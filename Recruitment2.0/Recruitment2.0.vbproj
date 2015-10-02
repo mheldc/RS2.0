@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06A7A897-9EF3-412A-9EAD-7F764B233D51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RecSys.My.MyApplication</StartupObject>
+    <RootNamespace>RecSys</RootNamespace>
+    <AssemblyName>Recruitment2.0</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Recruitment2.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Recruitment2.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="forms\frmLogIn.Designer.vb">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmLogIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSearch.Designer.vb">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmSysDefaults.Designer.vb">
+      <DependentUpon>frmSysDefaults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmSysDefaults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmCandidateProfile.Designer.vb">
+      <DependentUpon>frmCandidateProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmCandidateProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmClientProfile.Designer.vb">
+      <DependentUpon>frmClientProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmClientProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmDepartment.Designer.vb">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkill.Designer.vb">
+      <DependentUpon>frmSkill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillGroup.Designer.vb">
+      <DependentUpon>frmSkillGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillLevel.Designer.vb">
+      <DependentUpon>frmSkillLevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillLevel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillType.Designer.vb">
+      <DependentUpon>frmSkillType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmSkillType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserGroups.Designer.vb">
+      <DependentUpon>frmUserGroups.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserProfile.Designer.vb">
+      <DependentUpon>frmUserProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\RMSMain.Designer.vb">
+      <DependentUpon>RMSMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\RMSMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\transaction\frmCR.Designer.vb">
+      <DependentUpon>frmCR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\transaction\frmCR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\transaction\frmLR.Designer.vb">
+      <DependentUpon>frmLR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\transaction\frmLR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\transaction\frmMR.Designer.vb">
+      <DependentUpon>frmMR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\transaction\frmMR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="class\RSv2.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="forms\frmLogIn.resx">
+      <DependentUpon>frmLogIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSearch.resx">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmSysDefaults.resx">
+      <DependentUpon>frmSysDefaults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmCandidateProfile.resx">
+      <DependentUpon>frmCandidateProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmClientProfile.resx">
+      <DependentUpon>frmClientProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmDepartment.resx">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmSkill.resx">
+      <DependentUpon>frmSkill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmSkillGroup.resx">
+      <DependentUpon>frmSkillGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmSkillLevel.resx">
+      <DependentUpon>frmSkillLevel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmSkillType.resx">
+      <DependentUpon>frmSkillType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmUserGroups.resx">
+      <DependentUpon>frmUserGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmUserProfile.resx">
+      <DependentUpon>frmUserProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\RMSMain.resx">
+      <DependentUpon>RMSMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\transaction\frmCR.resx">
+      <DependentUpon>frmCR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\transaction\frmLR.resx">
+      <DependentUpon>frmLR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\transaction\frmMR.resx">
+      <DependentUpon>frmMR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="forms\viewer\" />
+    <Folder Include="modules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\accept.png" />
+    <Content Include="images\connect.png" />
+    <Content Include="images\cross.png" />
+    <Content Include="images\disk.png" />
+    <None Include="Resources\door.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\disconnect.png" />
+    <None Include="Resources\connect.png" />
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
