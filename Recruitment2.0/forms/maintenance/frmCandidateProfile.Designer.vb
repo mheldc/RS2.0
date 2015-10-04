@@ -162,15 +162,6 @@ Partial Class frmCandidateProfile
         Me.tpSkills = New System.Windows.Forms.TabPage()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colSTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSGroupId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSkill = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colYearsUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLastYearUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSCLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel16 = New System.Windows.Forms.Panel()
         Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
@@ -190,6 +181,8 @@ Partial Class frmCandidateProfile
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.tpOthers = New System.Windows.Forms.TabPage()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.Label62 = New System.Windows.Forms.Label()
         Me.TextBox30 = New System.Windows.Forms.TextBox()
         Me.Label61 = New System.Windows.Forms.Label()
         Me.ComboBox7 = New System.Windows.Forms.ComboBox()
@@ -206,7 +199,6 @@ Partial Class frmCandidateProfile
         Me.Label56 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label55 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -231,8 +223,19 @@ Partial Class frmCandidateProfile
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colSTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSGroupId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSkill = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colYearsUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLastYearUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSCLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -306,6 +309,7 @@ Partial Class frmCandidateProfile
         '
         'tpPersonal
         '
+        Me.tpPersonal.AutoScroll = True
         Me.tpPersonal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpPersonal.Controls.Add(Me.MaskedTextBox4)
         Me.tpPersonal.Controls.Add(Me.Label22)
@@ -589,9 +593,9 @@ Partial Class frmCandidateProfile
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(15, 42)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 15)
+        Me.Label9.Size = New System.Drawing.Size(62, 15)
         Me.Label9.TabIndex = 3
-        Me.Label9.Text = "Birth date"
+        Me.Label9.Text = "Birth Date"
         '
         'Label8
         '
@@ -604,6 +608,7 @@ Partial Class frmCandidateProfile
         '
         'tpFamily
         '
+        Me.tpFamily.AutoScroll = True
         Me.tpFamily.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpFamily.Controls.Add(Me.Panel8)
         Me.tpFamily.Controls.Add(Me.Panel7)
@@ -743,6 +748,7 @@ Partial Class frmCandidateProfile
         '
         'Panel6
         '
+        Me.Panel6.AutoScroll = True
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel6.Controls.Add(Me.TextBox15)
         Me.Panel6.Controls.Add(Me.Label30)
@@ -890,6 +896,7 @@ Partial Class frmCandidateProfile
         '
         'tpEduc
         '
+        Me.tpEduc.AutoScroll = True
         Me.tpEduc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpEduc.Controls.Add(Me.Panel9)
         Me.tpEduc.Controls.Add(Me.Panel10)
@@ -909,7 +916,7 @@ Partial Class frmCandidateProfile
         Me.Panel9.Location = New System.Drawing.Point(0, 132)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(945, 205)
-        Me.Panel9.TabIndex = 6
+        Me.Panel9.TabIndex = 9
         '
         'DataGridView2
         '
@@ -998,7 +1005,7 @@ Partial Class frmCandidateProfile
         Me.Panel10.Location = New System.Drawing.Point(0, 337)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(945, 46)
-        Me.Panel10.TabIndex = 5
+        Me.Panel10.TabIndex = 8
         '
         'ToolStrip2
         '
@@ -1056,7 +1063,7 @@ Partial Class frmCandidateProfile
         Me.Panel11.Location = New System.Drawing.Point(0, 0)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(945, 132)
-        Me.Panel11.TabIndex = 4
+        Me.Panel11.TabIndex = 7
         '
         'TextBox17
         '
@@ -1205,6 +1212,7 @@ Partial Class frmCandidateProfile
         '
         'tpEmpHist
         '
+        Me.tpEmpHist.AutoScroll = True
         Me.tpEmpHist.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpEmpHist.Controls.Add(Me.Panel12)
         Me.tpEmpHist.Controls.Add(Me.Panel13)
@@ -1224,7 +1232,7 @@ Partial Class frmCandidateProfile
         Me.Panel12.Location = New System.Drawing.Point(0, 156)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(945, 181)
-        Me.Panel12.TabIndex = 9
+        Me.Panel12.TabIndex = 12
         '
         'DataGridView3
         '
@@ -1313,7 +1321,7 @@ Partial Class frmCandidateProfile
         Me.Panel13.Location = New System.Drawing.Point(0, 337)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(945, 46)
-        Me.Panel13.TabIndex = 8
+        Me.Panel13.TabIndex = 11
         '
         'ToolStrip1
         '
@@ -1373,7 +1381,7 @@ Partial Class frmCandidateProfile
         Me.Panel14.Location = New System.Drawing.Point(0, 0)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(945, 156)
-        Me.Panel14.TabIndex = 7
+        Me.Panel14.TabIndex = 10
         '
         'CheckBox4
         '
@@ -1537,6 +1545,7 @@ Partial Class frmCandidateProfile
         '
         'tpSkills
         '
+        Me.tpSkills.AutoScroll = True
         Me.tpSkills.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpSkills.Controls.Add(Me.Panel15)
         Me.tpSkills.Controls.Add(Me.Panel16)
@@ -1556,7 +1565,7 @@ Partial Class frmCandidateProfile
         Me.Panel15.Location = New System.Drawing.Point(0, 104)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(945, 233)
-        Me.Panel15.TabIndex = 9
+        Me.Panel15.TabIndex = 12
         '
         'DataGridView4
         '
@@ -1570,73 +1579,6 @@ Partial Class frmCandidateProfile
         Me.DataGridView4.Size = New System.Drawing.Size(943, 231)
         Me.DataGridView4.TabIndex = 3
         '
-        'DataGridViewButtonColumn7
-        '
-        Me.DataGridViewButtonColumn7.Frozen = True
-        Me.DataGridViewButtonColumn7.HeaderText = ""
-        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
-        Me.DataGridViewButtonColumn7.ReadOnly = True
-        Me.DataGridViewButtonColumn7.Text = "Select"
-        Me.DataGridViewButtonColumn7.Width = 70
-        '
-        'DataGridViewButtonColumn8
-        '
-        Me.DataGridViewButtonColumn8.Frozen = True
-        Me.DataGridViewButtonColumn8.HeaderText = ""
-        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
-        Me.DataGridViewButtonColumn8.ReadOnly = True
-        Me.DataGridViewButtonColumn8.Text = "Remove"
-        Me.DataGridViewButtonColumn8.Width = 70
-        '
-        'colSTypeId
-        '
-        Me.colSTypeId.HeaderText = "Skill Type Id"
-        Me.colSTypeId.Name = "colSTypeId"
-        Me.colSTypeId.ReadOnly = True
-        Me.colSTypeId.Visible = False
-        '
-        'colSGroupId
-        '
-        Me.colSGroupId.HeaderText = "Skill Group Id"
-        Me.colSGroupId.Name = "colSGroupId"
-        Me.colSGroupId.ReadOnly = True
-        Me.colSGroupId.Visible = False
-        '
-        'colSId
-        '
-        Me.colSId.HeaderText = "Skill Id"
-        Me.colSId.Name = "colSId"
-        Me.colSId.ReadOnly = True
-        Me.colSId.Visible = False
-        '
-        'colSkill
-        '
-        Me.colSkill.HeaderText = "Skill Name"
-        Me.colSkill.Name = "colSkill"
-        Me.colSkill.ReadOnly = True
-        Me.colSkill.Width = 250
-        '
-        'colYearsUsed
-        '
-        Me.colYearsUsed.HeaderText = "No.of Years Used"
-        Me.colYearsUsed.Name = "colYearsUsed"
-        Me.colYearsUsed.ReadOnly = True
-        Me.colYearsUsed.Width = 150
-        '
-        'colLastYearUsed
-        '
-        Me.colLastYearUsed.HeaderText = "Last Year Used"
-        Me.colLastYearUsed.Name = "colLastYearUsed"
-        Me.colLastYearUsed.ReadOnly = True
-        Me.colLastYearUsed.Width = 120
-        '
-        'colSCLevel
-        '
-        Me.colSCLevel.HeaderText = "Skill Level"
-        Me.colSCLevel.Name = "colSCLevel"
-        Me.colSCLevel.ReadOnly = True
-        Me.colSCLevel.Width = 120
-        '
         'Panel16
         '
         Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1645,7 +1587,7 @@ Partial Class frmCandidateProfile
         Me.Panel16.Location = New System.Drawing.Point(0, 337)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(945, 46)
-        Me.Panel16.TabIndex = 8
+        Me.Panel16.TabIndex = 11
         '
         'ToolStrip4
         '
@@ -1699,7 +1641,7 @@ Partial Class frmCandidateProfile
         Me.Panel17.Location = New System.Drawing.Point(0, 0)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(945, 104)
-        Me.Panel17.TabIndex = 7
+        Me.Panel17.TabIndex = 10
         '
         'DateTimePicker6
         '
@@ -1814,7 +1756,12 @@ Partial Class frmCandidateProfile
         '
         'tpOthers
         '
+        Me.tpOthers.AutoScroll = True
         Me.tpOthers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpOthers.Controls.Add(Me.TextBox32)
+        Me.tpOthers.Controls.Add(Me.Label55)
+        Me.tpOthers.Controls.Add(Me.ComboBox8)
+        Me.tpOthers.Controls.Add(Me.CheckBox5)
         Me.tpOthers.Controls.Add(Me.TextBox31)
         Me.tpOthers.Controls.Add(Me.Label62)
         Me.tpOthers.Controls.Add(Me.TextBox30)
@@ -1839,9 +1786,26 @@ Partial Class frmCandidateProfile
         Me.tpOthers.Text = "Other Information"
         Me.tpOthers.UseVisualStyleBackColor = True
         '
+        'TextBox31
+        '
+        Me.TextBox31.Location = New System.Drawing.Point(176, 248)
+        Me.TextBox31.Multiline = True
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.Size = New System.Drawing.Size(588, 129)
+        Me.TextBox31.TabIndex = 43
+        '
+        'Label62
+        '
+        Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Location = New System.Drawing.Point(6, 251)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(95, 15)
+        Me.Label62.TabIndex = 42
+        Me.Label62.Text = "Remarks"
+        '
         'TextBox30
         '
-        Me.TextBox30.Location = New System.Drawing.Point(176, 69)
+        Me.TextBox30.Location = New System.Drawing.Point(176, 98)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(588, 23)
         Me.TextBox30.TabIndex = 41
@@ -1849,7 +1813,7 @@ Partial Class frmCandidateProfile
         'Label61
         '
         Me.Label61.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(6, 72)
+        Me.Label61.Location = New System.Drawing.Point(6, 101)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(157, 18)
         Me.Label61.TabIndex = 40
@@ -1859,14 +1823,14 @@ Partial Class frmCandidateProfile
         '
         Me.ComboBox7.FormattingEnabled = True
         Me.ComboBox7.Items.AddRange(New Object() {"per HOUR", "per DAY", "per MONTH", "per YEAR"})
-        Me.ComboBox7.Location = New System.Drawing.Point(309, 40)
+        Me.ComboBox7.Location = New System.Drawing.Point(309, 69)
         Me.ComboBox7.Name = "ComboBox7"
         Me.ComboBox7.Size = New System.Drawing.Size(147, 23)
         Me.ComboBox7.TabIndex = 39
         '
         'TextBox27
         '
-        Me.TextBox27.Location = New System.Drawing.Point(176, 40)
+        Me.TextBox27.Location = New System.Drawing.Point(176, 69)
         Me.TextBox27.Name = "TextBox27"
         Me.TextBox27.Size = New System.Drawing.Size(132, 23)
         Me.TextBox27.TabIndex = 38
@@ -1875,13 +1839,13 @@ Partial Class frmCandidateProfile
         '
         Me.TextBox26.Location = New System.Drawing.Point(176, 11)
         Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(588, 23)
+        Me.TextBox26.Size = New System.Drawing.Size(280, 23)
         Me.TextBox26.TabIndex = 37
         '
         'Label60
         '
         Me.Label60.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.Location = New System.Drawing.Point(6, 43)
+        Me.Label60.Location = New System.Drawing.Point(6, 72)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(127, 18)
         Me.Label60.TabIndex = 36
@@ -1899,7 +1863,7 @@ Partial Class frmCandidateProfile
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(176, 185)
+        Me.RadioButton4.Location = New System.Drawing.Point(176, 214)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(96, 19)
         Me.RadioButton4.TabIndex = 34
@@ -1911,7 +1875,7 @@ Partial Class frmCandidateProfile
         '
         Me.DateTimePicker9.CustomFormat = "MMMM/dd/yyyy"
         Me.DateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker9.Location = New System.Drawing.Point(216, 156)
+        Me.DateTimePicker9.Location = New System.Drawing.Point(216, 185)
         Me.DateTimePicker9.Name = "DateTimePicker9"
         Me.DateTimePicker9.Size = New System.Drawing.Size(117, 23)
         Me.DateTimePicker9.TabIndex = 33
@@ -1919,7 +1883,7 @@ Partial Class frmCandidateProfile
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(176, 159)
+        Me.RadioButton3.Location = New System.Drawing.Point(176, 188)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(39, 19)
         Me.RadioButton3.TabIndex = 32
@@ -1929,7 +1893,7 @@ Partial Class frmCandidateProfile
         '
         'TextBox25
         '
-        Me.TextBox25.Location = New System.Drawing.Point(213, 130)
+        Me.TextBox25.Location = New System.Drawing.Point(213, 159)
         Me.TextBox25.Name = "TextBox25"
         Me.TextBox25.Size = New System.Drawing.Size(38, 23)
         Me.TextBox25.TabIndex = 31
@@ -1937,7 +1901,7 @@ Partial Class frmCandidateProfile
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(176, 131)
+        Me.RadioButton2.Location = New System.Drawing.Point(176, 160)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(157, 19)
         Me.RadioButton2.TabIndex = 30
@@ -1949,7 +1913,7 @@ Partial Class frmCandidateProfile
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(176, 105)
+        Me.RadioButton1.Location = New System.Drawing.Point(176, 134)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(93, 19)
         Me.RadioButton1.TabIndex = 29
@@ -1960,7 +1924,7 @@ Partial Class frmCandidateProfile
         'Label56
         '
         Me.Label56.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(6, 107)
+        Me.Label56.Location = New System.Drawing.Point(6, 136)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(95, 15)
         Me.Label56.TabIndex = 28
@@ -1980,7 +1944,6 @@ Partial Class frmCandidateProfile
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Label55)
         Me.Panel4.Controls.Add(Me.Label7)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.Label5)
@@ -1997,41 +1960,30 @@ Partial Class frmCandidateProfile
         Me.Panel4.Size = New System.Drawing.Size(753, 139)
         Me.Panel4.TabIndex = 5
         '
-        'Label55
-        '
-        Me.Label55.AutoSize = True
-        Me.Label55.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(391, 18)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(22, 23)
-        Me.Label55.TabIndex = 21
-        Me.Label55.Text = "[]"
-        Me.Label55.Visible = False
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(523, 39)
+        Me.Label7.Location = New System.Drawing.Point(108, 102)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(22, 23)
-        Me.Label7.TabIndex = 20
+        Me.Label7.TabIndex = 22
         Me.Label7.Text = "[]"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(422, 47)
+        Me.Label6.Location = New System.Drawing.Point(7, 108)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 15)
-        Me.Label6.TabIndex = 19
+        Me.Label6.TabIndex = 21
         Me.Label6.Text = "Status :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(523, 16)
+        Me.Label5.Location = New System.Drawing.Point(108, 3)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(22, 23)
         Me.Label5.TabIndex = 18
@@ -2039,28 +1991,28 @@ Partial Class frmCandidateProfile
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(110, 65)
+        Me.TextBox3.Location = New System.Drawing.Point(112, 78)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(275, 23)
         Me.TextBox3.TabIndex = 17
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(110, 40)
+        Me.TextBox2.Location = New System.Drawing.Point(112, 54)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(275, 23)
         Me.TextBox2.TabIndex = 16
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(110, 15)
+        Me.TextBox1.Location = New System.Drawing.Point(112, 30)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(275, 23)
         Me.TextBox1.TabIndex = 15
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(7, 68)
+        Me.Label4.Location = New System.Drawing.Point(7, 83)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 15)
         Me.Label4.TabIndex = 14
@@ -2068,7 +2020,7 @@ Partial Class frmCandidateProfile
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(7, 43)
+        Me.Label3.Location = New System.Drawing.Point(7, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 20)
         Me.Label3.TabIndex = 13
@@ -2076,7 +2028,7 @@ Partial Class frmCandidateProfile
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(7, 18)
+        Me.Label2.Location = New System.Drawing.Point(7, 33)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 20)
         Me.Label2.TabIndex = 12
@@ -2084,7 +2036,7 @@ Partial Class frmCandidateProfile
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(422, 22)
+        Me.Label1.Location = New System.Drawing.Point(7, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(95, 15)
         Me.Label1.TabIndex = 11
@@ -2243,22 +2195,106 @@ Partial Class frmCandidateProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'Label62
+        'CheckBox5
         '
-        Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(6, 222)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(95, 15)
-        Me.Label62.TabIndex = 42
-        Me.Label62.Text = "Remarks"
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(462, 71)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(90, 19)
+        Me.CheckBox5.TabIndex = 44
+        Me.CheckBox5.Text = "Negotiable?"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
-        'TextBox31
+        'DataGridViewButtonColumn7
         '
-        Me.TextBox31.Location = New System.Drawing.Point(176, 219)
-        Me.TextBox31.Multiline = True
-        Me.TextBox31.Name = "TextBox31"
-        Me.TextBox31.Size = New System.Drawing.Size(588, 158)
-        Me.TextBox31.TabIndex = 43
+        Me.DataGridViewButtonColumn7.Frozen = True
+        Me.DataGridViewButtonColumn7.HeaderText = ""
+        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
+        Me.DataGridViewButtonColumn7.ReadOnly = True
+        Me.DataGridViewButtonColumn7.Text = "Select"
+        Me.DataGridViewButtonColumn7.Width = 70
+        '
+        'DataGridViewButtonColumn8
+        '
+        Me.DataGridViewButtonColumn8.Frozen = True
+        Me.DataGridViewButtonColumn8.HeaderText = ""
+        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
+        Me.DataGridViewButtonColumn8.ReadOnly = True
+        Me.DataGridViewButtonColumn8.Text = "Remove"
+        Me.DataGridViewButtonColumn8.Width = 70
+        '
+        'colSTypeId
+        '
+        Me.colSTypeId.HeaderText = "Skill Type Id"
+        Me.colSTypeId.Name = "colSTypeId"
+        Me.colSTypeId.ReadOnly = True
+        Me.colSTypeId.Visible = False
+        '
+        'colSGroupId
+        '
+        Me.colSGroupId.HeaderText = "Skill Group Id"
+        Me.colSGroupId.Name = "colSGroupId"
+        Me.colSGroupId.ReadOnly = True
+        Me.colSGroupId.Visible = False
+        '
+        'colSId
+        '
+        Me.colSId.HeaderText = "Skill Id"
+        Me.colSId.Name = "colSId"
+        Me.colSId.ReadOnly = True
+        Me.colSId.Visible = False
+        '
+        'colSkill
+        '
+        Me.colSkill.HeaderText = "Skill Name"
+        Me.colSkill.Name = "colSkill"
+        Me.colSkill.ReadOnly = True
+        Me.colSkill.Width = 250
+        '
+        'colYearsUsed
+        '
+        Me.colYearsUsed.HeaderText = "No.of Years Used"
+        Me.colYearsUsed.Name = "colYearsUsed"
+        Me.colYearsUsed.ReadOnly = True
+        Me.colYearsUsed.Width = 150
+        '
+        'colLastYearUsed
+        '
+        Me.colLastYearUsed.HeaderText = "Last Year Used"
+        Me.colLastYearUsed.Name = "colLastYearUsed"
+        Me.colLastYearUsed.ReadOnly = True
+        Me.colLastYearUsed.Width = 120
+        '
+        'colSCLevel
+        '
+        Me.colSCLevel.HeaderText = "Competency Level"
+        Me.colSCLevel.Name = "colSCLevel"
+        Me.colSCLevel.ReadOnly = True
+        Me.colSCLevel.Width = 150
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(176, 40)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(280, 23)
+        Me.ComboBox8.TabIndex = 45
+        '
+        'Label55
+        '
+        Me.Label55.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(6, 43)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(127, 18)
+        Me.Label55.TabIndex = 46
+        Me.Label55.Text = "Applicant Source"
+        '
+        'TextBox32
+        '
+        Me.TextBox32.Location = New System.Drawing.Point(457, 40)
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New System.Drawing.Size(302, 23)
+        Me.TextBox32.TabIndex = 47
         '
         'frmCandidateProfile
         '
@@ -2367,8 +2403,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
@@ -2400,36 +2434,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
-    Friend WithEvents Panel9 As System.Windows.Forms.Panel
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
-    Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents Panel11 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents DateTimePicker5 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label34 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
-    Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
-    Friend WithEvents Label35 As System.Windows.Forms.Label
-    Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn3 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents colId As System.Windows.Forms.DataGridViewButtonColumn
@@ -2442,9 +2446,53 @@ Partial Class frmCandidateProfile
     Friend WithEvents ToolStrip3 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbAdd As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbEdit As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbDelete As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbCancel As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbSave As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsOps As System.Windows.Forms.ToolStrip
+    Friend WithEvents tpOthers As System.Windows.Forms.TabPage
+    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents DateTimePicker9 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Label56 As System.Windows.Forms.Label
+    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
+    Friend WithEvents Label61 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
+    Friend WithEvents Label60 As System.Windows.Forms.Label
+    Friend WithEvents Label59 As System.Windows.Forms.Label
+    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
+    Friend WithEvents Label62 As System.Windows.Forms.Label
+    Friend WithEvents Panel15 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
+    Friend WithEvents Panel16 As System.Windows.Forms.Panel
+    Friend WithEvents ToolStrip4 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Panel17 As System.Windows.Forms.Panel
+    Friend WithEvents DateTimePicker6 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label54 As System.Windows.Forms.Label
+    Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
+    Friend WithEvents Label53 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label52 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label51 As System.Windows.Forms.Label
+    Friend WithEvents Label50 As System.Windows.Forms.Label
+    Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents Label57 As System.Windows.Forms.Label
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewButtonColumn4 As System.Windows.Forms.DataGridViewButtonColumn
@@ -2480,11 +2528,42 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label46 As System.Windows.Forms.Label
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents Label48 As System.Windows.Forms.Label
-    Friend WithEvents Panel15 As System.Windows.Forms.Panel
-    Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
-    Friend WithEvents Panel16 As System.Windows.Forms.Panel
-    Friend WithEvents Panel17 As System.Windows.Forms.Panel
-    Friend WithEvents Label57 As System.Windows.Forms.Label
+    Friend WithEvents Panel9 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn3 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents DateTimePicker5 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label34 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
+    Friend WithEvents Label35 As System.Windows.Forms.Label
+    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
     Friend WithEvents DataGridViewButtonColumn7 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn8 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents colSTypeId As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -2494,47 +2573,7 @@ Partial Class frmCandidateProfile
     Friend WithEvents colYearsUsed As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colLastYearUsed As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colSCLevel As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ToolStrip4 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents DateTimePicker6 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Label54 As System.Windows.Forms.Label
-    Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
-    Friend WithEvents Label53 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label52 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label51 As System.Windows.Forms.Label
-    Friend WithEvents Label50 As System.Windows.Forms.Label
-    Friend WithEvents Label49 As System.Windows.Forms.Label
+    Friend WithEvents TextBox32 As System.Windows.Forms.TextBox
     Friend WithEvents Label55 As System.Windows.Forms.Label
-    Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbAdd As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbEdit As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbDelete As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbCancel As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbSave As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
-    Friend WithEvents tsOps As System.Windows.Forms.ToolStrip
-    Friend WithEvents tpOthers As System.Windows.Forms.TabPage
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents DateTimePicker9 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label56 As System.Windows.Forms.Label
-    Friend WithEvents TextBox30 As System.Windows.Forms.TextBox
-    Friend WithEvents Label61 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
-    Friend WithEvents Label60 As System.Windows.Forms.Label
-    Friend WithEvents Label59 As System.Windows.Forms.Label
-    Friend WithEvents TextBox31 As System.Windows.Forms.TextBox
-    Friend WithEvents Label62 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
 End Class
