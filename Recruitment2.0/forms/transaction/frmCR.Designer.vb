@@ -24,34 +24,21 @@ Partial Class frmCR
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCR))
         Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.tpCandidate = New System.Windows.Forms.TabPage()
-        Me.tpSkills = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.tpEduc = New System.Windows.Forms.TabPage()
-        Me.tpJDText = New System.Windows.Forms.TabPage()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsOps
@@ -59,13 +46,8 @@ Partial Class frmCR
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(844, 39)
+        Me.tsOps.Size = New System.Drawing.Size(865, 39)
         Me.tsOps.TabIndex = 1
-        '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
         '
         'tsbClose
         '
@@ -143,6 +125,11 @@ Partial Class frmCR
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
         '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -174,86 +161,8 @@ Partial Class frmCR
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 484)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(844, 46)
+        Me.Panel1.Size = New System.Drawing.Size(865, 46)
         Me.Panel1.TabIndex = 2
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.GroupBox2)
-        Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 39)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(844, 445)
-        Me.Panel2.TabIndex = 3
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.TabControl1)
-        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 154)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(842, 289)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Request Details"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.tpCandidate)
-        Me.TabControl1.Controls.Add(Me.tpEduc)
-        Me.TabControl1.Controls.Add(Me.tpSkills)
-        Me.TabControl1.Controls.Add(Me.tpJDText)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(3, 19)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(836, 267)
-        Me.TabControl1.TabIndex = 0
-        '
-        'tpCandidate
-        '
-        Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
-        Me.tpCandidate.Name = "tpCandidate"
-        Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(828, 239)
-        Me.tpCandidate.TabIndex = 0
-        Me.tpCandidate.Text = "Candidate Preference"
-        Me.tpCandidate.UseVisualStyleBackColor = True
-        '
-        'tpSkills
-        '
-        Me.tpSkills.Location = New System.Drawing.Point(4, 24)
-        Me.tpSkills.Name = "tpSkills"
-        Me.tpSkills.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkills.Size = New System.Drawing.Size(828, 239)
-        Me.tpSkills.TabIndex = 1
-        Me.tpSkills.Text = "Skill Preference"
-        Me.tpSkills.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(842, 154)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Request Information"
-        '
-        'Button1
-        '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(4, 4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 36)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Approve"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -266,46 +175,31 @@ Partial Class frmCR
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'tpEduc
+        'Button1
         '
-        Me.tpEduc.Location = New System.Drawing.Point(4, 24)
-        Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(828, 239)
-        Me.tpEduc.TabIndex = 2
-        Me.tpEduc.Text = "Education Preference"
-        Me.tpEduc.UseVisualStyleBackColor = True
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(4, 4)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 36)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Approve"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'tpJDText
+        'Panel2
         '
-        Me.tpJDText.Location = New System.Drawing.Point(4, 24)
-        Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(828, 239)
-        Me.tpJDText.TabIndex = 3
-        Me.tpJDText.Text = "Full Job Description"
-        Me.tpJDText.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Request Type"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(94, 25)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(176, 23)
-        Me.ComboBox1.TabIndex = 1
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 39)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(865, 445)
+        Me.Panel2.TabIndex = 3
         '
         'frmCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(844, 530)
+        Me.ClientSize = New System.Drawing.Size(865, 530)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -318,11 +212,6 @@ Partial Class frmCR
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -341,13 +230,4 @@ Partial Class frmCR
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
-    Friend WithEvents tpCandidate As System.Windows.Forms.TabPage
-    Friend WithEvents tpSkills As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents tpEduc As System.Windows.Forms.TabPage
-    Friend WithEvents tpJDText As System.Windows.Forms.TabPage
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

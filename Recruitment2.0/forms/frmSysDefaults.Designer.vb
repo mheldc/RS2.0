@@ -24,6 +24,11 @@ Partial Class frmSysDefaults
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSysDefaults))
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpCn = New System.Windows.Forms.TabPage()
@@ -152,12 +157,8 @@ Partial Class frmSysDefaults
         Me.Label40 = New System.Windows.Forms.Label()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.Panel2.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpCn.SuspendLayout()
@@ -179,7 +180,6 @@ Partial Class frmSysDefaults
         Me.tpMailTemp.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -189,8 +189,60 @@ Partial Class frmSysDefaults
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 390)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(790, 46)
+        Me.Panel2.Size = New System.Drawing.Size(792, 46)
         Me.Panel2.TabIndex = 1
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton5, Me.ToolStripButton3})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 5)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(790, 39)
+        Me.ToolStrip1.TabIndex = 0
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton2.Text = "ToolStripButton2"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
+        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton5.Text = "ToolStripButton5"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
         '
         'Panel1
         '
@@ -198,7 +250,7 @@ Partial Class frmSysDefaults
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(790, 390)
+        Me.Panel1.Size = New System.Drawing.Size(792, 390)
         Me.Panel1.TabIndex = 2
         '
         'TabControl1
@@ -213,17 +265,19 @@ Partial Class frmSysDefaults
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(790, 390)
+        Me.TabControl1.Size = New System.Drawing.Size(792, 390)
         Me.TabControl1.TabIndex = 0
         '
         'tpCn
         '
+        Me.tpCn.AutoScroll = True
+        Me.tpCn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpCn.Controls.Add(Me.GroupBox8)
         Me.tpCn.Controls.Add(Me.GroupBox7)
         Me.tpCn.Location = New System.Drawing.Point(4, 24)
         Me.tpCn.Name = "tpCn"
         Me.tpCn.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCn.Size = New System.Drawing.Size(782, 362)
+        Me.tpCn.Size = New System.Drawing.Size(784, 362)
         Me.tpCn.TabIndex = 0
         Me.tpCn.Text = "Connection"
         Me.tpCn.UseVisualStyleBackColor = True
@@ -241,7 +295,7 @@ Partial Class frmSysDefaults
         Me.GroupBox8.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox8.Location = New System.Drawing.Point(390, 3)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(389, 356)
+        Me.GroupBox8.Size = New System.Drawing.Size(389, 354)
         Me.GroupBox8.TabIndex = 1
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "E-Mail Server (SMTP)"
@@ -392,7 +446,7 @@ Partial Class frmSysDefaults
         Me.GroupBox7.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox7.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(384, 356)
+        Me.GroupBox7.Size = New System.Drawing.Size(384, 354)
         Me.GroupBox7.TabIndex = 0
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Database Server"
@@ -527,12 +581,14 @@ Partial Class frmSysDefaults
         '
         'tpMR
         '
+        Me.tpMR.AutoScroll = True
+        Me.tpMR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpMR.Controls.Add(Me.GroupBox2)
         Me.tpMR.Controls.Add(Me.GroupBox1)
         Me.tpMR.Location = New System.Drawing.Point(4, 24)
         Me.tpMR.Name = "tpMR"
         Me.tpMR.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMR.Size = New System.Drawing.Size(782, 362)
+        Me.tpMR.Size = New System.Drawing.Size(784, 362)
         Me.tpMR.TabIndex = 1
         Me.tpMR.Text = "Manpower Request"
         Me.tpMR.UseVisualStyleBackColor = True
@@ -547,7 +603,7 @@ Partial Class frmSysDefaults
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox2.Location = New System.Drawing.Point(374, 3)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(405, 356)
+        Me.GroupBox2.Size = New System.Drawing.Size(405, 354)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Request Content"
@@ -619,7 +675,7 @@ Partial Class frmSysDefaults
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(365, 356)
+        Me.GroupBox1.Size = New System.Drawing.Size(365, 354)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Default Manpower Request Approvers"
@@ -770,11 +826,13 @@ Partial Class frmSysDefaults
         '
         'tpLR
         '
+        Me.tpLR.AutoScroll = True
+        Me.tpLR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpLR.Controls.Add(Me.GroupBox4)
         Me.tpLR.Controls.Add(Me.GroupBox3)
         Me.tpLR.Location = New System.Drawing.Point(4, 24)
         Me.tpLR.Name = "tpLR"
-        Me.tpLR.Size = New System.Drawing.Size(782, 362)
+        Me.tpLR.Size = New System.Drawing.Size(784, 362)
         Me.tpLR.TabIndex = 2
         Me.tpLR.Text = "Line-up Request"
         Me.tpLR.UseVisualStyleBackColor = True
@@ -800,7 +858,7 @@ Partial Class frmSysDefaults
         Me.GroupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox4.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(365, 335)
+        Me.GroupBox4.Size = New System.Drawing.Size(365, 354)
         Me.GroupBox4.TabIndex = 9
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Default Line-up Request Approvers"
@@ -958,7 +1016,7 @@ Partial Class frmSysDefaults
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Location = New System.Drawing.Point(374, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(405, 335)
+        Me.GroupBox3.Size = New System.Drawing.Size(405, 354)
         Me.GroupBox3.TabIndex = 6
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Request Content"
@@ -1010,11 +1068,13 @@ Partial Class frmSysDefaults
         '
         'tpCR
         '
+        Me.tpCR.AutoScroll = True
+        Me.tpCR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpCR.Controls.Add(Me.GroupBox5)
         Me.tpCR.Controls.Add(Me.GroupBox6)
         Me.tpCR.Location = New System.Drawing.Point(4, 24)
         Me.tpCR.Name = "tpCR"
-        Me.tpCR.Size = New System.Drawing.Size(782, 362)
+        Me.tpCR.Size = New System.Drawing.Size(784, 362)
         Me.tpCR.TabIndex = 3
         Me.tpCR.Text = "Contract Requests"
         Me.tpCR.UseVisualStyleBackColor = True
@@ -1040,7 +1100,7 @@ Partial Class frmSysDefaults
         Me.GroupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox5.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(365, 335)
+        Me.GroupBox5.Size = New System.Drawing.Size(365, 354)
         Me.GroupBox5.TabIndex = 11
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Default Contract Request Approvers"
@@ -1198,7 +1258,7 @@ Partial Class frmSysDefaults
         Me.GroupBox6.Controls.Add(Me.Label24)
         Me.GroupBox6.Location = New System.Drawing.Point(374, 3)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(405, 335)
+        Me.GroupBox6.Size = New System.Drawing.Size(405, 354)
         Me.GroupBox6.TabIndex = 10
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Request Content"
@@ -1250,11 +1310,13 @@ Partial Class frmSysDefaults
         '
         'tpCandidates
         '
+        Me.tpCandidates.AutoScroll = True
+        Me.tpCandidates.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpCandidates.Controls.Add(Me.GroupBox11)
         Me.tpCandidates.Controls.Add(Me.GroupBox10)
         Me.tpCandidates.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidates.Name = "tpCandidates"
-        Me.tpCandidates.Size = New System.Drawing.Size(782, 362)
+        Me.tpCandidates.Size = New System.Drawing.Size(784, 362)
         Me.tpCandidates.TabIndex = 4
         Me.tpCandidates.Text = "Candidates"
         Me.tpCandidates.UseVisualStyleBackColor = True
@@ -1268,7 +1330,7 @@ Partial Class frmSysDefaults
         Me.GroupBox11.Controls.Add(Me.CheckBox9)
         Me.GroupBox11.Location = New System.Drawing.Point(390, 2)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(389, 336)
+        Me.GroupBox11.Size = New System.Drawing.Size(389, 355)
         Me.GroupBox11.TabIndex = 2
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "User Notification"
@@ -1328,7 +1390,7 @@ Partial Class frmSysDefaults
         Me.GroupBox10.Controls.Add(Me.ComboBox19)
         Me.GroupBox10.Location = New System.Drawing.Point(3, 2)
         Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(381, 336)
+        Me.GroupBox10.Size = New System.Drawing.Size(381, 355)
         Me.GroupBox10.TabIndex = 1
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "Defaults"
@@ -1351,6 +1413,8 @@ Partial Class frmSysDefaults
         '
         'tpMailTemp
         '
+        Me.tpMailTemp.AutoScroll = True
+        Me.tpMailTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpMailTemp.Controls.Add(Me.TextBox12)
         Me.tpMailTemp.Controls.Add(Me.Label42)
         Me.tpMailTemp.Controls.Add(Me.GroupBox12)
@@ -1359,7 +1423,7 @@ Partial Class frmSysDefaults
         Me.tpMailTemp.Controls.Add(Me.GroupBox13)
         Me.tpMailTemp.Location = New System.Drawing.Point(4, 24)
         Me.tpMailTemp.Name = "tpMailTemp"
-        Me.tpMailTemp.Size = New System.Drawing.Size(782, 362)
+        Me.tpMailTemp.Size = New System.Drawing.Size(784, 362)
         Me.tpMailTemp.TabIndex = 5
         Me.tpMailTemp.Text = "E-Mail Templates"
         Me.tpMailTemp.UseVisualStyleBackColor = True
@@ -1388,7 +1452,7 @@ Partial Class frmSysDefaults
         Me.GroupBox12.Controls.Add(Me.Label39)
         Me.GroupBox12.Location = New System.Drawing.Point(265, 52)
         Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(512, 283)
+        Me.GroupBox12.Size = New System.Drawing.Size(512, 305)
         Me.GroupBox12.TabIndex = 10
         Me.GroupBox12.TabStop = False
         Me.GroupBox12.Text = "E-Mail composition"
@@ -1407,7 +1471,7 @@ Partial Class frmSysDefaults
         Me.TextBox8.Location = New System.Drawing.Point(77, 60)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(429, 197)
+        Me.TextBox8.Size = New System.Drawing.Size(429, 239)
         Me.TextBox8.TabIndex = 8
         '
         'TextBox11
@@ -1448,7 +1512,7 @@ Partial Class frmSysDefaults
         Me.GroupBox13.Controls.Add(Me.ListBox1)
         Me.GroupBox13.Location = New System.Drawing.Point(5, 52)
         Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(254, 283)
+        Me.GroupBox13.Size = New System.Drawing.Size(254, 305)
         Me.GroupBox13.TabIndex = 7
         Me.GroupBox13.TabStop = False
         Me.GroupBox13.Text = "Available Fields"
@@ -1460,76 +1524,27 @@ Partial Class frmSysDefaults
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(3, 19)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(248, 261)
+        Me.ListBox1.Size = New System.Drawing.Size(248, 283)
         Me.ListBox1.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton5, Me.ToolStripButton3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 5)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(788, 39)
-        Me.ToolStrip1.TabIndex = 0
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
-        '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
-        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton5.Text = "ToolStripButton5"
         '
         'frmSysDefaults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 436)
+        Me.ClientSize = New System.Drawing.Size(792, 436)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSysDefaults"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "System Setup"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
         Me.tpCn.ResumeLayout(False)
@@ -1563,8 +1578,6 @@ Partial Class frmSysDefaults
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
         Me.GroupBox13.ResumeLayout(False)
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

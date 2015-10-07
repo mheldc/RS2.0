@@ -28,6 +28,7 @@ Partial Class frmMR
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpEmpSetup = New System.Windows.Forms.TabPage()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -49,6 +50,13 @@ Partial Class frmMR
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tpCandidate = New System.Windows.Forms.TabPage()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -57,7 +65,39 @@ Partial Class frmMR
         Me.ComboBox7 = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.tpEduc = New System.Windows.Forms.TabPage()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.tpSkills = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.colView = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colSTId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colGroupId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSkillId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLevelId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSkillName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSkillLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colMin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.tpJDText = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -84,43 +124,8 @@ Partial Class frmMR
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.colView = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colSTId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colGroupId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSkillId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLevelId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSkillName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSkillLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colMin = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -129,13 +134,13 @@ Partial Class frmMR
         Me.tpCandidate.SuspendLayout()
         Me.tpEduc.SuspendLayout()
         Me.tpSkills.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.tpJDText.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tsOps.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -146,7 +151,7 @@ Partial Class frmMR
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(859, 600)
+        Me.Panel1.Size = New System.Drawing.Size(859, 715)
         Me.Panel1.TabIndex = 4
         '
         'Panel2
@@ -157,7 +162,7 @@ Partial Class frmMR
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(857, 552)
+        Me.Panel2.Size = New System.Drawing.Size(857, 667)
         Me.Panel2.TabIndex = 5
         '
         'GroupBox2
@@ -166,7 +171,7 @@ Partial Class frmMR
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox2.Location = New System.Drawing.Point(0, 162)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(855, 388)
+        Me.GroupBox2.Size = New System.Drawing.Size(855, 503)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Request Details"
@@ -182,13 +187,16 @@ Partial Class frmMR
         Me.TabControl1.Location = New System.Drawing.Point(3, 19)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(849, 366)
+        Me.TabControl1.Size = New System.Drawing.Size(849, 481)
         Me.TabControl1.TabIndex = 0
         '
         'tpEmpSetup
         '
         Me.tpEmpSetup.AutoScroll = True
         Me.tpEmpSetup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpEmpSetup.Controls.Add(Me.Label28)
+        Me.tpEmpSetup.Controls.Add(Me.TextBox15)
+        Me.tpEmpSetup.Controls.Add(Me.CheckBox2)
         Me.tpEmpSetup.Controls.Add(Me.Label12)
         Me.tpEmpSetup.Controls.Add(Me.TextBox8)
         Me.tpEmpSetup.Controls.Add(Me.Label11)
@@ -212,15 +220,25 @@ Partial Class frmMR
         Me.tpEmpSetup.Location = New System.Drawing.Point(4, 24)
         Me.tpEmpSetup.Name = "tpEmpSetup"
         Me.tpEmpSetup.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 338)
+        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 453)
         Me.tpEmpSetup.TabIndex = 4
         Me.tpEmpSetup.Text = "Employment Setup"
         Me.tpEmpSetup.UseVisualStyleBackColor = True
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(157, 302)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(107, 19)
+        Me.CheckBox2.TabIndex = 37
+        Me.CheckBox2.Text = "For Absorption"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 252)
+        Me.Label12.Location = New System.Drawing.Point(6, 276)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(64, 15)
         Me.Label12.TabIndex = 36
@@ -228,7 +246,7 @@ Partial Class frmMR
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(157, 249)
+        Me.TextBox8.Location = New System.Drawing.Point(157, 273)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(416, 23)
         Me.TextBox8.TabIndex = 35
@@ -236,7 +254,7 @@ Partial Class frmMR
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 228)
+        Me.Label11.Location = New System.Drawing.Point(6, 252)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(88, 15)
         Me.Label11.TabIndex = 34
@@ -244,7 +262,7 @@ Partial Class frmMR
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(157, 225)
+        Me.TextBox7.Location = New System.Drawing.Point(157, 249)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(416, 23)
         Me.TextBox7.TabIndex = 33
@@ -319,7 +337,7 @@ Partial Class frmMR
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(7, 204)
+        Me.Label10.Location = New System.Drawing.Point(7, 228)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(84, 15)
         Me.Label10.TabIndex = 25
@@ -327,7 +345,7 @@ Partial Class frmMR
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(157, 201)
+        Me.TextBox3.Location = New System.Drawing.Point(157, 225)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(416, 23)
         Me.TextBox3.TabIndex = 24
@@ -398,6 +416,8 @@ Partial Class frmMR
         '
         Me.tpCandidate.AutoScroll = True
         Me.tpCandidate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpCandidate.Controls.Add(Me.TextBox14)
+        Me.tpCandidate.Controls.Add(Me.Label27)
         Me.tpCandidate.Controls.Add(Me.CheckBox1)
         Me.tpCandidate.Controls.Add(Me.DateTimePicker2)
         Me.tpCandidate.Controls.Add(Me.DateTimePicker1)
@@ -413,10 +433,74 @@ Partial Class frmMR
         Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidate.Name = "tpCandidate"
         Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(841, 338)
+        Me.tpCandidate.Size = New System.Drawing.Size(841, 341)
         Me.tpCandidate.TabIndex = 0
         Me.tpCandidate.Text = "Candidate Preference"
         Me.tpCandidate.UseVisualStyleBackColor = True
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(124, 153)
+        Me.TextBox14.Multiline = True
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(571, 177)
+        Me.TextBox14.TabIndex = 23
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(7, 156)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(52, 15)
+        Me.Label27.TabIndex = 22
+        Me.Label27.Text = "Other(s)"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(124, 109)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(309, 19)
+        Me.CheckBox1.TabIndex = 21
+        Me.CheckBox1.Text = "Include candidates with ""Not Specified"" availability"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(495, 80)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker2.TabIndex = 20
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(262, 80)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker1.TabIndex = 19
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(124, 84)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(377, 19)
+        Me.RadioButton4.TabIndex = 18
+        Me.RadioButton4.Text = "Between the dates of                                                             " & _
+    "          and  "
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Checked = True
+        Me.RadioButton3.Location = New System.Drawing.Point(124, 59)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(131, 19)
+        Me.RadioButton3.TabIndex = 17
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Immediately / ASAP"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -491,10 +575,63 @@ Partial Class frmMR
         Me.tpEduc.Controls.Add(Me.Label19)
         Me.tpEduc.Location = New System.Drawing.Point(4, 24)
         Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(841, 338)
+        Me.tpEduc.Size = New System.Drawing.Size(841, 341)
         Me.tpEduc.TabIndex = 2
         Me.tpEduc.Text = "Education Preference"
         Me.tpEduc.UseVisualStyleBackColor = True
+        '
+        'TextBox12
+        '
+        Me.TextBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TextBox12.Location = New System.Drawing.Point(134, 142)
+        Me.TextBox12.Multiline = True
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(446, 131)
+        Me.TextBox12.TabIndex = 8
+        '
+        'TextBox11
+        '
+        Me.TextBox11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TextBox11.Location = New System.Drawing.Point(134, 30)
+        Me.TextBox11.Multiline = True
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(446, 111)
+        Me.TextBox11.TabIndex = 7
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(7, 145)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(112, 15)
+        Me.Label21.TabIndex = 6
+        Me.Label21.Text = "Preferred School(s)"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(7, 33)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(99, 15)
+        Me.Label20.TabIndex = 5
+        Me.Label20.Text = "Preferred Course"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Location = New System.Drawing.Point(134, 6)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(446, 23)
+        Me.ComboBox8.TabIndex = 4
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(7, 9)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(111, 15)
+        Me.Label19.TabIndex = 3
+        Me.Label19.Text = "Highest Attainment"
         '
         'tpSkills
         '
@@ -506,10 +643,250 @@ Partial Class frmMR
         Me.tpSkills.Location = New System.Drawing.Point(4, 24)
         Me.tpSkills.Name = "tpSkills"
         Me.tpSkills.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkills.Size = New System.Drawing.Size(841, 338)
+        Me.tpSkills.Size = New System.Drawing.Size(841, 341)
         Me.tpSkills.TabIndex = 1
         Me.tpSkills.Text = "Skill Preference"
         Me.tpSkills.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colView, Me.colRemove, Me.colSTId, Me.colGroupId, Me.colSkillId, Me.colLevelId, Me.colSkillName, Me.colSkillLevel, Me.colMin})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 89)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(833, 208)
+        Me.DataGridView1.TabIndex = 2
+        '
+        'colView
+        '
+        Me.colView.Frozen = True
+        Me.colView.HeaderText = ""
+        Me.colView.Name = "colView"
+        Me.colView.ReadOnly = True
+        Me.colView.Text = "View"
+        Me.colView.UseColumnTextForButtonValue = True
+        Me.colView.Width = 70
+        '
+        'colRemove
+        '
+        Me.colRemove.Frozen = True
+        Me.colRemove.HeaderText = ""
+        Me.colRemove.Name = "colRemove"
+        Me.colRemove.ReadOnly = True
+        Me.colRemove.Text = "Remove"
+        Me.colRemove.UseColumnTextForButtonValue = True
+        Me.colRemove.Width = 70
+        '
+        'colSTId
+        '
+        Me.colSTId.HeaderText = "Type Id"
+        Me.colSTId.Name = "colSTId"
+        Me.colSTId.ReadOnly = True
+        Me.colSTId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colSTId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.colSTId.Visible = False
+        Me.colSTId.Width = 50
+        '
+        'colGroupId
+        '
+        Me.colGroupId.HeaderText = "Group Id"
+        Me.colGroupId.Name = "colGroupId"
+        Me.colGroupId.ReadOnly = True
+        Me.colGroupId.Visible = False
+        '
+        'colSkillId
+        '
+        Me.colSkillId.HeaderText = "Skill Id"
+        Me.colSkillId.Name = "colSkillId"
+        Me.colSkillId.ReadOnly = True
+        Me.colSkillId.Visible = False
+        '
+        'colLevelId
+        '
+        Me.colLevelId.HeaderText = "Skill Level Id"
+        Me.colLevelId.Name = "colLevelId"
+        Me.colLevelId.ReadOnly = True
+        Me.colLevelId.Visible = False
+        '
+        'colSkillName
+        '
+        Me.colSkillName.HeaderText = "Skill"
+        Me.colSkillName.Name = "colSkillName"
+        Me.colSkillName.ReadOnly = True
+        Me.colSkillName.Width = 250
+        '
+        'colSkillLevel
+        '
+        Me.colSkillLevel.HeaderText = "Skill Level"
+        Me.colSkillLevel.Name = "colSkillLevel"
+        Me.colSkillLevel.ReadOnly = True
+        Me.colSkillLevel.Width = 120
+        '
+        'colMin
+        '
+        Me.colMin.HeaderText = "Length Used (Minimum)"
+        Me.colMin.Name = "colMin"
+        Me.colMin.ReadOnly = True
+        Me.colMin.Width = 120
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 297)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(833, 39)
+        Me.ToolStrip1.TabIndex = 1
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.ToolStripButton1.ToolTipText = "Cancel"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton2.Text = "ToolStripButton2"
+        Me.ToolStripButton2.ToolTipText = "Save"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
+        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton3.Text = "ToolStripButton3"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.ComboBox13)
+        Me.Panel4.Controls.Add(Me.TextBox13)
+        Me.Panel4.Controls.Add(Me.Label26)
+        Me.Panel4.Controls.Add(Me.ComboBox11)
+        Me.Panel4.Controls.Add(Me.ComboBox12)
+        Me.Panel4.Controls.Add(Me.ComboBox10)
+        Me.Panel4.Controls.Add(Me.ComboBox9)
+        Me.Panel4.Controls.Add(Me.Label25)
+        Me.Panel4.Controls.Add(Me.Label24)
+        Me.Panel4.Controls.Add(Me.Label23)
+        Me.Panel4.Controls.Add(Me.Label22)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(3, 3)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(833, 86)
+        Me.Panel4.TabIndex = 0
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"Month(s)", "Year(s)"})
+        Me.ComboBox13.Location = New System.Drawing.Point(527, 30)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(137, 23)
+        Me.ComboBox13.TabIndex = 13
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(474, 30)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(47, 23)
+        Me.TextBox13.TabIndex = 11
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(395, 33)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(72, 15)
+        Me.Label26.TabIndex = 8
+        Me.Label26.Text = "Length Used"
+        '
+        'ComboBox11
+        '
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Location = New System.Drawing.Point(474, 6)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(283, 23)
+        Me.ComboBox11.TabIndex = 7
+        '
+        'ComboBox12
+        '
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Location = New System.Drawing.Point(87, 54)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(283, 23)
+        Me.ComboBox12.TabIndex = 6
+        '
+        'ComboBox10
+        '
+        Me.ComboBox10.FormattingEnabled = True
+        Me.ComboBox10.Location = New System.Drawing.Point(87, 30)
+        Me.ComboBox10.Name = "ComboBox10"
+        Me.ComboBox10.Size = New System.Drawing.Size(283, 23)
+        Me.ComboBox10.TabIndex = 5
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Location = New System.Drawing.Point(87, 6)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(283, 23)
+        Me.ComboBox9.TabIndex = 4
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(395, 9)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(61, 15)
+        Me.Label25.TabIndex = 3
+        Me.Label25.Text = "Skill Level"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(8, 57)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(65, 15)
+        Me.Label24.TabIndex = 2
+        Me.Label24.Text = "Skill Name"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(8, 33)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(68, 15)
+        Me.Label23.TabIndex = 1
+        Me.Label23.Text = "Skill Group"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(8, 9)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(58, 15)
+        Me.Label22.TabIndex = 0
+        Me.Label22.Text = "Skill Type"
         '
         'tpJDText
         '
@@ -518,9 +895,9 @@ Partial Class frmMR
         Me.tpJDText.Controls.Add(Me.RichTextBox1)
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(841, 338)
+        Me.tpJDText.Size = New System.Drawing.Size(841, 341)
         Me.tpJDText.TabIndex = 3
-        Me.tpJDText.Text = "Full Job Description"
+        Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
         '
         'RichTextBox1
@@ -528,7 +905,7 @@ Partial Class frmMR
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(839, 336)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 339)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False
@@ -647,7 +1024,7 @@ Partial Class frmMR
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 552)
+        Me.Panel3.Location = New System.Drawing.Point(0, 667)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(857, 46)
         Me.Panel3.TabIndex = 4
@@ -786,353 +1163,27 @@ Partial Class frmMR
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Checked = True
-        Me.RadioButton3.Location = New System.Drawing.Point(124, 59)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(131, 19)
-        Me.RadioButton3.TabIndex = 17
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Immediately / ASAP"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Checked = True
-        Me.RadioButton4.Location = New System.Drawing.Point(124, 84)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(377, 19)
-        Me.RadioButton4.TabIndex = 18
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Between the dates of                                                             " & _
-    "          and  "
-        Me.RadioButton4.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(262, 80)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
-        Me.DateTimePicker1.TabIndex = 19
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(495, 80)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 23)
-        Me.DateTimePicker2.TabIndex = 20
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(124, 109)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(309, 19)
-        Me.CheckBox1.TabIndex = 21
-        Me.CheckBox1.Text = "Include candidates with ""Not Specified"" availability"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(7, 9)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(111, 15)
-        Me.Label19.TabIndex = 3
-        Me.Label19.Text = "Highest Attainment"
-        '
-        'ComboBox8
-        '
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Location = New System.Drawing.Point(134, 6)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(446, 23)
-        Me.ComboBox8.TabIndex = 4
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(7, 33)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(99, 15)
-        Me.Label20.TabIndex = 5
-        Me.Label20.Text = "Preferred Course"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(7, 145)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(112, 15)
-        Me.Label21.TabIndex = 6
-        Me.Label21.Text = "Preferred School(s)"
-        '
-        'TextBox11
-        '
-        Me.TextBox11.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.TextBox11.Location = New System.Drawing.Point(134, 30)
-        Me.TextBox11.Multiline = True
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(446, 111)
-        Me.TextBox11.TabIndex = 7
-        '
-        'TextBox12
-        '
-        Me.TextBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.TextBox12.Location = New System.Drawing.Point(134, 142)
-        Me.TextBox12.Multiline = True
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(446, 131)
-        Me.TextBox12.TabIndex = 8
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.ComboBox13)
-        Me.Panel4.Controls.Add(Me.TextBox13)
-        Me.Panel4.Controls.Add(Me.Label26)
-        Me.Panel4.Controls.Add(Me.ComboBox11)
-        Me.Panel4.Controls.Add(Me.ComboBox12)
-        Me.Panel4.Controls.Add(Me.ComboBox10)
-        Me.Panel4.Controls.Add(Me.ComboBox9)
-        Me.Panel4.Controls.Add(Me.Label25)
-        Me.Panel4.Controls.Add(Me.Label24)
-        Me.Panel4.Controls.Add(Me.Label23)
-        Me.Panel4.Controls.Add(Me.Label22)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(3, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(833, 86)
-        Me.Panel4.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(3, 294)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(833, 39)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Cancel"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        Me.ToolStripButton2.ToolTipText = "Save"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colView, Me.colRemove, Me.colSTId, Me.colGroupId, Me.colSkillId, Me.colLevelId, Me.colSkillName, Me.colSkillLevel, Me.colMin})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 89)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(833, 205)
-        Me.DataGridView1.TabIndex = 2
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(8, 9)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(58, 15)
-        Me.Label22.TabIndex = 0
-        Me.Label22.Text = "Skill Type"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(8, 33)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(68, 15)
-        Me.Label23.TabIndex = 1
-        Me.Label23.Text = "Skill Group"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(8, 57)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(65, 15)
-        Me.Label24.TabIndex = 2
-        Me.Label24.Text = "Skill Name"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(395, 9)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(61, 15)
-        Me.Label25.TabIndex = 3
-        Me.Label25.Text = "Skill Level"
-        '
-        'ComboBox9
-        '
-        Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Location = New System.Drawing.Point(87, 6)
-        Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(283, 23)
-        Me.ComboBox9.TabIndex = 4
-        '
-        'ComboBox10
-        '
-        Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Location = New System.Drawing.Point(87, 30)
-        Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(283, 23)
-        Me.ComboBox10.TabIndex = 5
-        '
-        'ComboBox11
-        '
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Location = New System.Drawing.Point(474, 6)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(283, 23)
-        Me.ComboBox11.TabIndex = 7
-        '
-        'ComboBox12
-        '
-        Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Location = New System.Drawing.Point(87, 54)
-        Me.ComboBox12.Name = "ComboBox12"
-        Me.ComboBox12.Size = New System.Drawing.Size(283, 23)
-        Me.ComboBox12.TabIndex = 6
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(395, 33)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(72, 15)
-        Me.Label26.TabIndex = 8
-        Me.Label26.Text = "Length Used"
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(474, 30)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(47, 23)
-        Me.TextBox13.TabIndex = 11
-        '
-        'ComboBox13
-        '
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"Month(s)", "Year(s)"})
-        Me.ComboBox13.Location = New System.Drawing.Point(527, 30)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(137, 23)
-        Me.ComboBox13.TabIndex = 13
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
-        '
-        'colView
-        '
-        Me.colView.Frozen = True
-        Me.colView.HeaderText = ""
-        Me.colView.Name = "colView"
-        Me.colView.ReadOnly = True
-        Me.colView.Text = "View"
-        Me.colView.UseColumnTextForButtonValue = True
-        Me.colView.Width = 70
-        '
-        'colRemove
-        '
-        Me.colRemove.Frozen = True
-        Me.colRemove.HeaderText = ""
-        Me.colRemove.Name = "colRemove"
-        Me.colRemove.ReadOnly = True
-        Me.colRemove.Text = "Remove"
-        Me.colRemove.UseColumnTextForButtonValue = True
-        Me.colRemove.Width = 70
-        '
-        'colSTId
-        '
-        Me.colSTId.HeaderText = "Type Id"
-        Me.colSTId.Name = "colSTId"
-        Me.colSTId.ReadOnly = True
-        Me.colSTId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colSTId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.colSTId.Visible = False
-        Me.colSTId.Width = 50
-        '
-        'colGroupId
-        '
-        Me.colGroupId.HeaderText = "Group Id"
-        Me.colGroupId.Name = "colGroupId"
-        Me.colGroupId.ReadOnly = True
-        Me.colGroupId.Visible = False
-        '
-        'colSkillId
-        '
-        Me.colSkillId.HeaderText = "Skill Id"
-        Me.colSkillId.Name = "colSkillId"
-        Me.colSkillId.ReadOnly = True
-        Me.colSkillId.Visible = False
-        '
-        'colLevelId
-        '
-        Me.colLevelId.HeaderText = "Skill Level Id"
-        Me.colLevelId.Name = "colLevelId"
-        Me.colLevelId.ReadOnly = True
-        Me.colLevelId.Visible = False
-        '
-        'colSkillName
-        '
-        Me.colSkillName.HeaderText = "Skill"
-        Me.colSkillName.Name = "colSkillName"
-        Me.colSkillName.ReadOnly = True
-        Me.colSkillName.Width = 250
-        '
-        'colSkillLevel
-        '
-        Me.colSkillLevel.HeaderText = "Skill Level"
-        Me.colSkillLevel.Name = "colSkillLevel"
-        Me.colSkillLevel.ReadOnly = True
-        Me.colSkillLevel.Width = 120
-        '
-        'colMin
-        '
-        Me.colMin.HeaderText = "Length Used (Minimum)"
-        Me.colMin.Name = "colMin"
-        Me.colMin.ReadOnly = True
-        Me.colMin.Width = 120
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(7, 204)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(50, 15)
+        Me.Label28.TabIndex = 39
+        Me.Label28.Text = "Benefits"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(157, 201)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(416, 23)
+        Me.TextBox15.TabIndex = 38
         '
         'frmMR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(859, 639)
+        Me.ClientSize = New System.Drawing.Size(859, 754)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
@@ -1140,7 +1191,7 @@ Partial Class frmMR
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMR"
-        Me.Text = "Manpower Requirement"
+        Me.Text = "i"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -1153,17 +1204,17 @@ Partial Class frmMR
         Me.tpEduc.PerformLayout()
         Me.tpSkills.ResumeLayout(False)
         Me.tpSkills.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.tpJDText.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1266,4 +1317,9 @@ Partial Class frmMR
     Friend WithEvents colSkillName As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colSkillLevel As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents colMin As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
 End Class
