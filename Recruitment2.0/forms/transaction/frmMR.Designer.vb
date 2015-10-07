@@ -28,6 +28,8 @@ Partial Class frmMR
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpEmpSetup = New System.Windows.Forms.TabPage()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -124,8 +126,8 @@ Partial Class frmMR
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -151,7 +153,7 @@ Partial Class frmMR
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(859, 715)
+        Me.Panel1.Size = New System.Drawing.Size(859, 702)
         Me.Panel1.TabIndex = 4
         '
         'Panel2
@@ -162,16 +164,16 @@ Partial Class frmMR
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(857, 667)
+        Me.Panel2.Size = New System.Drawing.Size(857, 654)
         Me.Panel2.TabIndex = 5
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TabControl1)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 162)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 187)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(855, 503)
+        Me.GroupBox2.Size = New System.Drawing.Size(855, 465)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Request Details"
@@ -187,7 +189,7 @@ Partial Class frmMR
         Me.TabControl1.Location = New System.Drawing.Point(3, 19)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(849, 481)
+        Me.TabControl1.Size = New System.Drawing.Size(849, 443)
         Me.TabControl1.TabIndex = 0
         '
         'tpEmpSetup
@@ -220,10 +222,26 @@ Partial Class frmMR
         Me.tpEmpSetup.Location = New System.Drawing.Point(4, 24)
         Me.tpEmpSetup.Name = "tpEmpSetup"
         Me.tpEmpSetup.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 453)
+        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 415)
         Me.tpEmpSetup.TabIndex = 4
         Me.tpEmpSetup.Text = "Employment Setup"
         Me.tpEmpSetup.UseVisualStyleBackColor = True
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(7, 204)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(50, 15)
+        Me.Label28.TabIndex = 39
+        Me.Label28.Text = "Benefits"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(157, 201)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(416, 23)
+        Me.TextBox15.TabIndex = 38
         '
         'CheckBox2
         '
@@ -433,7 +451,7 @@ Partial Class frmMR
         Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidate.Name = "tpCandidate"
         Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(841, 341)
+        Me.tpCandidate.Size = New System.Drawing.Size(841, 415)
         Me.tpCandidate.TabIndex = 0
         Me.tpCandidate.Text = "Candidate Preference"
         Me.tpCandidate.UseVisualStyleBackColor = True
@@ -575,7 +593,7 @@ Partial Class frmMR
         Me.tpEduc.Controls.Add(Me.Label19)
         Me.tpEduc.Location = New System.Drawing.Point(4, 24)
         Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(841, 341)
+        Me.tpEduc.Size = New System.Drawing.Size(841, 415)
         Me.tpEduc.TabIndex = 2
         Me.tpEduc.Text = "Education Preference"
         Me.tpEduc.UseVisualStyleBackColor = True
@@ -643,7 +661,7 @@ Partial Class frmMR
         Me.tpSkills.Location = New System.Drawing.Point(4, 24)
         Me.tpSkills.Name = "tpSkills"
         Me.tpSkills.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkills.Size = New System.Drawing.Size(841, 341)
+        Me.tpSkills.Size = New System.Drawing.Size(841, 415)
         Me.tpSkills.TabIndex = 1
         Me.tpSkills.Text = "Skill Preference"
         Me.tpSkills.UseVisualStyleBackColor = True
@@ -657,7 +675,7 @@ Partial Class frmMR
         Me.DataGridView1.Location = New System.Drawing.Point(3, 89)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(833, 208)
+        Me.DataGridView1.Size = New System.Drawing.Size(833, 282)
         Me.DataGridView1.TabIndex = 2
         '
         'colView
@@ -736,7 +754,7 @@ Partial Class frmMR
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(3, 297)
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 371)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(833, 39)
         Me.ToolStrip1.TabIndex = 1
@@ -895,7 +913,7 @@ Partial Class frmMR
         Me.tpJDText.Controls.Add(Me.RichTextBox1)
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(841, 341)
+        Me.tpJDText.Size = New System.Drawing.Size(841, 415)
         Me.tpJDText.TabIndex = 3
         Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
@@ -905,13 +923,15 @@ Partial Class frmMR
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(839, 339)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 413)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox16)
+        Me.GroupBox1.Controls.Add(Me.Label29)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.Label18)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -925,7 +945,7 @@ Partial Class frmMR
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(855, 162)
+        Me.GroupBox1.Size = New System.Drawing.Size(855, 187)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Request Information"
@@ -1024,7 +1044,7 @@ Partial Class frmMR
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 667)
+        Me.Panel3.Location = New System.Drawing.Point(0, 654)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(857, 46)
         Me.Panel3.TabIndex = 4
@@ -1163,27 +1183,27 @@ Partial Class frmMR
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'Label28
+        'Label29
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(7, 204)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(50, 15)
-        Me.Label28.TabIndex = 39
-        Me.Label28.Text = "Benefits"
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(15, 152)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(99, 15)
+        Me.Label29.TabIndex = 26
+        Me.Label29.Text = "# of Requirement"
         '
-        'TextBox15
+        'TextBox16
         '
-        Me.TextBox15.Location = New System.Drawing.Point(157, 201)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(416, 23)
-        Me.TextBox15.TabIndex = 38
+        Me.TextBox16.Location = New System.Drawing.Point(132, 149)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(75, 23)
+        Me.TextBox16.TabIndex = 27
         '
         'frmMR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(859, 754)
+        Me.ClientSize = New System.Drawing.Size(859, 741)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
@@ -1191,7 +1211,7 @@ Partial Class frmMR
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMR"
-        Me.Text = "i"
+        Me.Text = "Manpower Requirement"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -1322,4 +1342,6 @@ Partial Class frmMR
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents Label28 As System.Windows.Forms.Label
     Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents Label29 As System.Windows.Forms.Label
 End Class
