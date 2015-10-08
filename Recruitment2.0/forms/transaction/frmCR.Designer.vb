@@ -178,6 +178,7 @@ Partial Class frmCR
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.Label75 = New System.Windows.Forms.Label()
         Me.Label76 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -187,6 +188,7 @@ Partial Class frmCR
         Me.TabControl1.SuspendLayout()
         Me.tpContractDet.SuspendLayout()
         Me.tpRates.SuspendLayout()
+        Me.tpJD.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -694,9 +696,10 @@ Partial Class frmCR
         '
         Me.tpJD.AutoScroll = True
         Me.tpJD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpJD.Controls.Add(Me.RichTextBox1)
         Me.tpJD.Location = New System.Drawing.Point(4, 24)
         Me.tpJD.Name = "tpJD"
-        Me.tpJD.Size = New System.Drawing.Size(855, 581)
+        Me.tpJD.Size = New System.Drawing.Size(1026, 581)
         Me.tpJD.TabIndex = 2
         Me.tpJD.Text = "Job Description (Text)"
         Me.tpJD.UseVisualStyleBackColor = True
@@ -1801,6 +1804,16 @@ Partial Class frmCR
         Me.Label76.Text = "0.00"
         Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(1024, 579)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = ""
+        '
         'frmCR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1829,6 +1842,7 @@ Partial Class frmCR
         Me.tpContractDet.ResumeLayout(False)
         Me.tpContractDet.PerformLayout()
         Me.tpRates.ResumeLayout(False)
+        Me.tpJD.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.Panel7.ResumeLayout(False)
@@ -1994,4 +2008,5 @@ Partial Class frmCR
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
 End Class
