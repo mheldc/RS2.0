@@ -171,9 +171,9 @@ Partial Class frmMR
         '
         Me.GroupBox2.Controls.Add(Me.TabControl1)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 187)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 155)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(855, 465)
+        Me.GroupBox2.Size = New System.Drawing.Size(855, 497)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Request Details"
@@ -189,7 +189,7 @@ Partial Class frmMR
         Me.TabControl1.Location = New System.Drawing.Point(3, 19)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(849, 443)
+        Me.TabControl1.Size = New System.Drawing.Size(849, 475)
         Me.TabControl1.TabIndex = 0
         '
         'tpEmpSetup
@@ -913,7 +913,7 @@ Partial Class frmMR
         Me.tpJDText.Controls.Add(Me.RichTextBox1)
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(841, 415)
+        Me.tpJDText.Size = New System.Drawing.Size(841, 447)
         Me.tpJDText.TabIndex = 3
         Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
@@ -923,7 +923,7 @@ Partial Class frmMR
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(839, 413)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 445)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False
@@ -945,7 +945,7 @@ Partial Class frmMR
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(855, 187)
+        Me.GroupBox1.Size = New System.Drawing.Size(855, 155)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Request Information"
@@ -954,7 +954,7 @@ Partial Class frmMR
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(128, 44)
+        Me.Label17.Location = New System.Drawing.Point(539, 19)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(22, 23)
         Me.Label17.TabIndex = 25
@@ -963,7 +963,7 @@ Partial Class frmMR
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(15, 50)
+        Me.Label18.Location = New System.Drawing.Point(426, 25)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(62, 15)
         Me.Label18.TabIndex = 24
@@ -972,7 +972,7 @@ Partial Class frmMR
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 103)
+        Me.Label7.Location = New System.Drawing.Point(15, 72)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(73, 15)
         Me.Label7.TabIndex = 23
@@ -980,7 +980,7 @@ Partial Class frmMR
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(132, 100)
+        Me.TextBox2.Location = New System.Drawing.Point(132, 69)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(416, 23)
         Me.TextBox2.TabIndex = 22
@@ -988,7 +988,7 @@ Partial Class frmMR
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(132, 124)
+        Me.ComboBox4.Location = New System.Drawing.Point(132, 93)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(416, 23)
         Me.ComboBox4.TabIndex = 21
@@ -996,7 +996,7 @@ Partial Class frmMR
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 127)
+        Me.Label6.Location = New System.Drawing.Point(15, 96)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(69, 15)
         Me.Label6.TabIndex = 20
@@ -1024,7 +1024,7 @@ Partial Class frmMR
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(132, 76)
+        Me.ComboBox1.Location = New System.Drawing.Point(132, 45)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(249, 23)
         Me.ComboBox1.TabIndex = 1
@@ -1032,7 +1032,7 @@ Partial Class frmMR
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 79)
+        Me.Label1.Location = New System.Drawing.Point(15, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 15)
         Me.Label1.TabIndex = 0
@@ -1186,7 +1186,7 @@ Partial Class frmMR
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(15, 152)
+        Me.Label29.Location = New System.Drawing.Point(15, 121)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(99, 15)
         Me.Label29.TabIndex = 26
@@ -1194,7 +1194,7 @@ Partial Class frmMR
         '
         'TextBox16
         '
-        Me.TextBox16.Location = New System.Drawing.Point(132, 149)
+        Me.TextBox16.Location = New System.Drawing.Point(132, 118)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(75, 23)
         Me.TextBox16.TabIndex = 27
