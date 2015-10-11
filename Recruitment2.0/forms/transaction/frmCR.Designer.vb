@@ -46,6 +46,18 @@ Partial Class frmCR
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpContractDet = New System.Windows.Forms.TabPage()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -68,93 +80,15 @@ Partial Class frmCR
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tpRates = New System.Windows.Forms.TabPage()
-        Me.tpJD = New System.Windows.Forms.TabPage()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.TextBox39 = New System.Windows.Forms.TextBox()
+        Me.TextBox40 = New System.Windows.Forms.TextBox()
+        Me.TextBox41 = New System.Windows.Forms.TextBox()
+        Me.TextBox42 = New System.Windows.Forms.TextBox()
+        Me.TextBox43 = New System.Windows.Forms.TextBox()
+        Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.TextBox26 = New System.Windows.Forms.TextBox()
@@ -170,14 +104,80 @@ Partial Class frmCR
         Me.TextBox36 = New System.Windows.Forms.TextBox()
         Me.TextBox37 = New System.Windows.Forms.TextBox()
         Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
-        Me.TextBox42 = New System.Windows.Forms.TextBox()
-        Me.TextBox43 = New System.Windows.Forms.TextBox()
-        Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label57 = New System.Windows.Forms.Label()
+        Me.Label56 = New System.Windows.Forms.Label()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.tpJD = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -188,10 +188,10 @@ Partial Class frmCR
         Me.TabControl1.SuspendLayout()
         Me.tpContractDet.SuspendLayout()
         Me.tpRates.SuspendLayout()
-        Me.tpJD.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        Me.tpJD.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsOps
@@ -471,10 +471,124 @@ Partial Class frmCR
         Me.tpContractDet.Location = New System.Drawing.Point(4, 24)
         Me.tpContractDet.Name = "tpContractDet"
         Me.tpContractDet.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpContractDet.Size = New System.Drawing.Size(855, 581)
+        Me.tpContractDet.Size = New System.Drawing.Size(1026, 581)
         Me.tpContractDet.TabIndex = 0
         Me.tpContractDet.Text = "Contract Details"
         Me.tpContractDet.UseVisualStyleBackColor = True
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(156, 300)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(111, 15)
+        Me.Label35.TabIndex = 33
+        Me.Label35.Text = "[Contact Numbers]"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(31, 300)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(76, 15)
+        Me.Label36.TabIndex = 32
+        Me.Label36.Text = "Contact Nos."
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(156, 140)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(60, 15)
+        Me.Label33.TabIndex = 31
+        Me.Label33.Text = "[Job Post]"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(30, 140)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(52, 15)
+        Me.Label34.TabIndex = 30
+        Me.Label34.Text = "Job Post"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(156, 65)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(140, 15)
+        Me.Label31.TabIndex = 29
+        Me.Label31.Text = "[Requirement Category]"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(30, 65)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(81, 15)
+        Me.Label32.TabIndex = 28
+        Me.Label32.Text = "Req. Category"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(439, 115)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(65, 15)
+        Me.Label29.TabIndex = 27
+        Me.Label29.Text = "[LR Status]"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(358, 115)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(56, 15)
+        Me.Label30.TabIndex = 26
+        Me.Label30.Text = "LR Status"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(439, 90)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(70, 15)
+        Me.Label27.TabIndex = 25
+        Me.Label27.Text = "[MR Status]"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(358, 90)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(62, 15)
+        Me.Label28.TabIndex = 24
+        Me.Label28.Text = "MR Status"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(156, 115)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(96, 15)
+        Me.Label25.TabIndex = 23
+        Me.Label25.Text = "[LR Reference #]"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(30, 115)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(84, 15)
+        Me.Label26.TabIndex = 22
+        Me.Label26.Text = "LR Reference #"
         '
         'Label20
         '
@@ -692,183 +806,6 @@ Partial Class frmCR
         Me.tpRates.Text = "Contract Rates and Benefits"
         Me.tpRates.UseVisualStyleBackColor = True
         '
-        'tpJD
-        '
-        Me.tpJD.AutoScroll = True
-        Me.tpJD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpJD.Controls.Add(Me.RichTextBox1)
-        Me.tpJD.Location = New System.Drawing.Point(4, 24)
-        Me.tpJD.Name = "tpJD"
-        Me.tpJD.Size = New System.Drawing.Size(1026, 581)
-        Me.tpJD.TabIndex = 2
-        Me.tpJD.Text = "Job Description (Text)"
-        Me.tpJD.UseVisualStyleBackColor = True
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(156, 115)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(96, 15)
-        Me.Label25.TabIndex = 23
-        Me.Label25.Text = "[LR Reference #]"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(30, 115)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(84, 15)
-        Me.Label26.TabIndex = 22
-        Me.Label26.Text = "LR Reference #"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(439, 90)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(70, 15)
-        Me.Label27.TabIndex = 25
-        Me.Label27.Text = "[MR Status]"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(358, 90)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(62, 15)
-        Me.Label28.TabIndex = 24
-        Me.Label28.Text = "MR Status"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(439, 115)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(65, 15)
-        Me.Label29.TabIndex = 27
-        Me.Label29.Text = "[LR Status]"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(358, 115)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(56, 15)
-        Me.Label30.TabIndex = 26
-        Me.Label30.Text = "LR Status"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(156, 65)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(140, 15)
-        Me.Label31.TabIndex = 29
-        Me.Label31.Text = "[Requirement Category]"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(30, 65)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(81, 15)
-        Me.Label32.TabIndex = 28
-        Me.Label32.Text = "Req. Category"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(156, 140)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(60, 15)
-        Me.Label33.TabIndex = 31
-        Me.Label33.Text = "[Job Post]"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(30, 140)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(52, 15)
-        Me.Label34.TabIndex = 30
-        Me.Label34.Text = "Job Post"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(156, 300)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(111, 15)
-        Me.Label35.TabIndex = 33
-        Me.Label35.Text = "[Contact Numbers]"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(31, 300)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(76, 15)
-        Me.Label36.TabIndex = 32
-        Me.Label36.Text = "Contact Nos."
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.Label57)
-        Me.Panel6.Controls.Add(Me.Label56)
-        Me.Panel6.Controls.Add(Me.Label55)
-        Me.Panel6.Controls.Add(Me.Label54)
-        Me.Panel6.Controls.Add(Me.Label52)
-        Me.Panel6.Controls.Add(Me.Label53)
-        Me.Panel6.Controls.Add(Me.Label51)
-        Me.Panel6.Controls.Add(Me.Label49)
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel6.Location = New System.Drawing.Point(3, 504)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1018, 72)
-        Me.Panel6.TabIndex = 0
-        '
-        'Panel7
-        '
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.TextBox8)
-        Me.Panel7.Controls.Add(Me.Label58)
-        Me.Panel7.Controls.Add(Me.Label50)
-        Me.Panel7.Controls.Add(Me.TextBox7)
-        Me.Panel7.Controls.Add(Me.TextBox6)
-        Me.Panel7.Controls.Add(Me.Label48)
-        Me.Panel7.Controls.Add(Me.TextBox5)
-        Me.Panel7.Controls.Add(Me.Label47)
-        Me.Panel7.Controls.Add(Me.TextBox4)
-        Me.Panel7.Controls.Add(Me.TextBox3)
-        Me.Panel7.Controls.Add(Me.Label46)
-        Me.Panel7.Controls.Add(Me.Label45)
-        Me.Panel7.Controls.Add(Me.Label44)
-        Me.Panel7.Controls.Add(Me.CheckBox1)
-        Me.Panel7.Controls.Add(Me.ComboBox3)
-        Me.Panel7.Controls.Add(Me.TextBox2)
-        Me.Panel7.Controls.Add(Me.ComboBox2)
-        Me.Panel7.Controls.Add(Me.TextBox1)
-        Me.Panel7.Controls.Add(Me.Label43)
-        Me.Panel7.Controls.Add(Me.Label42)
-        Me.Panel7.Controls.Add(Me.Label41)
-        Me.Panel7.Controls.Add(Me.DateTimePicker2)
-        Me.Panel7.Controls.Add(Me.DateTimePicker1)
-        Me.Panel7.Controls.Add(Me.Label40)
-        Me.Panel7.Controls.Add(Me.Label39)
-        Me.Panel7.Controls.Add(Me.Label37)
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel7.Location = New System.Drawing.Point(3, 3)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(380, 501)
-        Me.Panel7.TabIndex = 1
-        '
         'Panel8
         '
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -938,662 +875,79 @@ Partial Class frmCR
         Me.Panel8.Size = New System.Drawing.Size(638, 501)
         Me.Panel8.TabIndex = 2
         '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(7, 10)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(55, 15)
-        Me.Label37.TabIndex = 23
-        Me.Label37.Text = "Duration"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(6, 10)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(52, 15)
-        Me.Label38.TabIndex = 24
-        Me.Label38.Text = "Benefits"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(25, 40)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(61, 15)
-        Me.Label39.TabIndex = 24
-        Me.Label39.Text = "Start Date"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(25, 65)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(55, 15)
-        Me.Label40.TabIndex = 25
-        Me.Label40.Text = "End Date"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(128, 34)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(229, 23)
-        Me.DateTimePicker1.TabIndex = 26
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(128, 59)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(229, 23)
-        Me.DateTimePicker2.TabIndex = 27
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(7, 100)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(109, 15)
-        Me.Label41.TabIndex = 28
-        Me.Label41.Text = "Rates (Basic Salary)"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(25, 130)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(88, 15)
-        Me.Label42.TabIndex = 29
-        Me.Label42.Text = "Previous Basic"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(25, 155)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(81, 15)
-        Me.Label43.TabIndex = 30
-        Me.Label43.Text = "Current Basic"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(128, 127)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(91, 23)
-        Me.TextBox1.TabIndex = 31
-        Me.TextBox1.Text = "999,999.00"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(221, 127)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(136, 23)
-        Me.ComboBox2.TabIndex = 32
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(221, 152)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(136, 23)
-        Me.ComboBox3.TabIndex = 34
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(128, 152)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(91, 23)
-        Me.TextBox2.TabIndex = 33
-        Me.TextBox2.Text = "999,999.00"
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(128, 181)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(103, 19)
-        Me.CheckBox1.TabIndex = 35
-        Me.CheckBox1.Text = "With Increase"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(7, 208)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(83, 15)
-        Me.Label44.TabIndex = 36
-        Me.Label44.Text = "Miscellaneous"
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(25, 233)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(211, 15)
-        Me.Label45.TabIndex = 37
-        Me.Label45.Text = "Total number of Workdays per Month"
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(25, 258)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(202, 15)
-        Me.Label46.TabIndex = 38
-        Me.Label46.Text = "Total number of Workhours per Day"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(293, 230)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(64, 23)
-        Me.TextBox3.TabIndex = 39
-        Me.TextBox3.Text = "99"
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(293, 255)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(64, 23)
-        Me.TextBox4.TabIndex = 40
-        Me.TextBox4.Text = "99"
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(25, 308)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(119, 15)
-        Me.Label47.TabIndex = 41
-        Me.Label47.Text = "Management Fee (%)"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(293, 305)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(64, 23)
-        Me.TextBox5.TabIndex = 42
-        Me.TextBox5.Text = "99"
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(25, 333)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(109, 15)
-        Me.Label48.TabIndex = 43
-        Me.Label48.Text = "Client Rate (Gross)"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(266, 330)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(91, 23)
-        Me.TextBox6.TabIndex = 44
-        Me.TextBox6.Text = "999,999.00"
-        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(28, 385)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(329, 109)
-        Me.TextBox7.TabIndex = 46
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(7, 365)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(54, 15)
-        Me.Label50.TabIndex = 47
-        Me.Label50.Text = "Remarks"
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.Location = New System.Drawing.Point(8, 13)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(72, 15)
-        Me.Label49.TabIndex = 48
-        Me.Label49.Text = "GROSS RATE"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Location = New System.Drawing.Point(8, 39)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(75, 15)
-        Me.Label51.TabIndex = 49
-        Me.Label51.Text = "DIRECT COST"
-        '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(377, 39)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(112, 15)
-        Me.Label52.TabIndex = 51
-        Me.Label52.Text = "GROSS MARGIN (%)"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(377, 13)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(92, 15)
-        Me.Label53.TabIndex = 50
-        Me.Label53.Text = "GROSS MARGIN"
-        '
-        'Label54
-        '
-        Me.Label54.AutoSize = True
-        Me.Label54.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(104, 10)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(38, 19)
-        Me.Label54.TabIndex = 52
-        Me.Label54.Text = "[GR]"
-        '
-        'Label55
-        '
-        Me.Label55.AutoSize = True
-        Me.Label55.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(104, 36)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(37, 19)
-        Me.Label55.TabIndex = 53
-        Me.Label55.Text = "[DC]"
-        '
-        'Label56
-        '
-        Me.Label56.AutoSize = True
-        Me.Label56.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(531, 13)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(43, 19)
-        Me.Label56.TabIndex = 54
-        Me.Label56.Text = "[GM]"
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = True
-        Me.Label57.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label57.Location = New System.Drawing.Point(531, 36)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(59, 19)
-        Me.Label57.TabIndex = 55
-        Me.Label57.Text = "[GM %]"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(293, 280)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(64, 23)
-        Me.TextBox8.TabIndex = 49
-        Me.TextBox8.Text = "99"
-        Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label58
-        '
-        Me.Label58.AutoSize = True
-        Me.Label58.Location = New System.Drawing.Point(25, 283)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(187, 15)
-        Me.Label58.TabIndex = 48
-        Me.Label58.Text = "Total Contract Duration (in Days)"
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(29, 65)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(44, 19)
-        Me.CheckBox2.TabIndex = 25
-        Me.CheckBox2.Text = "SSS"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'Label59
-        '
-        Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(26, 40)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(75, 15)
-        Me.Label59.TabIndex = 26
-        Me.Label59.Text = "Basic Salary"
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(29, 88)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(71, 19)
-        Me.CheckBox3.TabIndex = 27
-        Me.CheckBox3.Text = "Pag-Ibig"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(29, 136)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(113, 19)
-        Me.CheckBox4.TabIndex = 29
-        Me.CheckBox4.Text = "13th Month Pay"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox5
-        '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(29, 112)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(83, 19)
-        Me.CheckBox5.TabIndex = 28
-        Me.CheckBox5.Text = "Philhealth"
-        Me.CheckBox5.UseVisualStyleBackColor = True
-        '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(29, 160)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(114, 19)
-        Me.CheckBox6.TabIndex = 30
-        Me.CheckBox6.Text = "Leave Incentives"
-        Me.CheckBox6.UseVisualStyleBackColor = True
-        '
-        'Label60
-        '
-        Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(26, 185)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(73, 15)
-        Me.Label60.TabIndex = 31
-        Me.Label60.Text = "Holiday Pay"
-        '
-        'Label61
-        '
-        Me.Label61.AutoSize = True
-        Me.Label61.Location = New System.Drawing.Point(26, 209)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(74, 15)
-        Me.Label61.TabIndex = 32
-        Me.Label61.Text = "ECola / Cola"
-        '
-        'Label62
-        '
-        Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(26, 233)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(35, 15)
-        Me.Label62.TabIndex = 33
-        Me.Label62.Text = "HMO"
-        '
-        'Label63
-        '
-        Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(26, 257)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(64, 15)
-        Me.Label63.TabIndex = 34
-        Me.Label63.Text = "Allowance"
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(26, 281)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(84, 15)
-        Me.Label64.TabIndex = 35
-        Me.Label64.Text = "Other Benefits"
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(27, 381)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(96, 15)
-        Me.Label65.TabIndex = 39
-        Me.Label65.Text = "Total Client Rate"
-        '
-        'Label66
-        '
-        Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(26, 357)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(115, 15)
-        Me.Label66.TabIndex = 38
-        Me.Label66.Text = "Total Contract Price"
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(26, 329)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(97, 15)
-        Me.Label67.TabIndex = 37
-        Me.Label67.Text = "Total Direct Cost"
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(26, 305)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(107, 15)
-        Me.Label68.TabIndex = 36
-        Me.Label68.Text = "Total Benefit Value"
-        '
-        'Label69
-        '
-        Me.Label69.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label69.Location = New System.Drawing.Point(495, 7)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(130, 20)
-        Me.Label69.TabIndex = 55
-        Me.Label69.Text = "Hourly"
-        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label70
-        '
-        Me.Label70.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.Location = New System.Drawing.Point(360, 7)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(130, 20)
-        Me.Label70.TabIndex = 56
-        Me.Label70.Text = "Daily"
-        Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label71
-        '
-        Me.Label71.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(224, 7)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(130, 20)
-        Me.Label71.TabIndex = 57
-        Me.Label71.Text = "Monthly"
-        Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label72
-        '
-        Me.Label72.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.Location = New System.Drawing.Point(228, 40)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(127, 15)
-        Me.Label72.TabIndex = 58
-        Me.Label72.Text = "0.00"
-        Me.Label72.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label73
-        '
-        Me.Label73.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.Location = New System.Drawing.Point(369, 40)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(121, 15)
-        Me.Label73.TabIndex = 59
-        Me.Label73.Text = "0.00"
-        Me.Label73.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label74
-        '
-        Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.Location = New System.Drawing.Point(504, 40)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(121, 15)
-        Me.Label74.TabIndex = 60
-        Me.Label74.Text = "0.00"
-        Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(226, 62)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox9.TabIndex = 61
-        Me.TextBox9.Text = "0.00"
-        Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(361, 62)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox10.TabIndex = 62
-        Me.TextBox10.Text = "0.00"
-        Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(496, 62)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox11.TabIndex = 63
-        Me.TextBox11.Text = "0.00"
-        Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(496, 86)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox12.TabIndex = 66
-        Me.TextBox12.Text = "0.00"
-        Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(361, 86)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox13.TabIndex = 65
-        Me.TextBox13.Text = "0.00"
-        Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(226, 86)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox14.TabIndex = 64
-        Me.TextBox14.Text = "0.00"
-        Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(496, 110)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox15.TabIndex = 69
-        Me.TextBox15.Text = "0.00"
-        Me.TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(361, 110)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox16.TabIndex = 68
-        Me.TextBox16.Text = "0.00"
-        Me.TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Location = New System.Drawing.Point(226, 110)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox17.TabIndex = 67
-        Me.TextBox17.Text = "0.00"
-        Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Location = New System.Drawing.Point(496, 134)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox18.TabIndex = 72
-        Me.TextBox18.Text = "0.00"
-        Me.TextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox19
-        '
-        Me.TextBox19.Location = New System.Drawing.Point(361, 134)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox19.TabIndex = 71
-        Me.TextBox19.Text = "0.00"
-        Me.TextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox20
-        '
-        Me.TextBox20.Location = New System.Drawing.Point(226, 134)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox20.TabIndex = 70
-        Me.TextBox20.Text = "0.00"
-        Me.TextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(496, 158)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox21.TabIndex = 75
-        Me.TextBox21.Text = "0.00"
-        Me.TextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox22
-        '
-        Me.TextBox22.Location = New System.Drawing.Point(361, 158)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox22.TabIndex = 74
-        Me.TextBox22.Text = "0.00"
-        Me.TextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TextBox23
-        '
-        Me.TextBox23.Location = New System.Drawing.Point(226, 158)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox23.TabIndex = 73
-        Me.TextBox23.Text = "0.00"
-        Me.TextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        'Label76
+        '
+        Me.Label76.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label76.Location = New System.Drawing.Point(223, 381)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(132, 15)
+        Me.Label76.TabIndex = 98
+        Me.Label76.Text = "0.00"
+        Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label75
+        '
+        Me.Label75.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label75.Location = New System.Drawing.Point(223, 357)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(132, 15)
+        Me.Label75.TabIndex = 97
+        Me.Label75.Text = "0.00"
+        Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TextBox39
+        '
+        Me.TextBox39.Location = New System.Drawing.Point(496, 326)
+        Me.TextBox39.Name = "TextBox39"
+        Me.TextBox39.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox39.TabIndex = 96
+        Me.TextBox39.Text = "0.00"
+        Me.TextBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox40
+        '
+        Me.TextBox40.Location = New System.Drawing.Point(361, 326)
+        Me.TextBox40.Name = "TextBox40"
+        Me.TextBox40.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox40.TabIndex = 95
+        Me.TextBox40.Text = "0.00"
+        Me.TextBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox41
+        '
+        Me.TextBox41.Location = New System.Drawing.Point(226, 326)
+        Me.TextBox41.Name = "TextBox41"
+        Me.TextBox41.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox41.TabIndex = 94
+        Me.TextBox41.Text = "0.00"
+        Me.TextBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox42
+        '
+        Me.TextBox42.Location = New System.Drawing.Point(496, 302)
+        Me.TextBox42.Name = "TextBox42"
+        Me.TextBox42.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox42.TabIndex = 93
+        Me.TextBox42.Text = "0.00"
+        Me.TextBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox43
+        '
+        Me.TextBox43.Location = New System.Drawing.Point(361, 302)
+        Me.TextBox43.Name = "TextBox43"
+        Me.TextBox43.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox43.TabIndex = 92
+        Me.TextBox43.Text = "0.00"
+        Me.TextBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox44
+        '
+        Me.TextBox44.Location = New System.Drawing.Point(226, 302)
+        Me.TextBox44.Name = "TextBox44"
+        Me.TextBox44.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox44.TabIndex = 91
+        Me.TextBox44.Text = "0.00"
+        Me.TextBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TextBox24
         '
@@ -1730,79 +1084,725 @@ Partial Class frmCR
         Me.TextBox38.Text = "0.00"
         Me.TextBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox39
+        'TextBox21
         '
-        Me.TextBox39.Location = New System.Drawing.Point(496, 326)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox39.TabIndex = 96
-        Me.TextBox39.Text = "0.00"
-        Me.TextBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox21.Location = New System.Drawing.Point(496, 158)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox21.TabIndex = 75
+        Me.TextBox21.Text = "0.00"
+        Me.TextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox40
+        'TextBox22
         '
-        Me.TextBox40.Location = New System.Drawing.Point(361, 326)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox40.TabIndex = 95
-        Me.TextBox40.Text = "0.00"
-        Me.TextBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox22.Location = New System.Drawing.Point(361, 158)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox22.TabIndex = 74
+        Me.TextBox22.Text = "0.00"
+        Me.TextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox41
+        'TextBox23
         '
-        Me.TextBox41.Location = New System.Drawing.Point(226, 326)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox41.TabIndex = 94
-        Me.TextBox41.Text = "0.00"
-        Me.TextBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox23.Location = New System.Drawing.Point(226, 158)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox23.TabIndex = 73
+        Me.TextBox23.Text = "0.00"
+        Me.TextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox42
+        'TextBox18
         '
-        Me.TextBox42.Location = New System.Drawing.Point(496, 302)
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox42.TabIndex = 93
-        Me.TextBox42.Text = "0.00"
-        Me.TextBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox18.Location = New System.Drawing.Point(496, 134)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox18.TabIndex = 72
+        Me.TextBox18.Text = "0.00"
+        Me.TextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox43
+        'TextBox19
         '
-        Me.TextBox43.Location = New System.Drawing.Point(361, 302)
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox43.TabIndex = 92
-        Me.TextBox43.Text = "0.00"
-        Me.TextBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox19.Location = New System.Drawing.Point(361, 134)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox19.TabIndex = 71
+        Me.TextBox19.Text = "0.00"
+        Me.TextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'TextBox44
+        'TextBox20
         '
-        Me.TextBox44.Location = New System.Drawing.Point(226, 302)
-        Me.TextBox44.Name = "TextBox44"
-        Me.TextBox44.Size = New System.Drawing.Size(129, 23)
-        Me.TextBox44.TabIndex = 91
-        Me.TextBox44.Text = "0.00"
-        Me.TextBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TextBox20.Location = New System.Drawing.Point(226, 134)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox20.TabIndex = 70
+        Me.TextBox20.Text = "0.00"
+        Me.TextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label75
+        'TextBox15
         '
-        Me.Label75.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label75.Location = New System.Drawing.Point(223, 357)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(132, 15)
-        Me.Label75.TabIndex = 97
-        Me.Label75.Text = "0.00"
-        Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.TextBox15.Location = New System.Drawing.Point(496, 110)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox15.TabIndex = 69
+        Me.TextBox15.Text = "0.00"
+        Me.TextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'Label76
+        'TextBox16
         '
-        Me.Label76.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label76.Location = New System.Drawing.Point(223, 381)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(132, 15)
-        Me.Label76.TabIndex = 98
-        Me.Label76.Text = "0.00"
-        Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.TextBox16.Location = New System.Drawing.Point(361, 110)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox16.TabIndex = 68
+        Me.TextBox16.Text = "0.00"
+        Me.TextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Location = New System.Drawing.Point(226, 110)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox17.TabIndex = 67
+        Me.TextBox17.Text = "0.00"
+        Me.TextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(496, 86)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox12.TabIndex = 66
+        Me.TextBox12.Text = "0.00"
+        Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Location = New System.Drawing.Point(361, 86)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox13.TabIndex = 65
+        Me.TextBox13.Text = "0.00"
+        Me.TextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(226, 86)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox14.TabIndex = 64
+        Me.TextBox14.Text = "0.00"
+        Me.TextBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(496, 62)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox11.TabIndex = 63
+        Me.TextBox11.Text = "0.00"
+        Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(361, 62)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox10.TabIndex = 62
+        Me.TextBox10.Text = "0.00"
+        Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(226, 62)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(129, 23)
+        Me.TextBox9.TabIndex = 61
+        Me.TextBox9.Text = "0.00"
+        Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label74
+        '
+        Me.Label74.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Location = New System.Drawing.Point(504, 40)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(121, 15)
+        Me.Label74.TabIndex = 60
+        Me.Label74.Text = "0.00"
+        Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label73
+        '
+        Me.Label73.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.Location = New System.Drawing.Point(369, 40)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(121, 15)
+        Me.Label73.TabIndex = 59
+        Me.Label73.Text = "0.00"
+        Me.Label73.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label72
+        '
+        Me.Label72.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Location = New System.Drawing.Point(228, 40)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(127, 15)
+        Me.Label72.TabIndex = 58
+        Me.Label72.Text = "0.00"
+        Me.Label72.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label71
+        '
+        Me.Label71.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(224, 7)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(130, 20)
+        Me.Label71.TabIndex = 57
+        Me.Label71.Text = "Monthly"
+        Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label70
+        '
+        Me.Label70.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(360, 7)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(130, 20)
+        Me.Label70.TabIndex = 56
+        Me.Label70.Text = "Daily"
+        Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label69
+        '
+        Me.Label69.Font = New System.Drawing.Font("Calibri", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Location = New System.Drawing.Point(495, 7)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(130, 20)
+        Me.Label69.TabIndex = 55
+        Me.Label69.Text = "Hourly"
+        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Location = New System.Drawing.Point(27, 381)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(96, 15)
+        Me.Label65.TabIndex = 39
+        Me.Label65.Text = "Total Client Rate"
+        '
+        'Label66
+        '
+        Me.Label66.AutoSize = True
+        Me.Label66.Location = New System.Drawing.Point(26, 357)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(115, 15)
+        Me.Label66.TabIndex = 38
+        Me.Label66.Text = "Total Contract Price"
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Location = New System.Drawing.Point(26, 329)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(97, 15)
+        Me.Label67.TabIndex = 37
+        Me.Label67.Text = "Total Direct Cost"
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Location = New System.Drawing.Point(26, 305)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(107, 15)
+        Me.Label68.TabIndex = 36
+        Me.Label68.Text = "Total Benefit Value"
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Location = New System.Drawing.Point(26, 281)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(84, 15)
+        Me.Label64.TabIndex = 35
+        Me.Label64.Text = "Other Benefits"
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Location = New System.Drawing.Point(26, 257)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(64, 15)
+        Me.Label63.TabIndex = 34
+        Me.Label63.Text = "Allowance"
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(26, 233)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(35, 15)
+        Me.Label62.TabIndex = 33
+        Me.Label62.Text = "HMO"
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Location = New System.Drawing.Point(26, 209)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(74, 15)
+        Me.Label61.TabIndex = 32
+        Me.Label61.Text = "ECola / Cola"
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Location = New System.Drawing.Point(26, 185)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(73, 15)
+        Me.Label60.TabIndex = 31
+        Me.Label60.Text = "Holiday Pay"
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.Location = New System.Drawing.Point(29, 160)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(114, 19)
+        Me.CheckBox6.TabIndex = 30
+        Me.CheckBox6.Text = "Leave Incentives"
+        Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(29, 136)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(113, 19)
+        Me.CheckBox4.TabIndex = 29
+        Me.CheckBox4.Text = "13th Month Pay"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(29, 112)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(83, 19)
+        Me.CheckBox5.TabIndex = 28
+        Me.CheckBox5.Text = "Philhealth"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(29, 88)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(71, 19)
+        Me.CheckBox3.TabIndex = 27
+        Me.CheckBox3.Text = "Pag-Ibig"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Location = New System.Drawing.Point(26, 40)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(75, 15)
+        Me.Label59.TabIndex = 26
+        Me.Label59.Text = "Basic Salary"
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(29, 65)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(44, 19)
+        Me.CheckBox2.TabIndex = 25
+        Me.CheckBox2.Text = "SSS"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(6, 10)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(52, 15)
+        Me.Label38.TabIndex = 24
+        Me.Label38.Text = "Benefits"
+        '
+        'Panel7
+        '
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.TextBox8)
+        Me.Panel7.Controls.Add(Me.Label58)
+        Me.Panel7.Controls.Add(Me.Label50)
+        Me.Panel7.Controls.Add(Me.TextBox7)
+        Me.Panel7.Controls.Add(Me.TextBox6)
+        Me.Panel7.Controls.Add(Me.Label48)
+        Me.Panel7.Controls.Add(Me.TextBox5)
+        Me.Panel7.Controls.Add(Me.Label47)
+        Me.Panel7.Controls.Add(Me.TextBox4)
+        Me.Panel7.Controls.Add(Me.TextBox3)
+        Me.Panel7.Controls.Add(Me.Label46)
+        Me.Panel7.Controls.Add(Me.Label45)
+        Me.Panel7.Controls.Add(Me.Label44)
+        Me.Panel7.Controls.Add(Me.CheckBox1)
+        Me.Panel7.Controls.Add(Me.ComboBox3)
+        Me.Panel7.Controls.Add(Me.TextBox2)
+        Me.Panel7.Controls.Add(Me.ComboBox2)
+        Me.Panel7.Controls.Add(Me.TextBox1)
+        Me.Panel7.Controls.Add(Me.Label43)
+        Me.Panel7.Controls.Add(Me.Label42)
+        Me.Panel7.Controls.Add(Me.Label41)
+        Me.Panel7.Controls.Add(Me.DateTimePicker2)
+        Me.Panel7.Controls.Add(Me.DateTimePicker1)
+        Me.Panel7.Controls.Add(Me.Label40)
+        Me.Panel7.Controls.Add(Me.Label39)
+        Me.Panel7.Controls.Add(Me.Label37)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel7.Location = New System.Drawing.Point(3, 3)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(380, 501)
+        Me.Panel7.TabIndex = 1
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(293, 280)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(64, 23)
+        Me.TextBox8.TabIndex = 49
+        Me.TextBox8.Text = "99"
+        Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Location = New System.Drawing.Point(25, 283)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(187, 15)
+        Me.Label58.TabIndex = 48
+        Me.Label58.Text = "Total Contract Duration (in Days)"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(7, 365)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(54, 15)
+        Me.Label50.TabIndex = 47
+        Me.Label50.Text = "Remarks"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(28, 385)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(329, 109)
+        Me.TextBox7.TabIndex = 46
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(266, 330)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(91, 23)
+        Me.TextBox6.TabIndex = 44
+        Me.TextBox6.Text = "999,999.00"
+        Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(25, 333)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(109, 15)
+        Me.Label48.TabIndex = 43
+        Me.Label48.Text = "Client Rate (Gross)"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(293, 305)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(64, 23)
+        Me.TextBox5.TabIndex = 42
+        Me.TextBox5.Text = "99"
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(25, 308)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(119, 15)
+        Me.Label47.TabIndex = 41
+        Me.Label47.Text = "Management Fee (%)"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(293, 255)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(64, 23)
+        Me.TextBox4.TabIndex = 40
+        Me.TextBox4.Text = "99"
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(293, 230)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(64, 23)
+        Me.TextBox3.TabIndex = 39
+        Me.TextBox3.Text = "99"
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(25, 258)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(202, 15)
+        Me.Label46.TabIndex = 38
+        Me.Label46.Text = "Total number of Workhours per Day"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(25, 233)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(211, 15)
+        Me.Label45.TabIndex = 37
+        Me.Label45.Text = "Total number of Workdays per Month"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(7, 208)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(83, 15)
+        Me.Label44.TabIndex = 36
+        Me.Label44.Text = "Miscellaneous"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(128, 181)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(103, 19)
+        Me.CheckBox1.TabIndex = 35
+        Me.CheckBox1.Text = "With Increase"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(221, 152)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(136, 23)
+        Me.ComboBox3.TabIndex = 34
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(128, 152)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(91, 23)
+        Me.TextBox2.TabIndex = 33
+        Me.TextBox2.Text = "999,999.00"
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(221, 127)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(136, 23)
+        Me.ComboBox2.TabIndex = 32
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(128, 127)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(91, 23)
+        Me.TextBox1.TabIndex = 31
+        Me.TextBox1.Text = "999,999.00"
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(25, 155)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(81, 15)
+        Me.Label43.TabIndex = 30
+        Me.Label43.Text = "Current Basic"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(25, 130)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(88, 15)
+        Me.Label42.TabIndex = 29
+        Me.Label42.Text = "Previous Basic"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(7, 100)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(109, 15)
+        Me.Label41.TabIndex = 28
+        Me.Label41.Text = "Rates (Basic Salary)"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(128, 59)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(229, 23)
+        Me.DateTimePicker2.TabIndex = 27
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(128, 34)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(229, 23)
+        Me.DateTimePicker1.TabIndex = 26
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(25, 65)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(55, 15)
+        Me.Label40.TabIndex = 25
+        Me.Label40.Text = "End Date"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(25, 40)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(61, 15)
+        Me.Label39.TabIndex = 24
+        Me.Label39.Text = "Start Date"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(7, 10)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(55, 15)
+        Me.Label37.TabIndex = 23
+        Me.Label37.Text = "Duration"
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.Label57)
+        Me.Panel6.Controls.Add(Me.Label56)
+        Me.Panel6.Controls.Add(Me.Label55)
+        Me.Panel6.Controls.Add(Me.Label54)
+        Me.Panel6.Controls.Add(Me.Label52)
+        Me.Panel6.Controls.Add(Me.Label53)
+        Me.Panel6.Controls.Add(Me.Label51)
+        Me.Panel6.Controls.Add(Me.Label49)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel6.Location = New System.Drawing.Point(3, 504)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(1018, 72)
+        Me.Panel6.TabIndex = 0
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label57.Location = New System.Drawing.Point(531, 36)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(59, 19)
+        Me.Label57.TabIndex = 55
+        Me.Label57.Text = "[GM %]"
+        '
+        'Label56
+        '
+        Me.Label56.AutoSize = True
+        Me.Label56.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Location = New System.Drawing.Point(531, 13)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(43, 19)
+        Me.Label56.TabIndex = 54
+        Me.Label56.Text = "[GM]"
+        '
+        'Label55
+        '
+        Me.Label55.AutoSize = True
+        Me.Label55.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(104, 36)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(37, 19)
+        Me.Label55.TabIndex = 53
+        Me.Label55.Text = "[DC]"
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.Location = New System.Drawing.Point(104, 10)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(38, 19)
+        Me.Label54.TabIndex = 52
+        Me.Label54.Text = "[GR]"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(377, 39)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(112, 15)
+        Me.Label52.TabIndex = 51
+        Me.Label52.Text = "GROSS MARGIN (%)"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(377, 13)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(92, 15)
+        Me.Label53.TabIndex = 50
+        Me.Label53.Text = "GROSS MARGIN"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label51.Location = New System.Drawing.Point(8, 39)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(75, 15)
+        Me.Label51.TabIndex = 49
+        Me.Label51.Text = "DIRECT COST"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.Location = New System.Drawing.Point(8, 13)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(72, 15)
+        Me.Label49.TabIndex = 48
+        Me.Label49.Text = "GROSS RATE"
+        '
+        'tpJD
+        '
+        Me.tpJD.AutoScroll = True
+        Me.tpJD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpJD.Controls.Add(Me.RichTextBox1)
+        Me.tpJD.Location = New System.Drawing.Point(4, 24)
+        Me.tpJD.Name = "tpJD"
+        Me.tpJD.Size = New System.Drawing.Size(1026, 581)
+        Me.tpJD.TabIndex = 2
+        Me.tpJD.Text = "Job Description (Text)"
+        Me.tpJD.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
@@ -1825,7 +1825,7 @@ Partial Class frmCR
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCR"
         Me.Text = "Contract Request"
@@ -1842,13 +1842,13 @@ Partial Class frmCR
         Me.tpContractDet.ResumeLayout(False)
         Me.tpContractDet.PerformLayout()
         Me.tpRates.ResumeLayout(False)
-        Me.tpJD.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
+        Me.tpJD.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -108,6 +108,18 @@
     <Compile Include="forms\maintenance\frmDepartment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\maintenance\frmRequestStatus.Designer.vb">
+      <DependentUpon>frmRequestStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmRequestStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmRequestType.Designer.vb">
+      <DependentUpon>frmRequestType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmRequestType.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\maintenance\frmSkill.Designer.vb">
       <DependentUpon>frmSkill.vb</DependentUpon>
     </Compile>
@@ -130,6 +142,12 @@
       <DependentUpon>frmSkillType.vb</DependentUpon>
     </Compile>
     <Compile Include="forms\maintenance\frmSkillType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserAccess.Designer.vb">
+      <DependentUpon>frmUserAccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmUserAccess.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\maintenance\frmUserGroups.Designer.vb">
@@ -204,6 +222,12 @@
     <EmbeddedResource Include="forms\maintenance\frmDepartment.resx">
       <DependentUpon>frmDepartment.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmRequestStatus.resx">
+      <DependentUpon>frmRequestStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmRequestType.resx">
+      <DependentUpon>frmRequestType.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmSkill.resx">
       <DependentUpon>frmSkill.vb</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmSkillType.resx">
       <DependentUpon>frmSkillType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmUserAccess.resx">
+      <DependentUpon>frmUserAccess.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmUserGroups.resx">
       <DependentUpon>frmUserGroups.vb</DependentUpon>

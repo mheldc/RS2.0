@@ -41,6 +41,22 @@ Partial Class frmLR
         Me.tpMRInfo = New System.Windows.Forms.TabPage()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.tpEmpSetup = New System.Windows.Forms.TabPage()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.tpCandidatePref = New System.Windows.Forms.TabPage()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -77,22 +93,6 @@ Partial Class frmLR
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tpARS = New System.Windows.Forms.TabPage()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -225,7 +225,7 @@ Partial Class frmLR
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(0, 660)
+        Me.Panel3.Location = New System.Drawing.Point(0, 521)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(842, 53)
         Me.Panel3.TabIndex = 6
@@ -260,7 +260,7 @@ Partial Class frmLR
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(842, 621)
+        Me.Panel1.Size = New System.Drawing.Size(842, 482)
         Me.Panel1.TabIndex = 7
         '
         'TabControl1
@@ -271,7 +271,7 @@ Partial Class frmLR
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(840, 619)
+        Me.TabControl1.Size = New System.Drawing.Size(840, 480)
         Me.TabControl1.TabIndex = 0
         '
         'tpMRInfo
@@ -283,7 +283,7 @@ Partial Class frmLR
         Me.tpMRInfo.Location = New System.Drawing.Point(4, 24)
         Me.tpMRInfo.Name = "tpMRInfo"
         Me.tpMRInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMRInfo.Size = New System.Drawing.Size(832, 591)
+        Me.tpMRInfo.Size = New System.Drawing.Size(832, 452)
         Me.tpMRInfo.TabIndex = 0
         Me.tpMRInfo.Text = "Requirement Information"
         Me.tpMRInfo.UseVisualStyleBackColor = True
@@ -298,7 +298,7 @@ Partial Class frmLR
         Me.TabControl2.Location = New System.Drawing.Point(3, 72)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(824, 514)
+        Me.TabControl2.Size = New System.Drawing.Size(824, 375)
         Me.TabControl2.TabIndex = 1
         '
         'tpEmpSetup
@@ -324,10 +324,162 @@ Partial Class frmLR
         Me.tpEmpSetup.Location = New System.Drawing.Point(4, 24)
         Me.tpEmpSetup.Name = "tpEmpSetup"
         Me.tpEmpSetup.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpEmpSetup.Size = New System.Drawing.Size(816, 486)
+        Me.tpEmpSetup.Size = New System.Drawing.Size(816, 347)
         Me.tpEmpSetup.TabIndex = 0
         Me.tpEmpSetup.Text = "Employment Setup"
         Me.tpEmpSetup.UseVisualStyleBackColor = True
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(201, 140)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(60, 15)
+        Me.Label35.TabIndex = 15
+        Me.Label35.Text = "[Benefits]"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(13, 140)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(85, 15)
+        Me.Label36.TabIndex = 14
+        Me.Label36.Text = "Work Location"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(201, 230)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(71, 15)
+        Me.Label28.TabIndex = 13
+        Me.Label28.Text = "[Dresscode]"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(201, 200)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(96, 15)
+        Me.Label29.TabIndex = 12
+        Me.Label29.Text = "[Work Schedule]"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(201, 170)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(93, 15)
+        Me.Label30.TabIndex = 11
+        Me.Label30.Text = "[Work Location]"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(201, 110)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(98, 15)
+        Me.Label31.TabIndex = 10
+        Me.Label31.Text = "[Budget / Salary]"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(201, 80)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(97, 15)
+        Me.Label32.TabIndex = 9
+        Me.Label32.Text = "[For Absorption]"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(201, 50)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(136, 15)
+        Me.Label33.TabIndex = 8
+        Me.Label33.Text = "[Employment Duration]"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(201, 20)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(114, 15)
+        Me.Label34.TabIndex = 7
+        Me.Label34.Text = "[Employment Type]"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(13, 230)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(64, 15)
+        Me.Label27.TabIndex = 6
+        Me.Label27.Text = "Dresscode"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(13, 200)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(88, 15)
+        Me.Label26.TabIndex = 5
+        Me.Label26.Text = "Work Schedule"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(13, 170)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(85, 15)
+        Me.Label25.TabIndex = 4
+        Me.Label25.Text = "Work Location"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(13, 110)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(90, 15)
+        Me.Label24.TabIndex = 3
+        Me.Label24.Text = "Budget / Salary"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(13, 80)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(88, 15)
+        Me.Label23.TabIndex = 2
+        Me.Label23.Text = "For Absorption"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(13, 50)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(125, 15)
+        Me.Label22.TabIndex = 1
+        Me.Label22.Text = "Employment Duration"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(13, 20)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(101, 15)
+        Me.Label21.TabIndex = 0
+        Me.Label21.Text = "Employment Type"
         '
         'tpCandidatePref
         '
@@ -690,163 +842,11 @@ Partial Class frmLR
         Me.tpARS.Text = "Assigned Recruitment Specialists"
         Me.tpARS.UseVisualStyleBackColor = True
         '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(13, 20)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(101, 15)
-        Me.Label21.TabIndex = 0
-        Me.Label21.Text = "Employment Type"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(13, 50)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(125, 15)
-        Me.Label22.TabIndex = 1
-        Me.Label22.Text = "Employment Duration"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(13, 80)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(88, 15)
-        Me.Label23.TabIndex = 2
-        Me.Label23.Text = "For Absorption"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(13, 110)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(90, 15)
-        Me.Label24.TabIndex = 3
-        Me.Label24.Text = "Budget / Salary"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(13, 170)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(85, 15)
-        Me.Label25.TabIndex = 4
-        Me.Label25.Text = "Work Location"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(13, 200)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(88, 15)
-        Me.Label26.TabIndex = 5
-        Me.Label26.Text = "Work Schedule"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(13, 230)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(64, 15)
-        Me.Label27.TabIndex = 6
-        Me.Label27.Text = "Dresscode"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(201, 230)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(71, 15)
-        Me.Label28.TabIndex = 13
-        Me.Label28.Text = "[Dresscode]"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(201, 200)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(96, 15)
-        Me.Label29.TabIndex = 12
-        Me.Label29.Text = "[Work Schedule]"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(201, 170)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(93, 15)
-        Me.Label30.TabIndex = 11
-        Me.Label30.Text = "[Work Location]"
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(201, 110)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(98, 15)
-        Me.Label31.TabIndex = 10
-        Me.Label31.Text = "[Budget / Salary]"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(201, 80)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(97, 15)
-        Me.Label32.TabIndex = 9
-        Me.Label32.Text = "[For Absorption]"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(201, 50)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(136, 15)
-        Me.Label33.TabIndex = 8
-        Me.Label33.Text = "[Employment Duration]"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(201, 20)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(114, 15)
-        Me.Label34.TabIndex = 7
-        Me.Label34.Text = "[Employment Type]"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(201, 140)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(60, 15)
-        Me.Label35.TabIndex = 15
-        Me.Label35.Text = "[Benefits]"
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(13, 140)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(85, 15)
-        Me.Label36.TabIndex = 14
-        Me.Label36.Text = "Work Location"
-        '
         'frmLR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(842, 713)
+        Me.ClientSize = New System.Drawing.Size(842, 574)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)

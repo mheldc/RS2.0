@@ -27,30 +27,15 @@ Partial Class RMSMain
         Me.msMain = New System.Windows.Forms.MenuStrip()
         Me.tsFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ApplicantToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SkillCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SkillGroupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SkillLevelToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SkillToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutAndCloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsSetup = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ServerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SharedFoldersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemAccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RolesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CountriesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CountryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProvinceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZipCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsReports = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AuditLogsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,16 +50,53 @@ Partial Class RMSMain
         Me.tsActivate = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.CandidateProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TypesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CandidateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SourceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TypesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManpowerRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LineupRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractRequestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ClientAccountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartmentToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserGroupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManpowerRequestToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractRequestToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LineupRequestToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.CandidateProfileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CandidateLineupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CandidateLineupToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RequestToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManpowerRequirementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CandidateLineupToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMain.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'msMain
         '
-        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFile, Me.tsSetup, Me.tsReports, Me.tsHelp})
+        Me.msMain.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFile, Me.ViewToolStripMenuItem, Me.RequestToolStripMenuItem1, Me.tsSetup, Me.tsReports, Me.tsHelp})
         Me.msMain.Location = New System.Drawing.Point(0, 0)
         Me.msMain.Name = "msMain"
-        Me.msMain.Size = New System.Drawing.Size(903, 24)
+        Me.msMain.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.msMain.Size = New System.Drawing.Size(976, 24)
         Me.msMain.TabIndex = 1
         Me.msMain.Text = "MenuStrip1"
         '
@@ -82,51 +104,15 @@ Partial Class RMSMain
         '
         Me.tsFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ToolStripSeparator1, Me.LoginToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.LogoutAndCloseToolStripMenuItem})
         Me.tsFile.Name = "tsFile"
-        Me.tsFile.Size = New System.Drawing.Size(37, 20)
+        Me.tsFile.Size = New System.Drawing.Size(39, 20)
         Me.tsFile.Text = "&File"
         '
         'NewToolStripMenuItem
         '
-        Me.NewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicantToolStripMenuItem, Me.ClientToolStripMenuItem, Me.SkillCategoryToolStripMenuItem, Me.SkillGroupToolStripMenuItem, Me.SkillLevelToolStripMenuItem, Me.SkillToolStripMenuItem})
+        Me.NewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CandidateProfileToolStripMenuItem, Me.CandidateLineupToolStripMenuItem, Me.ToolStripSeparator6, Me.ClientAccountToolStripMenuItem, Me.ToolStripSeparator5, Me.ManpowerRequestToolStripMenuItem, Me.LineupRequestToolStripMenuItem, Me.ContractRequestToolStripMenuItem, Me.ToolStripSeparator4, Me.DepartmentToolStripMenuItem1, Me.UserGroupToolStripMenuItem, Me.UserProfileToolStripMenuItem})
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.NewToolStripMenuItem.Text = "New"
-        '
-        'ApplicantToolStripMenuItem
-        '
-        Me.ApplicantToolStripMenuItem.Name = "ApplicantToolStripMenuItem"
-        Me.ApplicantToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.ApplicantToolStripMenuItem.Text = "Applicant"
-        '
-        'ClientToolStripMenuItem
-        '
-        Me.ClientToolStripMenuItem.Name = "ClientToolStripMenuItem"
-        Me.ClientToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.ClientToolStripMenuItem.Text = "Client"
-        '
-        'SkillCategoryToolStripMenuItem
-        '
-        Me.SkillCategoryToolStripMenuItem.Name = "SkillCategoryToolStripMenuItem"
-        Me.SkillCategoryToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.SkillCategoryToolStripMenuItem.Text = "Skill Category"
-        '
-        'SkillGroupToolStripMenuItem
-        '
-        Me.SkillGroupToolStripMenuItem.Name = "SkillGroupToolStripMenuItem"
-        Me.SkillGroupToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.SkillGroupToolStripMenuItem.Text = "Skill Group"
-        '
-        'SkillLevelToolStripMenuItem
-        '
-        Me.SkillLevelToolStripMenuItem.Name = "SkillLevelToolStripMenuItem"
-        Me.SkillLevelToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.SkillLevelToolStripMenuItem.Text = "Skill Level"
-        '
-        'SkillToolStripMenuItem
-        '
-        Me.SkillToolStripMenuItem.Name = "SkillToolStripMenuItem"
-        Me.SkillToolStripMenuItem.Size = New System.Drawing.Size(146, 22)
-        Me.SkillToolStripMenuItem.Text = "Skill"
         '
         'ToolStripSeparator1
         '
@@ -153,134 +139,78 @@ Partial Class RMSMain
         '
         'tsSetup
         '
-        Me.tsSetup.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemToolStripMenuItem1, Me.SystemAccountsToolStripMenuItem, Me.CountriesToolStripMenuItem})
+        Me.tsSetup.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemToolStripMenuItem1, Me.SystemAccountsToolStripMenuItem})
         Me.tsSetup.Name = "tsSetup"
         Me.tsSetup.Size = New System.Drawing.Size(49, 20)
         Me.tsSetup.Text = "&Setup"
         '
         'SystemToolStripMenuItem1
         '
-        Me.SystemToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ServerToolStripMenuItem, Me.SharedFoldersToolStripMenuItem})
         Me.SystemToolStripMenuItem1.Name = "SystemToolStripMenuItem1"
-        Me.SystemToolStripMenuItem1.Size = New System.Drawing.Size(120, 22)
-        Me.SystemToolStripMenuItem1.Text = "System"
-        '
-        'ServerToolStripMenuItem
-        '
-        Me.ServerToolStripMenuItem.Name = "ServerToolStripMenuItem"
-        Me.ServerToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
-        Me.ServerToolStripMenuItem.Text = "Server "
-        '
-        'SharedFoldersToolStripMenuItem
-        '
-        Me.SharedFoldersToolStripMenuItem.Name = "SharedFoldersToolStripMenuItem"
-        Me.SharedFoldersToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
-        Me.SharedFoldersToolStripMenuItem.Text = "Shared Folders"
+        Me.SystemToolStripMenuItem1.Size = New System.Drawing.Size(161, 22)
+        Me.SystemToolStripMenuItem1.Text = "System Defaults"
         '
         'SystemAccountsToolStripMenuItem
         '
-        Me.SystemAccountsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GroupsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.RolesToolStripMenuItem})
+        Me.SystemAccountsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientToolStripMenuItem, Me.ToolStripSeparator2, Me.DepartmentToolStripMenuItem, Me.GroupsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ToolStripSeparator3, Me.RequestToolStripMenuItem, Me.CandidateToolStripMenuItem})
         Me.SystemAccountsToolStripMenuItem.Name = "SystemAccountsToolStripMenuItem"
-        Me.SystemAccountsToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
-        Me.SystemAccountsToolStripMenuItem.Text = "User"
+        Me.SystemAccountsToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.SystemAccountsToolStripMenuItem.Text = "Accounts"
         '
         'GroupsToolStripMenuItem
         '
         Me.GroupsToolStripMenuItem.Name = "GroupsToolStripMenuItem"
-        Me.GroupsToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.GroupsToolStripMenuItem.Text = "Groups"
+        Me.GroupsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GroupsToolStripMenuItem.Text = "User Groups"
         '
         'AccountsToolStripMenuItem
         '
         Me.AccountsToolStripMenuItem.Name = "AccountsToolStripMenuItem"
-        Me.AccountsToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.AccountsToolStripMenuItem.Text = "Accounts"
-        '
-        'RolesToolStripMenuItem
-        '
-        Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
-        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
-        Me.RolesToolStripMenuItem.Text = "Roles"
-        '
-        'CountriesToolStripMenuItem
-        '
-        Me.CountriesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CountryToolStripMenuItem, Me.ProvinceToolStripMenuItem, Me.CityToolStripMenuItem, Me.TownToolStripMenuItem, Me.ZipCodeToolStripMenuItem})
-        Me.CountriesToolStripMenuItem.Name = "CountriesToolStripMenuItem"
-        Me.CountriesToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
-        Me.CountriesToolStripMenuItem.Text = "Location"
-        '
-        'CountryToolStripMenuItem
-        '
-        Me.CountryToolStripMenuItem.Name = "CountryToolStripMenuItem"
-        Me.CountryToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.CountryToolStripMenuItem.Text = "Country"
-        '
-        'ProvinceToolStripMenuItem
-        '
-        Me.ProvinceToolStripMenuItem.Name = "ProvinceToolStripMenuItem"
-        Me.ProvinceToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.ProvinceToolStripMenuItem.Text = "Province / State"
-        '
-        'CityToolStripMenuItem
-        '
-        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
-        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.CityToolStripMenuItem.Text = "City"
-        '
-        'TownToolStripMenuItem
-        '
-        Me.TownToolStripMenuItem.Name = "TownToolStripMenuItem"
-        Me.TownToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.TownToolStripMenuItem.Text = "Town"
-        '
-        'ZipCodeToolStripMenuItem
-        '
-        Me.ZipCodeToolStripMenuItem.Name = "ZipCodeToolStripMenuItem"
-        Me.ZipCodeToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
-        Me.ZipCodeToolStripMenuItem.Text = "Zip Code"
+        Me.AccountsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AccountsToolStripMenuItem.Text = "User Profiles"
         '
         'tsReports
         '
         Me.tsReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SystemToolStripMenuItem, Me.ToolStripMenuItem1, Me.RecruitmentToolStripMenuItem})
         Me.tsReports.Name = "tsReports"
-        Me.tsReports.Size = New System.Drawing.Size(59, 20)
+        Me.tsReports.Size = New System.Drawing.Size(61, 20)
         Me.tsReports.Text = "&Reports"
         '
         'SystemToolStripMenuItem
         '
         Me.SystemToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AuditLogsToolStripMenuItem, Me.EventLogsToolStripMenuItem})
         Me.SystemToolStripMenuItem.Name = "SystemToolStripMenuItem"
-        Me.SystemToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.SystemToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SystemToolStripMenuItem.Text = "&System"
         '
         'AuditLogsToolStripMenuItem
         '
         Me.AuditLogsToolStripMenuItem.Name = "AuditLogsToolStripMenuItem"
-        Me.AuditLogsToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.AuditLogsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.AuditLogsToolStripMenuItem.Text = "Audit Logs"
         '
         'EventLogsToolStripMenuItem
         '
         Me.EventLogsToolStripMenuItem.Name = "EventLogsToolStripMenuItem"
-        Me.EventLogsToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.EventLogsToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
         Me.EventLogsToolStripMenuItem.Text = "Event Logs"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(136, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
         '
         'RecruitmentToolStripMenuItem
         '
         Me.RecruitmentToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCandidatesToolStripMenuItem})
         Me.RecruitmentToolStripMenuItem.Name = "RecruitmentToolStripMenuItem"
-        Me.RecruitmentToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.RecruitmentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RecruitmentToolStripMenuItem.Text = "Recruitment"
         '
         'NewCandidatesToolStripMenuItem
         '
         Me.NewCandidatesToolStripMenuItem.Name = "NewCandidatesToolStripMenuItem"
-        Me.NewCandidatesToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.NewCandidatesToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.NewCandidatesToolStripMenuItem.Text = "New Candidates"
         '
         'tsHelp
@@ -293,32 +223,33 @@ Partial Class RMSMain
         'tsManual
         '
         Me.tsManual.Name = "tsManual"
-        Me.tsManual.Size = New System.Drawing.Size(166, 22)
+        Me.tsManual.Size = New System.Drawing.Size(168, 22)
         Me.tsManual.Text = "&User Manual"
         '
         'tsAbout
         '
         Me.tsAbout.Name = "tsAbout"
-        Me.tsAbout.Size = New System.Drawing.Size(166, 22)
+        Me.tsAbout.Size = New System.Drawing.Size(168, 22)
         Me.tsAbout.Text = "&About"
         '
         'tsHelpS1
         '
         Me.tsHelpS1.Name = "tsHelpS1"
-        Me.tsHelpS1.Size = New System.Drawing.Size(163, 6)
+        Me.tsHelpS1.Size = New System.Drawing.Size(165, 6)
         '
         'tsActivate
         '
         Me.tsActivate.Name = "tsActivate"
-        Me.tsActivate.Size = New System.Drawing.Size(166, 22)
+        Me.tsActivate.Size = New System.Drawing.Size(168, 22)
         Me.tsActivate.Text = "Activat&e Software"
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 339)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripProgressBar1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 395)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(903, 22)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(976, 22)
         Me.StatusStrip1.TabIndex = 3
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -328,13 +259,222 @@ Partial Class RMSMain
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(120, 17)
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
+        'CandidateProfileToolStripMenuItem
+        '
+        Me.CandidateProfileToolStripMenuItem.Name = "CandidateProfileToolStripMenuItem"
+        Me.CandidateProfileToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.CandidateProfileToolStripMenuItem.Text = "Candidate Profile"
+        '
+        'DepartmentToolStripMenuItem
+        '
+        Me.DepartmentToolStripMenuItem.Name = "DepartmentToolStripMenuItem"
+        Me.DepartmentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DepartmentToolStripMenuItem.Text = "Department"
+        '
+        'ClientToolStripMenuItem
+        '
+        Me.ClientToolStripMenuItem.Name = "ClientToolStripMenuItem"
+        Me.ClientToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClientToolStripMenuItem.Text = "Client"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        '
+        'RequestToolStripMenuItem
+        '
+        Me.RequestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TypesToolStripMenuItem, Me.StatusToolStripMenuItem})
+        Me.RequestToolStripMenuItem.Name = "RequestToolStripMenuItem"
+        Me.RequestToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RequestToolStripMenuItem.Text = "Request"
+        '
+        'TypesToolStripMenuItem
+        '
+        Me.TypesToolStripMenuItem.Name = "TypesToolStripMenuItem"
+        Me.TypesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TypesToolStripMenuItem.Text = "Types"
+        '
+        'StatusToolStripMenuItem
+        '
+        Me.StatusToolStripMenuItem.Name = "StatusToolStripMenuItem"
+        Me.StatusToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StatusToolStripMenuItem.Text = "Status"
+        '
+        'CandidateToolStripMenuItem
+        '
+        Me.CandidateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SourceToolStripMenuItem, Me.TypesToolStripMenuItem1, Me.StatusToolStripMenuItem1})
+        Me.CandidateToolStripMenuItem.Name = "CandidateToolStripMenuItem"
+        Me.CandidateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CandidateToolStripMenuItem.Text = "Candidate"
+        '
+        'SourceToolStripMenuItem
+        '
+        Me.SourceToolStripMenuItem.Name = "SourceToolStripMenuItem"
+        Me.SourceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SourceToolStripMenuItem.Text = "Source"
+        '
+        'TypesToolStripMenuItem1
+        '
+        Me.TypesToolStripMenuItem1.Name = "TypesToolStripMenuItem1"
+        Me.TypesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.TypesToolStripMenuItem1.Text = "Types"
+        '
+        'StatusToolStripMenuItem1
+        '
+        Me.StatusToolStripMenuItem1.Name = "StatusToolStripMenuItem1"
+        Me.StatusToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.StatusToolStripMenuItem1.Text = "Status"
+        '
+        'ManpowerRequestToolStripMenuItem
+        '
+        Me.ManpowerRequestToolStripMenuItem.Name = "ManpowerRequestToolStripMenuItem"
+        Me.ManpowerRequestToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ManpowerRequestToolStripMenuItem.Text = "Manpower Request"
+        '
+        'LineupRequestToolStripMenuItem
+        '
+        Me.LineupRequestToolStripMenuItem.Name = "LineupRequestToolStripMenuItem"
+        Me.LineupRequestToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.LineupRequestToolStripMenuItem.Text = "Line-up Request"
+        '
+        'ContractRequestToolStripMenuItem
+        '
+        Me.ContractRequestToolStripMenuItem.Name = "ContractRequestToolStripMenuItem"
+        Me.ContractRequestToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ContractRequestToolStripMenuItem.Text = "Contract Request"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(176, 6)
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(176, 6)
+        '
+        'ClientAccountToolStripMenuItem
+        '
+        Me.ClientAccountToolStripMenuItem.Name = "ClientAccountToolStripMenuItem"
+        Me.ClientAccountToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ClientAccountToolStripMenuItem.Text = "Client Account"
+        '
+        'DepartmentToolStripMenuItem1
+        '
+        Me.DepartmentToolStripMenuItem1.Name = "DepartmentToolStripMenuItem1"
+        Me.DepartmentToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.DepartmentToolStripMenuItem1.Text = "Department"
+        '
+        'UserGroupToolStripMenuItem
+        '
+        Me.UserGroupToolStripMenuItem.Name = "UserGroupToolStripMenuItem"
+        Me.UserGroupToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UserGroupToolStripMenuItem.Text = "User Group"
+        '
+        'UserProfileToolStripMenuItem
+        '
+        Me.UserProfileToolStripMenuItem.Name = "UserProfileToolStripMenuItem"
+        Me.UserProfileToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.UserProfileToolStripMenuItem.Text = "User Profile"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(176, 6)
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CandidateProfileToolStripMenuItem1, Me.CandidateLineupToolStripMenuItem1, Me.ToolStripSeparator7, Me.ManpowerRequestToolStripMenuItem1, Me.LineupRequestToolStripMenuItem1, Me.ContractRequestToolStripMenuItem1})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
+        Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'ManpowerRequestToolStripMenuItem1
+        '
+        Me.ManpowerRequestToolStripMenuItem1.Name = "ManpowerRequestToolStripMenuItem1"
+        Me.ManpowerRequestToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.ManpowerRequestToolStripMenuItem1.Text = "Manpower Request"
+        '
+        'ContractRequestToolStripMenuItem1
+        '
+        Me.ContractRequestToolStripMenuItem1.Name = "ContractRequestToolStripMenuItem1"
+        Me.ContractRequestToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.ContractRequestToolStripMenuItem1.Text = "Contract Request"
+        '
+        'LineupRequestToolStripMenuItem1
+        '
+        Me.LineupRequestToolStripMenuItem1.Name = "LineupRequestToolStripMenuItem1"
+        Me.LineupRequestToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.LineupRequestToolStripMenuItem1.Text = "Line-up Request"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        '
+        'CandidateProfileToolStripMenuItem1
+        '
+        Me.CandidateProfileToolStripMenuItem1.Name = "CandidateProfileToolStripMenuItem1"
+        Me.CandidateProfileToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.CandidateProfileToolStripMenuItem1.Text = "Candidate Profile"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(176, 6)
+        '
+        'CandidateLineupToolStripMenuItem
+        '
+        Me.CandidateLineupToolStripMenuItem.Name = "CandidateLineupToolStripMenuItem"
+        Me.CandidateLineupToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.CandidateLineupToolStripMenuItem.Text = "Candidate Line-up"
+        '
+        'CandidateLineupToolStripMenuItem1
+        '
+        Me.CandidateLineupToolStripMenuItem1.Name = "CandidateLineupToolStripMenuItem1"
+        Me.CandidateLineupToolStripMenuItem1.Size = New System.Drawing.Size(179, 22)
+        Me.CandidateLineupToolStripMenuItem1.Text = "Candidate Line-ups"
+        '
+        'RequestToolStripMenuItem1
+        '
+        Me.RequestToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManpowerRequirementToolStripMenuItem, Me.CandidateLineupToolStripMenuItem2, Me.ContractToolStripMenuItem})
+        Me.RequestToolStripMenuItem1.Name = "RequestToolStripMenuItem1"
+        Me.RequestToolStripMenuItem1.Size = New System.Drawing.Size(62, 20)
+        Me.RequestToolStripMenuItem1.Text = "Request"
+        '
+        'ManpowerRequirementToolStripMenuItem
+        '
+        Me.ManpowerRequirementToolStripMenuItem.Name = "ManpowerRequirementToolStripMenuItem"
+        Me.ManpowerRequirementToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.ManpowerRequirementToolStripMenuItem.Text = "Manpower Requirement"
+        '
+        'CandidateLineupToolStripMenuItem2
+        '
+        Me.CandidateLineupToolStripMenuItem2.Name = "CandidateLineupToolStripMenuItem2"
+        Me.CandidateLineupToolStripMenuItem2.Size = New System.Drawing.Size(205, 22)
+        Me.CandidateLineupToolStripMenuItem2.Text = "Candidate Line-up"
+        '
+        'ContractToolStripMenuItem
+        '
+        Me.ContractToolStripMenuItem.Name = "ContractToolStripMenuItem"
+        Me.ContractToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.ContractToolStripMenuItem.Text = "Contract"
+        '
         'RMSMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(903, 361)
+        Me.ClientSize = New System.Drawing.Size(976, 417)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.msMain)
+        Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
@@ -369,30 +509,50 @@ Partial Class RMSMain
     Friend WithEvents tsAbout As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsSetup As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ApplicantToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SystemToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SystemAccountsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AccountsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RolesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents ClientToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SkillCategoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SkillGroupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SkillLevelToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SkillToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ServerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SharedFoldersToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CountriesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CountryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProvinceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TownToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ZipCodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LogoutAndCloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CandidateProfileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClientToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents DepartmentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents RequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ClientAccountToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ManpowerRequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LineupRequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContractRequestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents DepartmentToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UserGroupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UserProfileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ManpowerRequestToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LineupRequestToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContractRequestToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TypesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CandidateToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SourceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TypesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StatusToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
+    Friend WithEvents CandidateLineupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CandidateProfileToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CandidateLineupToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents RequestToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ManpowerRequirementToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CandidateLineupToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContractToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

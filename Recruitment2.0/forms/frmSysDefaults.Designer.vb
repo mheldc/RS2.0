@@ -145,18 +145,6 @@ Partial Class frmSysDefaults
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.tpMailTemp = New System.Windows.Forms.TabPage()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Panel2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -177,9 +165,6 @@ Partial Class frmSysDefaults
         Me.tpCandidates.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
-        Me.tpMailTemp.SuspendLayout()
-        Me.GroupBox12.SuspendLayout()
-        Me.GroupBox13.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -260,7 +245,6 @@ Partial Class frmSysDefaults
         Me.TabControl1.Controls.Add(Me.tpLR)
         Me.TabControl1.Controls.Add(Me.tpCR)
         Me.TabControl1.Controls.Add(Me.tpCandidates)
-        Me.TabControl1.Controls.Add(Me.tpMailTemp)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -1411,122 +1395,6 @@ Partial Class frmSysDefaults
         Me.ComboBox19.Size = New System.Drawing.Size(242, 23)
         Me.ComboBox19.TabIndex = 0
         '
-        'tpMailTemp
-        '
-        Me.tpMailTemp.AutoScroll = True
-        Me.tpMailTemp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpMailTemp.Controls.Add(Me.TextBox12)
-        Me.tpMailTemp.Controls.Add(Me.Label42)
-        Me.tpMailTemp.Controls.Add(Me.GroupBox12)
-        Me.tpMailTemp.Controls.Add(Me.ComboBox20)
-        Me.tpMailTemp.Controls.Add(Me.Label40)
-        Me.tpMailTemp.Controls.Add(Me.GroupBox13)
-        Me.tpMailTemp.Location = New System.Drawing.Point(4, 24)
-        Me.tpMailTemp.Name = "tpMailTemp"
-        Me.tpMailTemp.Size = New System.Drawing.Size(784, 362)
-        Me.tpMailTemp.TabIndex = 5
-        Me.tpMailTemp.Text = "E-Mail Templates"
-        Me.tpMailTemp.UseVisualStyleBackColor = True
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(278, 23)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(499, 23)
-        Me.TextBox12.TabIndex = 12
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(275, 5)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(90, 15)
-        Me.Label42.TabIndex = 11
-        Me.Label42.Text = "Template Name"
-        '
-        'GroupBox12
-        '
-        Me.GroupBox12.Controls.Add(Me.Label41)
-        Me.GroupBox12.Controls.Add(Me.TextBox8)
-        Me.GroupBox12.Controls.Add(Me.TextBox11)
-        Me.GroupBox12.Controls.Add(Me.Label39)
-        Me.GroupBox12.Location = New System.Drawing.Point(265, 52)
-        Me.GroupBox12.Name = "GroupBox12"
-        Me.GroupBox12.Size = New System.Drawing.Size(512, 305)
-        Me.GroupBox12.TabIndex = 10
-        Me.GroupBox12.TabStop = False
-        Me.GroupBox12.Text = "E-Mail composition"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(10, 63)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(34, 15)
-        Me.Label41.TabIndex = 9
-        Me.Label41.Text = "Body"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(77, 60)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(429, 239)
-        Me.TextBox8.TabIndex = 8
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(77, 31)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(429, 23)
-        Me.TextBox11.TabIndex = 7
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(10, 34)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(47, 15)
-        Me.Label39.TabIndex = 6
-        Me.Label39.Text = "Subject"
-        '
-        'ComboBox20
-        '
-        Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Location = New System.Drawing.Point(5, 23)
-        Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(254, 23)
-        Me.ComboBox20.TabIndex = 9
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(8, 5)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(118, 15)
-        Me.Label40.TabIndex = 8
-        Me.Label40.Text = "Create template for :"
-        '
-        'GroupBox13
-        '
-        Me.GroupBox13.Controls.Add(Me.ListBox1)
-        Me.GroupBox13.Location = New System.Drawing.Point(5, 52)
-        Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(254, 305)
-        Me.GroupBox13.TabIndex = 7
-        Me.GroupBox13.TabStop = False
-        Me.GroupBox13.Text = "Available Fields"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(3, 19)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(248, 283)
-        Me.ListBox1.TabIndex = 0
-        '
         'frmSysDefaults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1573,11 +1441,6 @@ Partial Class frmSysDefaults
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
-        Me.tpMailTemp.ResumeLayout(False)
-        Me.tpMailTemp.PerformLayout()
-        Me.GroupBox12.ResumeLayout(False)
-        Me.GroupBox12.PerformLayout()
-        Me.GroupBox13.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1690,18 +1553,6 @@ Partial Class frmSysDefaults
     Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox10 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
-    Friend WithEvents tpMailTemp As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox12 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox13 As System.Windows.Forms.GroupBox
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
-    Friend WithEvents Label42 As System.Windows.Forms.Label
     Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents CheckBox13 As System.Windows.Forms.CheckBox

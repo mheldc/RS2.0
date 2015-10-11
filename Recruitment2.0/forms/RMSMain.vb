@@ -66,4 +66,12 @@ Public Class RMSMain
         End If
 
     End Sub
+
+    Private Sub SystemToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SystemToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub RequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RequestToolStripMenuItem.Click
+
+    End Sub
 End Class
