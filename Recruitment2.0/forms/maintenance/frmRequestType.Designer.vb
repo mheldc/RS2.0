@@ -24,17 +24,22 @@ Partial Class frmRequestType
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRequestType))
         Me.tsOps = New System.Windows.Forms.ToolStrip()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsOps
@@ -42,8 +47,27 @@ Partial Class frmRequestType
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(331, 39)
+        Me.tsOps.Size = New System.Drawing.Size(357, 39)
         Me.tsOps.TabIndex = 1
+        '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
+        'Panel1
+        '
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 39)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(357, 69)
+        Me.Panel1.TabIndex = 2
         '
         'tsbClose
         '
@@ -121,11 +145,6 @@ Partial Class frmRequestType
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
         '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
-        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -149,21 +168,43 @@ Partial Class frmRequestType
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'Panel1
+        'TextBox2
         '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(331, 262)
-        Me.Panel1.TabIndex = 2
+        Me.TextBox2.Location = New System.Drawing.Point(99, 33)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(244, 23)
+        Me.TextBox2.TabIndex = 7
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(99, 9)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(11, 36)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 15)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Description"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 15)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Type Code"
         '
         'frmRequestType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(331, 301)
+        Me.ClientSize = New System.Drawing.Size(357, 108)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
@@ -174,6 +215,8 @@ Partial Class frmRequestType
         Me.Text = "frmRequestType"
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -189,4 +232,8 @@ Partial Class frmRequestType
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
