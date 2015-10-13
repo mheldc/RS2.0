@@ -25,15 +25,7 @@ Partial Class frmSkill
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSkill))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbClose = New System.Windows.Forms.ToolStripButton()
-        Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
-        Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
-        Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
-        Me.tsbSave = New System.Windows.Forms.ToolStripButton()
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
-        Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpSkillInfo = New System.Windows.Forms.TabPage()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -43,10 +35,16 @@ Partial Class frmSkill
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.tsbClose = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
+        Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
+        Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
         Me.tsOps.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -60,7 +58,7 @@ Partial Class frmSkill
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(465, 224)
+        Me.Panel1.Size = New System.Drawing.Size(465, 198)
         Me.Panel1.TabIndex = 6
         '
         'tsOps
@@ -70,6 +68,117 @@ Partial Class frmSkill
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(465, 39)
         Me.tsOps.TabIndex = 5
+        '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.tpSkillInfo)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(463, 196)
+        Me.TabControl1.TabIndex = 0
+        '
+        'tpSkillInfo
+        '
+        Me.tpSkillInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpSkillInfo.Controls.Add(Me.ComboBox2)
+        Me.tpSkillInfo.Controls.Add(Me.Label6)
+        Me.tpSkillInfo.Controls.Add(Me.ComboBox1)
+        Me.tpSkillInfo.Controls.Add(Me.Label5)
+        Me.tpSkillInfo.Controls.Add(Me.Label1)
+        Me.tpSkillInfo.Controls.Add(Me.TextBox4)
+        Me.tpSkillInfo.Controls.Add(Me.Label4)
+        Me.tpSkillInfo.Controls.Add(Me.TextBox2)
+        Me.tpSkillInfo.Controls.Add(Me.Label2)
+        Me.tpSkillInfo.Location = New System.Drawing.Point(4, 24)
+        Me.tpSkillInfo.Name = "tpSkillInfo"
+        Me.tpSkillInfo.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpSkillInfo.Size = New System.Drawing.Size(455, 168)
+        Me.tpSkillInfo.TabIndex = 0
+        Me.tpSkillInfo.Text = "Skill Information"
+        Me.tpSkillInfo.UseVisualStyleBackColor = True
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(101, 36)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(329, 23)
+        Me.ComboBox2.TabIndex = 44
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(9, 39)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(68, 15)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Skill Group"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(101, 12)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(329, 23)
+        Me.ComboBox1.TabIndex = 42
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 15)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 15)
+        Me.Label5.TabIndex = 41
+        Me.Label5.Text = "Skill Type"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(9, 118)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(15, 15)
+        Me.Label1.TabIndex = 40
+        Me.Label1.Text = "[]"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(101, 60)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
+        Me.TextBox4.TabIndex = 39
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 63)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(61, 15)
+        Me.Label4.TabIndex = 38
+        Me.Label4.Text = "Skill Code"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(101, 84)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
+        Me.TextBox2.TabIndex = 35
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 87)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 15)
+        Me.Label2.TabIndex = 34
+        Me.Label2.Text = "Description"
         '
         'tsbClose
         '
@@ -147,11 +256,6 @@ Partial Class frmSkill
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
         '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
-        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -175,135 +279,11 @@ Partial Class frmSkill
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.tpSkillInfo)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(463, 222)
-        Me.TabControl1.TabIndex = 0
-        '
-        'tpSkillInfo
-        '
-        Me.tpSkillInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpSkillInfo.Controls.Add(Me.ComboBox2)
-        Me.tpSkillInfo.Controls.Add(Me.Label6)
-        Me.tpSkillInfo.Controls.Add(Me.ComboBox1)
-        Me.tpSkillInfo.Controls.Add(Me.Label5)
-        Me.tpSkillInfo.Controls.Add(Me.Label1)
-        Me.tpSkillInfo.Controls.Add(Me.TextBox4)
-        Me.tpSkillInfo.Controls.Add(Me.Label4)
-        Me.tpSkillInfo.Controls.Add(Me.TextBox3)
-        Me.tpSkillInfo.Controls.Add(Me.Label3)
-        Me.tpSkillInfo.Controls.Add(Me.TextBox2)
-        Me.tpSkillInfo.Controls.Add(Me.Label2)
-        Me.tpSkillInfo.Location = New System.Drawing.Point(4, 24)
-        Me.tpSkillInfo.Name = "tpSkillInfo"
-        Me.tpSkillInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkillInfo.Size = New System.Drawing.Size(455, 194)
-        Me.tpSkillInfo.TabIndex = 0
-        Me.tpSkillInfo.Text = "Skill Information"
-        Me.tpSkillInfo.UseVisualStyleBackColor = True
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(101, 36)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(329, 23)
-        Me.ComboBox2.TabIndex = 44
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 39)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(68, 15)
-        Me.Label6.TabIndex = 43
-        Me.Label6.Text = "Skill Group"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(101, 12)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(329, 23)
-        Me.ComboBox1.TabIndex = 42
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 15)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 15)
-        Me.Label5.TabIndex = 41
-        Me.Label5.Text = "Skill Type"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 142)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 40
-        Me.Label1.Text = "[]"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(101, 60)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 39
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 63)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 15)
-        Me.Label4.TabIndex = 38
-        Me.Label4.Text = "Skill Code"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(101, 84)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(329, 23)
-        Me.TextBox3.TabIndex = 37
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 87)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 15)
-        Me.Label3.TabIndex = 36
-        Me.Label3.Text = "Skill Name"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(101, 108)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 35
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 111)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 15)
-        Me.Label2.TabIndex = 34
-        Me.Label2.Text = "Description"
-        '
         'frmSkill
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(465, 263)
+        Me.ClientSize = New System.Drawing.Size(465, 237)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
@@ -341,8 +321,6 @@ Partial Class frmSkill
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

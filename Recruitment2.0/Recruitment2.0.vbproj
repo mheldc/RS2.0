@@ -96,10 +96,28 @@
     <Compile Include="forms\maintenance\frmCandidateProfile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\maintenance\frmCandidateSource.Designer.vb">
+      <DependentUpon>frmCandidateSource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmCandidateSource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmCandidateStatus.Designer.vb">
+      <DependentUpon>frmCandidateStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmCandidateStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\maintenance\frmClientProfile.Designer.vb">
       <DependentUpon>frmClientProfile.vb</DependentUpon>
     </Compile>
     <Compile Include="forms\maintenance\frmClientProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmContractStatus.Designer.vb">
+      <DependentUpon>frmContractStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmContractStatus.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\maintenance\frmDepartment.Designer.vb">
@@ -108,16 +126,22 @@
     <Compile Include="forms\maintenance\frmDepartment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\maintenance\frmRequestStatus.Designer.vb">
-      <DependentUpon>frmRequestStatus.vb</DependentUpon>
+    <Compile Include="forms\maintenance\frmLRStatus.Designer.vb">
+      <DependentUpon>frmLRStatus.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\maintenance\frmRequestStatus.vb">
+    <Compile Include="forms\maintenance\frmLRStatus.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\maintenance\frmRequestType.Designer.vb">
-      <DependentUpon>frmRequestType.vb</DependentUpon>
+    <Compile Include="forms\maintenance\frmMRStatus.Designer.vb">
+      <DependentUpon>frmMRStatus.vb</DependentUpon>
     </Compile>
-    <Compile Include="forms\maintenance\frmRequestType.vb">
+    <Compile Include="forms\maintenance\frmMRStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\maintenance\frmMRTypes.Designer.vb">
+      <DependentUpon>frmMRTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmMRTypes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\maintenance\frmSkill.Designer.vb">
@@ -222,17 +246,29 @@
     <EmbeddedResource Include="forms\maintenance\frmCandidateProfile.resx">
       <DependentUpon>frmCandidateProfile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmCandidateSource.resx">
+      <DependentUpon>frmCandidateSource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmCandidateStatus.resx">
+      <DependentUpon>frmCandidateStatus.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmClientProfile.resx">
       <DependentUpon>frmClientProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmContractStatus.resx">
+      <DependentUpon>frmContractStatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmDepartment.resx">
       <DependentUpon>frmDepartment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\maintenance\frmRequestStatus.resx">
-      <DependentUpon>frmRequestStatus.vb</DependentUpon>
+    <EmbeddedResource Include="forms\maintenance\frmLRStatus.resx">
+      <DependentUpon>frmLRStatus.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\maintenance\frmRequestType.resx">
-      <DependentUpon>frmRequestType.vb</DependentUpon>
+    <EmbeddedResource Include="forms\maintenance\frmMRStatus.resx">
+      <DependentUpon>frmMRStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmMRTypes.resx">
+      <DependentUpon>frmMRTypes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmSkill.resx">
       <DependentUpon>frmSkill.vb</DependentUpon>

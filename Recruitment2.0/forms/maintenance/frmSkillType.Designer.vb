@@ -24,24 +24,21 @@ Partial Class frmSkillType
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSkillType))
         Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,96 +50,6 @@ Partial Class frmSkillType
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(451, 39)
         Me.tsOps.TabIndex = 1
-        '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(451, 191)
-        Me.Panel1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(143, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "[]"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(103, 46)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 27
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(11, 49)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 15)
-        Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Type Code"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(103, 70)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(329, 23)
-        Me.TextBox3.TabIndex = 25
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 73)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 15)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Type Name"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(103, 94)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 23
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 97)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 15)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Description"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(11, 12)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(125, 15)
-        Me.Label15.TabIndex = 19
-        Me.Label15.Text = "Skill Type Information"
         '
         'tsbClose
         '
@@ -216,6 +123,11 @@ Partial Class frmSkillType
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
         '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -239,11 +151,67 @@ Partial Class frmSkillType
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 39)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(451, 120)
+        Me.Panel1.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 68)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(15, 15)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "[]"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(101, 12)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
+        Me.TextBox4.TabIndex = 27
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(9, 15)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(61, 15)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "Type Code"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(101, 36)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
+        Me.TextBox2.TabIndex = 23
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(9, 39)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 15)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Description"
+        '
         'frmSkillType
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(451, 230)
+        Me.ClientSize = New System.Drawing.Size(451, 159)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
@@ -270,11 +238,8 @@ Partial Class frmSkillType
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
