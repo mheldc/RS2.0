@@ -93,6 +93,13 @@ Partial Class frmLR
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tpARS = New System.Windows.Forms.TabPage()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.colRemoveRS = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRSId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colRSName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tsOps.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -105,6 +112,10 @@ Partial Class frmLR
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpJDText.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.tpARS.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tsOps
@@ -503,7 +514,7 @@ Partial Class frmLR
         Me.tpCandidatePref.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidatePref.Name = "tpCandidatePref"
         Me.tpCandidatePref.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidatePref.Size = New System.Drawing.Size(816, 486)
+        Me.tpCandidatePref.Size = New System.Drawing.Size(816, 347)
         Me.tpCandidatePref.TabIndex = 1
         Me.tpCandidatePref.Text = "Candidate Preference"
         Me.tpCandidatePref.UseVisualStyleBackColor = True
@@ -655,7 +666,7 @@ Partial Class frmLR
         Me.tpSkillPref.Location = New System.Drawing.Point(4, 24)
         Me.tpSkillPref.Name = "tpSkillPref"
         Me.tpSkillPref.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkillPref.Size = New System.Drawing.Size(816, 486)
+        Me.tpSkillPref.Size = New System.Drawing.Size(816, 347)
         Me.tpSkillPref.TabIndex = 2
         Me.tpSkillPref.Text = "Skill Preference"
         Me.tpSkillPref.UseVisualStyleBackColor = True
@@ -670,7 +681,7 @@ Partial Class frmLR
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(808, 478)
+        Me.DataGridView1.Size = New System.Drawing.Size(808, 339)
         Me.DataGridView1.TabIndex = 0
         '
         'colSkillType
@@ -722,7 +733,7 @@ Partial Class frmLR
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
         Me.tpJDText.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpJDText.Size = New System.Drawing.Size(816, 486)
+        Me.tpJDText.Size = New System.Drawing.Size(816, 347)
         Me.tpJDText.TabIndex = 3
         Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
@@ -733,7 +744,7 @@ Partial Class frmLR
         Me.RichTextBox1.Location = New System.Drawing.Point(3, 3)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(808, 478)
+        Me.RichTextBox1.Size = New System.Drawing.Size(808, 339)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         '
@@ -834,13 +845,78 @@ Partial Class frmLR
         '
         Me.tpARS.AutoScroll = True
         Me.tpARS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpARS.Controls.Add(Me.Panel4)
+        Me.tpARS.Controls.Add(Me.ToolStrip1)
         Me.tpARS.Location = New System.Drawing.Point(4, 24)
         Me.tpARS.Name = "tpARS"
         Me.tpARS.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpARS.Size = New System.Drawing.Size(832, 591)
+        Me.tpARS.Size = New System.Drawing.Size(832, 452)
         Me.tpARS.TabIndex = 1
         Me.tpARS.Text = "Assigned Recruitment Specialists"
         Me.tpARS.UseVisualStyleBackColor = True
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 3)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(824, 39)
+        Me.ToolStrip1.TabIndex = 0
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.DataGridView2)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel4.Location = New System.Drawing.Point(3, 42)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(824, 405)
+        Me.Panel4.TabIndex = 1
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colRemoveRS, Me.colRSId, Me.colRSName})
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(824, 405)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'colRemoveRS
+        '
+        Me.colRemoveRS.Frozen = True
+        Me.colRemoveRS.HeaderText = ""
+        Me.colRemoveRS.Name = "colRemoveRS"
+        Me.colRemoveRS.ReadOnly = True
+        Me.colRemoveRS.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colRemoveRS.Width = 70
+        '
+        'colRSId
+        '
+        Me.colRSId.HeaderText = "Id"
+        Me.colRSId.Name = "colRSId"
+        Me.colRSId.ReadOnly = True
+        Me.colRSId.Visible = False
+        '
+        'colRSName
+        '
+        Me.colRSName.HeaderText = "Recruitment Specialist"
+        Me.colRSName.Name = "colRSName"
+        Me.colRSName.ReadOnly = True
+        Me.colRSName.Width = 350
         '
         'frmLR
         '
@@ -872,6 +948,12 @@ Partial Class frmLR
         Me.tpJDText.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.tpARS.ResumeLayout(False)
+        Me.tpARS.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -946,4 +1028,11 @@ Partial Class frmLR
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Label35 As System.Windows.Forms.Label
     Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents colRemoveRS As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colRSId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colRSName As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class
