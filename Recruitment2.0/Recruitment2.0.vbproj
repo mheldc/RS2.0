@@ -120,6 +120,12 @@
     <Compile Include="forms\maintenance\frmContractStatus.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\maintenance\frmContractTypes.Designer.vb">
+      <DependentUpon>frmContractTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmContractTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\maintenance\frmDepartment.Designer.vb">
       <DependentUpon>frmDepartment.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmContractStatus.resx">
       <DependentUpon>frmContractStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmContractTypes.resx">
+      <DependentUpon>frmContractTypes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmDepartment.resx">
       <DependentUpon>frmDepartment.vb</DependentUpon>

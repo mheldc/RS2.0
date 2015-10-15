@@ -103,6 +103,8 @@ Partial Class frmMR
         Me.tpJDText = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -126,8 +128,6 @@ Partial Class frmMR
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -222,7 +222,7 @@ Partial Class frmMR
         Me.tpEmpSetup.Location = New System.Drawing.Point(4, 24)
         Me.tpEmpSetup.Name = "tpEmpSetup"
         Me.tpEmpSetup.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 415)
+        Me.tpEmpSetup.Size = New System.Drawing.Size(841, 447)
         Me.tpEmpSetup.TabIndex = 4
         Me.tpEmpSetup.Text = "Employment Setup"
         Me.tpEmpSetup.UseVisualStyleBackColor = True
@@ -451,7 +451,7 @@ Partial Class frmMR
         Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidate.Name = "tpCandidate"
         Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(841, 415)
+        Me.tpCandidate.Size = New System.Drawing.Size(841, 447)
         Me.tpCandidate.TabIndex = 0
         Me.tpCandidate.Text = "Candidate Preference"
         Me.tpCandidate.UseVisualStyleBackColor = True
@@ -485,16 +485,16 @@ Partial Class frmMR
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(495, 80)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(518, 80)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(216, 23)
         Me.DateTimePicker2.TabIndex = 20
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(262, 80)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(264, 80)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(216, 23)
         Me.DateTimePicker1.TabIndex = 19
         '
         'RadioButton4
@@ -502,10 +502,10 @@ Partial Class frmMR
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Location = New System.Drawing.Point(124, 84)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(377, 19)
+        Me.RadioButton4.Size = New System.Drawing.Size(398, 19)
         Me.RadioButton4.TabIndex = 18
         Me.RadioButton4.Text = "Between the dates of                                                             " & _
-    "          and  "
+    "                 and  "
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'RadioButton3
@@ -593,7 +593,7 @@ Partial Class frmMR
         Me.tpEduc.Controls.Add(Me.Label19)
         Me.tpEduc.Location = New System.Drawing.Point(4, 24)
         Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(841, 415)
+        Me.tpEduc.Size = New System.Drawing.Size(841, 447)
         Me.tpEduc.TabIndex = 2
         Me.tpEduc.Text = "Education Preference"
         Me.tpEduc.UseVisualStyleBackColor = True
@@ -661,7 +661,7 @@ Partial Class frmMR
         Me.tpSkills.Location = New System.Drawing.Point(4, 24)
         Me.tpSkills.Name = "tpSkills"
         Me.tpSkills.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkills.Size = New System.Drawing.Size(841, 415)
+        Me.tpSkills.Size = New System.Drawing.Size(841, 447)
         Me.tpSkills.TabIndex = 1
         Me.tpSkills.Text = "Skill Preference"
         Me.tpSkills.UseVisualStyleBackColor = True
@@ -675,7 +675,7 @@ Partial Class frmMR
         Me.DataGridView1.Location = New System.Drawing.Point(3, 89)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(833, 282)
+        Me.DataGridView1.Size = New System.Drawing.Size(833, 314)
         Me.DataGridView1.TabIndex = 2
         '
         'colView
@@ -754,7 +754,7 @@ Partial Class frmMR
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(3, 371)
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 403)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(833, 39)
         Me.ToolStrip1.TabIndex = 1
@@ -949,6 +949,22 @@ Partial Class frmMR
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Request Information"
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(132, 118)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(75, 23)
+        Me.TextBox16.TabIndex = 27
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(15, 121)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(99, 15)
+        Me.Label29.TabIndex = 26
+        Me.Label29.Text = "# of Requirement"
         '
         'Label17
         '
@@ -1182,22 +1198,6 @@ Partial Class frmMR
         Me.tsbPrint.Size = New System.Drawing.Size(36, 36)
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(15, 121)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(99, 15)
-        Me.Label29.TabIndex = 26
-        Me.Label29.Text = "# of Requirement"
-        '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(132, 118)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(75, 23)
-        Me.TextBox16.TabIndex = 27
         '
         'frmMR
         '
