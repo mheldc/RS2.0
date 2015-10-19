@@ -50,3 +50,14 @@ C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recru
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmMR.resources
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.Resources.resources
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\Recruitment2.0.vbproj.GenerateResource.Cache
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmCandidateSource.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmCandidateStatus.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmContractStatus.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmContractTypes.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmLRStatus.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmMRStatus.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmMRTypes.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmStages.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmUserAccess.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmLineupCandidate.resources
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmStageCandidate.resources

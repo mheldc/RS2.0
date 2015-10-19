@@ -108,6 +108,7 @@ Partial Class frmMRStatus
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -200,19 +201,20 @@ Partial Class frmMRStatus
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'frmRequestStatus
+        'frmMRStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(357, 108)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmRequestStatus"
-        Me.Text = "Request Status"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmMRStatus"
+        Me.Text = "Manpower Request Status"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.tsOps.ResumeLayout(False)

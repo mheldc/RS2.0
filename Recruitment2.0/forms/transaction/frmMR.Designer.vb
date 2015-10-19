@@ -451,7 +451,7 @@ Partial Class frmMR
         Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidate.Name = "tpCandidate"
         Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(841, 447)
+        Me.tpCandidate.Size = New System.Drawing.Size(841, 450)
         Me.tpCandidate.TabIndex = 0
         Me.tpCandidate.Text = "Candidate Preference"
         Me.tpCandidate.UseVisualStyleBackColor = True
@@ -593,7 +593,7 @@ Partial Class frmMR
         Me.tpEduc.Controls.Add(Me.Label19)
         Me.tpEduc.Location = New System.Drawing.Point(4, 24)
         Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(841, 447)
+        Me.tpEduc.Size = New System.Drawing.Size(841, 450)
         Me.tpEduc.TabIndex = 2
         Me.tpEduc.Text = "Education Preference"
         Me.tpEduc.UseVisualStyleBackColor = True
@@ -661,7 +661,7 @@ Partial Class frmMR
         Me.tpSkills.Location = New System.Drawing.Point(4, 24)
         Me.tpSkills.Name = "tpSkills"
         Me.tpSkills.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSkills.Size = New System.Drawing.Size(841, 447)
+        Me.tpSkills.Size = New System.Drawing.Size(841, 450)
         Me.tpSkills.TabIndex = 1
         Me.tpSkills.Text = "Skill Preference"
         Me.tpSkills.UseVisualStyleBackColor = True
@@ -675,7 +675,7 @@ Partial Class frmMR
         Me.DataGridView1.Location = New System.Drawing.Point(3, 89)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(833, 314)
+        Me.DataGridView1.Size = New System.Drawing.Size(833, 317)
         Me.DataGridView1.TabIndex = 2
         '
         'colView
@@ -754,7 +754,7 @@ Partial Class frmMR
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
-        Me.ToolStrip1.Location = New System.Drawing.Point(3, 403)
+        Me.ToolStrip1.Location = New System.Drawing.Point(3, 406)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(833, 39)
         Me.ToolStrip1.TabIndex = 1
@@ -913,7 +913,7 @@ Partial Class frmMR
         Me.tpJDText.Controls.Add(Me.RichTextBox1)
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(841, 447)
+        Me.tpJDText.Size = New System.Drawing.Size(841, 450)
         Me.tpJDText.TabIndex = 3
         Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
@@ -923,7 +923,7 @@ Partial Class frmMR
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(839, 445)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 448)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False
@@ -1107,6 +1107,7 @@ Partial Class frmMR
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -1204,12 +1205,13 @@ Partial Class frmMR
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(859, 741)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmMR"
         Me.Text = "Manpower Requirement"
         Me.Panel1.ResumeLayout(False)

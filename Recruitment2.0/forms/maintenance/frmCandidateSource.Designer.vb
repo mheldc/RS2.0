@@ -29,13 +29,13 @@ Partial Class frmCandidateSource
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
@@ -96,11 +96,6 @@ Partial Class frmCandidateSource
         Me.tsOps.Size = New System.Drawing.Size(363, 39)
         Me.tsOps.TabIndex = 5
         '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
-        '
         'tsbClose
         '
         Me.tsbClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
@@ -113,6 +108,7 @@ Partial Class frmCandidateSource
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -177,6 +173,11 @@ Partial Class frmCandidateSource
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
         '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -205,10 +206,12 @@ Partial Class frmCandidateSource
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(363, 107)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCandidateSource"
         Me.Text = "Candidate Source"
         Me.Panel1.ResumeLayout(False)

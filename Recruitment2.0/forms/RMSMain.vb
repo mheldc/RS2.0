@@ -59,7 +59,7 @@ Public Class RMSMain
         Else
             Dim cProfile As New frmCandidateProfile
             cProfile.TopLevel = False
-            cProfile.MdiParent = Me
+            cProfile.Parent = Me
             cProfile.StartPosition = FormStartPosition.CenterParent
             cProfile.WindowState = FormWindowState.Maximized
             cProfile.Show()
@@ -73,5 +73,14 @@ Public Class RMSMain
 
     Private Sub RequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RequestToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub NewFormsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFormsToolStripMenuItem.Click
+        Dim x As New frmStageCandidate
+        x.TopLevel = False
+        x.MdiParent = Me
+        x.StartPosition = FormStartPosition.CenterParent
+        x.WindowState = FormWindowState.Maximized
+        x.Show()
     End Sub
 End Class

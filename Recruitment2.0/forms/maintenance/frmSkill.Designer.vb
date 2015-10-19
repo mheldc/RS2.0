@@ -24,8 +24,6 @@ Partial Class frmSkill
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSkill))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpSkillInfo = New System.Windows.Forms.TabPage()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -37,18 +35,20 @@ Partial Class frmSkill
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.tsOps = New System.Windows.Forms.ToolStrip()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1.SuspendLayout()
-        Me.tsOps.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpSkillInfo.SuspendLayout()
+        Me.tsOps.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -60,19 +60,6 @@ Partial Class frmSkill
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(465, 198)
         Me.Panel1.TabIndex = 6
-        '
-        'tsOps
-        '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
-        Me.tsOps.Location = New System.Drawing.Point(0, 0)
-        Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(465, 39)
-        Me.tsOps.TabIndex = 5
-        '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
         '
         'TabControl1
         '
@@ -180,6 +167,14 @@ Partial Class frmSkill
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Description"
         '
+        'tsOps
+        '
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Location = New System.Drawing.Point(0, 0)
+        Me.tsOps.Name = "tsOps"
+        Me.tsOps.Size = New System.Drawing.Size(465, 39)
+        Me.tsOps.TabIndex = 5
+        '
         'tsbClose
         '
         Me.tsbClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
@@ -192,6 +187,7 @@ Partial Class frmSkill
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -256,6 +252,11 @@ Partial Class frmSkill
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
         '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
         'tsbSearch
         '
         Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -284,19 +285,21 @@ Partial Class frmSkill
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(465, 237)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmSkill"
         Me.Text = "Skills"
         Me.Panel1.ResumeLayout(False)
-        Me.tsOps.ResumeLayout(False)
-        Me.tsOps.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.tpSkillInfo.ResumeLayout(False)
         Me.tpSkillInfo.PerformLayout()
+        Me.tsOps.ResumeLayout(False)
+        Me.tsOps.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

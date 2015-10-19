@@ -148,6 +148,13 @@ Partial Class frmSysDefaults
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.CheckBox16 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
+        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.Panel2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -447,7 +454,7 @@ Partial Class frmSysDefaults
         Me.tpCnEMail.Location = New System.Drawing.Point(4, 24)
         Me.tpCnEMail.Name = "tpCnEMail"
         Me.tpCnEMail.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCnEMail.Size = New System.Drawing.Size(887, 763)
+        Me.tpCnEMail.Size = New System.Drawing.Size(887, 631)
         Me.tpCnEMail.TabIndex = 1
         Me.tpCnEMail.Text = "E-Mail"
         Me.tpCnEMail.UseVisualStyleBackColor = True
@@ -586,7 +593,7 @@ Partial Class frmSysDefaults
         Me.tpMR.Location = New System.Drawing.Point(4, 24)
         Me.tpMR.Name = "tpMR"
         Me.tpMR.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMR.Size = New System.Drawing.Size(903, 799)
+        Me.tpMR.Size = New System.Drawing.Size(903, 667)
         Me.tpMR.TabIndex = 1
         Me.tpMR.Text = "Manpower Request"
         Me.tpMR.UseVisualStyleBackColor = True
@@ -599,7 +606,7 @@ Partial Class frmSysDefaults
         Me.TabControl2.Location = New System.Drawing.Point(3, 3)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(895, 791)
+        Me.TabControl2.Size = New System.Drawing.Size(895, 659)
         Me.TabControl2.TabIndex = 0
         '
         'tpMRApprovers
@@ -626,7 +633,7 @@ Partial Class frmSysDefaults
         Me.tpMRApprovers.Location = New System.Drawing.Point(4, 24)
         Me.tpMRApprovers.Name = "tpMRApprovers"
         Me.tpMRApprovers.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMRApprovers.Size = New System.Drawing.Size(887, 763)
+        Me.tpMRApprovers.Size = New System.Drawing.Size(887, 631)
         Me.tpMRApprovers.TabIndex = 0
         Me.tpMRApprovers.Text = "Approvers"
         Me.tpMRApprovers.UseVisualStyleBackColor = True
@@ -790,6 +797,13 @@ Partial Class frmSysDefaults
         '
         Me.tpMRDefaults.AutoScroll = True
         Me.tpMRDefaults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpMRDefaults.Controls.Add(Me.CheckBox17)
+        Me.tpMRDefaults.Controls.Add(Me.ComboBox21)
+        Me.tpMRDefaults.Controls.Add(Me.TextBox8)
+        Me.tpMRDefaults.Controls.Add(Me.Label42)
+        Me.tpMRDefaults.Controls.Add(Me.ComboBox20)
+        Me.tpMRDefaults.Controls.Add(Me.Label41)
+        Me.tpMRDefaults.Controls.Add(Me.CheckBox16)
         Me.tpMRDefaults.Controls.Add(Me.Label40)
         Me.tpMRDefaults.Controls.Add(Me.CheckBox12)
         Me.tpMRDefaults.Controls.Add(Me.CheckBox6)
@@ -798,7 +812,7 @@ Partial Class frmSysDefaults
         Me.tpMRDefaults.Location = New System.Drawing.Point(4, 24)
         Me.tpMRDefaults.Name = "tpMRDefaults"
         Me.tpMRDefaults.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMRDefaults.Size = New System.Drawing.Size(887, 763)
+        Me.tpMRDefaults.Size = New System.Drawing.Size(887, 631)
         Me.tpMRDefaults.TabIndex = 1
         Me.tpMRDefaults.Text = "Request Defaults"
         Me.tpMRDefaults.UseVisualStyleBackColor = True
@@ -807,7 +821,7 @@ Partial Class frmSysDefaults
         '
         Me.Label40.AutoSize = True
         Me.Label40.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(6, 71)
+        Me.Label40.Location = New System.Drawing.Point(6, 173)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(71, 15)
         Me.Label40.TabIndex = 32
@@ -816,7 +830,7 @@ Partial Class frmSysDefaults
         'CheckBox12
         '
         Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(21, 127)
+        Me.CheckBox12.Location = New System.Drawing.Point(21, 229)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(269, 19)
         Me.CheckBox12.TabIndex = 14
@@ -826,7 +840,7 @@ Partial Class frmSysDefaults
         'CheckBox6
         '
         Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(21, 101)
+        Me.CheckBox6.Location = New System.Drawing.Point(21, 203)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(265, 19)
         Me.CheckBox6.TabIndex = 12
@@ -836,16 +850,17 @@ Partial Class frmSysDefaults
         'ComboBox6
         '
         Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(161, 14)
+        Me.ComboBox6.Location = New System.Drawing.Point(201, 9)
         Me.ComboBox6.Name = "ComboBox6"
         Me.ComboBox6.Size = New System.Drawing.Size(244, 23)
         Me.ComboBox6.TabIndex = 11
         '
         'Label7
         '
+        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(6, 12)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(146, 31)
+        Me.Label7.Size = New System.Drawing.Size(175, 15)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Default status for New Request"
         '
@@ -857,7 +872,7 @@ Partial Class frmSysDefaults
         Me.tpLR.Controls.Add(Me.GroupBox3)
         Me.tpLR.Location = New System.Drawing.Point(4, 24)
         Me.tpLR.Name = "tpLR"
-        Me.tpLR.Size = New System.Drawing.Size(903, 799)
+        Me.tpLR.Size = New System.Drawing.Size(903, 667)
         Me.tpLR.TabIndex = 2
         Me.tpLR.Text = "Line-up Request"
         Me.tpLR.UseVisualStyleBackColor = True
@@ -1099,7 +1114,7 @@ Partial Class frmSysDefaults
         Me.tpCR.Controls.Add(Me.GroupBox6)
         Me.tpCR.Location = New System.Drawing.Point(4, 24)
         Me.tpCR.Name = "tpCR"
-        Me.tpCR.Size = New System.Drawing.Size(903, 799)
+        Me.tpCR.Size = New System.Drawing.Size(903, 667)
         Me.tpCR.TabIndex = 3
         Me.tpCR.Text = "Contract Requests"
         Me.tpCR.UseVisualStyleBackColor = True
@@ -1341,7 +1356,7 @@ Partial Class frmSysDefaults
         Me.tpCandidates.Controls.Add(Me.GroupBox10)
         Me.tpCandidates.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidates.Name = "tpCandidates"
-        Me.tpCandidates.Size = New System.Drawing.Size(903, 799)
+        Me.tpCandidates.Size = New System.Drawing.Size(903, 667)
         Me.tpCandidates.TabIndex = 4
         Me.tpCandidates.Text = "Candidates"
         Me.tpCandidates.UseVisualStyleBackColor = True
@@ -1435,6 +1450,67 @@ Partial Class frmSysDefaults
         Me.ComboBox19.Name = "ComboBox19"
         Me.ComboBox19.Size = New System.Drawing.Size(242, 23)
         Me.ComboBox19.TabIndex = 0
+        '
+        'CheckBox16
+        '
+        Me.CheckBox16.AutoSize = True
+        Me.CheckBox16.Location = New System.Drawing.Point(9, 46)
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.Size = New System.Drawing.Size(346, 19)
+        Me.CheckBox16.TabIndex = 33
+        Me.CheckBox16.Text = "Automatically change request status when NO MOVEMENT."
+        Me.CheckBox16.UseVisualStyleBackColor = True
+        '
+        'ComboBox20
+        '
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Location = New System.Drawing.Point(266, 99)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(244, 23)
+        Me.ComboBox20.TabIndex = 35
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(21, 102)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(230, 15)
+        Me.Label41.TabIndex = 34
+        Me.Label41.Text = "Set status for Request with No Movement"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(21, 78)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(200, 15)
+        Me.Label42.TabIndex = 36
+        Me.Label42.Text = "Duration to check for No Movement"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(266, 75)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(60, 23)
+        Me.TextBox8.TabIndex = 37
+        '
+        'ComboBox21
+        '
+        Me.ComboBox21.FormattingEnabled = True
+        Me.ComboBox21.Location = New System.Drawing.Point(327, 75)
+        Me.ComboBox21.Name = "ComboBox21"
+        Me.ComboBox21.Size = New System.Drawing.Size(183, 23)
+        Me.ComboBox21.TabIndex = 38
+        '
+        'CheckBox17
+        '
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Location = New System.Drawing.Point(24, 128)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(341, 19)
+        Me.CheckBox17.TabIndex = 39
+        Me.CheckBox17.Text = "Send E-Mail Notification for Request(s) with No Movement"
+        Me.CheckBox17.UseVisualStyleBackColor = True
         '
         'frmSysDefaults
         '
@@ -1612,4 +1688,11 @@ Partial Class frmSysDefaults
     Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox17 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox16 As System.Windows.Forms.CheckBox
 End Class

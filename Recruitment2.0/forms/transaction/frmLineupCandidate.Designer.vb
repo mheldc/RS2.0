@@ -34,6 +34,14 @@ Partial Class frmLineupCandidate
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.colRemoveLineup = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colViewProfile = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colCandidateId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCandidateRefId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCandidateName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLineupDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLineupStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -48,20 +56,12 @@ Partial Class frmLineupCandidate
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.colRemoveLineup = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colViewProfile = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colCandidateId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCandidateRefId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCandidateName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLineupDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLineupStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tsOps
@@ -84,6 +84,7 @@ Partial Class frmLineupCandidate
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -190,6 +191,79 @@ Partial Class frmLineupCandidate
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(949, 487)
         Me.Panel1.TabIndex = 3
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colRemoveLineup, Me.colViewProfile, Me.colCandidateId, Me.colCandidateRefId, Me.colCandidateName, Me.colLineupDate, Me.colLineupStatus})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 143)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(947, 342)
+        Me.DataGridView1.TabIndex = 3
+        '
+        'colRemoveLineup
+        '
+        Me.colRemoveLineup.Frozen = True
+        Me.colRemoveLineup.HeaderText = ""
+        Me.colRemoveLineup.Name = "colRemoveLineup"
+        Me.colRemoveLineup.ReadOnly = True
+        Me.colRemoveLineup.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.colRemoveLineup.Text = "Remove from Line-up"
+        Me.colRemoveLineup.UseColumnTextForButtonValue = True
+        Me.colRemoveLineup.Width = 120
+        '
+        'colViewProfile
+        '
+        Me.colViewProfile.Frozen = True
+        Me.colViewProfile.HeaderText = ""
+        Me.colViewProfile.Name = "colViewProfile"
+        Me.colViewProfile.ReadOnly = True
+        Me.colViewProfile.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colViewProfile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.colViewProfile.Text = "View Profile"
+        Me.colViewProfile.Width = 120
+        '
+        'colCandidateId
+        '
+        Me.colCandidateId.Frozen = True
+        Me.colCandidateId.HeaderText = "CandidateId"
+        Me.colCandidateId.Name = "colCandidateId"
+        Me.colCandidateId.ReadOnly = True
+        Me.colCandidateId.Visible = False
+        '
+        'colCandidateRefId
+        '
+        Me.colCandidateRefId.Frozen = True
+        Me.colCandidateRefId.HeaderText = "Reference Id"
+        Me.colCandidateRefId.Name = "colCandidateRefId"
+        Me.colCandidateRefId.ReadOnly = True
+        '
+        'colCandidateName
+        '
+        Me.colCandidateName.Frozen = True
+        Me.colCandidateName.HeaderText = "Candidate Name"
+        Me.colCandidateName.Name = "colCandidateName"
+        Me.colCandidateName.ReadOnly = True
+        Me.colCandidateName.Width = 250
+        '
+        'colLineupDate
+        '
+        Me.colLineupDate.Frozen = True
+        Me.colLineupDate.HeaderText = "Line-up Date"
+        Me.colLineupDate.Name = "colLineupDate"
+        Me.colLineupDate.ReadOnly = True
+        Me.colLineupDate.Width = 150
+        '
+        'colLineupStatus
+        '
+        Me.colLineupStatus.Frozen = True
+        Me.colLineupStatus.HeaderText = "Line-up Status"
+        Me.colLineupStatus.Name = "colLineupStatus"
+        Me.colLineupStatus.ReadOnly = True
+        Me.colLineupStatus.Width = 150
         '
         'Panel3
         '
@@ -338,102 +412,30 @@ Partial Class frmLineupCandidate
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MR Reference #"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colRemoveLineup, Me.colViewProfile, Me.colCandidateId, Me.colCandidateRefId, Me.colCandidateName, Me.colLineupDate, Me.colLineupStatus})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 143)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(947, 342)
-        Me.DataGridView1.TabIndex = 3
-        '
-        'colRemoveLineup
-        '
-        Me.colRemoveLineup.Frozen = True
-        Me.colRemoveLineup.HeaderText = ""
-        Me.colRemoveLineup.Name = "colRemoveLineup"
-        Me.colRemoveLineup.ReadOnly = True
-        Me.colRemoveLineup.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.colRemoveLineup.Text = "Remove from Line-up"
-        Me.colRemoveLineup.UseColumnTextForButtonValue = True
-        Me.colRemoveLineup.Width = 120
-        '
-        'colViewProfile
-        '
-        Me.colViewProfile.Frozen = True
-        Me.colViewProfile.HeaderText = ""
-        Me.colViewProfile.Name = "colViewProfile"
-        Me.colViewProfile.ReadOnly = True
-        Me.colViewProfile.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colViewProfile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.colViewProfile.Text = "View Profile"
-        Me.colViewProfile.Width = 120
-        '
-        'colCandidateId
-        '
-        Me.colCandidateId.Frozen = True
-        Me.colCandidateId.HeaderText = "CandidateId"
-        Me.colCandidateId.Name = "colCandidateId"
-        Me.colCandidateId.ReadOnly = True
-        Me.colCandidateId.Visible = False
-        '
-        'colCandidateRefId
-        '
-        Me.colCandidateRefId.Frozen = True
-        Me.colCandidateRefId.HeaderText = "Reference Id"
-        Me.colCandidateRefId.Name = "colCandidateRefId"
-        Me.colCandidateRefId.ReadOnly = True
-        '
-        'colCandidateName
-        '
-        Me.colCandidateName.Frozen = True
-        Me.colCandidateName.HeaderText = "Candidate Name"
-        Me.colCandidateName.Name = "colCandidateName"
-        Me.colCandidateName.ReadOnly = True
-        Me.colCandidateName.Width = 250
-        '
-        'colLineupDate
-        '
-        Me.colLineupDate.Frozen = True
-        Me.colLineupDate.HeaderText = "Line-up Date"
-        Me.colLineupDate.Name = "colLineupDate"
-        Me.colLineupDate.ReadOnly = True
-        Me.colLineupDate.Width = 150
-        '
-        'colLineupStatus
-        '
-        Me.colLineupStatus.Frozen = True
-        Me.colLineupStatus.HeaderText = "Line-up Status"
-        Me.colLineupStatus.Name = "colLineupStatus"
-        Me.colLineupStatus.ReadOnly = True
-        Me.colLineupStatus.Width = 150
-        '
         'frmLineupCandidate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(949, 526)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmLineupCandidate"
         Me.Text = "Line-up Candidate"
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

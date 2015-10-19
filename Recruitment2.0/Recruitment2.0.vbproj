@@ -174,6 +174,12 @@
     <Compile Include="forms\maintenance\frmSkillType.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\maintenance\frmStages.Designer.vb">
+      <DependentUpon>frmStages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmStages.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\maintenance\frmUserAccess.Designer.vb">
       <DependentUpon>frmUserAccess.vb</DependentUpon>
     </Compile>
@@ -220,6 +226,12 @@
       <DependentUpon>frmMR.vb</DependentUpon>
     </Compile>
     <Compile Include="forms\transaction\frmMR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\transaction\frmStageCandidate.Designer.vb">
+      <DependentUpon>frmStageCandidate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\transaction\frmStageCandidate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -291,6 +303,9 @@
     <EmbeddedResource Include="forms\maintenance\frmSkillType.resx">
       <DependentUpon>frmSkillType.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmStages.resx">
+      <DependentUpon>frmStages.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmUserAccess.resx">
       <DependentUpon>frmUserAccess.vb</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\transaction\frmMR.resx">
       <DependentUpon>frmMR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\transaction\frmStageCandidate.resx">
+      <DependentUpon>frmStageCandidate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -63,6 +63,7 @@ Partial Class frmSkillType
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -87,6 +88,7 @@ Partial Class frmSkillType
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
+        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -99,6 +101,7 @@ Partial Class frmSkillType
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
+        Me.tsbDelete.Visible = False
         '
         'tsbCancel
         '
@@ -110,6 +113,7 @@ Partial Class frmSkillType
         Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
         Me.tsbCancel.Text = "ToolStripButton7"
         Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
         '
         'tsbSave
         '
@@ -122,6 +126,7 @@ Partial Class frmSkillType
         Me.tsbSave.Text = "ToolStripButton2"
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
+        Me.tsbSave.Visible = False
         '
         'tsbSeparator
         '
@@ -212,11 +217,13 @@ Partial Class frmSkillType
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(451, 159)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmSkillType"
         Me.Text = "Skill Types"
         Me.tsOps.ResumeLayout(False)

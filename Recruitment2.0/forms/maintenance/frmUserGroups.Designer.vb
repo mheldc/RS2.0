@@ -34,6 +34,7 @@ Partial Class frmUserGroups
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -41,7 +42,6 @@ Partial Class frmUserGroups
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class frmUserGroups
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(406, 39)
+        Me.tsOps.Size = New System.Drawing.Size(485, 39)
         Me.tsOps.TabIndex = 1
         '
         'tsbClose
@@ -66,6 +66,7 @@ Partial Class frmUserGroups
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
         '
         'tsbAdd
         '
@@ -173,22 +174,33 @@ Partial Class frmUserGroups
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(406, 258)
+        Me.Panel1.Size = New System.Drawing.Size(485, 172)
         Me.Panel1.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(112, 196)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(172, 49)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Set Group Rights"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(112, 80)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(279, 110)
+        Me.TextBox3.Size = New System.Drawing.Size(350, 76)
         Me.TextBox3.TabIndex = 25
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(112, 56)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(279, 23)
+        Me.TextBox2.Size = New System.Drawing.Size(350, 23)
         Me.TextBox2.TabIndex = 24
         '
         'TextBox1
@@ -239,28 +251,19 @@ Partial Class frmUserGroups
         Me.Label15.TabIndex = 19
         Me.Label15.Text = "Group Information"
         '
-        'Button1
-        '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(112, 196)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(172, 49)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Set Group Rights"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmUserGroups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(406, 297)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(485, 211)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmUserGroups"
         Me.Text = "User Groups"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

@@ -25,6 +25,13 @@ Partial Class frmStageCandidate
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStageCandidate))
         Me.tsOps = New System.Windows.Forms.ToolStrip()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.CVEvaluationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InterviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExaminationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentSubmissionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContractSigningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AppointmentAndDeploymentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
@@ -35,14 +42,15 @@ Partial Class frmStageCandidate
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.colRemoveLineup = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colViewProfile = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colCandidateId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCandidateRefId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCandidateName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLineupDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLineupStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSetFeedback = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colStageId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStage = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStagedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStagedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStageRF = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
@@ -61,7 +69,7 @@ Partial Class frmStageCandidate
         '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.ToolStripDropDownButton1, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(943, 39)
@@ -79,6 +87,66 @@ Partial Class frmStageCandidate
         Me.tsbClose.Text = "ToolStripButton1"
         Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbClose.ToolTipText = "Close"
+        Me.tsbClose.Visible = False
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CVEvaluationToolStripMenuItem, Me.InterviewToolStripMenuItem, Me.ExaminationToolStripMenuItem, Me.DocumentSubmissionToolStripMenuItem, Me.ContractSigningToolStripMenuItem, Me.AppointmentAndDeploymentToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
+        Me.ToolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(45, 36)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        'CVEvaluationToolStripMenuItem
+        '
+        Me.CVEvaluationToolStripMenuItem.Image = CType(resources.GetObject("CVEvaluationToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CVEvaluationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CVEvaluationToolStripMenuItem.Name = "CVEvaluationToolStripMenuItem"
+        Me.CVEvaluationToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.CVEvaluationToolStripMenuItem.Text = "CV Evaluation"
+        '
+        'InterviewToolStripMenuItem
+        '
+        Me.InterviewToolStripMenuItem.Image = CType(resources.GetObject("InterviewToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.InterviewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.InterviewToolStripMenuItem.Name = "InterviewToolStripMenuItem"
+        Me.InterviewToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.InterviewToolStripMenuItem.Text = "Interview"
+        '
+        'ExaminationToolStripMenuItem
+        '
+        Me.ExaminationToolStripMenuItem.Image = CType(resources.GetObject("ExaminationToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ExaminationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ExaminationToolStripMenuItem.Name = "ExaminationToolStripMenuItem"
+        Me.ExaminationToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.ExaminationToolStripMenuItem.Text = "Examination"
+        '
+        'DocumentSubmissionToolStripMenuItem
+        '
+        Me.DocumentSubmissionToolStripMenuItem.Image = CType(resources.GetObject("DocumentSubmissionToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.DocumentSubmissionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.DocumentSubmissionToolStripMenuItem.Name = "DocumentSubmissionToolStripMenuItem"
+        Me.DocumentSubmissionToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.DocumentSubmissionToolStripMenuItem.Text = "Document Submission"
+        '
+        'ContractSigningToolStripMenuItem
+        '
+        Me.ContractSigningToolStripMenuItem.Image = CType(resources.GetObject("ContractSigningToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ContractSigningToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ContractSigningToolStripMenuItem.Name = "ContractSigningToolStripMenuItem"
+        Me.ContractSigningToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.ContractSigningToolStripMenuItem.Text = "Contract Signing"
+        '
+        'AppointmentAndDeploymentToolStripMenuItem
+        '
+        Me.AppointmentAndDeploymentToolStripMenuItem.Image = CType(resources.GetObject("AppointmentAndDeploymentToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.AppointmentAndDeploymentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.AppointmentAndDeploymentToolStripMenuItem.Name = "AppointmentAndDeploymentToolStripMenuItem"
+        Me.AppointmentAndDeploymentToolStripMenuItem.Size = New System.Drawing.Size(252, 38)
+        Me.AppointmentAndDeploymentToolStripMenuItem.Text = "Appointment and Deployment"
         '
         'tsbAdd
         '
@@ -91,6 +159,7 @@ Partial Class frmStageCandidate
         Me.tsbAdd.Text = "ToolStripButton5"
         Me.tsbAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbAdd.ToolTipText = "New"
+        Me.tsbAdd.Visible = False
         '
         'tsbEdit
         '
@@ -180,84 +249,76 @@ Partial Class frmStageCandidate
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(943, 377)
+        Me.Panel1.Size = New System.Drawing.Size(943, 406)
         Me.Panel1.TabIndex = 3
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colRemoveLineup, Me.colViewProfile, Me.colCandidateId, Me.colCandidateRefId, Me.colCandidateName, Me.colLineupDate, Me.colLineupStatus})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSetFeedback, Me.colStageId, Me.colStage, Me.colStagedBy, Me.colStagedDate, Me.colStageRF})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 108)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(941, 267)
+        Me.DataGridView1.Size = New System.Drawing.Size(941, 296)
         Me.DataGridView1.TabIndex = 7
         '
-        'colRemoveLineup
+        'colSetFeedback
         '
-        Me.colRemoveLineup.Frozen = True
-        Me.colRemoveLineup.HeaderText = ""
-        Me.colRemoveLineup.Name = "colRemoveLineup"
-        Me.colRemoveLineup.ReadOnly = True
-        Me.colRemoveLineup.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.colRemoveLineup.Text = "Remove from Line-up"
-        Me.colRemoveLineup.UseColumnTextForButtonValue = True
-        Me.colRemoveLineup.Width = 120
+        Me.colSetFeedback.Frozen = True
+        Me.colSetFeedback.HeaderText = ""
+        Me.colSetFeedback.Name = "colSetFeedback"
+        Me.colSetFeedback.ReadOnly = True
+        Me.colSetFeedback.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colSetFeedback.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.colSetFeedback.Text = "Set Feedback"
+        Me.colSetFeedback.Width = 120
         '
-        'colViewProfile
+        'colStageId
         '
-        Me.colViewProfile.Frozen = True
-        Me.colViewProfile.HeaderText = ""
-        Me.colViewProfile.Name = "colViewProfile"
-        Me.colViewProfile.ReadOnly = True
-        Me.colViewProfile.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colViewProfile.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.colViewProfile.Text = "View Profile"
-        Me.colViewProfile.Width = 120
+        Me.colStageId.Frozen = True
+        Me.colStageId.HeaderText = "StageId"
+        Me.colStageId.Name = "colStageId"
+        Me.colStageId.ReadOnly = True
+        Me.colStageId.Visible = False
         '
-        'colCandidateId
+        'colStage
         '
-        Me.colCandidateId.Frozen = True
-        Me.colCandidateId.HeaderText = "CandidateId"
-        Me.colCandidateId.Name = "colCandidateId"
-        Me.colCandidateId.ReadOnly = True
-        Me.colCandidateId.Visible = False
+        Me.colStage.FillWeight = 150.0!
+        Me.colStage.Frozen = True
+        Me.colStage.HeaderText = "Stage"
+        Me.colStage.Name = "colStage"
+        Me.colStage.ReadOnly = True
         '
-        'colCandidateRefId
+        'colStagedBy
         '
-        Me.colCandidateRefId.Frozen = True
-        Me.colCandidateRefId.HeaderText = "Reference Id"
-        Me.colCandidateRefId.Name = "colCandidateRefId"
-        Me.colCandidateRefId.ReadOnly = True
+        Me.colStagedBy.Frozen = True
+        Me.colStagedBy.HeaderText = "Staged By"
+        Me.colStagedBy.Name = "colStagedBy"
+        Me.colStagedBy.ReadOnly = True
+        Me.colStagedBy.Width = 250
         '
-        'colCandidateName
+        'colStagedDate
         '
-        Me.colCandidateName.Frozen = True
-        Me.colCandidateName.HeaderText = "Candidate Name"
-        Me.colCandidateName.Name = "colCandidateName"
-        Me.colCandidateName.ReadOnly = True
-        Me.colCandidateName.Width = 250
+        Me.colStagedDate.Frozen = True
+        Me.colStagedDate.HeaderText = "Date Staged"
+        Me.colStagedDate.Name = "colStagedDate"
+        Me.colStagedDate.ReadOnly = True
+        Me.colStagedDate.Width = 150
         '
-        'colLineupDate
+        'colStageRF
         '
-        Me.colLineupDate.Frozen = True
-        Me.colLineupDate.HeaderText = "Line-up Date"
-        Me.colLineupDate.Name = "colLineupDate"
-        Me.colLineupDate.ReadOnly = True
-        Me.colLineupDate.Width = 150
-        '
-        'colLineupStatus
-        '
-        Me.colLineupStatus.Frozen = True
-        Me.colLineupStatus.HeaderText = "Line-up Status"
-        Me.colLineupStatus.Name = "colLineupStatus"
-        Me.colLineupStatus.ReadOnly = True
-        Me.colLineupStatus.Width = 150
+        Me.colStageRF.Frozen = True
+        Me.colStageRF.HeaderText = "Remarks / Feedback"
+        Me.colStageRF.Name = "colStageRF"
+        Me.colStageRF.ReadOnly = True
+        Me.colStageRF.Width = 250
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.LinkLabel2)
@@ -273,6 +334,25 @@ Partial Class frmStageCandidate
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(941, 108)
         Me.Panel2.TabIndex = 6
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(576, 69)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(184, 15)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "[Candidate Id - Candidate Name]"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(420, 69)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(63, 15)
+        Me.Label10.TabIndex = 11
+        Me.Label10.Text = "Candidate"
         '
         'Label8
         '
@@ -377,13 +457,14 @@ Partial Class frmStageCandidate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(943, 416)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(943, 445)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmStageCandidate"
         Me.Text = "Candidate Stageing"
         Me.tsOps.ResumeLayout(False)
@@ -408,13 +489,6 @@ Partial Class frmStageCandidate
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents colRemoveLineup As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colViewProfile As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colCandidateId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCandidateRefId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCandidateName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colLineupDate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colLineupStatus As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -426,4 +500,19 @@ Partial Class frmStageCandidate
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents colSetFeedback As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colStageId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStage As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStagedBy As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStagedDate As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStageRF As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents CVEvaluationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents InterviewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ExaminationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DocumentSubmissionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ContractSigningToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AppointmentAndDeploymentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
