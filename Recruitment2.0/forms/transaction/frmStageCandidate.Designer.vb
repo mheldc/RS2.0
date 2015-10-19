@@ -42,12 +42,6 @@ Partial Class frmStageCandidate
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.colSetFeedback = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colStageId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStage = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStagedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStagedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colStageRF = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -61,6 +55,15 @@ Partial Class frmStageCandidate
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.colSetFeedback = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colStageId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStage = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStagedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStagedDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colInitStat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCurrStat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLastUpdatedBy = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStageRF = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -256,64 +259,13 @@ Partial Class frmStageCandidate
         '
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSetFeedback, Me.colStageId, Me.colStage, Me.colStagedBy, Me.colStagedDate, Me.colStageRF})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSetFeedback, Me.colStageId, Me.colStage, Me.colStagedBy, Me.colStagedDate, Me.colInitStat, Me.colCurrStat, Me.colLastUpdatedBy, Me.colStageRF})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 108)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(941, 296)
         Me.DataGridView1.TabIndex = 7
-        '
-        'colSetFeedback
-        '
-        Me.colSetFeedback.Frozen = True
-        Me.colSetFeedback.HeaderText = ""
-        Me.colSetFeedback.Name = "colSetFeedback"
-        Me.colSetFeedback.ReadOnly = True
-        Me.colSetFeedback.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colSetFeedback.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.colSetFeedback.Text = "Set Feedback"
-        Me.colSetFeedback.Width = 120
-        '
-        'colStageId
-        '
-        Me.colStageId.Frozen = True
-        Me.colStageId.HeaderText = "StageId"
-        Me.colStageId.Name = "colStageId"
-        Me.colStageId.ReadOnly = True
-        Me.colStageId.Visible = False
-        '
-        'colStage
-        '
-        Me.colStage.FillWeight = 150.0!
-        Me.colStage.Frozen = True
-        Me.colStage.HeaderText = "Stage"
-        Me.colStage.Name = "colStage"
-        Me.colStage.ReadOnly = True
-        '
-        'colStagedBy
-        '
-        Me.colStagedBy.Frozen = True
-        Me.colStagedBy.HeaderText = "Staged By"
-        Me.colStagedBy.Name = "colStagedBy"
-        Me.colStagedBy.ReadOnly = True
-        Me.colStagedBy.Width = 250
-        '
-        'colStagedDate
-        '
-        Me.colStagedDate.Frozen = True
-        Me.colStagedDate.HeaderText = "Date Staged"
-        Me.colStagedDate.Name = "colStagedDate"
-        Me.colStagedDate.ReadOnly = True
-        Me.colStagedDate.Width = 150
-        '
-        'colStageRF
-        '
-        Me.colStageRF.Frozen = True
-        Me.colStageRF.HeaderText = "Remarks / Feedback"
-        Me.colStageRF.Name = "colStageRF"
-        Me.colStageRF.ReadOnly = True
-        Me.colStageRF.Width = 250
         '
         'Panel2
         '
@@ -453,6 +405,81 @@ Partial Class frmStageCandidate
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "MR Reference #"
         '
+        'colSetFeedback
+        '
+        Me.colSetFeedback.Frozen = True
+        Me.colSetFeedback.HeaderText = ""
+        Me.colSetFeedback.Name = "colSetFeedback"
+        Me.colSetFeedback.ReadOnly = True
+        Me.colSetFeedback.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colSetFeedback.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.colSetFeedback.Text = "Set Feedback"
+        Me.colSetFeedback.Width = 120
+        '
+        'colStageId
+        '
+        Me.colStageId.Frozen = True
+        Me.colStageId.HeaderText = "StageId"
+        Me.colStageId.Name = "colStageId"
+        Me.colStageId.ReadOnly = True
+        Me.colStageId.Visible = False
+        '
+        'colStage
+        '
+        Me.colStage.FillWeight = 150.0!
+        Me.colStage.Frozen = True
+        Me.colStage.HeaderText = "Stage"
+        Me.colStage.Name = "colStage"
+        Me.colStage.ReadOnly = True
+        '
+        'colStagedBy
+        '
+        Me.colStagedBy.Frozen = True
+        Me.colStagedBy.HeaderText = "Staged By"
+        Me.colStagedBy.Name = "colStagedBy"
+        Me.colStagedBy.ReadOnly = True
+        Me.colStagedBy.Width = 200
+        '
+        'colStagedDate
+        '
+        Me.colStagedDate.Frozen = True
+        Me.colStagedDate.HeaderText = "Date Staged"
+        Me.colStagedDate.Name = "colStagedDate"
+        Me.colStagedDate.ReadOnly = True
+        Me.colStagedDate.Width = 150
+        '
+        'colInitStat
+        '
+        Me.colInitStat.Frozen = True
+        Me.colInitStat.HeaderText = "Initial Status"
+        Me.colInitStat.Name = "colInitStat"
+        Me.colInitStat.ReadOnly = True
+        Me.colInitStat.Width = 150
+        '
+        'colCurrStat
+        '
+        Me.colCurrStat.Frozen = True
+        Me.colCurrStat.HeaderText = "Current Status"
+        Me.colCurrStat.Name = "colCurrStat"
+        Me.colCurrStat.ReadOnly = True
+        Me.colCurrStat.Width = 150
+        '
+        'colLastUpdatedBy
+        '
+        Me.colLastUpdatedBy.Frozen = True
+        Me.colLastUpdatedBy.HeaderText = "Last Update By"
+        Me.colLastUpdatedBy.Name = "colLastUpdatedBy"
+        Me.colLastUpdatedBy.ReadOnly = True
+        Me.colLastUpdatedBy.Width = 200
+        '
+        'colStageRF
+        '
+        Me.colStageRF.Frozen = True
+        Me.colStageRF.HeaderText = "Remarks / Feedback"
+        Me.colStageRF.Name = "colStageRF"
+        Me.colStageRF.ReadOnly = True
+        Me.colStageRF.Width = 250
+        '
         'frmStageCandidate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -500,12 +527,6 @@ Partial Class frmStageCandidate
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents colSetFeedback As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colStageId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colStage As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colStagedBy As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colStagedDate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colStageRF As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
@@ -515,4 +536,13 @@ Partial Class frmStageCandidate
     Friend WithEvents DocumentSubmissionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContractSigningToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AppointmentAndDeploymentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents colSetFeedback As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colStageId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStage As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStagedBy As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStagedDate As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colInitStat As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colCurrStat As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colLastUpdatedBy As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colStageRF As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
