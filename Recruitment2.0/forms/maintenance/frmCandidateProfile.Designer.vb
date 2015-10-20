@@ -27,6 +27,8 @@ Partial Class frmCandidateProfile
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.tabInfo = New System.Windows.Forms.TabControl()
         Me.tpPersonal = New System.Windows.Forms.TabPage()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.rdbAdd2 = New System.Windows.Forms.RadioButton()
         Me.rdbAdd1 = New System.Windows.Forms.RadioButton()
         Me.mtbTIN = New System.Windows.Forms.MaskedTextBox()
@@ -102,7 +104,7 @@ Partial Class frmCandidateProfile
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.tsEduc = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.tsbEducSave = New System.Windows.Forms.ToolStripButton()
         Me.Panel11 = New System.Windows.Forms.Panel()
@@ -138,9 +140,9 @@ Partial Class frmCandidateProfile
         Me.colReasonForLeaving = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colIsPresent = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel13 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.tsEmp = New System.Windows.Forms.ToolStrip()
+        Me.tsbEmpCancel = New System.Windows.Forms.ToolStripButton()
+        Me.tsbEmpSave = New System.Windows.Forms.ToolStripButton()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.TextBox29 = New System.Windows.Forms.TextBox()
@@ -174,9 +176,9 @@ Partial Class frmCandidateProfile
         Me.colLastYearUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSCLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
+        Me.tsSkills = New System.Windows.Forms.ToolStrip()
+        Me.tsbSkillCancel = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSkillSave = New System.Windows.Forms.ToolStripButton()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.Label54 = New System.Windows.Forms.Label()
@@ -238,8 +240,7 @@ Partial Class frmCandidateProfile
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.txtAge = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tabInfo.SuspendLayout()
@@ -254,19 +255,19 @@ Partial Class frmCandidateProfile
         Me.Panel9.SuspendLayout()
         CType(Me.dgvEduHist, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
+        Me.tsEduc.SuspendLayout()
         Me.Panel11.SuspendLayout()
         Me.tpEmpHist.SuspendLayout()
         Me.Panel12.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel13.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        Me.tsEmp.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.tpSkills.SuspendLayout()
         Me.Panel15.SuspendLayout()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel16.SuspendLayout()
-        Me.ToolStrip4.SuspendLayout()
+        Me.tsSkills.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.tpOthers.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -352,6 +353,23 @@ Partial Class frmCandidateProfile
         Me.tpPersonal.TabIndex = 0
         Me.tpPersonal.Text = "Personal Information"
         Me.tpPersonal.UseVisualStyleBackColor = True
+        '
+        'txtAge
+        '
+        Me.txtAge.Location = New System.Drawing.Point(349, 37)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.ReadOnly = True
+        Me.txtAge.Size = New System.Drawing.Size(50, 23)
+        Me.txtAge.TabIndex = 37
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(319, 42)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(26, 15)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Age"
         '
         'rdbAdd2
         '
@@ -1008,22 +1026,22 @@ Partial Class frmCandidateProfile
         'Panel10
         '
         Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Controls.Add(Me.ToolStrip2)
+        Me.Panel10.Controls.Add(Me.tsEduc)
         Me.Panel10.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel10.Location = New System.Drawing.Point(0, 337)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(945, 46)
         Me.Panel10.TabIndex = 8
         '
-        'ToolStrip2
+        'tsEduc
         '
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton4, Me.tsbEducSave})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 5)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(943, 39)
-        Me.ToolStrip2.TabIndex = 3
-        Me.ToolStrip2.Text = "ToolStrip2"
+        Me.tsEduc.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.tsEduc.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton4, Me.tsbEducSave})
+        Me.tsEduc.Location = New System.Drawing.Point(0, 5)
+        Me.tsEduc.Name = "tsEduc"
+        Me.tsEduc.Size = New System.Drawing.Size(943, 39)
+        Me.tsEduc.TabIndex = 3
+        Me.tsEduc.Text = "ToolStrip2"
         '
         'ToolStripButton4
         '
@@ -1336,44 +1354,44 @@ Partial Class frmCandidateProfile
         'Panel13
         '
         Me.Panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel13.Controls.Add(Me.ToolStrip1)
+        Me.Panel13.Controls.Add(Me.tsEmp)
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel13.Location = New System.Drawing.Point(0, 337)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(945, 46)
         Me.Panel13.TabIndex = 11
         '
-        'ToolStrip1
+        'tsEmp
         '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 5)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(943, 39)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.tsEmp.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.tsEmp.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbEmpCancel, Me.tsbEmpSave})
+        Me.tsEmp.Location = New System.Drawing.Point(0, 5)
+        Me.tsEmp.Name = "tsEmp"
+        Me.tsEmp.Size = New System.Drawing.Size(943, 39)
+        Me.tsEmp.TabIndex = 1
+        Me.tsEmp.Text = "ToolStrip1"
         '
-        'ToolStripButton2
+        'tsbEmpCancel
         '
-        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
+        Me.tsbEmpCancel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbEmpCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbEmpCancel.Image = CType(resources.GetObject("tsbEmpCancel.Image"), System.Drawing.Image)
+        Me.tsbEmpCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbEmpCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbEmpCancel.Name = "tsbEmpCancel"
+        Me.tsbEmpCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbEmpCancel.Text = "ToolStripButton2"
         '
-        'ToolStripButton1
+        'tsbEmpSave
         '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
+        Me.tsbEmpSave.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbEmpSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbEmpSave.Image = CType(resources.GetObject("tsbEmpSave.Image"), System.Drawing.Image)
+        Me.tsbEmpSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbEmpSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbEmpSave.Name = "tsbEmpSave"
+        Me.tsbEmpSave.Size = New System.Drawing.Size(36, 36)
+        Me.tsbEmpSave.Text = "ToolStripButton1"
         '
         'Panel14
         '
@@ -1669,44 +1687,44 @@ Partial Class frmCandidateProfile
         'Panel16
         '
         Me.Panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel16.Controls.Add(Me.ToolStrip4)
+        Me.Panel16.Controls.Add(Me.tsSkills)
         Me.Panel16.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel16.Location = New System.Drawing.Point(0, 337)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(945, 46)
         Me.Panel16.TabIndex = 11
         '
-        'ToolStrip4
+        'tsSkills
         '
-        Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton7, Me.ToolStripButton8})
-        Me.ToolStrip4.Location = New System.Drawing.Point(0, 5)
-        Me.ToolStrip4.Name = "ToolStrip4"
-        Me.ToolStrip4.Size = New System.Drawing.Size(943, 39)
-        Me.ToolStrip4.TabIndex = 2
-        Me.ToolStrip4.Text = "ToolStrip4"
+        Me.tsSkills.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.tsSkills.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbSkillCancel, Me.tsbSkillSave})
+        Me.tsSkills.Location = New System.Drawing.Point(0, 5)
+        Me.tsSkills.Name = "tsSkills"
+        Me.tsSkills.Size = New System.Drawing.Size(943, 39)
+        Me.tsSkills.TabIndex = 2
+        Me.tsSkills.Text = "ToolStrip4"
         '
-        'ToolStripButton7
+        'tsbSkillCancel
         '
-        Me.ToolStripButton7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton7.Text = "ToolStripButton2"
+        Me.tsbSkillCancel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbSkillCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbSkillCancel.Image = CType(resources.GetObject("tsbSkillCancel.Image"), System.Drawing.Image)
+        Me.tsbSkillCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbSkillCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSkillCancel.Name = "tsbSkillCancel"
+        Me.tsbSkillCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbSkillCancel.Text = "ToolStripButton2"
         '
-        'ToolStripButton8
+        'tsbSkillSave
         '
-        Me.ToolStripButton8.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
-        Me.ToolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton8.Name = "ToolStripButton8"
-        Me.ToolStripButton8.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton8.Text = "ToolStripButton1"
+        Me.tsbSkillSave.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbSkillSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbSkillSave.Image = CType(resources.GetObject("tsbSkillSave.Image"), System.Drawing.Image)
+        Me.tsbSkillSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbSkillSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSkillSave.Name = "tsbSkillSave"
+        Me.tsbSkillSave.Size = New System.Drawing.Size(36, 36)
+        Me.tsbSkillSave.Text = "ToolStripButton1"
         '
         'Panel17
         '
@@ -1844,6 +1862,7 @@ Partial Class frmCandidateProfile
         '
         Me.tpOthers.AutoScroll = True
         Me.tpOthers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpOthers.Controls.Add(Me.ComboBox1)
         Me.tpOthers.Controls.Add(Me.TextBox32)
         Me.tpOthers.Controls.Add(Me.Label55)
         Me.tpOthers.Controls.Add(Me.ComboBox8)
@@ -2023,10 +2042,10 @@ Partial Class frmCandidateProfile
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(176, 160)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(157, 19)
+        Me.RadioButton2.Size = New System.Drawing.Size(246, 19)
         Me.RadioButton2.TabIndex = 30
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "in                 day(s) notice"
+        Me.RadioButton2.Text = "in                                                           notice"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton1
@@ -2317,22 +2336,14 @@ Partial Class frmCandidateProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'txtAge
+        'ComboBox1
         '
-        Me.txtAge.Location = New System.Drawing.Point(349, 37)
-        Me.txtAge.Name = "txtAge"
-        Me.txtAge.ReadOnly = True
-        Me.txtAge.Size = New System.Drawing.Size(50, 23)
-        Me.txtAge.TabIndex = 37
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(319, 42)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(26, 15)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Age"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
+        Me.ComboBox1.Location = New System.Drawing.Point(252, 159)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox1.TabIndex = 48
         '
         'frmCandidateProfile
         '
@@ -2368,8 +2379,8 @@ Partial Class frmCandidateProfile
         CType(Me.dgvEduHist, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
+        Me.tsEduc.ResumeLayout(False)
+        Me.tsEduc.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         Me.tpEmpHist.ResumeLayout(False)
@@ -2377,8 +2388,8 @@ Partial Class frmCandidateProfile
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.tsEmp.ResumeLayout(False)
+        Me.tsEmp.PerformLayout()
         Me.Panel14.ResumeLayout(False)
         Me.Panel14.PerformLayout()
         Me.tpSkills.ResumeLayout(False)
@@ -2386,8 +2397,8 @@ Partial Class frmCandidateProfile
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel16.ResumeLayout(False)
         Me.Panel16.PerformLayout()
-        Me.ToolStrip4.ResumeLayout(False)
-        Me.ToolStrip4.PerformLayout()
+        Me.tsSkills.ResumeLayout(False)
+        Me.tsSkills.PerformLayout()
         Me.Panel17.ResumeLayout(False)
         Me.Panel17.PerformLayout()
         Me.tpOthers.ResumeLayout(False)
@@ -2512,9 +2523,9 @@ Partial Class frmCandidateProfile
     Friend WithEvents Panel15 As System.Windows.Forms.Panel
     Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel16 As System.Windows.Forms.Panel
-    Friend WithEvents ToolStrip4 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsSkills As System.Windows.Forms.ToolStrip
+    Friend WithEvents tsbSkillCancel As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbSkillSave As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel17 As System.Windows.Forms.Panel
     Friend WithEvents Label54 As System.Windows.Forms.Label
     Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
@@ -2531,9 +2542,9 @@ Partial Class frmCandidateProfile
     Friend WithEvents Panel12 As System.Windows.Forms.Panel
     Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel13 As System.Windows.Forms.Panel
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsEmp As System.Windows.Forms.ToolStrip
+    Friend WithEvents tsbEmpCancel As System.Windows.Forms.ToolStripButton
+    Friend WithEvents tsbEmpSave As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel14 As System.Windows.Forms.Panel
     Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
     Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
@@ -2566,7 +2577,7 @@ Partial Class frmCandidateProfile
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel10 As System.Windows.Forms.Panel
-    Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
+    Friend WithEvents tsEduc As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbEducSave As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
@@ -2620,4 +2631,5 @@ Partial Class frmCandidateProfile
     Friend WithEvents colIsPresent As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents txtAge As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class
