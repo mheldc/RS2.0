@@ -72,6 +72,12 @@ Partial Class frmClientProfile
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
+        Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAcctId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colContactName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDesignation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpAccountInfo.SuspendLayout()
@@ -90,7 +96,7 @@ Partial Class frmClientProfile
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(766, 497)
+        Me.Panel1.Size = New System.Drawing.Size(605, 497)
         Me.Panel1.TabIndex = 10
         '
         'TabControl1
@@ -101,7 +107,7 @@ Partial Class frmClientProfile
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(764, 495)
+        Me.TabControl1.Size = New System.Drawing.Size(603, 495)
         Me.TabControl1.TabIndex = 2
         '
         'tpAccountInfo
@@ -128,7 +134,7 @@ Partial Class frmClientProfile
         Me.tpAccountInfo.Location = New System.Drawing.Point(4, 24)
         Me.tpAccountInfo.Name = "tpAccountInfo"
         Me.tpAccountInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpAccountInfo.Size = New System.Drawing.Size(756, 467)
+        Me.tpAccountInfo.Size = New System.Drawing.Size(595, 467)
         Me.tpAccountInfo.TabIndex = 0
         Me.tpAccountInfo.Text = "Account Information"
         Me.tpAccountInfo.UseVisualStyleBackColor = True
@@ -284,18 +290,21 @@ Partial Class frmClientProfile
         Me.tpContactInfo.Location = New System.Drawing.Point(4, 24)
         Me.tpContactInfo.Name = "tpContactInfo"
         Me.tpContactInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpContactInfo.Size = New System.Drawing.Size(756, 467)
+        Me.tpContactInfo.Size = New System.Drawing.Size(595, 467)
         Me.tpContactInfo.TabIndex = 1
         Me.tpContactInfo.Text = "Contact Information"
         Me.tpContactInfo.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSelect, Me.colRemove, Me.colId, Me.colAcctId, Me.colContactName, Me.colDesignation})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 279)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(748, 183)
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(587, 183)
         Me.DataGridView1.TabIndex = 1
         '
         'Panel3
@@ -318,7 +327,7 @@ Partial Class frmClientProfile
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(748, 276)
+        Me.Panel3.Size = New System.Drawing.Size(587, 276)
         Me.Panel3.TabIndex = 0
         '
         'ToolStrip1
@@ -327,7 +336,7 @@ Partial Class frmClientProfile
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 235)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(746, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(585, 39)
         Me.ToolStrip1.TabIndex = 114
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -466,7 +475,7 @@ Partial Class frmClientProfile
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(766, 39)
+        Me.tsOps.Size = New System.Drawing.Size(605, 39)
         Me.tsOps.TabIndex = 9
         '
         'tsbClose
@@ -574,11 +583,61 @@ Partial Class frmClientProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
+        'colSelect
+        '
+        Me.colSelect.Frozen = True
+        Me.colSelect.HeaderText = ""
+        Me.colSelect.Name = "colSelect"
+        Me.colSelect.ReadOnly = True
+        Me.colSelect.Text = "Select"
+        Me.colSelect.UseColumnTextForButtonValue = True
+        Me.colSelect.Width = 70
+        '
+        'colRemove
+        '
+        Me.colRemove.Frozen = True
+        Me.colRemove.HeaderText = ""
+        Me.colRemove.Name = "colRemove"
+        Me.colRemove.ReadOnly = True
+        Me.colRemove.Text = "Remove"
+        Me.colRemove.UseColumnTextForButtonValue = True
+        Me.colRemove.Width = 70
+        '
+        'colId
+        '
+        Me.colId.HeaderText = "Id"
+        Me.colId.Name = "colId"
+        Me.colId.ReadOnly = True
+        Me.colId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.colId.Visible = False
+        '
+        'colAcctId
+        '
+        Me.colAcctId.HeaderText = "Account Id"
+        Me.colAcctId.Name = "colAcctId"
+        Me.colAcctId.ReadOnly = True
+        Me.colAcctId.Visible = False
+        '
+        'colContactName
+        '
+        Me.colContactName.HeaderText = "Contact Name"
+        Me.colContactName.Name = "colContactName"
+        Me.colContactName.ReadOnly = True
+        Me.colContactName.Width = 150
+        '
+        'colDesignation
+        '
+        Me.colDesignation.HeaderText = "Designation"
+        Me.colDesignation.Name = "colDesignation"
+        Me.colDesignation.ReadOnly = True
+        Me.colDesignation.Width = 200
+        '
         'frmClientProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(766, 536)
+        Me.ClientSize = New System.Drawing.Size(605, 536)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -653,4 +712,10 @@ Partial Class frmClientProfile
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colAcctId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colContactName As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colDesignation As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

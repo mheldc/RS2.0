@@ -138,6 +138,7 @@ Partial Class frmSkill
         '
         Me.TextBox4.Location = New System.Drawing.Point(101, 60)
         Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(160, 23)
         Me.TextBox4.TabIndex = 39
         '

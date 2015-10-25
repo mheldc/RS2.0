@@ -74,6 +74,7 @@ Partial Class frmCandidateProfile
         Me.tsbFMCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbFMSave = New System.Windows.Forms.ToolStripButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.chkFMIsDeceased = New System.Windows.Forms.CheckBox()
         Me.cboFMCStatus = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtFMOccupation = New System.Windows.Forms.TextBox()
@@ -84,11 +85,7 @@ Partial Class frmCandidateProfile
         Me.Label29 = New System.Windows.Forms.Label()
         Me.dtpFMBDate = New System.Windows.Forms.DateTimePicker()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtFMMName = New System.Windows.Forms.TextBox()
-        Me.txtFMFName = New System.Windows.Forms.TextBox()
         Me.txtFMLName = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.tpEduc = New System.Windows.Forms.TabPage()
@@ -194,6 +191,7 @@ Partial Class frmCandidateProfile
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
         Me.tpOthers = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox32 = New System.Windows.Forms.TextBox()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.ComboBox8 = New System.Windows.Forms.ComboBox()
@@ -240,7 +238,6 @@ Partial Class frmCandidateProfile
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tabInfo.SuspendLayout()
@@ -546,7 +543,7 @@ Partial Class frmCandidateProfile
         'cboCStatus
         '
         Me.cboCStatus.FormattingEnabled = True
-        Me.cboCStatus.Items.AddRange(New Object() {"- Select Gender -", "MALE", "FEMALE"})
+        Me.cboCStatus.Items.AddRange(New Object() {"- Select Marital Status -", "Single", "Married", "Divorced", "Separated", "Widowed/Widower"})
         Me.cboCStatus.Location = New System.Drawing.Point(132, 85)
         Me.cboCStatus.Name = "cboCStatus"
         Me.cboCStatus.Size = New System.Drawing.Size(366, 23)
@@ -570,7 +567,7 @@ Partial Class frmCandidateProfile
         'cboGender
         '
         Me.cboGender.FormattingEnabled = True
-        Me.cboGender.Items.AddRange(New Object() {"- Select Gender -", "MALE", "FEMALE"})
+        Me.cboGender.Items.AddRange(New Object() {"- Select Gender -", "Male", "Female"})
         Me.cboGender.Location = New System.Drawing.Point(132, 13)
         Me.cboGender.Name = "cboGender"
         Me.cboGender.Size = New System.Drawing.Size(184, 23)
@@ -756,6 +753,7 @@ Partial Class frmCandidateProfile
         '
         Me.Panel6.AutoScroll = True
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.chkFMIsDeceased)
         Me.Panel6.Controls.Add(Me.cboFMCStatus)
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Controls.Add(Me.txtFMOccupation)
@@ -766,11 +764,7 @@ Partial Class frmCandidateProfile
         Me.Panel6.Controls.Add(Me.Label29)
         Me.Panel6.Controls.Add(Me.dtpFMBDate)
         Me.Panel6.Controls.Add(Me.Label27)
-        Me.Panel6.Controls.Add(Me.txtFMMName)
-        Me.Panel6.Controls.Add(Me.txtFMFName)
         Me.Panel6.Controls.Add(Me.txtFMLName)
-        Me.Panel6.Controls.Add(Me.Label26)
-        Me.Panel6.Controls.Add(Me.Label25)
         Me.Panel6.Controls.Add(Me.Label24)
         Me.Panel6.Controls.Add(Me.Label23)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
@@ -779,10 +773,21 @@ Partial Class frmCandidateProfile
         Me.Panel6.Size = New System.Drawing.Size(939, 137)
         Me.Panel6.TabIndex = 0
         '
+        'chkFMIsDeceased
+        '
+        Me.chkFMIsDeceased.AutoSize = True
+        Me.chkFMIsDeceased.Location = New System.Drawing.Point(448, 79)
+        Me.chkFMIsDeceased.Name = "chkFMIsDeceased"
+        Me.chkFMIsDeceased.Size = New System.Drawing.Size(78, 19)
+        Me.chkFMIsDeceased.TabIndex = 37
+        Me.chkFMIsDeceased.Text = "Deceased"
+        Me.chkFMIsDeceased.UseVisualStyleBackColor = True
+        '
         'cboFMCStatus
         '
         Me.cboFMCStatus.FormattingEnabled = True
-        Me.cboFMCStatus.Location = New System.Drawing.Point(447, 29)
+        Me.cboFMCStatus.Items.AddRange(New Object() {"- Select Marital Status -", "Single", "Married", "Divorced", "Separated", "Widowed/Widower"})
+        Me.cboFMCStatus.Location = New System.Drawing.Point(114, 77)
         Me.cboFMCStatus.Name = "cboFMCStatus"
         Me.cboFMCStatus.Size = New System.Drawing.Size(216, 23)
         Me.cboFMCStatus.TabIndex = 36
@@ -790,7 +795,7 @@ Partial Class frmCandidateProfile
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(361, 32)
+        Me.Label12.Location = New System.Drawing.Point(24, 80)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(69, 15)
         Me.Label12.TabIndex = 35
@@ -798,7 +803,7 @@ Partial Class frmCandidateProfile
         '
         'txtFMOccupation
         '
-        Me.txtFMOccupation.Location = New System.Drawing.Point(447, 77)
+        Me.txtFMOccupation.Location = New System.Drawing.Point(448, 53)
         Me.txtFMOccupation.Name = "txtFMOccupation"
         Me.txtFMOccupation.Size = New System.Drawing.Size(216, 23)
         Me.txtFMOccupation.TabIndex = 34
@@ -806,7 +811,7 @@ Partial Class frmCandidateProfile
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(361, 80)
+        Me.Label30.Location = New System.Drawing.Point(362, 56)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(70, 15)
         Me.Label30.TabIndex = 33
@@ -814,7 +819,7 @@ Partial Class frmCandidateProfile
         '
         'txtFMRel
         '
-        Me.txtFMRel.Location = New System.Drawing.Point(447, 53)
+        Me.txtFMRel.Location = New System.Drawing.Point(448, 29)
         Me.txtFMRel.Name = "txtFMRel"
         Me.txtFMRel.Size = New System.Drawing.Size(216, 23)
         Me.txtFMRel.TabIndex = 32
@@ -822,7 +827,7 @@ Partial Class frmCandidateProfile
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(361, 56)
+        Me.Label28.Location = New System.Drawing.Point(362, 32)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(76, 15)
         Me.Label28.TabIndex = 31
@@ -830,16 +835,16 @@ Partial Class frmCandidateProfile
         '
         'txtFMAge
         '
-        Me.txtFMAge.Location = New System.Drawing.Point(280, 101)
+        Me.txtFMAge.Location = New System.Drawing.Point(281, 53)
         Me.txtFMAge.Name = "txtFMAge"
         Me.txtFMAge.ReadOnly = True
-        Me.txtFMAge.Size = New System.Drawing.Size(50, 23)
+        Me.txtFMAge.Size = New System.Drawing.Size(49, 23)
         Me.txtFMAge.TabIndex = 30
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(248, 104)
+        Me.Label29.Location = New System.Drawing.Point(249, 56)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(26, 15)
         Me.Label29.TabIndex = 29
@@ -848,7 +853,7 @@ Partial Class frmCandidateProfile
         'dtpFMBDate
         '
         Me.dtpFMBDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFMBDate.Location = New System.Drawing.Point(114, 101)
+        Me.dtpFMBDate.Location = New System.Drawing.Point(115, 53)
         Me.dtpFMBDate.Name = "dtpFMBDate"
         Me.dtpFMBDate.Size = New System.Drawing.Size(128, 23)
         Me.dtpFMBDate.TabIndex = 28
@@ -856,25 +861,11 @@ Partial Class frmCandidateProfile
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(24, 104)
+        Me.Label27.Location = New System.Drawing.Point(25, 56)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(62, 15)
         Me.Label27.TabIndex = 27
         Me.Label27.Text = "Birth Date"
-        '
-        'txtFMMName
-        '
-        Me.txtFMMName.Location = New System.Drawing.Point(114, 77)
-        Me.txtFMMName.Name = "txtFMMName"
-        Me.txtFMMName.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMMName.TabIndex = 26
-        '
-        'txtFMFName
-        '
-        Me.txtFMFName.Location = New System.Drawing.Point(114, 53)
-        Me.txtFMFName.Name = "txtFMFName"
-        Me.txtFMFName.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMFName.TabIndex = 25
         '
         'txtFMLName
         '
@@ -883,32 +874,14 @@ Partial Class frmCandidateProfile
         Me.txtFMLName.Size = New System.Drawing.Size(216, 23)
         Me.txtFMLName.TabIndex = 24
         '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(24, 80)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(80, 15)
-        Me.Label26.TabIndex = 23
-        Me.Label26.Text = "Middle Name"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(24, 56)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(66, 15)
-        Me.Label25.TabIndex = 22
-        Me.Label25.Text = "First Name"
-        '
         'Label24
         '
         Me.Label24.AutoSize = True
         Me.Label24.Location = New System.Drawing.Point(24, 32)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(63, 15)
+        Me.Label24.Size = New System.Drawing.Size(86, 15)
         Me.Label24.TabIndex = 21
-        Me.Label24.Text = "Last Name"
+        Me.Label24.Text = "Member Name"
         '
         'Label23
         '
@@ -1891,6 +1864,15 @@ Partial Class frmCandidateProfile
         Me.tpOthers.Text = "Other Information"
         Me.tpOthers.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
+        Me.ComboBox1.Location = New System.Drawing.Point(252, 159)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox1.TabIndex = 48
+        '
         'TextBox32
         '
         Me.TextBox32.Location = New System.Drawing.Point(457, 40)
@@ -2336,15 +2318,6 @@ Partial Class frmCandidateProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
-        Me.ComboBox1.Location = New System.Drawing.Point(252, 159)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 48
-        '
         'frmCandidateProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -2474,11 +2447,7 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents dtpFMBDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents txtFMMName As System.Windows.Forms.TextBox
-    Friend WithEvents txtFMFName As System.Windows.Forms.TextBox
     Friend WithEvents txtFMLName As System.Windows.Forms.TextBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
@@ -2632,4 +2601,5 @@ Partial Class frmCandidateProfile
     Friend WithEvents txtAge As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents chkFMIsDeceased As System.Windows.Forms.CheckBox
 End Class
