@@ -54,16 +54,7 @@ Public Class RMSMain
     End Function
 
     Private Sub tsFile_Click(sender As Object, e As EventArgs) Handles tsFile.Click
-        If Application.OpenForms().OfType(Of frmCandidateProfile).Any Then
-            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
-        Else
-            Dim cProfile As New frmCandidateProfile
-            cProfile.TopLevel = False
-            cProfile.Parent = Me
-            cProfile.StartPosition = FormStartPosition.CenterParent
-            cProfile.WindowState = FormWindowState.Maximized
-            cProfile.Show()
-        End If
+
 
     End Sub
 
@@ -82,5 +73,18 @@ Public Class RMSMain
         x.StartPosition = FormStartPosition.CenterParent
         x.WindowState = FormWindowState.Maximized
         x.Show()
+    End Sub
+
+    Private Sub CandidateProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CandidateProfileToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmCandidateProfile).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim cProfile As New frmCandidateProfile
+            cProfile.TopLevel = False
+            cProfile.MdiParent = Me
+            cProfile.StartPosition = FormStartPosition.CenterParent
+            cProfile.WindowState = FormWindowState.Maximized
+            cProfile.Show()
+        End If
     End Sub
 End Class

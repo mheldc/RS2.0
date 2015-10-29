@@ -17,17 +17,26 @@
     <Setting Name="DefaultPwd" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DefaultNetDrive" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Z:\</Value>
+    <Setting Name="SMTPHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.ipiphil.com</Value>
     </Setting>
-    <Setting Name="DefaultNetFolder" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\CVs</Value>
+    <Setting Name="SMTPPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25</Value>
     </Setting>
-    <Setting Name="DefaultNetUser" Type="System.String" Scope="Application">
+    <Setting Name="SMTPSSL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseCredential" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CredentialEmail" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DefaultNetPwd" Type="System.String" Scope="User">
+    <Setting Name="CredentialPwd" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DbType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

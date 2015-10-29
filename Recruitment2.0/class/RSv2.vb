@@ -1,11 +1,14 @@
 ﻿Imports MySql.Data
 Imports MySql.Data.MySqlClient
+Imports System.Data.SqlClient
+Imports System.Data
 Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Security.Cryptography
 Imports System.Management
 Imports System.Net.Dns
+Imports System.Net.Mail
 Imports System.Net
 
 Namespace RSv2
@@ -14,9 +17,35 @@ Namespace RSv2
         Public Const HashKeyCode As String = "The quick brown fox jumps over the lazy dog."
         Public Const SaltKeyCode As String = ".god yzal eht revo spmuj xof nworb kciuq ehT"
 
-        'Public HRMSHost, HRMSPort, HRMSDb, HRMSLoginId, HRMSPassword As String
-        Public RECSHost, RECSPort, RECSDb, RECSLoginId, RECSPassword As String
-        Public NETDrive, NETFDir, NETFLoginId, NETFPassword As String
+        ' DB and SMTP Server Variables
+        Public DefHost, DefPort, DefDb, DefUID, DefPWD As String, DbType As DbTypes
+        Public DefSMTPHost, DefSMTPPort, CredEmail, CredEmailPwd As String, useSSL As Boolean, useCredential As Boolean
+
+        ' Data variables
+        Public Qry As String, Dset As DataSet, Dtbl As DataTable, Drow As DataRow
+        Public Params As ArrayList
+
+        ' Login variables
+        Public CurrentUID As Integer, CurrentUName As String, CurrentUPosition As String
+
+        Public Enum DbTypes As Integer
+            MySQL = 0
+            MSSQL = 1
+            ORACLE = 2 ' To support soon
+        End Enum
+
+        Public Enum RecModules As Integer
+            Candidate = 0
+            ManpowerRequest = 1
+            LineUpRequest = 2
+            ContractRequest = 3
+            MRStatus = 4
+            MRTypes = 5
+            LRStatus = 6
+            CRStatus = 7
+            ClientAccounts = 8
+            UserProfile = 9
+        End Enum
 
     End Module
 
@@ -41,23 +70,29 @@ Namespace RSv2
 
                             Select Case chldNodes.Attributes("name").Value
                                 Case "DefaultHost"
-                                    Declares.RECSHost = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                    Declares.DefHost = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
                                 Case "DefaultDb"
-                                    Declares.RECSDb = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                    Declares.DefDb = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
                                 Case "DefaultPort"
-                                    Declares.RECSPort = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                    Declares.DefPort = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
                                 Case "DefaultUser"
-                                    Declares.RECSLoginId = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                    Declares.DefUID = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
                                 Case "DefaultPwd"
-                                    Declares.RECSPassword = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
-                                Case "DefaultNetDrive"
-                                    Declares.NETFDir = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
-                                Case "DefaultNetFolder"
-                                    Declares.NETFDir = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
-                                Case "DefaultNetUser"
-                                    Declares.NETFLoginId = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
-                                Case "DefaultNetPwd"
-                                    Declares.NETFPassword = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                    Declares.DefPWD = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "SMTPHost"
+                                    Declares.DefSMTPHost = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "SMTPPort"
+                                    Declares.DefSMTPPort = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "SMTPSSL"
+                                    Declares.useSSL = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "UseCredential"
+                                    Declares.useCredential = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "CredentialEmail"
+                                    Declares.CredEmail = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "CredentialPwd"
+                                    Declares.CredEmailPwd = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
+                                Case "DbType"
+                                    Declares.DbType = .DecryptData(chldNodes.FirstChild.InnerText.ToString)
                                 Case Else
 
                             End Select
@@ -98,14 +133,20 @@ Namespace RSv2
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(3))
                                 Case "DefaultPwd"
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(4))
-                                Case "DefaultNetDrive"
+                                Case "DefSMTPHost"
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(5))
-                                Case "DefaultNetFolder"
+                                Case "SMTPPort"
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(6))
-                                Case "DefaultNetUser"
+                                Case "SMTPSSL"
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(7))
-                                Case "DefaultNetPwd"
+                                Case "UseCredential"
                                     chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(8))
+                                Case "CredentialEmail"
+                                    chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(9))
+                                Case "CredentialPwd"
+                                    chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(10))
+                                Case "DbType"
+                                    chldNodes.FirstChild.InnerText = .EncryptData(SysSettings(11))
                                 Case Else
                                     ' Unhandled condition
                             End Select
@@ -164,6 +205,7 @@ Namespace RSv2
                 Return tmpCn
             Catch ex As Exception
                 Return Nothing
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
             End Try
         End Function
 
@@ -177,6 +219,7 @@ Namespace RSv2
                 Return tmpCn
             Catch ex As Exception
                 Return Nothing
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
             End Try
         End Function
 
@@ -189,7 +232,7 @@ Namespace RSv2
                         .CommandText = CommandString
                         .Connection = DefaultConnection
 
-                        If IsNothing(CommandParameters) = True Then
+                        If CommandParameters.Count > 0 Or Not IsNothing(CommandParameters) Then
                             For Each SqlParam As MySqlParameter In CommandParameters
                                 .Parameters.Add(SqlParam)
                             Next
@@ -204,6 +247,7 @@ Namespace RSv2
 
                 MsgBox("Please contact application vendor and report this error." + vbCrLf + _
                         ex.HResult.ToString + ":" + ex.Message, MsgBoxStyle.Critical, "System Error!")
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
                 Return Nothing
             End Try
         End Function
@@ -216,7 +260,7 @@ Namespace RSv2
                         .CommandText = CommandString
                         .Connection = DefaultConnection
 
-                        If IsNothing(CommandParameters) = True Then
+                        If CommandParameters.Count > 0 Or Not IsNothing(CommandParameters) Then
                             For Each SqlParam As MySqlParameter In CommandParameters
                                 .Parameters.Add(SqlParam)
                             Next
@@ -227,6 +271,7 @@ Namespace RSv2
             Catch ex As Exception
                 MsgBox("Please contact application vendor and report this error." + vbCrLf + _
                         ex.HResult.ToString + ":" + ex.Message, MsgBoxStyle.Critical, "System Error!")
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
                 Return Nothing
             End Try
         End Function
@@ -260,6 +305,7 @@ Namespace RSv2
             Catch ex As Exception
                 MsgBox("Please contact application vendor and report this error." + vbCrLf + _
                         ex.HResult.ToString + ":" + ex.Message, MsgBoxStyle.Critical, "System Error!")
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
             End Try
         End Sub
 
@@ -292,7 +338,19 @@ Namespace RSv2
             Catch ex As Exception
                 MsgBox("Please contact application vendor and report this error." + vbCrLf + _
                         ex.HResult.ToString + ":" + ex.Message, MsgBoxStyle.Critical, "System Error!")
+                Call LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
             End Try
+        End Sub
+
+        Public Shared Sub LogActivity(ByVal LogType As Integer, LogActivity As String, CurrentUID As Integer)
+            Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+                Params = New ArrayList
+                Params.Add(New MySqlParameter("@ltype", LogType))
+                Params.Add(New MySqlParameter("@lactivity", LogActivity))
+                Params.Add(New MySqlParameter("@usedid", CurrentUID))
+
+                QueryExec("log_activity", Cn, Params, CommandType.StoredProcedure)
+            End Using
         End Sub
     End Class
 
@@ -368,6 +426,45 @@ Namespace RSv2
 
             ' Convert the plaintext stream to a string. 
             Return System.Text.Encoding.Unicode.GetString(ms.ToArray)
+        End Function
+
+    End Class
+
+    Public Class Mailer
+        Public Shared Function SendEmail(ByVal MailSender As String, ByVal MailReceipients As String, ByVal MailSubject As String, _
+                                  ByVal MailMessage As String, Optional ByVal IsBodyHtml As Boolean = False, Optional ByVal MailAttachments As ArrayList = Nothing) As Boolean
+
+            Try
+                Using SMTPMail As New SmtpClient
+                    Using NewMail As New MailMessage
+                        With SMTPMail
+                            .EnableSsl = Declares.useSSL
+                            .UseDefaultCredentials = Declares.useCredential
+                            .Credentials = New Net.NetworkCredential(Declares.CredEmail, Declares.CredEmailPwd)
+                            .Port = Declares.DefSMTPPort
+                            .Host = Declares.DefSMTPHost
+
+                            With NewMail
+                                .From = New MailAddress(MailSender)
+                                .To.Add(MailReceipients)
+                                .Subject = MailSubject
+                                .IsBodyHtml = IsBodyHtml
+                                .Body = MailMessage
+                            End With
+
+                            .Send(NewMail)
+                            Console.Write("Mail Sent")
+                            Return True
+                        End With
+                    End Using
+                End Using
+
+            Catch ex As Exception
+                MsgBox("Please contact application vendor and report this error." + vbCrLf + _
+                        ex.HResult.ToString + ":" + ex.Message, MsgBoxStyle.Critical, "System Error!")
+                Call DataConnection.LogActivity(0, "Error occurred : " + ex.Message, CurrentUID)
+                Return False
+            End Try
         End Function
 
     End Class

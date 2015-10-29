@@ -29,8 +29,6 @@ Partial Class frmDepartment
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -56,21 +54,19 @@ Partial Class frmDepartment
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(461, 210)
+        Me.Panel1.Size = New System.Drawing.Size(461, 183)
         Me.Panel1.TabIndex = 8
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(106, 166)
+        Me.ComboBox1.Location = New System.Drawing.Point(106, 137)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(329, 23)
         Me.ComboBox1.TabIndex = 30
@@ -78,7 +74,7 @@ Partial Class frmDepartment
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(11, 169)
+        Me.Label5.Location = New System.Drawing.Point(11, 140)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 15)
         Me.Label5.TabIndex = 29
@@ -97,6 +93,7 @@ Partial Class frmDepartment
         '
         Me.TextBox4.Location = New System.Drawing.Point(106, 41)
         Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(160, 23)
         Me.TextBox4.TabIndex = 27
         '
@@ -109,25 +106,9 @@ Partial Class frmDepartment
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Dept. Code"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(106, 65)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(329, 23)
-        Me.TextBox3.TabIndex = 25
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 68)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 15)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Dept. Name"
-        '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 89)
+        Me.TextBox2.Location = New System.Drawing.Point(106, 65)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(329, 71)
@@ -136,7 +117,7 @@ Partial Class frmDepartment
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 92)
+        Me.Label2.Location = New System.Drawing.Point(14, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 15)
         Me.Label2.TabIndex = 21
@@ -269,7 +250,7 @@ Partial Class frmDepartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(461, 249)
+        Me.ClientSize = New System.Drawing.Size(461, 222)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -293,8 +274,6 @@ Partial Class frmDepartment
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label

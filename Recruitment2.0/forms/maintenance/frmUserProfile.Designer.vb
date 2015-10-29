@@ -24,19 +24,10 @@ Partial Class frmUserProfile
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUserProfile))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.tsOps = New System.Windows.Forms.ToolStrip()
-        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbClose = New System.Windows.Forms.ToolStripButton()
-        Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
-        Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
-        Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
-        Me.tsbSave = New System.Windows.Forms.ToolStripButton()
-        Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
-        Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpUserInfo = New System.Windows.Forms.TabPage()
-        Me.tpUserAccess = New System.Windows.Forms.TabPage()
+        Me.ComboBox23 = New System.Windows.Forms.ComboBox()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -57,60 +48,69 @@ Partial Class frmUserProfile
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.tpUserAccess = New System.Windows.Forms.TabPage()
+        Me.tsOps = New System.Windows.Forms.ToolStrip()
+        Me.tsbClose = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
+        Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
+        Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
+        Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
-        Me.Label18 = New System.Windows.Forms.Label()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.ComboBox10 = New System.Windows.Forms.ComboBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.ComboBox15 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.ComboBox22 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.ComboBox23 = New System.Windows.Forms.ComboBox()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.ComboBox22 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
-        Me.tsOps.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpUserInfo.SuspendLayout()
         Me.tpUserAccess.SuspendLayout()
+        Me.tsOps.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -124,118 +124,6 @@ Partial Class frmUserProfile
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(795, 637)
         Me.Panel1.TabIndex = 4
-        '
-        'tsOps
-        '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
-        Me.tsOps.Location = New System.Drawing.Point(0, 0)
-        Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(795, 39)
-        Me.tsOps.TabIndex = 3
-        '
-        'tsbSeparator
-        '
-        Me.tsbSeparator.Name = "tsbSeparator"
-        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
-        '
-        'tsbClose
-        '
-        Me.tsbClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbClose.Image = CType(resources.GetObject("tsbClose.Image"), System.Drawing.Image)
-        Me.tsbClose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbClose.Name = "tsbClose"
-        Me.tsbClose.Size = New System.Drawing.Size(36, 36)
-        Me.tsbClose.Text = "ToolStripButton1"
-        Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbClose.ToolTipText = "Close"
-        '
-        'tsbAdd
-        '
-        Me.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbAdd.Image = CType(resources.GetObject("tsbAdd.Image"), System.Drawing.Image)
-        Me.tsbAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAdd.Name = "tsbAdd"
-        Me.tsbAdd.Size = New System.Drawing.Size(36, 36)
-        Me.tsbAdd.Text = "ToolStripButton5"
-        Me.tsbAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbAdd.ToolTipText = "New"
-        '
-        'tsbEdit
-        '
-        Me.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbEdit.Image = CType(resources.GetObject("tsbEdit.Image"), System.Drawing.Image)
-        Me.tsbEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbEdit.Name = "tsbEdit"
-        Me.tsbEdit.Size = New System.Drawing.Size(36, 36)
-        Me.tsbEdit.Text = "ToolStripButton4"
-        Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
-        '
-        'tsbDelete
-        '
-        Me.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbDelete.Image = CType(resources.GetObject("tsbDelete.Image"), System.Drawing.Image)
-        Me.tsbDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbDelete.Name = "tsbDelete"
-        Me.tsbDelete.Size = New System.Drawing.Size(36, 36)
-        Me.tsbDelete.Text = "ToolStripButton3"
-        Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
-        '
-        'tsbCancel
-        '
-        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
-        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancel.Name = "tsbCancel"
-        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
-        Me.tsbCancel.Text = "ToolStripButton7"
-        Me.tsbCancel.ToolTipText = "Cancel"
-        Me.tsbCancel.Visible = False
-        '
-        'tsbSave
-        '
-        Me.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbSave.Image = CType(resources.GetObject("tsbSave.Image"), System.Drawing.Image)
-        Me.tsbSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSave.Name = "tsbSave"
-        Me.tsbSave.Size = New System.Drawing.Size(36, 36)
-        Me.tsbSave.Text = "ToolStripButton2"
-        Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbSave.ToolTipText = "Save"
-        Me.tsbSave.Visible = False
-        '
-        'tsbSearch
-        '
-        Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbSearch.Image = CType(resources.GetObject("tsbSearch.Image"), System.Drawing.Image)
-        Me.tsbSearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSearch.Name = "tsbSearch"
-        Me.tsbSearch.Size = New System.Drawing.Size(36, 36)
-        Me.tsbSearch.Text = "ToolStripButton6"
-        Me.tsbSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.tsbSearch.ToolTipText = "Search"
-        '
-        'tsbPrint
-        '
-        Me.tsbPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbPrint.Image = CType(resources.GetObject("tsbPrint.Image"), System.Drawing.Image)
-        Me.tsbPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbPrint.Name = "tsbPrint"
-        Me.tsbPrint.Size = New System.Drawing.Size(36, 36)
-        Me.tsbPrint.Text = "ToolStripButton8"
-        Me.tsbPrint.ToolTipText = "Print"
         '
         'TabControl1
         '
@@ -282,64 +170,23 @@ Partial Class frmUserProfile
         Me.tpUserInfo.Text = "User Information"
         Me.tpUserInfo.UseVisualStyleBackColor = True
         '
-        'tpUserAccess
+        'ComboBox23
         '
-        Me.tpUserAccess.AutoScroll = True
-        Me.tpUserAccess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpUserAccess.Controls.Add(Me.ComboBox22)
-        Me.tpUserAccess.Controls.Add(Me.Label29)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox21)
-        Me.tpUserAccess.Controls.Add(Me.Label28)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox20)
-        Me.tpUserAccess.Controls.Add(Me.Label27)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox19)
-        Me.tpUserAccess.Controls.Add(Me.Label26)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox18)
-        Me.tpUserAccess.Controls.Add(Me.Label25)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox17)
-        Me.tpUserAccess.Controls.Add(Me.Label24)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox16)
-        Me.tpUserAccess.Controls.Add(Me.Label23)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox15)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox9)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox14)
-        Me.tpUserAccess.Controls.Add(Me.Label22)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox13)
-        Me.tpUserAccess.Controls.Add(Me.Label21)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox12)
-        Me.tpUserAccess.Controls.Add(Me.Label20)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox11)
-        Me.tpUserAccess.Controls.Add(Me.Label19)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox8)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox10)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox7)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox8)
-        Me.tpUserAccess.Controls.Add(Me.Label17)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox9)
-        Me.tpUserAccess.Controls.Add(Me.Label18)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox6)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox6)
-        Me.tpUserAccess.Controls.Add(Me.Label14)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox7)
-        Me.tpUserAccess.Controls.Add(Me.Label16)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox4)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox5)
-        Me.tpUserAccess.Controls.Add(Me.Label13)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox4)
-        Me.tpUserAccess.Controls.Add(Me.Label12)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox5)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox3)
-        Me.tpUserAccess.Controls.Add(Me.ComboBox2)
-        Me.tpUserAccess.Controls.Add(Me.Label11)
-        Me.tpUserAccess.Controls.Add(Me.Label10)
-        Me.tpUserAccess.Controls.Add(Me.CheckBox3)
-        Me.tpUserAccess.Location = New System.Drawing.Point(4, 24)
-        Me.tpUserAccess.Name = "tpUserAccess"
-        Me.tpUserAccess.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpUserAccess.Size = New System.Drawing.Size(785, 607)
-        Me.tpUserAccess.TabIndex = 1
-        Me.tpUserAccess.Text = "User Access"
-        Me.tpUserAccess.UseVisualStyleBackColor = True
+        Me.ComboBox23.FormattingEnabled = True
+        Me.ComboBox23.Location = New System.Drawing.Point(133, 327)
+        Me.ComboBox23.Name = "ComboBox23"
+        Me.ComboBox23.Size = New System.Drawing.Size(325, 23)
+        Me.ComboBox23.TabIndex = 61
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(29, 330)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(71, 15)
+        Me.Label30.TabIndex = 60
+        Me.Label30.Text = "Department"
         '
         'TextBox7
         '
@@ -520,6 +367,177 @@ Partial Class frmUserProfile
         Me.Label15.TabIndex = 40
         Me.Label15.Text = "Login Information"
         '
+        'tpUserAccess
+        '
+        Me.tpUserAccess.AutoScroll = True
+        Me.tpUserAccess.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpUserAccess.Controls.Add(Me.ComboBox22)
+        Me.tpUserAccess.Controls.Add(Me.Label29)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox21)
+        Me.tpUserAccess.Controls.Add(Me.Label28)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox20)
+        Me.tpUserAccess.Controls.Add(Me.Label27)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox19)
+        Me.tpUserAccess.Controls.Add(Me.Label26)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox18)
+        Me.tpUserAccess.Controls.Add(Me.Label25)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox17)
+        Me.tpUserAccess.Controls.Add(Me.Label24)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox16)
+        Me.tpUserAccess.Controls.Add(Me.Label23)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox15)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox9)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox14)
+        Me.tpUserAccess.Controls.Add(Me.Label22)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox13)
+        Me.tpUserAccess.Controls.Add(Me.Label21)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox12)
+        Me.tpUserAccess.Controls.Add(Me.Label20)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox11)
+        Me.tpUserAccess.Controls.Add(Me.Label19)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox8)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox10)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox7)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox8)
+        Me.tpUserAccess.Controls.Add(Me.Label17)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox9)
+        Me.tpUserAccess.Controls.Add(Me.Label18)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox6)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox6)
+        Me.tpUserAccess.Controls.Add(Me.Label14)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox7)
+        Me.tpUserAccess.Controls.Add(Me.Label16)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox4)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox5)
+        Me.tpUserAccess.Controls.Add(Me.Label13)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox4)
+        Me.tpUserAccess.Controls.Add(Me.Label12)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox5)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox3)
+        Me.tpUserAccess.Controls.Add(Me.ComboBox2)
+        Me.tpUserAccess.Controls.Add(Me.Label11)
+        Me.tpUserAccess.Controls.Add(Me.Label10)
+        Me.tpUserAccess.Controls.Add(Me.CheckBox3)
+        Me.tpUserAccess.Location = New System.Drawing.Point(4, 24)
+        Me.tpUserAccess.Name = "tpUserAccess"
+        Me.tpUserAccess.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpUserAccess.Size = New System.Drawing.Size(785, 607)
+        Me.tpUserAccess.TabIndex = 1
+        Me.tpUserAccess.Text = "User Access"
+        Me.tpUserAccess.UseVisualStyleBackColor = True
+        '
+        'tsOps
+        '
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Location = New System.Drawing.Point(0, 0)
+        Me.tsOps.Name = "tsOps"
+        Me.tsOps.Size = New System.Drawing.Size(795, 39)
+        Me.tsOps.TabIndex = 3
+        '
+        'tsbClose
+        '
+        Me.tsbClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbClose.Image = CType(resources.GetObject("tsbClose.Image"), System.Drawing.Image)
+        Me.tsbClose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbClose.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbClose.Name = "tsbClose"
+        Me.tsbClose.Size = New System.Drawing.Size(36, 36)
+        Me.tsbClose.Text = "ToolStripButton1"
+        Me.tsbClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbClose.ToolTipText = "Close"
+        '
+        'tsbAdd
+        '
+        Me.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbAdd.Image = CType(resources.GetObject("tsbAdd.Image"), System.Drawing.Image)
+        Me.tsbAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAdd.Name = "tsbAdd"
+        Me.tsbAdd.Size = New System.Drawing.Size(36, 36)
+        Me.tsbAdd.Text = "ToolStripButton5"
+        Me.tsbAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbAdd.ToolTipText = "New"
+        '
+        'tsbEdit
+        '
+        Me.tsbEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbEdit.Image = CType(resources.GetObject("tsbEdit.Image"), System.Drawing.Image)
+        Me.tsbEdit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbEdit.Name = "tsbEdit"
+        Me.tsbEdit.Size = New System.Drawing.Size(36, 36)
+        Me.tsbEdit.Text = "ToolStripButton4"
+        Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbEdit.ToolTipText = "Edit"
+        Me.tsbEdit.Visible = False
+        '
+        'tsbDelete
+        '
+        Me.tsbDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbDelete.Image = CType(resources.GetObject("tsbDelete.Image"), System.Drawing.Image)
+        Me.tsbDelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbDelete.Name = "tsbDelete"
+        Me.tsbDelete.Size = New System.Drawing.Size(36, 36)
+        Me.tsbDelete.Text = "ToolStripButton3"
+        Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbDelete.ToolTipText = "Delete"
+        Me.tsbDelete.Visible = False
+        '
+        'tsbCancel
+        '
+        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
+        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancel.Name = "tsbCancel"
+        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCancel.Text = "ToolStripButton7"
+        Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
+        '
+        'tsbSave
+        '
+        Me.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbSave.Image = CType(resources.GetObject("tsbSave.Image"), System.Drawing.Image)
+        Me.tsbSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSave.Name = "tsbSave"
+        Me.tsbSave.Size = New System.Drawing.Size(36, 36)
+        Me.tsbSave.Text = "ToolStripButton2"
+        Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbSave.ToolTipText = "Save"
+        Me.tsbSave.Visible = False
+        '
+        'tsbSeparator
+        '
+        Me.tsbSeparator.Name = "tsbSeparator"
+        Me.tsbSeparator.Size = New System.Drawing.Size(6, 39)
+        '
+        'tsbSearch
+        '
+        Me.tsbSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbSearch.Image = CType(resources.GetObject("tsbSearch.Image"), System.Drawing.Image)
+        Me.tsbSearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbSearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSearch.Name = "tsbSearch"
+        Me.tsbSearch.Size = New System.Drawing.Size(36, 36)
+        Me.tsbSearch.Text = "ToolStripButton6"
+        Me.tsbSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.tsbSearch.ToolTipText = "Search"
+        '
+        'tsbPrint
+        '
+        Me.tsbPrint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbPrint.Image = CType(resources.GetObject("tsbPrint.Image"), System.Drawing.Image)
+        Me.tsbPrint.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbPrint.Name = "tsbPrint"
+        Me.tsbPrint.Size = New System.Drawing.Size(36, 36)
+        Me.tsbPrint.Text = "ToolStripButton8"
+        Me.tsbPrint.ToolTipText = "Print"
+        '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
@@ -578,15 +596,6 @@ Partial Class frmUserProfile
         Me.CheckBox5.Text = "Manpower Request"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox4.Location = New System.Drawing.Point(146, 149)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox4.TabIndex = 9
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -596,14 +605,14 @@ Partial Class frmUserProfile
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Create Request"
         '
-        'ComboBox5
+        'ComboBox4
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox5.Location = New System.Drawing.Point(146, 173)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox5.TabIndex = 11
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox4.Location = New System.Drawing.Point(146, 149)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox4.TabIndex = 9
         '
         'Label13
         '
@@ -613,6 +622,15 @@ Partial Class frmUserProfile
         Me.Label13.Size = New System.Drawing.Size(98, 15)
         Me.Label13.TabIndex = 10
         Me.Label13.Text = "Approve Request"
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox5.Location = New System.Drawing.Point(146, 173)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox5.TabIndex = 11
         '
         'CheckBox4
         '
@@ -625,23 +643,14 @@ Partial Class frmUserProfile
         Me.CheckBox4.Text = "Line-Up Request"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
-        'ComboBox6
+        'Label16
         '
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox6.Location = New System.Drawing.Point(146, 265)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox6.TabIndex = 16
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(25, 268)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 15)
-        Me.Label14.TabIndex = 15
-        Me.Label14.Text = "Approve Request"
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(25, 244)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(88, 15)
+        Me.Label16.TabIndex = 13
+        Me.Label16.Text = "Create Request"
         '
         'ComboBox7
         '
@@ -652,50 +661,23 @@ Partial Class frmUserProfile
         Me.ComboBox7.Size = New System.Drawing.Size(121, 23)
         Me.ComboBox7.TabIndex = 14
         '
-        'Label16
+        'Label14
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(25, 244)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(88, 15)
-        Me.Label16.TabIndex = 13
-        Me.Label16.Text = "Create Request"
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(25, 268)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(98, 15)
+        Me.Label14.TabIndex = 15
+        Me.Label14.Text = "Approve Request"
         '
-        'ComboBox8
+        'ComboBox6
         '
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox8.Location = New System.Drawing.Point(146, 352)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox8.TabIndex = 21
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(25, 355)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(98, 15)
-        Me.Label17.TabIndex = 20
-        Me.Label17.Text = "Approve Request"
-        '
-        'ComboBox9
-        '
-        Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox9.Location = New System.Drawing.Point(146, 328)
-        Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox9.TabIndex = 19
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(25, 331)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(88, 15)
-        Me.Label18.TabIndex = 18
-        Me.Label18.Text = "Create Request"
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox6.Location = New System.Drawing.Point(146, 265)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox6.TabIndex = 16
         '
         'CheckBox6
         '
@@ -707,6 +689,42 @@ Partial Class frmUserProfile
         Me.CheckBox6.TabIndex = 17
         Me.CheckBox6.Text = "Contract Request"
         Me.CheckBox6.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(25, 331)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(88, 15)
+        Me.Label18.TabIndex = 18
+        Me.Label18.Text = "Create Request"
+        '
+        'ComboBox9
+        '
+        Me.ComboBox9.FormattingEnabled = True
+        Me.ComboBox9.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox9.Location = New System.Drawing.Point(146, 328)
+        Me.ComboBox9.Name = "ComboBox9"
+        Me.ComboBox9.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox9.TabIndex = 19
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(25, 355)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(98, 15)
+        Me.Label17.TabIndex = 20
+        Me.Label17.Text = "Approve Request"
+        '
+        'ComboBox8
+        '
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox8.Location = New System.Drawing.Point(146, 352)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox8.TabIndex = 21
         '
         'CheckBox7
         '
@@ -739,15 +757,6 @@ Partial Class frmUserProfile
         Me.CheckBox8.Text = "Management"
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
-        'ComboBox11
-        '
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox11.Location = New System.Drawing.Point(464, 38)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox11.TabIndex = 26
-        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -757,14 +766,14 @@ Partial Class frmUserProfile
         Me.Label19.TabIndex = 25
         Me.Label19.Text = "Client Accounts"
         '
-        'ComboBox12
+        'ComboBox11
         '
-        Me.ComboBox12.FormattingEnabled = True
-        Me.ComboBox12.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox12.Location = New System.Drawing.Point(464, 62)
-        Me.ComboBox12.Name = "ComboBox12"
-        Me.ComboBox12.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox12.TabIndex = 28
+        Me.ComboBox11.FormattingEnabled = True
+        Me.ComboBox11.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox11.Location = New System.Drawing.Point(464, 38)
+        Me.ComboBox11.Name = "ComboBox11"
+        Me.ComboBox11.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox11.TabIndex = 26
         '
         'Label20
         '
@@ -775,14 +784,14 @@ Partial Class frmUserProfile
         Me.Label20.TabIndex = 27
         Me.Label20.Text = "Department"
         '
-        'ComboBox13
+        'ComboBox12
         '
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox13.Location = New System.Drawing.Point(464, 86)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox13.TabIndex = 30
+        Me.ComboBox12.FormattingEnabled = True
+        Me.ComboBox12.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox12.Location = New System.Drawing.Point(464, 62)
+        Me.ComboBox12.Name = "ComboBox12"
+        Me.ComboBox12.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox12.TabIndex = 28
         '
         'Label21
         '
@@ -793,14 +802,14 @@ Partial Class frmUserProfile
         Me.Label21.TabIndex = 29
         Me.Label21.Text = "User Groups"
         '
-        'ComboBox14
+        'ComboBox13
         '
-        Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox14.Location = New System.Drawing.Point(464, 110)
-        Me.ComboBox14.Name = "ComboBox14"
-        Me.ComboBox14.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox14.TabIndex = 32
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox13.Location = New System.Drawing.Point(464, 86)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox13.TabIndex = 30
         '
         'Label22
         '
@@ -810,6 +819,15 @@ Partial Class frmUserProfile
         Me.Label22.Size = New System.Drawing.Size(77, 15)
         Me.Label22.TabIndex = 31
         Me.Label22.Text = "User Profiles"
+        '
+        'ComboBox14
+        '
+        Me.ComboBox14.FormattingEnabled = True
+        Me.ComboBox14.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox14.Location = New System.Drawing.Point(464, 110)
+        Me.ComboBox14.Name = "ComboBox14"
+        Me.ComboBox14.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox14.TabIndex = 32
         '
         'CheckBox9
         '
@@ -831,15 +849,6 @@ Partial Class frmUserProfile
         Me.ComboBox15.Size = New System.Drawing.Size(121, 23)
         Me.ComboBox15.TabIndex = 34
         '
-        'ComboBox16
-        '
-        Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox16.Location = New System.Drawing.Point(464, 134)
-        Me.ComboBox16.Name = "ComboBox16"
-        Me.ComboBox16.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox16.TabIndex = 36
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
@@ -849,14 +858,14 @@ Partial Class frmUserProfile
         Me.Label23.TabIndex = 35
         Me.Label23.Text = "E-Mail Templates"
         '
-        'ComboBox17
+        'ComboBox16
         '
-        Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox17.Location = New System.Drawing.Point(464, 206)
-        Me.ComboBox17.Name = "ComboBox17"
-        Me.ComboBox17.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox17.TabIndex = 38
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox16.Location = New System.Drawing.Point(464, 134)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox16.TabIndex = 36
         '
         'Label24
         '
@@ -867,14 +876,14 @@ Partial Class frmUserProfile
         Me.Label24.TabIndex = 37
         Me.Label24.Text = "Stage Types"
         '
-        'ComboBox18
+        'ComboBox17
         '
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox18.Location = New System.Drawing.Point(464, 158)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox18.TabIndex = 40
+        Me.ComboBox17.FormattingEnabled = True
+        Me.ComboBox17.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox17.Location = New System.Drawing.Point(464, 206)
+        Me.ComboBox17.Name = "ComboBox17"
+        Me.ComboBox17.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox17.TabIndex = 38
         '
         'Label25
         '
@@ -885,14 +894,14 @@ Partial Class frmUserProfile
         Me.Label25.TabIndex = 39
         Me.Label25.Text = "Request Types"
         '
-        'ComboBox19
+        'ComboBox18
         '
-        Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox19.Location = New System.Drawing.Point(464, 230)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox19.TabIndex = 42
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox18.Location = New System.Drawing.Point(464, 158)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox18.TabIndex = 40
         '
         'Label26
         '
@@ -903,14 +912,14 @@ Partial Class frmUserProfile
         Me.Label26.TabIndex = 41
         Me.Label26.Text = "Stage Status"
         '
-        'ComboBox20
+        'ComboBox19
         '
-        Me.ComboBox20.FormattingEnabled = True
-        Me.ComboBox20.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox20.Location = New System.Drawing.Point(464, 254)
-        Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox20.TabIndex = 44
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox19.Location = New System.Drawing.Point(464, 230)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox19.TabIndex = 42
         '
         'Label27
         '
@@ -921,14 +930,14 @@ Partial Class frmUserProfile
         Me.Label27.TabIndex = 43
         Me.Label27.Text = "Candidate Source"
         '
-        'ComboBox21
+        'ComboBox20
         '
-        Me.ComboBox21.FormattingEnabled = True
-        Me.ComboBox21.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox21.Location = New System.Drawing.Point(464, 278)
-        Me.ComboBox21.Name = "ComboBox21"
-        Me.ComboBox21.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox21.TabIndex = 46
+        Me.ComboBox20.FormattingEnabled = True
+        Me.ComboBox20.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox20.Location = New System.Drawing.Point(464, 254)
+        Me.ComboBox20.Name = "ComboBox20"
+        Me.ComboBox20.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox20.TabIndex = 44
         '
         'Label28
         '
@@ -939,14 +948,14 @@ Partial Class frmUserProfile
         Me.Label28.TabIndex = 45
         Me.Label28.Text = "Candidate Status"
         '
-        'ComboBox22
+        'ComboBox21
         '
-        Me.ComboBox22.FormattingEnabled = True
-        Me.ComboBox22.Items.AddRange(New Object() {"Allow", "Deny"})
-        Me.ComboBox22.Location = New System.Drawing.Point(464, 182)
-        Me.ComboBox22.Name = "ComboBox22"
-        Me.ComboBox22.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox22.TabIndex = 48
+        Me.ComboBox21.FormattingEnabled = True
+        Me.ComboBox21.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox21.Location = New System.Drawing.Point(464, 278)
+        Me.ComboBox21.Name = "ComboBox21"
+        Me.ComboBox21.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox21.TabIndex = 46
         '
         'Label29
         '
@@ -957,23 +966,14 @@ Partial Class frmUserProfile
         Me.Label29.TabIndex = 47
         Me.Label29.Text = "Request Status"
         '
-        'ComboBox23
+        'ComboBox22
         '
-        Me.ComboBox23.FormattingEnabled = True
-        Me.ComboBox23.Location = New System.Drawing.Point(133, 327)
-        Me.ComboBox23.Name = "ComboBox23"
-        Me.ComboBox23.Size = New System.Drawing.Size(325, 23)
-        Me.ComboBox23.TabIndex = 61
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(29, 330)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(71, 15)
-        Me.Label30.TabIndex = 60
-        Me.Label30.Text = "Department"
+        Me.ComboBox22.FormattingEnabled = True
+        Me.ComboBox22.Items.AddRange(New Object() {"Allow", "Deny"})
+        Me.ComboBox22.Location = New System.Drawing.Point(464, 182)
+        Me.ComboBox22.Name = "ComboBox22"
+        Me.ComboBox22.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBox22.TabIndex = 48
         '
         'frmUserProfile
         '
@@ -989,13 +989,13 @@ Partial Class frmUserProfile
         Me.Name = "frmUserProfile"
         Me.Text = "User Profile"
         Me.Panel1.ResumeLayout(False)
-        Me.tsOps.ResumeLayout(False)
-        Me.tsOps.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.tpUserInfo.ResumeLayout(False)
         Me.tpUserInfo.PerformLayout()
         Me.tpUserAccess.ResumeLayout(False)
         Me.tpUserAccess.PerformLayout()
+        Me.tsOps.ResumeLayout(False)
+        Me.tsOps.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1034,6 +1034,33 @@ Partial Class frmUserProfile
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tpUserAccess As System.Windows.Forms.TabPage
+    Friend WithEvents ComboBox23 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox22 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox19 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox18 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox17 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox16 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox15 As System.Windows.Forms.ComboBox
+    Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox14 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox13 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
     Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
@@ -1056,31 +1083,4 @@ Partial Class frmUserProfile
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox19 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox18 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox17 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox16 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox15 As System.Windows.Forms.ComboBox
-    Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox14 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox13 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox22 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label29 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox23 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label30 As System.Windows.Forms.Label
 End Class

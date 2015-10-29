@@ -25,9 +25,6 @@ Partial Class frmSysDefaults
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSysDefaults))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -67,23 +64,20 @@ Partial Class frmSysDefaults
         Me.tpMR = New System.Windows.Forms.TabPage()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.tpMRApprovers = New System.Windows.Forms.TabPage()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colMRId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colMRRwId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Panel8 = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.tpMRDefaults = New System.Windows.Forms.TabPage()
         Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.ComboBox21 = New System.Windows.Forms.ComboBox()
@@ -96,64 +90,22 @@ Partial Class frmSysDefaults
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tpLR = New System.Windows.Forms.TabPage()
-        Me.tpCR = New System.Windows.Forms.TabPage()
-        Me.tpCandidates = New System.Windows.Forms.TabPage()
-        Me.TabControl5 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox14 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox17 = New System.Windows.Forms.ComboBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.ComboBox24 = New System.Windows.Forms.ComboBox()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox25 = New System.Windows.Forms.ComboBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.TabControl6 = New System.Windows.Forms.TabControl()
-        Me.tpCandidateDef = New System.Windows.Forms.TabPage()
-        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
-        Me.ComboBox32 = New System.Windows.Forms.ComboBox()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.TabControl4 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colLRRwId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLRId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox9 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox10 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox11 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
@@ -165,7 +117,43 @@ Partial Class frmSysDefaults
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
         Me.ComboBox23 = New System.Windows.Forms.ComboBox()
         Me.Label44 = New System.Windows.Forms.Label()
+        Me.tpCR = New System.Windows.Forms.TabPage()
+        Me.TabControl5 = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewButtonColumn3 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colCRRwId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colCRId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.ComboBox7 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.ComboBox24 = New System.Windows.Forms.ComboBox()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox25 = New System.Windows.Forms.ComboBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.tpCandidates = New System.Windows.Forms.TabPage()
+        Me.TabControl6 = New System.Windows.Forms.TabControl()
+        Me.tpCandidateDef = New System.Windows.Forms.TabPage()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox32 = New System.Windows.Forms.ComboBox()
+        Me.Label57 = New System.Windows.Forms.Label()
         Me.tpCandidateLineup = New System.Windows.Forms.TabPage()
         Me.Panel2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -179,18 +167,30 @@ Partial Class frmSysDefaults
         Me.tpMR.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.tpMRApprovers.SuspendLayout()
+        Me.Panel9.SuspendLayout()
+        Me.Panel7.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
         Me.tpMRDefaults.SuspendLayout()
         Me.tpLR.SuspendLayout()
-        Me.tpCR.SuspendLayout()
-        Me.tpCandidates.SuspendLayout()
-        Me.TabControl5.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabControl6.SuspendLayout()
-        Me.tpCandidateDef.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel6.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.tpCR.SuspendLayout()
+        Me.TabControl5.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        Me.tpCandidates.SuspendLayout()
+        Me.TabControl6.SuspendLayout()
+        Me.tpCandidateDef.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -206,43 +206,12 @@ Partial Class frmSysDefaults
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton5, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 5)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(909, 39)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
-        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton5.Text = "ToolStripButton5"
         '
         'ToolStripButton3
         '
@@ -573,6 +542,7 @@ Partial Class frmSysDefaults
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(97, 23)
         Me.TextBox9.TabIndex = 21
+        Me.TextBox9.Text = "25"
         '
         'Label33
         '
@@ -627,23 +597,9 @@ Partial Class frmSysDefaults
         '
         Me.tpMRApprovers.AutoScroll = True
         Me.tpMRApprovers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpMRApprovers.Controls.Add(Me.Label39)
-        Me.tpMRApprovers.Controls.Add(Me.RadioButton3)
-        Me.tpMRApprovers.Controls.Add(Me.Label8)
-        Me.tpMRApprovers.Controls.Add(Me.CheckBox1)
-        Me.tpMRApprovers.Controls.Add(Me.RadioButton2)
-        Me.tpMRApprovers.Controls.Add(Me.RadioButton1)
-        Me.tpMRApprovers.Controls.Add(Me.Label6)
-        Me.tpMRApprovers.Controls.Add(Me.ComboBox5)
-        Me.tpMRApprovers.Controls.Add(Me.ComboBox4)
-        Me.tpMRApprovers.Controls.Add(Me.ComboBox3)
-        Me.tpMRApprovers.Controls.Add(Me.ComboBox2)
-        Me.tpMRApprovers.Controls.Add(Me.ComboBox1)
-        Me.tpMRApprovers.Controls.Add(Me.Label5)
-        Me.tpMRApprovers.Controls.Add(Me.Label4)
-        Me.tpMRApprovers.Controls.Add(Me.Label3)
-        Me.tpMRApprovers.Controls.Add(Me.Label2)
-        Me.tpMRApprovers.Controls.Add(Me.Label1)
+        Me.tpMRApprovers.Controls.Add(Me.Panel9)
+        Me.tpMRApprovers.Controls.Add(Me.Panel7)
+        Me.tpMRApprovers.Controls.Add(Me.Panel8)
         Me.tpMRApprovers.Location = New System.Drawing.Point(4, 24)
         Me.tpMRApprovers.Name = "tpMRApprovers"
         Me.tpMRApprovers.Padding = New System.Windows.Forms.Padding(3)
@@ -652,160 +608,130 @@ Partial Class frmSysDefaults
         Me.tpMRApprovers.Text = "Approvers"
         Me.tpMRApprovers.UseVisualStyleBackColor = True
         '
-        'Label39
+        'Panel9
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(6, 14)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(59, 15)
-        Me.Label39.TabIndex = 31
-        Me.Label39.Text = "Heirarchy"
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(25, 335)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(175, 19)
-        Me.RadioButton3.TabIndex = 30
-        Me.RadioButton3.Text = "Approved ONLY by PRIMARY"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.Location = New System.Drawing.Point(136, 190)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(223, 48)
-        Me.Label8.TabIndex = 29
-        Me.Label8.Text = "Automatically allow supplementary approver(s) to approve requests when PRIMARY is" & _
-    " not present"
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(115, 191)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 28
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(25, 310)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(113, 19)
-        Me.RadioButton2.TabIndex = 27
-        Me.RadioButton2.Text = "Approved by ALL"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(25, 285)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(117, 19)
-        Me.RadioButton1.TabIndex = 26
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Approved by ANY"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 261)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 15)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Approval Method"
-        '
-        'ComboBox5
-        '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(115, 149)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox5.TabIndex = 24
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(115, 123)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox4.TabIndex = 23
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(115, 97)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox3.TabIndex = 22
+        Me.Panel9.Controls.Add(Me.ComboBox2)
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel9.Location = New System.Drawing.Point(3, 597)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(879, 29)
+        Me.Panel9.TabIndex = 40
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(115, 71)
+        Me.ComboBox2.Items.AddRange(New Object() {"- Select approval method -", "Approval of ANY ", "Approval of ALL ", "Approval ONLY by PRIMARY"})
+        Me.ComboBox2.Location = New System.Drawing.Point(6, 3)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox2.TabIndex = 21
+        Me.ComboBox2.Size = New System.Drawing.Size(399, 23)
+        Me.ComboBox2.TabIndex = 37
+        '
+        'Panel7
+        '
+        Me.Panel7.Controls.Add(Me.DataGridView3)
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel7.Location = New System.Drawing.Point(3, 50)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(879, 576)
+        Me.Panel7.TabIndex = 38
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn2, Me.colMRId, Me.colMRRwId, Me.DataGridViewTextBoxColumn2, Me.DataGridViewCheckBoxColumn2})
+        Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView3.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
+        Me.DataGridView3.Size = New System.Drawing.Size(879, 576)
+        Me.DataGridView3.TabIndex = 0
+        '
+        'DataGridViewButtonColumn2
+        '
+        Me.DataGridViewButtonColumn2.Frozen = True
+        Me.DataGridViewButtonColumn2.HeaderText = ""
+        Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
+        Me.DataGridViewButtonColumn2.ReadOnly = True
+        '
+        'colMRId
+        '
+        Me.colMRId.Frozen = True
+        Me.colMRId.HeaderText = "MRId"
+        Me.colMRId.Name = "colMRId"
+        Me.colMRId.ReadOnly = True
+        Me.colMRId.Visible = False
+        '
+        'colMRRwId
+        '
+        Me.colMRRwId.Frozen = True
+        Me.colMRRwId.HeaderText = "Id"
+        Me.colMRRwId.Name = "colMRRwId"
+        Me.colMRRwId.ReadOnly = True
+        Me.colMRRwId.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.Frozen = True
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 450
+        '
+        'DataGridViewCheckBoxColumn2
+        '
+        Me.DataGridViewCheckBoxColumn2.Frozen = True
+        Me.DataGridViewCheckBoxColumn2.HeaderText = "Primary"
+        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
+        Me.DataGridViewCheckBoxColumn2.ReadOnly = True
+        '
+        'Panel8
+        '
+        Me.Panel8.Controls.Add(Me.ComboBox1)
+        Me.Panel8.Controls.Add(Me.Label1)
+        Me.Panel8.Controls.Add(Me.CheckBox1)
+        Me.Panel8.Controls.Add(Me.Button5)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel8.Location = New System.Drawing.Point(3, 3)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(879, 47)
+        Me.Panel8.TabIndex = 37
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(115, 45)
+        Me.ComboBox1.Location = New System.Drawing.Point(101, 11)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox1.TabIndex = 20
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 152)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(99, 15)
-        Me.Label5.TabIndex = 19
-        Me.Label5.Text = "Supplementary 4"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 126)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(99, 15)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Supplementary 3"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 100)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 15)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Supplementary 2"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 74)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(99, 15)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Supplementary 1"
+        Me.ComboBox1.Size = New System.Drawing.Size(429, 23)
+        Me.ComboBox1.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 48)
+        Me.Label1.Location = New System.Drawing.Point(3, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 15)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Primary Approver"
+        Me.Label1.Size = New System.Drawing.Size(92, 15)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Select Approver"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(536, 13)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(70, 19)
+        Me.CheckBox1.TabIndex = 1
+        Me.CheckBox1.Text = "Primary"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
+        Me.Button5.Location = New System.Drawing.Point(835, 5)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(40, 39)
+        Me.Button5.TabIndex = 0
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'tpMRDefaults
         '
@@ -929,408 +855,6 @@ Partial Class frmSysDefaults
         Me.tpLR.Text = "Line-up Request"
         Me.tpLR.UseVisualStyleBackColor = True
         '
-        'tpCR
-        '
-        Me.tpCR.AutoScroll = True
-        Me.tpCR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpCR.Controls.Add(Me.TabControl5)
-        Me.tpCR.Location = New System.Drawing.Point(4, 24)
-        Me.tpCR.Name = "tpCR"
-        Me.tpCR.Size = New System.Drawing.Size(903, 667)
-        Me.tpCR.TabIndex = 3
-        Me.tpCR.Text = "Contract Requests"
-        Me.tpCR.UseVisualStyleBackColor = True
-        '
-        'tpCandidates
-        '
-        Me.tpCandidates.AutoScroll = True
-        Me.tpCandidates.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpCandidates.Controls.Add(Me.TabControl6)
-        Me.tpCandidates.Location = New System.Drawing.Point(4, 24)
-        Me.tpCandidates.Name = "tpCandidates"
-        Me.tpCandidates.Size = New System.Drawing.Size(903, 667)
-        Me.tpCandidates.TabIndex = 4
-        Me.tpCandidates.Text = "Candidates"
-        Me.tpCandidates.UseVisualStyleBackColor = True
-        '
-        'TabControl5
-        '
-        Me.TabControl5.Controls.Add(Me.TabPage3)
-        Me.TabControl5.Controls.Add(Me.TabPage4)
-        Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl5.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl5.Name = "TabControl5"
-        Me.TabControl5.SelectedIndex = 0
-        Me.TabControl5.Size = New System.Drawing.Size(901, 665)
-        Me.TabControl5.TabIndex = 1
-        '
-        'TabPage3
-        '
-        Me.TabPage3.AutoScroll = True
-        Me.TabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TabPage3.Controls.Add(Me.Label17)
-        Me.TabPage3.Controls.Add(Me.RadioButton7)
-        Me.TabPage3.Controls.Add(Me.Label18)
-        Me.TabPage3.Controls.Add(Me.CheckBox3)
-        Me.TabPage3.Controls.Add(Me.RadioButton8)
-        Me.TabPage3.Controls.Add(Me.RadioButton9)
-        Me.TabPage3.Controls.Add(Me.Label19)
-        Me.TabPage3.Controls.Add(Me.ComboBox13)
-        Me.TabPage3.Controls.Add(Me.ComboBox14)
-        Me.TabPage3.Controls.Add(Me.ComboBox15)
-        Me.TabPage3.Controls.Add(Me.ComboBox16)
-        Me.TabPage3.Controls.Add(Me.ComboBox17)
-        Me.TabPage3.Controls.Add(Me.Label20)
-        Me.TabPage3.Controls.Add(Me.Label21)
-        Me.TabPage3.Controls.Add(Me.Label22)
-        Me.TabPage3.Controls.Add(Me.Label23)
-        Me.TabPage3.Controls.Add(Me.Label24)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(893, 637)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "Approvers"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(6, 14)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(59, 15)
-        Me.Label17.TabIndex = 31
-        Me.Label17.Text = "Heirarchy"
-        '
-        'RadioButton7
-        '
-        Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(25, 335)
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(175, 19)
-        Me.RadioButton7.TabIndex = 30
-        Me.RadioButton7.Text = "Approved ONLY by PRIMARY"
-        Me.RadioButton7.UseVisualStyleBackColor = True
-        '
-        'Label18
-        '
-        Me.Label18.Location = New System.Drawing.Point(136, 190)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(223, 48)
-        Me.Label18.TabIndex = 29
-        Me.Label18.Text = "Automatically allow supplementary approver(s) to approve requests when PRIMARY is" & _
-    " not present"
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(115, 191)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 28
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'RadioButton8
-        '
-        Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Location = New System.Drawing.Point(25, 310)
-        Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(113, 19)
-        Me.RadioButton8.TabIndex = 27
-        Me.RadioButton8.Text = "Approved by ALL"
-        Me.RadioButton8.UseVisualStyleBackColor = True
-        '
-        'RadioButton9
-        '
-        Me.RadioButton9.AutoSize = True
-        Me.RadioButton9.Checked = True
-        Me.RadioButton9.Location = New System.Drawing.Point(25, 285)
-        Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(117, 19)
-        Me.RadioButton9.TabIndex = 26
-        Me.RadioButton9.TabStop = True
-        Me.RadioButton9.Text = "Approved by ANY"
-        Me.RadioButton9.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(6, 261)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(103, 15)
-        Me.Label19.TabIndex = 25
-        Me.Label19.Text = "Approval Method"
-        '
-        'ComboBox13
-        '
-        Me.ComboBox13.FormattingEnabled = True
-        Me.ComboBox13.Location = New System.Drawing.Point(115, 149)
-        Me.ComboBox13.Name = "ComboBox13"
-        Me.ComboBox13.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox13.TabIndex = 24
-        '
-        'ComboBox14
-        '
-        Me.ComboBox14.FormattingEnabled = True
-        Me.ComboBox14.Location = New System.Drawing.Point(115, 123)
-        Me.ComboBox14.Name = "ComboBox14"
-        Me.ComboBox14.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox14.TabIndex = 23
-        '
-        'ComboBox15
-        '
-        Me.ComboBox15.FormattingEnabled = True
-        Me.ComboBox15.Location = New System.Drawing.Point(115, 97)
-        Me.ComboBox15.Name = "ComboBox15"
-        Me.ComboBox15.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox15.TabIndex = 22
-        '
-        'ComboBox16
-        '
-        Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Location = New System.Drawing.Point(115, 71)
-        Me.ComboBox16.Name = "ComboBox16"
-        Me.ComboBox16.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox16.TabIndex = 21
-        '
-        'ComboBox17
-        '
-        Me.ComboBox17.FormattingEnabled = True
-        Me.ComboBox17.Location = New System.Drawing.Point(115, 45)
-        Me.ComboBox17.Name = "ComboBox17"
-        Me.ComboBox17.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox17.TabIndex = 20
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(6, 152)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(99, 15)
-        Me.Label20.TabIndex = 19
-        Me.Label20.Text = "Supplementary 4"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(6, 126)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(99, 15)
-        Me.Label21.TabIndex = 18
-        Me.Label21.Text = "Supplementary 3"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(6, 100)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(99, 15)
-        Me.Label22.TabIndex = 17
-        Me.Label22.Text = "Supplementary 2"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(6, 74)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(99, 15)
-        Me.Label23.TabIndex = 15
-        Me.Label23.Text = "Supplementary 1"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(6, 48)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(104, 15)
-        Me.Label24.TabIndex = 16
-        Me.Label24.Text = "Primary Approver"
-        '
-        'TabPage4
-        '
-        Me.TabPage4.AutoScroll = True
-        Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TabPage4.Controls.Add(Me.CheckBox8)
-        Me.TabPage4.Controls.Add(Me.ComboBox18)
-        Me.TabPage4.Controls.Add(Me.TextBox12)
-        Me.TabPage4.Controls.Add(Me.Label45)
-        Me.TabPage4.Controls.Add(Me.ComboBox24)
-        Me.TabPage4.Controls.Add(Me.Label46)
-        Me.TabPage4.Controls.Add(Me.CheckBox14)
-        Me.TabPage4.Controls.Add(Me.CheckBox18)
-        Me.TabPage4.Controls.Add(Me.ComboBox25)
-        Me.TabPage4.Controls.Add(Me.Label47)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(893, 637)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "Request Defaults"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(24, 145)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(341, 19)
-        Me.CheckBox8.TabIndex = 39
-        Me.CheckBox8.Text = "Send E-Mail Notification for Request(s) with No Movement"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'ComboBox18
-        '
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Location = New System.Drawing.Point(327, 92)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(183, 23)
-        Me.ComboBox18.TabIndex = 38
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(266, 92)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(60, 23)
-        Me.TextBox12.TabIndex = 37
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(21, 95)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(200, 15)
-        Me.Label45.TabIndex = 36
-        Me.Label45.Text = "Duration to check for No Movement"
-        '
-        'ComboBox24
-        '
-        Me.ComboBox24.FormattingEnabled = True
-        Me.ComboBox24.Location = New System.Drawing.Point(266, 116)
-        Me.ComboBox24.Name = "ComboBox24"
-        Me.ComboBox24.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox24.TabIndex = 35
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(21, 119)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(230, 15)
-        Me.Label46.TabIndex = 34
-        Me.Label46.Text = "Set status for Request with No Movement"
-        '
-        'CheckBox14
-        '
-        Me.CheckBox14.AutoSize = True
-        Me.CheckBox14.Location = New System.Drawing.Point(9, 63)
-        Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(346, 19)
-        Me.CheckBox14.TabIndex = 33
-        Me.CheckBox14.Text = "Automatically change request status when NO MOVEMENT."
-        Me.CheckBox14.UseVisualStyleBackColor = True
-        '
-        'CheckBox18
-        '
-        Me.CheckBox18.AutoSize = True
-        Me.CheckBox18.Location = New System.Drawing.Point(9, 38)
-        Me.CheckBox18.Name = "CheckBox18"
-        Me.CheckBox18.Size = New System.Drawing.Size(265, 19)
-        Me.CheckBox18.TabIndex = 12
-        Me.CheckBox18.Text = "Send E-Mail Notification for NEW Request(s)"
-        Me.CheckBox18.UseVisualStyleBackColor = True
-        '
-        'ComboBox25
-        '
-        Me.ComboBox25.FormattingEnabled = True
-        Me.ComboBox25.Location = New System.Drawing.Point(201, 9)
-        Me.ComboBox25.Name = "ComboBox25"
-        Me.ComboBox25.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox25.TabIndex = 11
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(6, 12)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(175, 15)
-        Me.Label47.TabIndex = 10
-        Me.Label47.Text = "Default status for New Request"
-        '
-        'TabControl6
-        '
-        Me.TabControl6.Controls.Add(Me.tpCandidateDef)
-        Me.TabControl6.Controls.Add(Me.tpCandidateLineup)
-        Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl6.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl6.Name = "TabControl6"
-        Me.TabControl6.SelectedIndex = 0
-        Me.TabControl6.Size = New System.Drawing.Size(901, 665)
-        Me.TabControl6.TabIndex = 2
-        '
-        'tpCandidateDef
-        '
-        Me.tpCandidateDef.AutoScroll = True
-        Me.tpCandidateDef.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpCandidateDef.Controls.Add(Me.CheckBox9)
-        Me.tpCandidateDef.Controls.Add(Me.ComboBox19)
-        Me.tpCandidateDef.Controls.Add(Me.Label37)
-        Me.tpCandidateDef.Controls.Add(Me.CheckBox15)
-        Me.tpCandidateDef.Controls.Add(Me.ComboBox32)
-        Me.tpCandidateDef.Controls.Add(Me.Label57)
-        Me.tpCandidateDef.Location = New System.Drawing.Point(4, 24)
-        Me.tpCandidateDef.Name = "tpCandidateDef"
-        Me.tpCandidateDef.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidateDef.Size = New System.Drawing.Size(893, 637)
-        Me.tpCandidateDef.TabIndex = 1
-        Me.tpCandidateDef.Text = "Defaults"
-        Me.tpCandidateDef.UseVisualStyleBackColor = True
-        '
-        'CheckBox15
-        '
-        Me.CheckBox15.AutoSize = True
-        Me.CheckBox15.Location = New System.Drawing.Point(9, 75)
-        Me.CheckBox15.Name = "CheckBox15"
-        Me.CheckBox15.Size = New System.Drawing.Size(264, 19)
-        Me.CheckBox15.TabIndex = 12
-        Me.CheckBox15.Text = "Send E-Mail Notification for NEW Candidate"
-        Me.CheckBox15.UseVisualStyleBackColor = True
-        '
-        'ComboBox32
-        '
-        Me.ComboBox32.FormattingEnabled = True
-        Me.ComboBox32.Location = New System.Drawing.Point(218, 9)
-        Me.ComboBox32.Name = "ComboBox32"
-        Me.ComboBox32.Size = New System.Drawing.Size(291, 23)
-        Me.ComboBox32.TabIndex = 11
-        '
-        'Label57
-        '
-        Me.Label57.AutoSize = True
-        Me.Label57.Location = New System.Drawing.Point(6, 12)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(188, 15)
-        Me.Label57.TabIndex = 10
-        Me.Label57.Text = "Default status for New Candidate"
-        '
-        'ComboBox19
-        '
-        Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Location = New System.Drawing.Point(218, 33)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(291, 23)
-        Me.ComboBox19.TabIndex = 14
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(6, 36)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(206, 15)
-        Me.Label37.TabIndex = 13
-        Me.Label37.Text = "Default status for Deleted Candidate"
-        '
         'TabControl4
         '
         Me.TabControl4.Controls.Add(Me.TabPage1)
@@ -1346,23 +870,9 @@ Partial Class frmSysDefaults
         '
         Me.TabPage1.AutoScroll = True
         Me.TabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Controls.Add(Me.RadioButton4)
-        Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Controls.Add(Me.CheckBox2)
-        Me.TabPage1.Controls.Add(Me.RadioButton5)
-        Me.TabPage1.Controls.Add(Me.RadioButton6)
-        Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.ComboBox7)
-        Me.TabPage1.Controls.Add(Me.ComboBox8)
-        Me.TabPage1.Controls.Add(Me.ComboBox9)
-        Me.TabPage1.Controls.Add(Me.ComboBox10)
-        Me.TabPage1.Controls.Add(Me.ComboBox11)
-        Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Controls.Add(Me.Label14)
-        Me.TabPage1.Controls.Add(Me.Label15)
-        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Panel5)
+        Me.TabPage1.Controls.Add(Me.Panel6)
+        Me.TabPage1.Controls.Add(Me.Panel10)
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -1371,160 +881,126 @@ Partial Class frmSysDefaults
         Me.TabPage1.Text = "Approvers"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Label9
+        'Panel5
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(6, 14)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 15)
-        Me.Label9.TabIndex = 31
-        Me.Label9.Text = "Heirarchy"
+        Me.Panel5.Controls.Add(Me.ComboBox3)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel5.Location = New System.Drawing.Point(3, 603)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(885, 29)
+        Me.Panel5.TabIndex = 43
         '
-        'RadioButton4
+        'ComboBox3
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(25, 335)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(175, 19)
-        Me.RadioButton4.TabIndex = 30
-        Me.RadioButton4.Text = "Approved ONLY by PRIMARY"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"- Select approval method -", "Approval of ANY ", "Approval of ALL ", "Approval ONLY by PRIMARY"})
+        Me.ComboBox3.Location = New System.Drawing.Point(6, 3)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(399, 23)
+        Me.ComboBox3.TabIndex = 37
         '
-        'Label10
+        'Panel6
         '
-        Me.Label10.Location = New System.Drawing.Point(136, 190)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(223, 48)
-        Me.Label10.TabIndex = 29
-        Me.Label10.Text = "Automatically allow supplementary approver(s) to approve requests when PRIMARY is" & _
-    " not present"
+        Me.Panel6.Controls.Add(Me.DataGridView2)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel6.Location = New System.Drawing.Point(3, 50)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(885, 582)
+        Me.Panel6.TabIndex = 42
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn1, Me.colLRRwId, Me.colLRId, Me.DataGridViewTextBoxColumn1, Me.DataGridViewCheckBoxColumn1})
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(885, 582)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'DataGridViewButtonColumn1
+        '
+        Me.DataGridViewButtonColumn1.Frozen = True
+        Me.DataGridViewButtonColumn1.HeaderText = ""
+        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
+        Me.DataGridViewButtonColumn1.ReadOnly = True
+        '
+        'colLRRwId
+        '
+        Me.colLRRwId.HeaderText = "LR Row Id"
+        Me.colLRRwId.Name = "colLRRwId"
+        Me.colLRRwId.ReadOnly = True
+        Me.colLRRwId.Visible = False
+        '
+        'colLRId
+        '
+        Me.colLRId.HeaderText = "LRId"
+        Me.colLRId.Name = "colLRId"
+        Me.colLRId.ReadOnly = True
+        Me.colLRId.Visible = False
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Width = 450
+        '
+        'DataGridViewCheckBoxColumn1
+        '
+        Me.DataGridViewCheckBoxColumn1.HeaderText = "Primary"
+        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
+        Me.DataGridViewCheckBoxColumn1.ReadOnly = True
+        '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.ComboBox4)
+        Me.Panel10.Controls.Add(Me.Label2)
+        Me.Panel10.Controls.Add(Me.CheckBox2)
+        Me.Panel10.Controls.Add(Me.Button2)
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel10.Location = New System.Drawing.Point(3, 3)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(885, 47)
+        Me.Panel10.TabIndex = 41
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(101, 11)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(429, 23)
+        Me.ComboBox4.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(92, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Select Approver"
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(115, 191)
+        Me.CheckBox2.Location = New System.Drawing.Point(536, 13)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 28
+        Me.CheckBox2.Size = New System.Drawing.Size(70, 19)
+        Me.CheckBox2.TabIndex = 1
+        Me.CheckBox2.Text = "Primary"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'RadioButton5
+        'Button2
         '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(25, 310)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(113, 19)
-        Me.RadioButton5.TabIndex = 27
-        Me.RadioButton5.Text = "Approved by ALL"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Checked = True
-        Me.RadioButton6.Location = New System.Drawing.Point(25, 285)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(117, 19)
-        Me.RadioButton6.TabIndex = 26
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "Approved by ANY"
-        Me.RadioButton6.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 261)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(103, 15)
-        Me.Label11.TabIndex = 25
-        Me.Label11.Text = "Approval Method"
-        '
-        'ComboBox7
-        '
-        Me.ComboBox7.FormattingEnabled = True
-        Me.ComboBox7.Location = New System.Drawing.Point(115, 149)
-        Me.ComboBox7.Name = "ComboBox7"
-        Me.ComboBox7.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox7.TabIndex = 24
-        '
-        'ComboBox8
-        '
-        Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Location = New System.Drawing.Point(115, 123)
-        Me.ComboBox8.Name = "ComboBox8"
-        Me.ComboBox8.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox8.TabIndex = 23
-        '
-        'ComboBox9
-        '
-        Me.ComboBox9.FormattingEnabled = True
-        Me.ComboBox9.Location = New System.Drawing.Point(115, 97)
-        Me.ComboBox9.Name = "ComboBox9"
-        Me.ComboBox9.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox9.TabIndex = 22
-        '
-        'ComboBox10
-        '
-        Me.ComboBox10.FormattingEnabled = True
-        Me.ComboBox10.Location = New System.Drawing.Point(115, 71)
-        Me.ComboBox10.Name = "ComboBox10"
-        Me.ComboBox10.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox10.TabIndex = 21
-        '
-        'ComboBox11
-        '
-        Me.ComboBox11.FormattingEnabled = True
-        Me.ComboBox11.Location = New System.Drawing.Point(115, 45)
-        Me.ComboBox11.Name = "ComboBox11"
-        Me.ComboBox11.Size = New System.Drawing.Size(244, 23)
-        Me.ComboBox11.TabIndex = 20
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(6, 152)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(99, 15)
-        Me.Label12.TabIndex = 19
-        Me.Label12.Text = "Supplementary 4"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(6, 126)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(99, 15)
-        Me.Label13.TabIndex = 18
-        Me.Label13.Text = "Supplementary 3"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(6, 100)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(99, 15)
-        Me.Label14.TabIndex = 17
-        Me.Label14.Text = "Supplementary 2"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(6, 74)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(99, 15)
-        Me.Label15.TabIndex = 15
-        Me.Label15.Text = "Supplementary 1"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(6, 48)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(104, 15)
-        Me.Label16.TabIndex = 16
-        Me.Label16.Text = "Primary Approver"
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(842, 5)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(40, 39)
+        Me.Button2.TabIndex = 0
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
@@ -1636,6 +1112,320 @@ Partial Class frmSysDefaults
         Me.Label44.TabIndex = 10
         Me.Label44.Text = "Default status for New Request"
         '
+        'tpCR
+        '
+        Me.tpCR.AutoScroll = True
+        Me.tpCR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpCR.Controls.Add(Me.TabControl5)
+        Me.tpCR.Location = New System.Drawing.Point(4, 24)
+        Me.tpCR.Name = "tpCR"
+        Me.tpCR.Size = New System.Drawing.Size(903, 667)
+        Me.tpCR.TabIndex = 3
+        Me.tpCR.Text = "Contract Requests"
+        Me.tpCR.UseVisualStyleBackColor = True
+        '
+        'TabControl5
+        '
+        Me.TabControl5.Controls.Add(Me.TabPage3)
+        Me.TabControl5.Controls.Add(Me.TabPage4)
+        Me.TabControl5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl5.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl5.Name = "TabControl5"
+        Me.TabControl5.SelectedIndex = 0
+        Me.TabControl5.Size = New System.Drawing.Size(901, 665)
+        Me.TabControl5.TabIndex = 1
+        '
+        'TabPage3
+        '
+        Me.TabPage3.AutoScroll = True
+        Me.TabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage3.Controls.Add(Me.Panel3)
+        Me.TabPage3.Controls.Add(Me.Panel4)
+        Me.TabPage3.Controls.Add(Me.Panel11)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(893, 637)
+        Me.TabPage3.TabIndex = 0
+        Me.TabPage3.Text = "Approvers"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.ComboBox5)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(3, 603)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(885, 29)
+        Me.Panel3.TabIndex = 43
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"- Select approval method -", "Approval of ANY ", "Approval of ALL ", "Approval ONLY by PRIMARY"})
+        Me.ComboBox5.Location = New System.Drawing.Point(6, 3)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(399, 23)
+        Me.ComboBox5.TabIndex = 37
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.DataGridView1)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel4.Location = New System.Drawing.Point(3, 50)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(885, 582)
+        Me.Panel4.TabIndex = 42
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn3, Me.colCRRwId, Me.colCRId, Me.DataGridViewTextBoxColumn3, Me.DataGridViewCheckBoxColumn3})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(885, 582)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'DataGridViewButtonColumn3
+        '
+        Me.DataGridViewButtonColumn3.Frozen = True
+        Me.DataGridViewButtonColumn3.HeaderText = ""
+        Me.DataGridViewButtonColumn3.Name = "DataGridViewButtonColumn3"
+        Me.DataGridViewButtonColumn3.ReadOnly = True
+        '
+        'colCRRwId
+        '
+        Me.colCRRwId.Frozen = True
+        Me.colCRRwId.HeaderText = "CR Row Id"
+        Me.colCRRwId.Name = "colCRRwId"
+        Me.colCRRwId.ReadOnly = True
+        Me.colCRRwId.Visible = False
+        '
+        'colCRId
+        '
+        Me.colCRId.Frozen = True
+        Me.colCRId.HeaderText = "CRId"
+        Me.colCRId.Name = "colCRId"
+        Me.colCRId.ReadOnly = True
+        Me.colCRId.Visible = False
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.Frozen = True
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 450
+        '
+        'DataGridViewCheckBoxColumn3
+        '
+        Me.DataGridViewCheckBoxColumn3.Frozen = True
+        Me.DataGridViewCheckBoxColumn3.HeaderText = "Primary"
+        Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
+        Me.DataGridViewCheckBoxColumn3.ReadOnly = True
+        '
+        'Panel11
+        '
+        Me.Panel11.Controls.Add(Me.ComboBox7)
+        Me.Panel11.Controls.Add(Me.Label3)
+        Me.Panel11.Controls.Add(Me.CheckBox3)
+        Me.Panel11.Controls.Add(Me.Button1)
+        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel11.Location = New System.Drawing.Point(3, 3)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(885, 47)
+        Me.Panel11.TabIndex = 41
+        '
+        'ComboBox7
+        '
+        Me.ComboBox7.FormattingEnabled = True
+        Me.ComboBox7.Location = New System.Drawing.Point(101, 11)
+        Me.ComboBox7.Name = "ComboBox7"
+        Me.ComboBox7.Size = New System.Drawing.Size(429, 23)
+        Me.ComboBox7.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 14)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 15)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Select Approver"
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(536, 13)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(70, 19)
+        Me.CheckBox3.TabIndex = 1
+        Me.CheckBox3.Text = "Primary"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(842, 5)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(40, 39)
+        Me.Button1.TabIndex = 0
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.AutoScroll = True
+        Me.TabPage4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TabPage4.Controls.Add(Me.CheckBox8)
+        Me.TabPage4.Controls.Add(Me.ComboBox18)
+        Me.TabPage4.Controls.Add(Me.TextBox12)
+        Me.TabPage4.Controls.Add(Me.Label45)
+        Me.TabPage4.Controls.Add(Me.ComboBox24)
+        Me.TabPage4.Controls.Add(Me.Label46)
+        Me.TabPage4.Controls.Add(Me.CheckBox14)
+        Me.TabPage4.Controls.Add(Me.CheckBox18)
+        Me.TabPage4.Controls.Add(Me.ComboBox25)
+        Me.TabPage4.Controls.Add(Me.Label47)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(893, 637)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "Request Defaults"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(24, 145)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(341, 19)
+        Me.CheckBox8.TabIndex = 39
+        Me.CheckBox8.Text = "Send E-Mail Notification for Request(s) with No Movement"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Location = New System.Drawing.Point(327, 92)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(183, 23)
+        Me.ComboBox18.TabIndex = 38
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(266, 92)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.Size = New System.Drawing.Size(60, 23)
+        Me.TextBox12.TabIndex = 37
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(21, 95)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(200, 15)
+        Me.Label45.TabIndex = 36
+        Me.Label45.Text = "Duration to check for No Movement"
+        '
+        'ComboBox24
+        '
+        Me.ComboBox24.FormattingEnabled = True
+        Me.ComboBox24.Location = New System.Drawing.Point(266, 116)
+        Me.ComboBox24.Name = "ComboBox24"
+        Me.ComboBox24.Size = New System.Drawing.Size(244, 23)
+        Me.ComboBox24.TabIndex = 35
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(21, 119)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(230, 15)
+        Me.Label46.TabIndex = 34
+        Me.Label46.Text = "Set status for Request with No Movement"
+        '
+        'CheckBox14
+        '
+        Me.CheckBox14.AutoSize = True
+        Me.CheckBox14.Location = New System.Drawing.Point(9, 63)
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(346, 19)
+        Me.CheckBox14.TabIndex = 33
+        Me.CheckBox14.Text = "Automatically change request status when NO MOVEMENT."
+        Me.CheckBox14.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Location = New System.Drawing.Point(9, 38)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(265, 19)
+        Me.CheckBox18.TabIndex = 12
+        Me.CheckBox18.Text = "Send E-Mail Notification for NEW Request(s)"
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
+        'ComboBox25
+        '
+        Me.ComboBox25.FormattingEnabled = True
+        Me.ComboBox25.Location = New System.Drawing.Point(201, 9)
+        Me.ComboBox25.Name = "ComboBox25"
+        Me.ComboBox25.Size = New System.Drawing.Size(244, 23)
+        Me.ComboBox25.TabIndex = 11
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(6, 12)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(175, 15)
+        Me.Label47.TabIndex = 10
+        Me.Label47.Text = "Default status for New Request"
+        '
+        'tpCandidates
+        '
+        Me.tpCandidates.AutoScroll = True
+        Me.tpCandidates.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpCandidates.Controls.Add(Me.TabControl6)
+        Me.tpCandidates.Location = New System.Drawing.Point(4, 24)
+        Me.tpCandidates.Name = "tpCandidates"
+        Me.tpCandidates.Size = New System.Drawing.Size(903, 667)
+        Me.tpCandidates.TabIndex = 4
+        Me.tpCandidates.Text = "Candidates"
+        Me.tpCandidates.UseVisualStyleBackColor = True
+        '
+        'TabControl6
+        '
+        Me.TabControl6.Controls.Add(Me.tpCandidateDef)
+        Me.TabControl6.Controls.Add(Me.tpCandidateLineup)
+        Me.TabControl6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl6.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl6.Name = "TabControl6"
+        Me.TabControl6.SelectedIndex = 0
+        Me.TabControl6.Size = New System.Drawing.Size(901, 665)
+        Me.TabControl6.TabIndex = 2
+        '
+        'tpCandidateDef
+        '
+        Me.tpCandidateDef.AutoScroll = True
+        Me.tpCandidateDef.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpCandidateDef.Controls.Add(Me.CheckBox9)
+        Me.tpCandidateDef.Controls.Add(Me.ComboBox19)
+        Me.tpCandidateDef.Controls.Add(Me.Label37)
+        Me.tpCandidateDef.Controls.Add(Me.CheckBox15)
+        Me.tpCandidateDef.Controls.Add(Me.ComboBox32)
+        Me.tpCandidateDef.Controls.Add(Me.Label57)
+        Me.tpCandidateDef.Location = New System.Drawing.Point(4, 24)
+        Me.tpCandidateDef.Name = "tpCandidateDef"
+        Me.tpCandidateDef.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpCandidateDef.Size = New System.Drawing.Size(893, 637)
+        Me.tpCandidateDef.TabIndex = 1
+        Me.tpCandidateDef.Text = "Defaults"
+        Me.tpCandidateDef.UseVisualStyleBackColor = True
+        '
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
@@ -1645,6 +1435,50 @@ Partial Class frmSysDefaults
         Me.CheckBox9.TabIndex = 15
         Me.CheckBox9.Text = "Send E-Mail Notification for Deleted Candidate"
         Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'ComboBox19
+        '
+        Me.ComboBox19.FormattingEnabled = True
+        Me.ComboBox19.Location = New System.Drawing.Point(218, 33)
+        Me.ComboBox19.Name = "ComboBox19"
+        Me.ComboBox19.Size = New System.Drawing.Size(291, 23)
+        Me.ComboBox19.TabIndex = 14
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(6, 36)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(206, 15)
+        Me.Label37.TabIndex = 13
+        Me.Label37.Text = "Default status for Deleted Candidate"
+        '
+        'CheckBox15
+        '
+        Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.Location = New System.Drawing.Point(9, 75)
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(264, 19)
+        Me.CheckBox15.TabIndex = 12
+        Me.CheckBox15.Text = "Send E-Mail Notification for NEW Candidate"
+        Me.CheckBox15.UseVisualStyleBackColor = True
+        '
+        'ComboBox32
+        '
+        Me.ComboBox32.FormattingEnabled = True
+        Me.ComboBox32.Location = New System.Drawing.Point(218, 9)
+        Me.ComboBox32.Name = "ComboBox32"
+        Me.ComboBox32.Size = New System.Drawing.Size(291, 23)
+        Me.ComboBox32.TabIndex = 11
+        '
+        'Label57
+        '
+        Me.Label57.AutoSize = True
+        Me.Label57.Location = New System.Drawing.Point(6, 12)
+        Me.Label57.Name = "Label57"
+        Me.Label57.Size = New System.Drawing.Size(188, 15)
+        Me.Label57.TabIndex = 10
+        Me.Label57.Text = "Default status for New Candidate"
         '
         'tpCandidateLineup
         '
@@ -1690,25 +1524,37 @@ Partial Class frmSysDefaults
         Me.tpMR.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
         Me.tpMRApprovers.ResumeLayout(False)
-        Me.tpMRApprovers.PerformLayout()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
         Me.tpMRDefaults.ResumeLayout(False)
         Me.tpMRDefaults.PerformLayout()
         Me.tpLR.ResumeLayout(False)
+        Me.TabControl4.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.tpCR.ResumeLayout(False)
-        Me.tpCandidates.ResumeLayout(False)
         Me.TabControl5.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        Me.tpCandidates.ResumeLayout(False)
         Me.TabControl6.ResumeLayout(False)
         Me.tpCandidateDef.ResumeLayout(False)
         Me.tpCandidateDef.PerformLayout()
-        Me.TabControl4.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1721,9 +1567,6 @@ Partial Class frmSysDefaults
     Friend WithEvents tpCR As System.Windows.Forms.TabPage
     Friend WithEvents tpCandidates As System.Windows.Forms.TabPage
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Friend WithEvents TabControl3 As System.Windows.Forms.TabControl
     Friend WithEvents tpCnDb As System.Windows.Forms.TabPage
@@ -1757,55 +1600,8 @@ Partial Class frmSysDefaults
     Friend WithEvents Label33 As System.Windows.Forms.Label
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents TabControl2 As System.Windows.Forms.TabControl
-    Friend WithEvents tpMRApprovers As System.Windows.Forms.TabPage
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents tpMRDefaults As System.Windows.Forms.TabPage
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox17 As System.Windows.Forms.CheckBox
-    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents Label42 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox16 As System.Windows.Forms.CheckBox
     Friend WithEvents TabControl4 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton6 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox9 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox10 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox11 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents CheckBox7 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox12 As System.Windows.Forms.ComboBox
@@ -1819,23 +1615,6 @@ Partial Class frmSysDefaults
     Friend WithEvents Label44 As System.Windows.Forms.Label
     Friend WithEvents TabControl5 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents RadioButton7 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents RadioButton8 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton9 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox13 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox14 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox15 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox16 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox17 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox18 As System.Windows.Forms.ComboBox
@@ -1856,4 +1635,59 @@ Partial Class frmSysDefaults
     Friend WithEvents ComboBox32 As System.Windows.Forms.ComboBox
     Friend WithEvents Label57 As System.Windows.Forms.Label
     Friend WithEvents tpCandidateLineup As System.Windows.Forms.TabPage
+    Friend WithEvents TabControl2 As System.Windows.Forms.TabControl
+    Friend WithEvents tpMRApprovers As System.Windows.Forms.TabPage
+    Friend WithEvents Panel9 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Panel7 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colMRId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colMRRwId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn2 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Panel8 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents tpMRDefaults As System.Windows.Forms.TabPage
+    Friend WithEvents CheckBox17 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox16 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox6 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox6 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Panel5 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Panel6 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colLRRwId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colLRId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Panel10 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewButtonColumn3 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colCRRwId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents colCRId As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewCheckBoxColumn3 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents ComboBox7 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
