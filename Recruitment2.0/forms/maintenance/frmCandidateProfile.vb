@@ -172,7 +172,7 @@ Public Class frmCandidateProfile
                             rdbAvail0.Checked = True
                         Case 1
                             rdbAvail1.Checked = True
-                            txtAvailInCount.Text = Drow("availnotice")
+                            txtAvailInCount.Text = Drow("availinnotice")
                             'cboAvailInType.SelectedIndex = Drow("availnoticetype")
                         Case 2
                             rdbAvail2.Checked = True
