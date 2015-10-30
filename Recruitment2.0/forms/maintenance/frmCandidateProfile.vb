@@ -6,7 +6,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class frmCandidateProfile
 
-    Dim TranType As Integer = -1
+    Dim CandidateTranType As Integer = -1
     Public Shared SelCandidateId As Integer
 
     Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -182,15 +182,45 @@ Public Class frmCandidateProfile
                         Case Else
 
                     End Select
-
+                    txtCandidateRemarks.Text = Drow("candidateremarks")
                 Next
+                Call Tran_FamilyBackground(4, 0, CandidateId, CurrentUserId)
             End If
         End If
 
     End Sub
 
+    Private Sub Tran_FamilyBackground(ByVal TranType As Integer, ByVal FamilyMemberId As Integer, ByVal CandidateId As Integer, ByVal CurrentUserId As Integer, _
+                                      Optional ByVal FamilyMemberName As String = Nothing, Optional ByVal BDate As Date = Nothing, _
+                                      Optional ByVal CivilStat As Integer = Nothing, Optional ByVal Relationship As String = Nothing, _
+                                      Optional ByVal Occupation As String = Nothing)
+
+        Params = New ArrayList
+        Params.Add(New MySqlParameter("@trantype", TranType))
+        Params.Add(New MySqlParameter("@recid", FamilyMemberId))
+        Params.Add(New MySqlParameter("@candidateid", CandidateId))
+        Params.Add(New MySqlParameter("@cfmname", FamilyMemberName))
+        Params.Add(New MySqlParameter("@cbdate", BDate))
+        Params.Add(New MySqlParameter("@ccivilstat", CivilStat))
+        Params.Add(New MySqlParameter("@crelationship", Relationship))
+        Params.Add(New MySqlParameter("@coccupation", Occupation))
+        Params.Add(New MySqlParameter("@usedid", CurrentUserId))
+
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            If TranType = 0 Or TranType = 2 Then
+                QueryExec("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
+            ElseIf TranType = 4 Then
+                Dset = New DataSet
+                Dset = Query("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
+                dgvFM.DataSource = Dset.Tables(0)
+                dgvFM.Refresh()
+            End If
+        End Using
+
+    End Sub
+
     Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
-        TranType = 3
+        CandidateTranType = 3
         Dim ParamList As New ArrayList
         ParamList.AddRange({4, "Mix", 5.1})
         With frmSearch
@@ -198,7 +228,7 @@ Public Class frmCandidateProfile
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me.Name, ParamList)
             .ShowDialog()
-            Call TranCandidateInfo(TranType, SelCandidateId)
+            Call TranCandidateInfo(CandidateTranType, SelCandidateId)
         End With
     End Sub
 
@@ -208,15 +238,15 @@ Public Class frmCandidateProfile
     End Sub
 
     Private Sub tsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
-        TranType = 0
+        CandidateTranType = 0
+        tsbSave.Visible = True
+        tsbCancel.Visible = True
         tsbAdd.Visible = False
         tsbEdit.Visible = False
         tsbDelete.Visible = False
         tsbSeparator.Visible = False
         tsbSearch.Visible = False
         tsbPrint.Visible = False
-        tsbSave.Visible = True
-        tsbCancel.Visible = True
         Call ClearNEnableFields(True)
     End Sub
 
@@ -234,30 +264,31 @@ Public Class frmCandidateProfile
         tsbSave.Visible = False
         tsbCancel.Visible = False
 
-        If TranType = 0 Then
+        If CandidateTranType = 0 Then
             Call LogActivity(1, "User " + CurrentUName + " cancels profile creation.", CurrentUID)
-        ElseIf TranType = 1 Then
+        ElseIf CandidateTranType = 1 Then
             Call LogActivity(1, "User " + CurrentUName + "cancels modification of profile " + txtFName.Text + " " + txtLName.Text + ".", CurrentUID)
         Else
             ' Unhandled transaction
         End If
 
         Call ClearNEnableFields(False)
-        TranType = -1
+        CandidateTranType = -1
         SelCandidateId = 0
     End Sub
 
     Private Sub tsbEdit_Click(sender As Object, e As EventArgs) Handles tsbEdit.Click
         If SelCandidateId > 0 Then
-            TranType = 1
+            CandidateTranType = 1
+            tsbSave.Visible = True
+            tsbCancel.Visible = True
             tsbAdd.Visible = False
             tsbEdit.Visible = False
             tsbDelete.Visible = False
             tsbSeparator.Visible = False
             tsbSearch.Visible = False
             tsbPrint.Visible = False
-            tsbSave.Visible = True
-            tsbCancel.Visible = True
+
             For Each tPages In tabInfo.TabPages
                 tPages.enabled = True
             Next
@@ -273,7 +304,7 @@ Public Class frmCandidateProfile
                 Call TranCandidateInfo(2, SelCandidateId)
                 Call LogActivity(1, "User " + CurrentUName + " successfully deleted the candidate profile of Mr./Ms. " + txtFName.Text + " " + txtLName.Text + ".", CurrentUID)
                 Call ClearNEnableFields(False)
-                TranType = -1
+                CandidateTranType = -1
                 SelCandidateId = 0
                 Call LogActivity(0, "System clears and disable fields. After deletion of candidate profile.", CurrentUID)
             End If
@@ -283,5 +314,23 @@ Public Class frmCandidateProfile
             Call ClearNEnableFields(False)
         End If
 
+    End Sub
+
+    Private Sub dtpBDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpBDate.ValueChanged
+        txtAge.Text = DateDiff(DateInterval.Year, dtpBDate.Value, Now)
+    End Sub
+
+    Private Sub tsbFMSave_Click(sender As Object, e As EventArgs) Handles tsbFMSave.Click
+        ' Validation
+
+        Call Tran_FamilyBackground(0, 0, SelCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text)
+    End Sub
+
+    Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
+        If txtFName.Text.Trim.Length = 0 Then
+
+        ElseIf txtLName.Text.Trim.Length = 0 Then
+
+        End If
     End Sub
 End Class
