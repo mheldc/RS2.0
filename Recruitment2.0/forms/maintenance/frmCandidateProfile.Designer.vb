@@ -60,15 +60,8 @@ Partial Class frmCandidateProfile
         Me.tpFamily = New System.Windows.Forms.TabPage()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.dgvFM = New System.Windows.Forms.DataGridView()
-        Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colEdit = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colId = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAge = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colCivilStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colRelationship = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colOccupation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.tsFM = New System.Windows.Forms.ToolStrip()
         Me.tsbFMSave = New System.Windows.Forms.ToolStripButton()
@@ -92,13 +85,6 @@ Partial Class frmCandidateProfile
         Me.dgvEduHist = New System.Windows.Forms.DataGridView()
         Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn3 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.tsEduc = New System.Windows.Forms.ToolStrip()
         Me.tsbEducSave = New System.Windows.Forms.ToolStripButton()
@@ -125,15 +111,7 @@ Partial Class frmCandidateProfile
         Me.dgvEmp = New System.Windows.Forms.DataGridView()
         Me.DataGridViewButtonColumn4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DataGridViewButtonColumn5 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn6 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colReasonForLeaving = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colIsPresent = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ispresentemp = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.tsEmp = New System.Windows.Forms.ToolStrip()
         Me.tsbEmpSave = New System.Windows.Forms.ToolStripButton()
@@ -160,15 +138,6 @@ Partial Class frmCandidateProfile
         Me.tpSkills = New System.Windows.Forms.TabPage()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.dgvSkill = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colSTypeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSGroupId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSkill = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colYearsUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLastYearUsed = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colSCLevel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.tsSkills = New System.Windows.Forms.ToolStrip()
         Me.tsbSkillSave = New System.Windows.Forms.ToolStripButton()
@@ -234,6 +203,8 @@ Partial Class frmCandidateProfile
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tabInfo.SuspendLayout()
@@ -627,9 +598,10 @@ Partial Class frmCandidateProfile
         '
         'dgvFM
         '
+        Me.dgvFM.AllowUserToAddRows = False
         Me.dgvFM.AllowUserToDeleteRows = False
         Me.dgvFM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvFM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSelect, Me.colRemove, Me.colId, Me.colName, Me.colBDate, Me.colAge, Me.colCivilStatus, Me.colRelationship, Me.colOccupation})
+        Me.dgvFM.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colEdit, Me.colRemove})
         Me.dgvFM.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvFM.Location = New System.Drawing.Point(0, 0)
         Me.dgvFM.Name = "dgvFM"
@@ -637,66 +609,27 @@ Partial Class frmCandidateProfile
         Me.dgvFM.Size = New System.Drawing.Size(937, 226)
         Me.dgvFM.TabIndex = 3
         '
-        'colSelect
+        'colEdit
         '
-        Me.colSelect.Frozen = True
-        Me.colSelect.HeaderText = ""
-        Me.colSelect.Name = "colSelect"
-        Me.colSelect.ReadOnly = True
-        Me.colSelect.Text = "Select"
-        Me.colSelect.Width = 70
+        Me.colEdit.Frozen = True
+        Me.colEdit.HeaderText = ""
+        Me.colEdit.Name = "colEdit"
+        Me.colEdit.ReadOnly = True
+        Me.colEdit.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.colEdit.Text = "Edit"
+        Me.colEdit.UseColumnTextForButtonValue = True
+        Me.colEdit.Width = 70
         '
         'colRemove
         '
+        Me.colRemove.Frozen = True
         Me.colRemove.HeaderText = ""
         Me.colRemove.Name = "colRemove"
         Me.colRemove.ReadOnly = True
+        Me.colRemove.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.colRemove.Text = "Remove"
+        Me.colRemove.UseColumnTextForButtonValue = True
         Me.colRemove.Width = 70
-        '
-        'colId
-        '
-        Me.colId.HeaderText = "Id"
-        Me.colId.Name = "colId"
-        Me.colId.ReadOnly = True
-        Me.colId.Visible = False
-        '
-        'colName
-        '
-        Me.colName.HeaderText = "Name"
-        Me.colName.Name = "colName"
-        Me.colName.ReadOnly = True
-        Me.colName.Width = 150
-        '
-        'colBDate
-        '
-        Me.colBDate.HeaderText = "Birth Date"
-        Me.colBDate.Name = "colBDate"
-        Me.colBDate.ReadOnly = True
-        '
-        'colAge
-        '
-        Me.colAge.HeaderText = "Age"
-        Me.colAge.Name = "colAge"
-        Me.colAge.ReadOnly = True
-        '
-        'colCivilStatus
-        '
-        Me.colCivilStatus.HeaderText = "Civil Status"
-        Me.colCivilStatus.Name = "colCivilStatus"
-        Me.colCivilStatus.ReadOnly = True
-        '
-        'colRelationship
-        '
-        Me.colRelationship.HeaderText = "Relationship"
-        Me.colRelationship.Name = "colRelationship"
-        Me.colRelationship.ReadOnly = True
-        '
-        'colOccupation
-        '
-        Me.colOccupation.HeaderText = "Occupation"
-        Me.colOccupation.Name = "colOccupation"
-        Me.colOccupation.ReadOnly = True
         '
         'Panel6
         '
@@ -742,6 +675,7 @@ Partial Class frmCandidateProfile
         Me.tsbFMSave.Name = "tsbFMSave"
         Me.tsbFMSave.Size = New System.Drawing.Size(36, 36)
         Me.tsbFMSave.Text = "Save Family Member"
+        Me.tsbFMSave.ToolTipText = "Save Information"
         '
         'tsbFMCancel
         '
@@ -759,7 +693,7 @@ Partial Class frmCandidateProfile
         Me.chkFMIsDeceased.Location = New System.Drawing.Point(448, 79)
         Me.chkFMIsDeceased.Name = "chkFMIsDeceased"
         Me.chkFMIsDeceased.Size = New System.Drawing.Size(78, 19)
-        Me.chkFMIsDeceased.TabIndex = 37
+        Me.chkFMIsDeceased.TabIndex = 29
         Me.chkFMIsDeceased.Text = "Deceased"
         Me.chkFMIsDeceased.UseVisualStyleBackColor = True
         '
@@ -770,7 +704,7 @@ Partial Class frmCandidateProfile
         Me.cboFMCStatus.Location = New System.Drawing.Point(114, 77)
         Me.cboFMCStatus.Name = "cboFMCStatus"
         Me.cboFMCStatus.Size = New System.Drawing.Size(216, 23)
-        Me.cboFMCStatus.TabIndex = 36
+        Me.cboFMCStatus.TabIndex = 26
         '
         'Label12
         '
@@ -786,7 +720,7 @@ Partial Class frmCandidateProfile
         Me.txtFMOccupation.Location = New System.Drawing.Point(448, 53)
         Me.txtFMOccupation.Name = "txtFMOccupation"
         Me.txtFMOccupation.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMOccupation.TabIndex = 34
+        Me.txtFMOccupation.TabIndex = 28
         '
         'Label30
         '
@@ -802,7 +736,7 @@ Partial Class frmCandidateProfile
         Me.txtFMRel.Location = New System.Drawing.Point(448, 29)
         Me.txtFMRel.Name = "txtFMRel"
         Me.txtFMRel.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMRel.TabIndex = 32
+        Me.txtFMRel.TabIndex = 27
         '
         'Label28
         '
@@ -836,7 +770,7 @@ Partial Class frmCandidateProfile
         Me.dtpFMBDate.Location = New System.Drawing.Point(115, 53)
         Me.dtpFMBDate.Name = "dtpFMBDate"
         Me.dtpFMBDate.Size = New System.Drawing.Size(128, 23)
-        Me.dtpFMBDate.TabIndex = 28
+        Me.dtpFMBDate.TabIndex = 25
         '
         'Label27
         '
@@ -898,9 +832,10 @@ Partial Class frmCandidateProfile
         '
         'dgvEduHist
         '
+        Me.dgvEduHist.AllowUserToAddRows = False
         Me.dgvEduHist.AllowUserToDeleteRows = False
         Me.dgvEduHist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEduHist.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn1, Me.DataGridViewButtonColumn2, Me.DataGridViewButtonColumn3, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.dgvEduHist.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn1, Me.DataGridViewButtonColumn2})
         Me.dgvEduHist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEduHist.Location = New System.Drawing.Point(0, 0)
         Me.dgvEduHist.Name = "dgvEduHist"
@@ -914,66 +849,19 @@ Partial Class frmCandidateProfile
         Me.DataGridViewButtonColumn1.HeaderText = ""
         Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
         Me.DataGridViewButtonColumn1.ReadOnly = True
-        Me.DataGridViewButtonColumn1.Text = "Select"
+        Me.DataGridViewButtonColumn1.Text = "Edit"
+        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn1.Width = 70
         '
         'DataGridViewButtonColumn2
         '
+        Me.DataGridViewButtonColumn2.Frozen = True
         Me.DataGridViewButtonColumn2.HeaderText = ""
         Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
         Me.DataGridViewButtonColumn2.ReadOnly = True
         Me.DataGridViewButtonColumn2.Text = "Remove"
+        Me.DataGridViewButtonColumn2.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn2.Width = 70
-        '
-        'DataGridViewButtonColumn3
-        '
-        Me.DataGridViewButtonColumn3.HeaderText = "Id"
-        Me.DataGridViewButtonColumn3.Name = "DataGridViewButtonColumn3"
-        Me.DataGridViewButtonColumn3.ReadOnly = True
-        Me.DataGridViewButtonColumn3.Visible = False
-        Me.DataGridViewButtonColumn3.Width = 50
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "School Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Width = 250
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 250
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Inclusive Dates"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 150
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Date Graduated"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Width = 150
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Course Taken"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.Width = 250
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Honors Received"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 250
         '
         'Panel11
         '
@@ -1202,9 +1090,10 @@ Partial Class frmCandidateProfile
         '
         'dgvEmp
         '
+        Me.dgvEmp.AllowUserToAddRows = False
         Me.dgvEmp.AllowUserToDeleteRows = False
         Me.dgvEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn4, Me.DataGridViewButtonColumn5, Me.DataGridViewButtonColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.colReasonForLeaving, Me.colIsPresent})
+        Me.dgvEmp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn4, Me.DataGridViewButtonColumn5, Me.ispresentemp})
         Me.dgvEmp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmp.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmp.Name = "dgvEmp"
@@ -1218,78 +1107,29 @@ Partial Class frmCandidateProfile
         Me.DataGridViewButtonColumn4.HeaderText = ""
         Me.DataGridViewButtonColumn4.Name = "DataGridViewButtonColumn4"
         Me.DataGridViewButtonColumn4.ReadOnly = True
-        Me.DataGridViewButtonColumn4.Text = "Select"
+        Me.DataGridViewButtonColumn4.Text = "Edit"
+        Me.DataGridViewButtonColumn4.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn4.Width = 70
         '
         'DataGridViewButtonColumn5
         '
+        Me.DataGridViewButtonColumn5.Frozen = True
         Me.DataGridViewButtonColumn5.HeaderText = ""
         Me.DataGridViewButtonColumn5.Name = "DataGridViewButtonColumn5"
         Me.DataGridViewButtonColumn5.ReadOnly = True
         Me.DataGridViewButtonColumn5.Text = "Remove"
+        Me.DataGridViewButtonColumn5.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn5.Width = 70
         '
-        'DataGridViewButtonColumn6
+        'ispresentemp
         '
-        Me.DataGridViewButtonColumn6.HeaderText = "Id"
-        Me.DataGridViewButtonColumn6.Name = "DataGridViewButtonColumn6"
-        Me.DataGridViewButtonColumn6.ReadOnly = True
-        Me.DataGridViewButtonColumn6.Visible = False
-        Me.DataGridViewButtonColumn6.Width = 50
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Company Name"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 250
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.HeaderText = "Address"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 250
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Contact Numbers"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Width = 150
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Inclusive Dates"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Width = 150
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Position Held"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        Me.DataGridViewTextBoxColumn11.Width = 250
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Immediate Superior"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Width = 250
-        '
-        'colReasonForLeaving
-        '
-        Me.colReasonForLeaving.HeaderText = "Reason for Leaving"
-        Me.colReasonForLeaving.Name = "colReasonForLeaving"
-        Me.colReasonForLeaving.ReadOnly = True
-        '
-        'colIsPresent
-        '
-        Me.colIsPresent.HeaderText = "Present"
-        Me.colIsPresent.Name = "colIsPresent"
-        Me.colIsPresent.ReadOnly = True
+        Me.ispresentemp.Frozen = True
+        Me.ispresentemp.HeaderText = "Present"
+        Me.ispresentemp.Name = "ispresentemp"
+        Me.ispresentemp.ReadOnly = True
+        Me.ispresentemp.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ispresentemp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.ispresentemp.Width = 70
         '
         'Panel14
         '
@@ -1338,7 +1178,7 @@ Partial Class frmCandidateProfile
         Me.tsbEmpSave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbEmpSave.Name = "tsbEmpSave"
         Me.tsbEmpSave.Size = New System.Drawing.Size(36, 36)
-        Me.tsbEmpSave.Text = "Save Employment "
+        Me.tsbEmpSave.Text = "Save Information"
         '
         'tsbEmpCancel
         '
@@ -1535,82 +1375,16 @@ Partial Class frmCandidateProfile
         '
         'dgvSkill
         '
+        Me.dgvSkill.AllowUserToAddRows = False
         Me.dgvSkill.AllowUserToDeleteRows = False
         Me.dgvSkill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvSkill.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn7, Me.DataGridViewButtonColumn8, Me.colSTypeId, Me.colSGroupId, Me.colSId, Me.colSkill, Me.colYearsUsed, Me.colLastYearUsed, Me.colSCLevel})
+        Me.dgvSkill.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn7, Me.DataGridViewButtonColumn8})
         Me.dgvSkill.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvSkill.Location = New System.Drawing.Point(0, 0)
         Me.dgvSkill.Name = "dgvSkill"
         Me.dgvSkill.ReadOnly = True
         Me.dgvSkill.Size = New System.Drawing.Size(943, 227)
         Me.dgvSkill.TabIndex = 3
-        '
-        'DataGridViewButtonColumn7
-        '
-        Me.DataGridViewButtonColumn7.Frozen = True
-        Me.DataGridViewButtonColumn7.HeaderText = ""
-        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
-        Me.DataGridViewButtonColumn7.ReadOnly = True
-        Me.DataGridViewButtonColumn7.Text = "Select"
-        Me.DataGridViewButtonColumn7.Width = 70
-        '
-        'DataGridViewButtonColumn8
-        '
-        Me.DataGridViewButtonColumn8.Frozen = True
-        Me.DataGridViewButtonColumn8.HeaderText = ""
-        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
-        Me.DataGridViewButtonColumn8.ReadOnly = True
-        Me.DataGridViewButtonColumn8.Text = "Remove"
-        Me.DataGridViewButtonColumn8.Width = 70
-        '
-        'colSTypeId
-        '
-        Me.colSTypeId.HeaderText = "Skill Type Id"
-        Me.colSTypeId.Name = "colSTypeId"
-        Me.colSTypeId.ReadOnly = True
-        Me.colSTypeId.Visible = False
-        '
-        'colSGroupId
-        '
-        Me.colSGroupId.HeaderText = "Skill Group Id"
-        Me.colSGroupId.Name = "colSGroupId"
-        Me.colSGroupId.ReadOnly = True
-        Me.colSGroupId.Visible = False
-        '
-        'colSId
-        '
-        Me.colSId.HeaderText = "Skill Id"
-        Me.colSId.Name = "colSId"
-        Me.colSId.ReadOnly = True
-        Me.colSId.Visible = False
-        '
-        'colSkill
-        '
-        Me.colSkill.HeaderText = "Skill Name"
-        Me.colSkill.Name = "colSkill"
-        Me.colSkill.ReadOnly = True
-        Me.colSkill.Width = 250
-        '
-        'colYearsUsed
-        '
-        Me.colYearsUsed.HeaderText = "No.of Years Used"
-        Me.colYearsUsed.Name = "colYearsUsed"
-        Me.colYearsUsed.ReadOnly = True
-        Me.colYearsUsed.Width = 150
-        '
-        'colLastYearUsed
-        '
-        Me.colLastYearUsed.HeaderText = "Last Year Used"
-        Me.colLastYearUsed.Name = "colLastYearUsed"
-        Me.colLastYearUsed.ReadOnly = True
-        Me.colLastYearUsed.Width = 120
-        '
-        'colSCLevel
-        '
-        Me.colSCLevel.HeaderText = "Competency Level"
-        Me.colSCLevel.Name = "colSCLevel"
-        Me.colSCLevel.ReadOnly = True
-        Me.colSCLevel.Width = 150
         '
         'Panel17
         '
@@ -2260,6 +2034,24 @@ Partial Class frmCandidateProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
+        'DataGridViewButtonColumn7
+        '
+        Me.DataGridViewButtonColumn7.Frozen = True
+        Me.DataGridViewButtonColumn7.HeaderText = ""
+        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
+        Me.DataGridViewButtonColumn7.ReadOnly = True
+        Me.DataGridViewButtonColumn7.Text = "Select"
+        Me.DataGridViewButtonColumn7.Width = 70
+        '
+        'DataGridViewButtonColumn8
+        '
+        Me.DataGridViewButtonColumn8.Frozen = True
+        Me.DataGridViewButtonColumn8.HeaderText = ""
+        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
+        Me.DataGridViewButtonColumn8.ReadOnly = True
+        Me.DataGridViewButtonColumn8.Text = "Remove"
+        Me.DataGridViewButtonColumn8.Width = 70
+        '
         'frmCandidateProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -2381,15 +2173,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents txtFMName As System.Windows.Forms.TextBox
     Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colId As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colBDate As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colAge As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colCivilStatus As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colRelationship As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colOccupation As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbAdd As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbEdit As System.Windows.Forms.ToolStripButton
@@ -2456,15 +2239,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label48 As System.Windows.Forms.Label
     Friend WithEvents Panel9 As System.Windows.Forms.Panel
     Friend WithEvents dgvEduHist As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn3 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
     Friend WithEvents txtEduHonors As System.Windows.Forms.TextBox
     Friend WithEvents Label39 As System.Windows.Forms.Label
@@ -2486,15 +2260,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents lblStatus As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents chkIsNegotiable As System.Windows.Forms.CheckBox
-    Friend WithEvents DataGridViewButtonColumn7 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn8 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colSTypeId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colSGroupId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colSId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colSkill As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colYearsUsed As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colLastYearUsed As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colSCLevel As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtAppSrcRemarks As System.Windows.Forms.TextBox
     Friend WithEvents Label55 As System.Windows.Forms.Label
     Friend WithEvents cboAppSource As System.Windows.Forms.ComboBox
@@ -2503,17 +2268,6 @@ Partial Class frmCandidateProfile
     Friend WithEvents cboFMCStatus As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txtSLastYearUsed As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridViewButtonColumn4 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn5 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn6 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colReasonForLeaving As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colIsPresent As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents txtAge As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents cboAvailInType As System.Windows.Forms.ComboBox
@@ -2530,4 +2284,13 @@ Partial Class frmCandidateProfile
     Friend WithEvents tsSkills As System.Windows.Forms.ToolStrip
     Friend WithEvents tsbSkillSave As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbSkillCancel As System.Windows.Forms.ToolStripButton
+    Friend WithEvents colEdit As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn4 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn5 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents ispresentemp As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewButtonColumn7 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn8 As System.Windows.Forms.DataGridViewButtonColumn
 End Class

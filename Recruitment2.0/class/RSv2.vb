@@ -469,4 +469,16 @@ Namespace RSv2
 
     End Class
 
+    Public Class AppForm
+        Public Shared Sub FormatGridColumn(ByVal DGObject As DataGridView, ByVal ColumnId As Integer, ByVal HeaderText As String, Optional IsFrozen As Boolean = False, _
+                             Optional ByVal IsVisible As Boolean = True, Optional ByVal IsReadOnly As Boolean = False, Optional ByVal ColumnWidth As Double = 100)
+            With DGObject
+                .Columns(ColumnId).Frozen = IsFrozen
+                .Columns(ColumnId).Visible = IsVisible
+                .Columns(ColumnId).Width = ColumnWidth
+                .Columns(ColumnId).HeaderText = HeaderText
+            End With
+        End Sub
+    End Class
+
 End Namespace

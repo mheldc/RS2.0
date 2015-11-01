@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data
 Imports MySql.Data.MySqlClient
+Imports RecSys.RSv2.AppForm
 
 Public Class frmSearch
     Dim SourceForm As String = ""
@@ -56,10 +57,10 @@ Public Class frmSearch
 
                         With dgvSearchItems
                             .DataSource = ds.Tables(0)
-                            FormatGridColumn(1, "", False, False, False, 50)
-                            FormatGridColumn(2, "Reference Id", True, True, True, 150)
-                            FormatGridColumn(3, "Candidate Name", True, True, True, 250)
-                            FormatGridColumn(4, "Status", True, True, True, 100)
+                            FormatGridColumn(dgvSearchItems, 1, "", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 2, "Reference Id", True, True, True, 150)
+                            FormatGridColumn(dgvSearchItems, 3, "Candidate Name", True, True, True, 250)
+                            FormatGridColumn(dgvSearchItems, 4, "Status", True, True, True, 100)
                         End With
 
 
@@ -74,15 +75,7 @@ Public Class frmSearch
         Return 0
     End Function
 
-    Private Sub FormatGridColumn(ByVal ColumnId As Integer, ByVal HeaderText As String, Optional IsFrozen As Boolean = False, _
-                                 Optional ByVal IsVisible As Boolean = True, Optional ByVal IsReadOnly As Boolean = False, Optional ByVal ColumnWidth As Double = 100)
-        With dgvSearchItems
-            .Columns(ColumnId).Frozen = IsFrozen
-            .Columns(ColumnId).Visible = IsVisible
-            .Columns(ColumnId).Width = ColumnWidth
-            .Columns(ColumnId).HeaderText = HeaderText
-        End With
-    End Sub
+
 
     Private Sub dgvSearchItems_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchItems.CellClick
         If e.ColumnIndex = 0 Then
@@ -121,10 +114,10 @@ Public Class frmSearch
 
                         With dgvSearchItems
                             .DataSource = ds.Tables(0)
-                            FormatGridColumn(1, "", False, False, False, 50)
-                            FormatGridColumn(2, "Reference Id", True, True, True, 150)
-                            FormatGridColumn(3, "Candidate Name", True, True, True, 250)
-                            FormatGridColumn(4, "Status", True, True, True, 100)
+                            FormatGridColumn(dgvSearchItems, 1, "", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 2, "Reference Id", True, True, True, 150)
+                            FormatGridColumn(dgvSearchItems, 3, "Candidate Name", True, True, True, 250)
+                            FormatGridColumn(dgvSearchItems, 4, "Status", True, True, True, 100)
                         End With
 
 
