@@ -445,13 +445,13 @@ Partial Class RMSMain
         'SourcesToolStripMenuItem
         '
         Me.SourcesToolStripMenuItem.Name = "SourcesToolStripMenuItem"
-        Me.SourcesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SourcesToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.SourcesToolStripMenuItem.Text = "Sources"
         '
         'StatusToolStripMenuItem2
         '
         Me.StatusToolStripMenuItem2.Name = "StatusToolStripMenuItem2"
-        Me.StatusToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.StatusToolStripMenuItem2.Size = New System.Drawing.Size(117, 22)
         Me.StatusToolStripMenuItem2.Text = "Status"
         '
         'StatusesToolStripMenuItem

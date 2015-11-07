@@ -102,9 +102,9 @@ Public Class RMSMain
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Maximized
-                .Show()
                 .ClearNEnableFields(False)
                 .tsbSearch.PerformClick()
+                .Show()
             End With
 
         End If
@@ -120,6 +120,7 @@ Public Class RMSMain
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
                 .Show()
             End With
         End If
@@ -135,6 +136,115 @@ Public Class RMSMain
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillGroupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SkillGroupToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmSkillGroup).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillGroup As New frmSkillGroup
+            With fSkillGroup
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillTypeToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SkillTypeToolStripMenuItem1.Click
+        If Application.OpenForms().OfType(Of frmSkillType).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillType As New frmSkillType
+            With fSkillType
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillGroupToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SkillGroupToolStripMenuItem1.Click
+        If Application.OpenForms().OfType(Of frmSkillGroup).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillGroup As New frmSkillGroup
+            With fSkillGroup
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillLevelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SkillLevelToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmSkillLevel).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillLevel As New frmSkillLevel
+            With fSkillLevel
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SkillToolStripMenuItem1.Click
+        If Application.OpenForms().OfType(Of frmSkill).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkill As New frmSkill
+            With fSkill
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SkillToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmSkillLevel).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillLevel As New frmSkillLevel
+            With fSkillLevel
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SkillToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles SkillToolStripMenuItem3.Click
+        If Application.OpenForms().OfType(Of frmSkill).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkill As New frmSkill
+            With fSkill
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
                 .Show()
             End With
         End If

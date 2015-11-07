@@ -33,18 +33,18 @@ Partial Class frmSkillLevel
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.pnlInfo = New System.Windows.Forms.Panel()
+        Me.txtLevelCode = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtLevelDesc = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.pnlInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(450, 39)
@@ -87,7 +87,6 @@ Partial Class frmSkillLevel
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -100,7 +99,6 @@ Partial Class frmSkillLevel
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
         '
         'tsbCancel
         '
@@ -155,26 +153,27 @@ Partial Class frmSkillLevel
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'Panel1
+        'pnlInfo
         '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(450, 127)
-        Me.Panel1.TabIndex = 5
+        Me.pnlInfo.AutoScroll = True
+        Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlInfo.Controls.Add(Me.txtLevelCode)
+        Me.pnlInfo.Controls.Add(Me.Label4)
+        Me.pnlInfo.Controls.Add(Me.txtLevelDesc)
+        Me.pnlInfo.Controls.Add(Me.Label2)
+        Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
+        Me.pnlInfo.Name = "pnlInfo"
+        Me.pnlInfo.Size = New System.Drawing.Size(450, 127)
+        Me.pnlInfo.TabIndex = 5
         '
-        'TextBox4
+        'txtLevelCode
         '
-        Me.TextBox4.Location = New System.Drawing.Point(101, 14)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 43
+        Me.txtLevelCode.Location = New System.Drawing.Point(101, 14)
+        Me.txtLevelCode.Name = "txtLevelCode"
+        Me.txtLevelCode.ReadOnly = True
+        Me.txtLevelCode.Size = New System.Drawing.Size(329, 23)
+        Me.txtLevelCode.TabIndex = 43
         '
         'Label4
         '
@@ -185,13 +184,13 @@ Partial Class frmSkillLevel
         Me.Label4.TabIndex = 42
         Me.Label4.Text = "Level Code"
         '
-        'TextBox2
+        'txtLevelDesc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(101, 38)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 41
+        Me.txtLevelDesc.Location = New System.Drawing.Point(101, 38)
+        Me.txtLevelDesc.Multiline = True
+        Me.txtLevelDesc.Name = "txtLevelDesc"
+        Me.txtLevelDesc.Size = New System.Drawing.Size(329, 71)
+        Me.txtLevelDesc.TabIndex = 41
         '
         'Label2
         '
@@ -207,7 +206,7 @@ Partial Class frmSkillLevel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(450, 166)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -218,8 +217,8 @@ Partial Class frmSkillLevel
         Me.Text = "Skill Level"
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlInfo.ResumeLayout(False)
+        Me.pnlInfo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -234,9 +233,9 @@ Partial Class frmSkillLevel
     Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents pnlInfo As System.Windows.Forms.Panel
+    Friend WithEvents txtLevelCode As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtLevelDesc As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

@@ -6,7 +6,7 @@ Imports MySql.Data.MySqlClient
 Imports MySql.Data
 
 Public Class frmSkillGroup
-    Dim SGTranType As Integer
+    Dim SGTranType As Integer = -1
 
     Private Sub Tran_SkillGroup(ByVal TranType As Integer, ByVal SkillGroupId As Integer, CurrentUserId As Integer, _
                                 Optional ByVal SkillTypeId As Integer = Nothing, Optional ByVal GroupDescription As String = Nothing)
@@ -27,7 +27,7 @@ Public Class frmSkillGroup
 
                     If Not IsNothing(Dset) Then
                         For Each Drow As DataRow In Dset.Tables(0).Rows
-                            cboSkillType.SelectedIndex = CInt(Drow("st_id"))
+                            cboSkillType.SelectedValue = CInt(Drow("st_id"))
                             txtGroupCode.Text = Drow("groupcode")
                             txtGroupDesc.Text = Drow("description")
                         Next
@@ -48,7 +48,10 @@ Public Class frmSkillGroup
     End Sub
 
     Private Sub frmSkillGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            Qry = "select `st_id`, `description` from `rms_skilltypes` where `recstatus` = 1;"
+            Call FillComboBox(Qry, Cn, "description", "st_id", cboSkillType, , CommandType.Text)
+        End Using
     End Sub
 
     Private Sub tsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
@@ -86,15 +89,43 @@ Public Class frmSkillGroup
     End Sub
 
     Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
+        If cboSkillType.SelectedIndex = -1 Then
+            MsgBox("Please select a valid Skill Type.", MsgBoxStyle.Exclamation, "Invalid Skill Type")
+            Exit Sub
+        End If
+        If txtGroupDesc.Text.Trim.Length = 0 Then
+            MsgBox("Skill Group description cannot be empty.", MsgBoxStyle.Exclamation, "Invalid Entry")
+            Exit Sub
+        End If
 
+        Call Tran_SkillGroup(SGTranType, SelectedId, CurrentUID, cboSkillType.SelectedValue, txtGroupDesc.Text)
+        MsgBox("Skill group has been saved successfully", MsgBoxStyle.Information, "Saved")
+
+        tsbCancel.PerformClick()
     End Sub
 
     Private Sub tsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
-
+        tsbAdd.Visible = True
+        tsbEdit.Visible = True
+        tsbDelete.Visible = True
+        tsbSeparator.Visible = True
+        tsbSearch.Visible = True
+        tsbPrint.Visible = True
+        tsbSave.Visible = False
+        tsbCancel.Visible = False
+        SGTranType = -1
+        Call ClearNEnableFields()
+        SelectedId = 0
     End Sub
 
     Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
-
+        With frmSearch
+            .StartPosition = FormStartPosition.CenterScreen
+            .WindowState = FormWindowState.Normal
+            .LoadSeachItems(Me)
+            .ShowDialog()
+            Call Tran_SkillGroup(3, SelectedId, CurrentUID)
+        End With
     End Sub
 
     Private Sub tsbPrint_Click(sender As Object, e As EventArgs) Handles tsbPrint.Click

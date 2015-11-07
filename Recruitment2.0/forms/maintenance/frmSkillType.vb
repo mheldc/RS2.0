@@ -86,6 +86,11 @@ Public Class frmSkillType
     End Sub
 
     Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
+        If txtSTDesc.Text.Trim.Length = 0 Then
+            MsgBox("Description field can't be empty. Key in a valid value.", MsgBoxStyle.Exclamation, "Save Failed")
+            Exit Sub
+        End If
+
         Select Case SkillTranType
             Case 0
                 If MsgBox("Add skill type " + txtSTDesc.Text + "?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Create?") = MsgBoxResult.Yes Then
@@ -123,6 +128,16 @@ Public Class frmSkillType
         End With
     End Sub
 
-
-
+    Private Sub tsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
+        tsbAdd.Visible = True
+        tsbEdit.Visible = True
+        tsbDelete.Visible = True
+        tsbSeparator.Visible = True
+        tsbSearch.Visible = True
+        tsbPrint.Visible = True
+        tsbSave.Visible = False
+        tsbCancel.Visible = False
+        Call ClearNEnableFields()
+        SelectedId = 0
+    End Sub
 End Class

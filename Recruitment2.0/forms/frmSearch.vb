@@ -14,7 +14,7 @@ Public Class frmSearch
 
     Public Function LoadSeachItems(ByVal SourceObj As Form) As Integer
         SourceForm = SourceObj
-
+        dgvSearchItems.DataSource = Nothing
         Dim ItemId As Integer = 0
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
             Try
@@ -57,6 +57,36 @@ Public Class frmSearch
                         With dgvSearchItems
                             .DataSource = Dset.Tables(0)
                             FormatGridColumn(dgvSearchItems, 1, "Type Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 2, "Code", True, True, True, 150)
+                            FormatGridColumn(dgvSearchItems, 3, "Description", True, True, True, 250)
+                        End With
+
+                    Case "frmSkillGroup"
+                        Qry = <Query>
+                                    select a.`sg_id`, a.`st_id`, a.`groupcode`, a.`description` as skillgroup, b.`description` as skilltype
+                                    from 			`rms_skillgroups` as a
+	                                    inner join	`rms_skilltypes`  as b on a.`st_id` = b.`st_id`
+                                    where a.`recstatus` = 1
+                                    order by a.`st_id` asc; 
+                              </Query>.Value
+                        Dset = New DataSet
+                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        With dgvSearchItems
+                            .DataSource = Dset.Tables(0)
+                            FormatGridColumn(dgvSearchItems, 1, "Group Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 2, "Type Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 3, "Code", True, True, True, 150)
+                            FormatGridColumn(dgvSearchItems, 4, "Group Name", True, True, True, 250)
+                            FormatGridColumn(dgvSearchItems, 5, "Skill Type", True, True, True, 250)
+                        End With
+
+                    Case "frmSkillLevel"
+                        Qry = "select `sl_id`, `levelcode`, `description` from `rms_skilllevels` where `recstatus` = 1;"
+                        Dset = New DataSet
+                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        With dgvSearchItems
+                            .DataSource = Dset.Tables(0)
+                            FormatGridColumn(dgvSearchItems, 1, "Level Id", False, False, False, 50)
                             FormatGridColumn(dgvSearchItems, 2, "Code", True, True, True, 150)
                             FormatGridColumn(dgvSearchItems, 3, "Description", True, True, True, 250)
                         End With

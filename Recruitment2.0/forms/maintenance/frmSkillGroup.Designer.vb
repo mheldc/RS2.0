@@ -35,8 +35,8 @@ Partial Class frmSkillGroup
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
@@ -54,6 +54,7 @@ Partial Class frmSkillGroup
         Me.pnlInfo.Controls.Add(Me.txtGroupDesc)
         Me.pnlInfo.Controls.Add(Me.Label2)
         Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Enabled = False
         Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
         Me.pnlInfo.Name = "pnlInfo"
         Me.pnlInfo.Size = New System.Drawing.Size(460, 151)
@@ -65,7 +66,7 @@ Partial Class frmSkillGroup
         Me.cboSkillType.Location = New System.Drawing.Point(102, 15)
         Me.cboSkillType.Name = "cboSkillType"
         Me.cboSkillType.Size = New System.Drawing.Size(329, 23)
-        Me.cboSkillType.TabIndex = 30
+        Me.cboSkillType.TabIndex = 0
         '
         'Label5
         '
@@ -99,7 +100,7 @@ Partial Class frmSkillGroup
         Me.txtGroupDesc.Multiline = True
         Me.txtGroupDesc.Name = "txtGroupDesc"
         Me.txtGroupDesc.Size = New System.Drawing.Size(329, 71)
-        Me.txtGroupDesc.TabIndex = 23
+        Me.txtGroupDesc.TabIndex = 1
         '
         'Label2
         '
@@ -168,18 +169,6 @@ Partial Class frmSkillGroup
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
         '
-        'tsbCancel
-        '
-        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
-        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancel.Name = "tsbCancel"
-        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
-        Me.tsbCancel.Text = "ToolStripButton7"
-        Me.tsbCancel.ToolTipText = "Cancel"
-        Me.tsbCancel.Visible = False
-        '
         'tsbSave
         '
         Me.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -192,6 +181,18 @@ Partial Class frmSkillGroup
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
+        '
+        'tsbCancel
+        '
+        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
+        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancel.Name = "tsbCancel"
+        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCancel.Text = "ToolStripButton7"
+        Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
         '
         'tsbSeparator
         '
