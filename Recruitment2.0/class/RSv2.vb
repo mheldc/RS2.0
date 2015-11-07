@@ -1,15 +1,17 @@
 ﻿Imports MySql.Data
 Imports MySql.Data.MySqlClient
-Imports System.Data.SqlClient
-Imports System.Data
 Imports System
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Globalization
 Imports System.IO
-Imports System.Xml
-Imports System.Security.Cryptography
 Imports System.Management
+Imports System.Net
 Imports System.Net.Dns
 Imports System.Net.Mail
-Imports System.Net
+Imports System.Security.Cryptography
+Imports System.Text.RegularExpressions
+Imports System.Xml
 
 Namespace RSv2
     Public Module Declares
@@ -27,6 +29,9 @@ Namespace RSv2
 
         ' Login variables
         Public CurrentUID As Integer, CurrentUName As String, CurrentUPosition As String
+
+        ' General Variables
+        Public SelectedId As Integer = 0
 
         Public Enum DbTypes As Integer
             MySQL = 0
@@ -232,7 +237,7 @@ Namespace RSv2
                         .CommandText = CommandString
                         .Connection = DefaultConnection
 
-                        If CommandParameters.Count > 0 Or Not IsNothing(CommandParameters) Then
+                        If Not IsNothing(CommandParameters) Then
                             For Each SqlParam As MySqlParameter In CommandParameters
                                 .Parameters.Add(SqlParam)
                             Next
@@ -286,7 +291,7 @@ Namespace RSv2
                         .CommandText = CommandString
                         .Connection = DefaultConnection
 
-                        If IsNothing(CommandParameters) = True Then
+                        If IsNothing(CommandParameters) = False Then
                             For Each SqlParam As MySqlParameter In CommandParameters
                                 .Parameters.Add(SqlParam)
                             Next
@@ -471,14 +476,59 @@ Namespace RSv2
 
     Public Class AppForm
         Public Shared Sub FormatGridColumn(ByVal DGObject As DataGridView, ByVal ColumnId As Integer, ByVal HeaderText As String, Optional IsFrozen As Boolean = False, _
-                             Optional ByVal IsVisible As Boolean = True, Optional ByVal IsReadOnly As Boolean = False, Optional ByVal ColumnWidth As Double = 100)
+                             Optional ByVal IsVisible As Boolean = True, Optional ByVal IsReadOnly As Boolean = False, Optional ByVal ColumnWidth As Double = 100, _
+                             Optional ByVal ContentAlignment As DataGridViewContentAlignment = DataGridViewContentAlignment.MiddleLeft, _
+                             Optional ByVal HeaderAlignment As DataGridViewContentAlignment = DataGridViewContentAlignment.MiddleLeft)
             With DGObject
                 .Columns(ColumnId).Frozen = IsFrozen
                 .Columns(ColumnId).Visible = IsVisible
                 .Columns(ColumnId).Width = ColumnWidth
                 .Columns(ColumnId).HeaderText = HeaderText
+                .Columns(ColumnId).DefaultCellStyle.Alignment = ContentAlignment
+                .Columns(ColumnId).HeaderCell.Style.Alignment = HeaderAlignment
             End With
         End Sub
     End Class
 
+    Public Class RegExUtilities
+        Shared IsValid As Boolean = False
+
+        Public Shared Function IsValidEmail(strIn As String) As Boolean
+            IsValid = False
+            If String.IsNullOrEmpty(strIn) Then Return False
+
+            ' Use IdnMapping class to convert Unicode domain names.
+            Try
+                strIn = Regex.Replace(strIn, "(@)(.+)$", AddressOf DomainMapper, RegexOptions.None, TimeSpan.FromMilliseconds(200))
+            Catch e As RegexMatchTimeoutException
+                Return False
+            End Try
+
+            If IsValid Then Return False
+
+            ' Return true if strIn is in valid e-mail format.
+            Try
+                Return Regex.IsMatch(strIn,
+                       "^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                       "(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                       RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250))
+            Catch e As RegexMatchTimeoutException
+                Return False
+            End Try
+        End Function
+
+        Public Shared Function DomainMapper(match As Match) As String
+            ' IdnMapping class with default property values.
+            Dim idn As New IdnMapping()
+
+            Dim domainName As String = match.Groups(2).Value
+            Try
+                domainName = idn.GetAscii(domainName)
+            Catch e As ArgumentException
+                IsValid = True
+            End Try
+            Return match.Groups(1).Value + domainName
+        End Function
+
+    End Class
 End Namespace

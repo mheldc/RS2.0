@@ -28,24 +28,23 @@ Partial Class frmSkillType
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.pnlInfo = New System.Windows.Forms.Panel()
+        Me.txtSTCode = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtSTDesc = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.pnlInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(451, 39)
@@ -88,7 +87,6 @@ Partial Class frmSkillType
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -101,19 +99,6 @@ Partial Class frmSkillType
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
-        '
-        'tsbCancel
-        '
-        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
-        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancel.Name = "tsbCancel"
-        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
-        Me.tsbCancel.Text = "ToolStripButton7"
-        Me.tsbCancel.ToolTipText = "Cancel"
-        Me.tsbCancel.Visible = False
         '
         'tsbSave
         '
@@ -127,6 +112,18 @@ Partial Class frmSkillType
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
+        '
+        'tsbCancel
+        '
+        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
+        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancel.Name = "tsbCancel"
+        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCancel.Text = "ToolStripButton7"
+        Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
         '
         'tsbSeparator
         '
@@ -156,35 +153,27 @@ Partial Class frmSkillType
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'Panel1
+        'pnlInfo
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(451, 120)
-        Me.Panel1.TabIndex = 2
+        Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlInfo.Controls.Add(Me.txtSTCode)
+        Me.pnlInfo.Controls.Add(Me.Label4)
+        Me.pnlInfo.Controls.Add(Me.txtSTDesc)
+        Me.pnlInfo.Controls.Add(Me.Label2)
+        Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Enabled = False
+        Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
+        Me.pnlInfo.Name = "pnlInfo"
+        Me.pnlInfo.Size = New System.Drawing.Size(451, 120)
+        Me.pnlInfo.TabIndex = 2
         '
-        'Label1
+        'txtSTCode
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 68)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "[]"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(101, 12)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 27
+        Me.txtSTCode.Location = New System.Drawing.Point(101, 12)
+        Me.txtSTCode.Name = "txtSTCode"
+        Me.txtSTCode.ReadOnly = True
+        Me.txtSTCode.Size = New System.Drawing.Size(329, 23)
+        Me.txtSTCode.TabIndex = 27
         '
         'Label4
         '
@@ -195,13 +184,13 @@ Partial Class frmSkillType
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Type Code"
         '
-        'TextBox2
+        'txtSTDesc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(101, 36)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 23
+        Me.txtSTDesc.Location = New System.Drawing.Point(101, 36)
+        Me.txtSTDesc.Multiline = True
+        Me.txtSTDesc.Name = "txtSTDesc"
+        Me.txtSTDesc.Size = New System.Drawing.Size(329, 71)
+        Me.txtSTDesc.TabIndex = 23
         '
         'Label2
         '
@@ -217,7 +206,7 @@ Partial Class frmSkillType
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(451, 159)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -228,8 +217,8 @@ Partial Class frmSkillType
         Me.Text = "Skill Types"
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlInfo.ResumeLayout(False)
+        Me.pnlInfo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -244,10 +233,9 @@ Partial Class frmSkillType
     Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents pnlInfo As System.Windows.Forms.Panel
+    Friend WithEvents txtSTDesc As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents txtSTCode As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

@@ -26,6 +26,28 @@ Partial Class frmCandidateProfile
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.tabInfo = New System.Windows.Forms.TabControl()
+        Me.tpOthers = New System.Windows.Forms.TabPage()
+        Me.cboAvailInType = New System.Windows.Forms.ComboBox()
+        Me.txtAppSrcRemarks = New System.Windows.Forms.TextBox()
+        Me.Label55 = New System.Windows.Forms.Label()
+        Me.cboAppSource = New System.Windows.Forms.ComboBox()
+        Me.chkIsNegotiable = New System.Windows.Forms.CheckBox()
+        Me.txtCandidateRemarks = New System.Windows.Forms.TextBox()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.txtPrefWorkLocation = New System.Windows.Forms.TextBox()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.cboSalaryRate = New System.Windows.Forms.ComboBox()
+        Me.txtSalary = New System.Windows.Forms.TextBox()
+        Me.txtApplyingFor = New System.Windows.Forms.TextBox()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.rdbAvail3 = New System.Windows.Forms.RadioButton()
+        Me.dtpAvailableOn = New System.Windows.Forms.DateTimePicker()
+        Me.rdbAvail2 = New System.Windows.Forms.RadioButton()
+        Me.txtAvailInCount = New System.Windows.Forms.TextBox()
+        Me.rdbAvail1 = New System.Windows.Forms.RadioButton()
+        Me.rdbAvail0 = New System.Windows.Forms.RadioButton()
+        Me.Label56 = New System.Windows.Forms.Label()
         Me.tpPersonal = New System.Windows.Forms.TabPage()
         Me.txtAge = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -111,7 +133,7 @@ Partial Class frmCandidateProfile
         Me.dgvEmp = New System.Windows.Forms.DataGridView()
         Me.DataGridViewButtonColumn4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DataGridViewButtonColumn5 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.ispresentemp = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.colchkbox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.tsEmp = New System.Windows.Forms.ToolStrip()
         Me.tsbEmpSave = New System.Windows.Forms.ToolStripButton()
@@ -138,6 +160,8 @@ Partial Class frmCandidateProfile
         Me.tpSkills = New System.Windows.Forms.TabPage()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.dgvSkill = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.tsSkills = New System.Windows.Forms.ToolStrip()
         Me.tsbSkillSave = New System.Windows.Forms.ToolStripButton()
@@ -155,40 +179,18 @@ Partial Class frmCandidateProfile
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.tpOthers = New System.Windows.Forms.TabPage()
-        Me.cboAvailInType = New System.Windows.Forms.ComboBox()
-        Me.txtAppSrcRemarks = New System.Windows.Forms.TextBox()
-        Me.Label55 = New System.Windows.Forms.Label()
-        Me.cboAppSource = New System.Windows.Forms.ComboBox()
-        Me.chkIsNegotiable = New System.Windows.Forms.CheckBox()
-        Me.txtCandidateRemarks = New System.Windows.Forms.TextBox()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.txtPrefWorkLocation = New System.Windows.Forms.TextBox()
-        Me.Label61 = New System.Windows.Forms.Label()
-        Me.cboSalaryRate = New System.Windows.Forms.ComboBox()
-        Me.txtSalary = New System.Windows.Forms.TextBox()
-        Me.txtApplyingFor = New System.Windows.Forms.TextBox()
-        Me.Label60 = New System.Windows.Forms.Label()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.rdbAvail3 = New System.Windows.Forms.RadioButton()
-        Me.dtpAvailableOn = New System.Windows.Forms.DateTimePicker()
-        Me.rdbAvail2 = New System.Windows.Forms.RadioButton()
-        Me.txtAvailInCount = New System.Windows.Forms.TextBox()
-        Me.rdbAvail1 = New System.Windows.Forms.RadioButton()
-        Me.rdbAvail0 = New System.Windows.Forms.RadioButton()
-        Me.Label56 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pnlCInfo = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblCStatus = New System.Windows.Forms.Label()
         Me.lblRefId = New System.Windows.Forms.Label()
         Me.txtMName = New System.Windows.Forms.TextBox()
         Me.txtFName = New System.Windows.Forms.TextBox()
         Me.txtLName = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblMName = New System.Windows.Forms.Label()
+        Me.lblFName = New System.Windows.Forms.Label()
+        Me.lblLName = New System.Windows.Forms.Label()
+        Me.lblCRefId = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnUseImgFile = New System.Windows.Forms.Button()
         Me.btnUseCam = New System.Windows.Forms.Button()
@@ -203,11 +205,11 @@ Partial Class frmCandidateProfile
         Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.ofdImage = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tabInfo.SuspendLayout()
+        Me.tpOthers.SuspendLayout()
         Me.tpPersonal.SuspendLayout()
         Me.tpFamily.SuspendLayout()
         Me.Panel8.SuspendLayout()
@@ -229,7 +231,6 @@ Partial Class frmCandidateProfile
         CType(Me.dgvSkill, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel17.SuspendLayout()
         Me.tsSkills.SuspendLayout()
-        Me.tpOthers.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.pnlCInfo.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -259,18 +260,239 @@ Partial Class frmCandidateProfile
         '
         'tabInfo
         '
+        Me.tabInfo.Controls.Add(Me.tpOthers)
         Me.tabInfo.Controls.Add(Me.tpPersonal)
         Me.tabInfo.Controls.Add(Me.tpFamily)
         Me.tabInfo.Controls.Add(Me.tpEduc)
         Me.tabInfo.Controls.Add(Me.tpEmpHist)
         Me.tabInfo.Controls.Add(Me.tpSkills)
-        Me.tabInfo.Controls.Add(Me.tpOthers)
         Me.tabInfo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tabInfo.Location = New System.Drawing.Point(0, 0)
         Me.tabInfo.Name = "tabInfo"
         Me.tabInfo.SelectedIndex = 0
         Me.tabInfo.Size = New System.Drawing.Size(955, 413)
         Me.tabInfo.TabIndex = 0
+        '
+        'tpOthers
+        '
+        Me.tpOthers.AutoScroll = True
+        Me.tpOthers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tpOthers.Controls.Add(Me.cboAvailInType)
+        Me.tpOthers.Controls.Add(Me.txtAppSrcRemarks)
+        Me.tpOthers.Controls.Add(Me.Label55)
+        Me.tpOthers.Controls.Add(Me.cboAppSource)
+        Me.tpOthers.Controls.Add(Me.chkIsNegotiable)
+        Me.tpOthers.Controls.Add(Me.txtCandidateRemarks)
+        Me.tpOthers.Controls.Add(Me.Label62)
+        Me.tpOthers.Controls.Add(Me.txtPrefWorkLocation)
+        Me.tpOthers.Controls.Add(Me.Label61)
+        Me.tpOthers.Controls.Add(Me.cboSalaryRate)
+        Me.tpOthers.Controls.Add(Me.txtSalary)
+        Me.tpOthers.Controls.Add(Me.txtApplyingFor)
+        Me.tpOthers.Controls.Add(Me.Label60)
+        Me.tpOthers.Controls.Add(Me.Label59)
+        Me.tpOthers.Controls.Add(Me.rdbAvail3)
+        Me.tpOthers.Controls.Add(Me.dtpAvailableOn)
+        Me.tpOthers.Controls.Add(Me.rdbAvail2)
+        Me.tpOthers.Controls.Add(Me.txtAvailInCount)
+        Me.tpOthers.Controls.Add(Me.rdbAvail1)
+        Me.tpOthers.Controls.Add(Me.rdbAvail0)
+        Me.tpOthers.Controls.Add(Me.Label56)
+        Me.tpOthers.Location = New System.Drawing.Point(4, 24)
+        Me.tpOthers.Name = "tpOthers"
+        Me.tpOthers.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpOthers.Size = New System.Drawing.Size(947, 385)
+        Me.tpOthers.TabIndex = 5
+        Me.tpOthers.Text = "Application Information"
+        Me.tpOthers.UseVisualStyleBackColor = True
+        '
+        'cboAvailInType
+        '
+        Me.cboAvailInType.FormattingEnabled = True
+        Me.cboAvailInType.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
+        Me.cboAvailInType.Location = New System.Drawing.Point(252, 159)
+        Me.cboAvailInType.Name = "cboAvailInType"
+        Me.cboAvailInType.Size = New System.Drawing.Size(121, 23)
+        Me.cboAvailInType.TabIndex = 13
+        '
+        'txtAppSrcRemarks
+        '
+        Me.txtAppSrcRemarks.Location = New System.Drawing.Point(457, 40)
+        Me.txtAppSrcRemarks.Name = "txtAppSrcRemarks"
+        Me.txtAppSrcRemarks.Size = New System.Drawing.Size(302, 23)
+        Me.txtAppSrcRemarks.TabIndex = 5
+        '
+        'Label55
+        '
+        Me.Label55.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label55.Location = New System.Drawing.Point(6, 43)
+        Me.Label55.Name = "Label55"
+        Me.Label55.Size = New System.Drawing.Size(127, 18)
+        Me.Label55.TabIndex = 46
+        Me.Label55.Text = "Applicant Source"
+        '
+        'cboAppSource
+        '
+        Me.cboAppSource.FormattingEnabled = True
+        Me.cboAppSource.Location = New System.Drawing.Point(176, 40)
+        Me.cboAppSource.Name = "cboAppSource"
+        Me.cboAppSource.Size = New System.Drawing.Size(280, 23)
+        Me.cboAppSource.TabIndex = 4
+        '
+        'chkIsNegotiable
+        '
+        Me.chkIsNegotiable.AutoSize = True
+        Me.chkIsNegotiable.Location = New System.Drawing.Point(462, 71)
+        Me.chkIsNegotiable.Name = "chkIsNegotiable"
+        Me.chkIsNegotiable.Size = New System.Drawing.Size(90, 19)
+        Me.chkIsNegotiable.TabIndex = 8
+        Me.chkIsNegotiable.Text = "Negotiable?"
+        Me.chkIsNegotiable.UseVisualStyleBackColor = True
+        '
+        'txtCandidateRemarks
+        '
+        Me.txtCandidateRemarks.Location = New System.Drawing.Point(176, 248)
+        Me.txtCandidateRemarks.Multiline = True
+        Me.txtCandidateRemarks.Name = "txtCandidateRemarks"
+        Me.txtCandidateRemarks.Size = New System.Drawing.Size(588, 129)
+        Me.txtCandidateRemarks.TabIndex = 17
+        '
+        'Label62
+        '
+        Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Location = New System.Drawing.Point(6, 251)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(95, 15)
+        Me.Label62.TabIndex = 42
+        Me.Label62.Text = "Remarks"
+        '
+        'txtPrefWorkLocation
+        '
+        Me.txtPrefWorkLocation.Location = New System.Drawing.Point(176, 98)
+        Me.txtPrefWorkLocation.Name = "txtPrefWorkLocation"
+        Me.txtPrefWorkLocation.Size = New System.Drawing.Size(588, 23)
+        Me.txtPrefWorkLocation.TabIndex = 9
+        '
+        'Label61
+        '
+        Me.Label61.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.Location = New System.Drawing.Point(6, 101)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(157, 18)
+        Me.Label61.TabIndex = 40
+        Me.Label61.Text = "Preferred Work Location"
+        '
+        'cboSalaryRate
+        '
+        Me.cboSalaryRate.FormattingEnabled = True
+        Me.cboSalaryRate.Items.AddRange(New Object() {"per HOUR", "per DAY", "per MONTH", "per YEAR"})
+        Me.cboSalaryRate.Location = New System.Drawing.Point(309, 69)
+        Me.cboSalaryRate.Name = "cboSalaryRate"
+        Me.cboSalaryRate.Size = New System.Drawing.Size(147, 23)
+        Me.cboSalaryRate.TabIndex = 7
+        '
+        'txtSalary
+        '
+        Me.txtSalary.Location = New System.Drawing.Point(176, 69)
+        Me.txtSalary.Name = "txtSalary"
+        Me.txtSalary.Size = New System.Drawing.Size(132, 23)
+        Me.txtSalary.TabIndex = 6
+        '
+        'txtApplyingFor
+        '
+        Me.txtApplyingFor.Location = New System.Drawing.Point(176, 11)
+        Me.txtApplyingFor.Name = "txtApplyingFor"
+        Me.txtApplyingFor.Size = New System.Drawing.Size(583, 23)
+        Me.txtApplyingFor.TabIndex = 3
+        '
+        'Label60
+        '
+        Me.Label60.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Location = New System.Drawing.Point(6, 72)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(127, 18)
+        Me.Label60.TabIndex = 36
+        Me.Label60.Text = "Preferred Salary Rate"
+        '
+        'Label59
+        '
+        Me.Label59.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.Location = New System.Drawing.Point(6, 14)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(127, 18)
+        Me.Label59.TabIndex = 35
+        Me.Label59.Text = "Position Applying For"
+        '
+        'rdbAvail3
+        '
+        Me.rdbAvail3.AutoSize = True
+        Me.rdbAvail3.Location = New System.Drawing.Point(176, 214)
+        Me.rdbAvail3.Name = "rdbAvail3"
+        Me.rdbAvail3.Size = New System.Drawing.Size(96, 19)
+        Me.rdbAvail3.TabIndex = 16
+        Me.rdbAvail3.TabStop = True
+        Me.rdbAvail3.Text = "Not Specified"
+        Me.rdbAvail3.UseVisualStyleBackColor = True
+        '
+        'dtpAvailableOn
+        '
+        Me.dtpAvailableOn.CustomFormat = "MMMM/dd/yyyy"
+        Me.dtpAvailableOn.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpAvailableOn.Location = New System.Drawing.Point(216, 185)
+        Me.dtpAvailableOn.Name = "dtpAvailableOn"
+        Me.dtpAvailableOn.Size = New System.Drawing.Size(117, 23)
+        Me.dtpAvailableOn.TabIndex = 15
+        '
+        'rdbAvail2
+        '
+        Me.rdbAvail2.AutoSize = True
+        Me.rdbAvail2.Location = New System.Drawing.Point(176, 188)
+        Me.rdbAvail2.Name = "rdbAvail2"
+        Me.rdbAvail2.Size = New System.Drawing.Size(39, 19)
+        Me.rdbAvail2.TabIndex = 14
+        Me.rdbAvail2.TabStop = True
+        Me.rdbAvail2.Text = "on"
+        Me.rdbAvail2.UseVisualStyleBackColor = True
+        '
+        'txtAvailInCount
+        '
+        Me.txtAvailInCount.Location = New System.Drawing.Point(213, 159)
+        Me.txtAvailInCount.Name = "txtAvailInCount"
+        Me.txtAvailInCount.Size = New System.Drawing.Size(38, 23)
+        Me.txtAvailInCount.TabIndex = 12
+        Me.txtAvailInCount.Text = "0"
+        '
+        'rdbAvail1
+        '
+        Me.rdbAvail1.AutoSize = True
+        Me.rdbAvail1.Location = New System.Drawing.Point(176, 160)
+        Me.rdbAvail1.Name = "rdbAvail1"
+        Me.rdbAvail1.Size = New System.Drawing.Size(246, 19)
+        Me.rdbAvail1.TabIndex = 11
+        Me.rdbAvail1.TabStop = True
+        Me.rdbAvail1.Text = "in                                                           notice"
+        Me.rdbAvail1.UseVisualStyleBackColor = True
+        '
+        'rdbAvail0
+        '
+        Me.rdbAvail0.AutoSize = True
+        Me.rdbAvail0.Checked = True
+        Me.rdbAvail0.Location = New System.Drawing.Point(176, 134)
+        Me.rdbAvail0.Name = "rdbAvail0"
+        Me.rdbAvail0.Size = New System.Drawing.Size(93, 19)
+        Me.rdbAvail0.TabIndex = 10
+        Me.rdbAvail0.TabStop = True
+        Me.rdbAvail0.Text = "Immediately"
+        Me.rdbAvail0.UseVisualStyleBackColor = True
+        '
+        'Label56
+        '
+        Me.Label56.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label56.Location = New System.Drawing.Point(6, 136)
+        Me.Label56.Name = "Label56"
+        Me.Label56.Size = New System.Drawing.Size(95, 15)
+        Me.Label56.TabIndex = 28
+        Me.Label56.Text = "Availability"
         '
         'tpPersonal
         '
@@ -359,7 +581,7 @@ Partial Class frmCandidateProfile
         Me.mtbTIN.Mask = "000-000-000-000"
         Me.mtbTIN.Name = "mtbTIN"
         Me.mtbTIN.Size = New System.Drawing.Size(139, 23)
-        Me.mtbTIN.TabIndex = 33
+        Me.mtbTIN.TabIndex = 28
         '
         'Label22
         '
@@ -376,7 +598,7 @@ Partial Class frmCandidateProfile
         Me.mtbPH.Mask = "00-000000000-0"
         Me.mtbPH.Name = "mtbPH"
         Me.mtbPH.Size = New System.Drawing.Size(139, 23)
-        Me.mtbPH.TabIndex = 31
+        Me.mtbPH.TabIndex = 30
         '
         'mtbHDMF
         '
@@ -384,7 +606,7 @@ Partial Class frmCandidateProfile
         Me.mtbHDMF.Mask = "0000-0000-0000"
         Me.mtbHDMF.Name = "mtbHDMF"
         Me.mtbHDMF.Size = New System.Drawing.Size(139, 23)
-        Me.mtbHDMF.TabIndex = 30
+        Me.mtbHDMF.TabIndex = 29
         '
         'mtbSSS
         '
@@ -392,7 +614,7 @@ Partial Class frmCandidateProfile
         Me.mtbSSS.Mask = "00-0000000-0"
         Me.mtbSSS.Name = "mtbSSS"
         Me.mtbSSS.Size = New System.Drawing.Size(139, 23)
-        Me.mtbSSS.TabIndex = 29
+        Me.mtbSSS.TabIndex = 27
         '
         'Label21
         '
@@ -436,7 +658,7 @@ Partial Class frmCandidateProfile
         Me.txtEmail.Location = New System.Drawing.Point(132, 248)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(472, 23)
-        Me.txtEmail.TabIndex = 22
+        Me.txtEmail.TabIndex = 26
         '
         'Label17
         '
@@ -452,7 +674,7 @@ Partial Class frmCandidateProfile
         Me.txtMobileNo.Location = New System.Drawing.Point(132, 224)
         Me.txtMobileNo.Name = "txtMobileNo"
         Me.txtMobileNo.Size = New System.Drawing.Size(184, 23)
-        Me.txtMobileNo.TabIndex = 20
+        Me.txtMobileNo.TabIndex = 25
         '
         'Label16
         '
@@ -478,7 +700,7 @@ Partial Class frmCandidateProfile
         Me.txtPhoneNo.Location = New System.Drawing.Point(132, 200)
         Me.txtPhoneNo.Name = "txtPhoneNo"
         Me.txtPhoneNo.Size = New System.Drawing.Size(184, 23)
-        Me.txtPhoneNo.TabIndex = 17
+        Me.txtPhoneNo.TabIndex = 24
         '
         'Label14
         '
@@ -494,14 +716,14 @@ Partial Class frmCandidateProfile
         Me.txtAdd2.Location = New System.Drawing.Point(132, 176)
         Me.txtAdd2.Name = "txtAdd2"
         Me.txtAdd2.Size = New System.Drawing.Size(472, 23)
-        Me.txtAdd2.TabIndex = 13
+        Me.txtAdd2.TabIndex = 23
         '
         'txtAdd1
         '
         Me.txtAdd1.Location = New System.Drawing.Point(132, 152)
         Me.txtAdd1.Name = "txtAdd1"
         Me.txtAdd1.Size = New System.Drawing.Size(472, 23)
-        Me.txtAdd1.TabIndex = 11
+        Me.txtAdd1.TabIndex = 22
         '
         'cboCStatus
         '
@@ -510,14 +732,14 @@ Partial Class frmCandidateProfile
         Me.cboCStatus.Location = New System.Drawing.Point(132, 85)
         Me.cboCStatus.Name = "cboCStatus"
         Me.cboCStatus.Size = New System.Drawing.Size(366, 23)
-        Me.cboCStatus.TabIndex = 9
+        Me.cboCStatus.TabIndex = 21
         '
         'txtBPlace
         '
         Me.txtBPlace.Location = New System.Drawing.Point(132, 61)
         Me.txtBPlace.Name = "txtBPlace"
         Me.txtBPlace.Size = New System.Drawing.Size(366, 23)
-        Me.txtBPlace.TabIndex = 8
+        Me.txtBPlace.TabIndex = 20
         '
         'dtpBDate
         '
@@ -525,7 +747,7 @@ Partial Class frmCandidateProfile
         Me.dtpBDate.Location = New System.Drawing.Point(132, 37)
         Me.dtpBDate.Name = "dtpBDate"
         Me.dtpBDate.Size = New System.Drawing.Size(184, 23)
-        Me.dtpBDate.TabIndex = 7
+        Me.dtpBDate.TabIndex = 19
         '
         'cboGender
         '
@@ -534,7 +756,7 @@ Partial Class frmCandidateProfile
         Me.cboGender.Location = New System.Drawing.Point(132, 13)
         Me.cboGender.Name = "cboGender"
         Me.cboGender.Size = New System.Drawing.Size(184, 23)
-        Me.cboGender.TabIndex = 6
+        Me.cboGender.TabIndex = 18
         '
         'Label11
         '
@@ -693,7 +915,7 @@ Partial Class frmCandidateProfile
         Me.chkFMIsDeceased.Location = New System.Drawing.Point(448, 79)
         Me.chkFMIsDeceased.Name = "chkFMIsDeceased"
         Me.chkFMIsDeceased.Size = New System.Drawing.Size(78, 19)
-        Me.chkFMIsDeceased.TabIndex = 29
+        Me.chkFMIsDeceased.TabIndex = 36
         Me.chkFMIsDeceased.Text = "Deceased"
         Me.chkFMIsDeceased.UseVisualStyleBackColor = True
         '
@@ -704,7 +926,7 @@ Partial Class frmCandidateProfile
         Me.cboFMCStatus.Location = New System.Drawing.Point(114, 77)
         Me.cboFMCStatus.Name = "cboFMCStatus"
         Me.cboFMCStatus.Size = New System.Drawing.Size(216, 23)
-        Me.cboFMCStatus.TabIndex = 26
+        Me.cboFMCStatus.TabIndex = 33
         '
         'Label12
         '
@@ -720,7 +942,7 @@ Partial Class frmCandidateProfile
         Me.txtFMOccupation.Location = New System.Drawing.Point(448, 53)
         Me.txtFMOccupation.Name = "txtFMOccupation"
         Me.txtFMOccupation.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMOccupation.TabIndex = 28
+        Me.txtFMOccupation.TabIndex = 35
         '
         'Label30
         '
@@ -736,7 +958,7 @@ Partial Class frmCandidateProfile
         Me.txtFMRel.Location = New System.Drawing.Point(448, 29)
         Me.txtFMRel.Name = "txtFMRel"
         Me.txtFMRel.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMRel.TabIndex = 27
+        Me.txtFMRel.TabIndex = 34
         '
         'Label28
         '
@@ -770,7 +992,7 @@ Partial Class frmCandidateProfile
         Me.dtpFMBDate.Location = New System.Drawing.Point(115, 53)
         Me.dtpFMBDate.Name = "dtpFMBDate"
         Me.dtpFMBDate.Size = New System.Drawing.Size(128, 23)
-        Me.dtpFMBDate.TabIndex = 25
+        Me.dtpFMBDate.TabIndex = 32
         '
         'Label27
         '
@@ -786,7 +1008,7 @@ Partial Class frmCandidateProfile
         Me.txtFMName.Location = New System.Drawing.Point(114, 29)
         Me.txtFMName.Name = "txtFMName"
         Me.txtFMName.Size = New System.Drawing.Size(216, 23)
-        Me.txtFMName.TabIndex = 24
+        Me.txtFMName.TabIndex = 31
         '
         'Label24
         '
@@ -926,7 +1148,7 @@ Partial Class frmCandidateProfile
         Me.txtEduHonors.Multiline = True
         Me.txtEduHonors.Name = "txtEduHonors"
         Me.txtEduHonors.Size = New System.Drawing.Size(308, 47)
-        Me.txtEduHonors.TabIndex = 37
+        Me.txtEduHonors.TabIndex = 44
         '
         'Label39
         '
@@ -943,7 +1165,7 @@ Partial Class frmCandidateProfile
         Me.chkEduIsUG.Location = New System.Drawing.Point(644, 55)
         Me.chkEduIsUG.Name = "chkEduIsUG"
         Me.chkEduIsUG.Size = New System.Drawing.Size(108, 19)
-        Me.chkEduIsUG.TabIndex = 35
+        Me.chkEduIsUG.TabIndex = 43
         Me.chkEduIsUG.Text = "Undergraduate"
         Me.chkEduIsUG.UseVisualStyleBackColor = True
         '
@@ -953,7 +1175,7 @@ Partial Class frmCandidateProfile
         Me.dtpEduGrad.Location = New System.Drawing.Point(477, 53)
         Me.dtpEduGrad.Name = "dtpEduGrad"
         Me.dtpEduGrad.Size = New System.Drawing.Size(161, 23)
-        Me.dtpEduGrad.TabIndex = 34
+        Me.dtpEduGrad.TabIndex = 42
         '
         'Label34
         '
@@ -970,7 +1192,7 @@ Partial Class frmCandidateProfile
         Me.dtpEduEnd.Location = New System.Drawing.Point(206, 101)
         Me.dtpEduEnd.Name = "dtpEduEnd"
         Me.dtpEduEnd.Size = New System.Drawing.Size(157, 23)
-        Me.dtpEduEnd.TabIndex = 32
+        Me.dtpEduEnd.TabIndex = 40
         '
         'Label33
         '
@@ -987,7 +1209,7 @@ Partial Class frmCandidateProfile
         Me.dtpEduStart.Location = New System.Drawing.Point(206, 77)
         Me.dtpEduStart.Name = "dtpEduStart"
         Me.dtpEduStart.Size = New System.Drawing.Size(157, 23)
-        Me.dtpEduStart.TabIndex = 30
+        Me.dtpEduStart.TabIndex = 39
         '
         'Label32
         '
@@ -1003,7 +1225,7 @@ Partial Class frmCandidateProfile
         Me.txtEduCourse.Location = New System.Drawing.Point(477, 29)
         Me.txtEduCourse.Name = "txtEduCourse"
         Me.txtEduCourse.Size = New System.Drawing.Size(308, 23)
-        Me.txtEduCourse.TabIndex = 28
+        Me.txtEduCourse.TabIndex = 41
         '
         'Label31
         '
@@ -1019,14 +1241,14 @@ Partial Class frmCandidateProfile
         Me.txtEduAdd.Location = New System.Drawing.Point(160, 53)
         Me.txtEduAdd.Name = "txtEduAdd"
         Me.txtEduAdd.Size = New System.Drawing.Size(203, 23)
-        Me.txtEduAdd.TabIndex = 25
+        Me.txtEduAdd.TabIndex = 38
         '
         'txtEduSchool
         '
         Me.txtEduSchool.Location = New System.Drawing.Point(160, 29)
         Me.txtEduSchool.Name = "txtEduSchool"
         Me.txtEduSchool.Size = New System.Drawing.Size(203, 23)
-        Me.txtEduSchool.TabIndex = 24
+        Me.txtEduSchool.TabIndex = 37
         '
         'Label35
         '
@@ -1093,7 +1315,7 @@ Partial Class frmCandidateProfile
         Me.dgvEmp.AllowUserToAddRows = False
         Me.dgvEmp.AllowUserToDeleteRows = False
         Me.dgvEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEmp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn4, Me.DataGridViewButtonColumn5, Me.ispresentemp})
+        Me.dgvEmp.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewButtonColumn4, Me.DataGridViewButtonColumn5, Me.colchkbox})
         Me.dgvEmp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmp.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmp.Name = "dgvEmp"
@@ -1121,15 +1343,15 @@ Partial Class frmCandidateProfile
         Me.DataGridViewButtonColumn5.UseColumnTextForButtonValue = True
         Me.DataGridViewButtonColumn5.Width = 70
         '
-        'ispresentemp
+        'colchkbox
         '
-        Me.ispresentemp.Frozen = True
-        Me.ispresentemp.HeaderText = "Present"
-        Me.ispresentemp.Name = "ispresentemp"
-        Me.ispresentemp.ReadOnly = True
-        Me.ispresentemp.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ispresentemp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.ispresentemp.Width = 70
+        Me.colchkbox.DataPropertyName = "ispresentemp"
+        Me.colchkbox.Frozen = True
+        Me.colchkbox.HeaderText = "Checkbox"
+        Me.colchkbox.Name = "colchkbox"
+        Me.colchkbox.ReadOnly = True
+        Me.colchkbox.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colchkbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'Panel14
         '
@@ -1196,7 +1418,7 @@ Partial Class frmCandidateProfile
         Me.chkEmpPresent.Location = New System.Drawing.Point(289, 128)
         Me.chkEmpPresent.Name = "chkEmpPresent"
         Me.chkEmpPresent.Size = New System.Drawing.Size(67, 19)
-        Me.chkEmpPresent.TabIndex = 43
+        Me.chkEmpPresent.TabIndex = 50
         Me.chkEmpPresent.Text = "Present"
         Me.chkEmpPresent.UseVisualStyleBackColor = True
         '
@@ -1206,7 +1428,7 @@ Partial Class frmCandidateProfile
         Me.txtEmpReason.Multiline = True
         Me.txtEmpReason.Name = "txtEmpReason"
         Me.txtEmpReason.Size = New System.Drawing.Size(286, 71)
-        Me.txtEmpReason.TabIndex = 42
+        Me.txtEmpReason.TabIndex = 53
         '
         'Label40
         '
@@ -1222,14 +1444,14 @@ Partial Class frmCandidateProfile
         Me.txtEmpIS.Location = New System.Drawing.Point(501, 53)
         Me.txtEmpIS.Name = "txtEmpIS"
         Me.txtEmpIS.Size = New System.Drawing.Size(286, 23)
-        Me.txtEmpIS.TabIndex = 40
+        Me.txtEmpIS.TabIndex = 52
         '
         'txtEmpCContact
         '
         Me.txtEmpCContact.Location = New System.Drawing.Point(122, 77)
         Me.txtEmpCContact.Name = "txtEmpCContact"
         Me.txtEmpCContact.Size = New System.Drawing.Size(241, 23)
-        Me.txtEmpCContact.TabIndex = 39
+        Me.txtEmpCContact.TabIndex = 47
         '
         'Label58
         '
@@ -1255,7 +1477,7 @@ Partial Class frmCandidateProfile
         Me.dtpEmpEnd.Location = New System.Drawing.Point(176, 125)
         Me.dtpEmpEnd.Name = "dtpEmpEnd"
         Me.dtpEmpEnd.Size = New System.Drawing.Size(107, 23)
-        Me.dtpEmpEnd.TabIndex = 32
+        Me.dtpEmpEnd.TabIndex = 49
         '
         'Label42
         '
@@ -1272,7 +1494,7 @@ Partial Class frmCandidateProfile
         Me.dtpEmpStart.Location = New System.Drawing.Point(176, 101)
         Me.dtpEmpStart.Name = "dtpEmpStart"
         Me.dtpEmpStart.Size = New System.Drawing.Size(107, 23)
-        Me.dtpEmpStart.TabIndex = 30
+        Me.dtpEmpStart.TabIndex = 48
         '
         'Label43
         '
@@ -1288,7 +1510,7 @@ Partial Class frmCandidateProfile
         Me.txtEmpPosHeld.Location = New System.Drawing.Point(501, 29)
         Me.txtEmpPosHeld.Name = "txtEmpPosHeld"
         Me.txtEmpPosHeld.Size = New System.Drawing.Size(286, 23)
-        Me.txtEmpPosHeld.TabIndex = 28
+        Me.txtEmpPosHeld.TabIndex = 51
         '
         'Label44
         '
@@ -1304,14 +1526,14 @@ Partial Class frmCandidateProfile
         Me.txtEmpCAdd.Location = New System.Drawing.Point(122, 53)
         Me.txtEmpCAdd.Name = "txtEmpCAdd"
         Me.txtEmpCAdd.Size = New System.Drawing.Size(241, 23)
-        Me.txtEmpCAdd.TabIndex = 25
+        Me.txtEmpCAdd.TabIndex = 46
         '
         'txtEmpCName
         '
         Me.txtEmpCName.Location = New System.Drawing.Point(122, 29)
         Me.txtEmpCName.Name = "txtEmpCName"
         Me.txtEmpCName.Size = New System.Drawing.Size(241, 23)
-        Me.txtEmpCName.TabIndex = 24
+        Me.txtEmpCName.TabIndex = 45
         '
         'Label45
         '
@@ -1386,6 +1608,24 @@ Partial Class frmCandidateProfile
         Me.dgvSkill.Size = New System.Drawing.Size(943, 227)
         Me.dgvSkill.TabIndex = 3
         '
+        'DataGridViewButtonColumn7
+        '
+        Me.DataGridViewButtonColumn7.Frozen = True
+        Me.DataGridViewButtonColumn7.HeaderText = ""
+        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
+        Me.DataGridViewButtonColumn7.ReadOnly = True
+        Me.DataGridViewButtonColumn7.Text = "Select"
+        Me.DataGridViewButtonColumn7.Width = 70
+        '
+        'DataGridViewButtonColumn8
+        '
+        Me.DataGridViewButtonColumn8.Frozen = True
+        Me.DataGridViewButtonColumn8.HeaderText = ""
+        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
+        Me.DataGridViewButtonColumn8.ReadOnly = True
+        Me.DataGridViewButtonColumn8.Text = "Remove"
+        Me.DataGridViewButtonColumn8.Width = 70
+        '
         'Panel17
         '
         Me.Panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1444,7 +1684,7 @@ Partial Class frmCandidateProfile
         Me.txtSLastYearUsed.Location = New System.Drawing.Point(524, 50)
         Me.txtSLastYearUsed.Name = "txtSLastYearUsed"
         Me.txtSLastYearUsed.Size = New System.Drawing.Size(59, 23)
-        Me.txtSLastYearUsed.TabIndex = 32
+        Me.txtSLastYearUsed.TabIndex = 58
         '
         'Label54
         '
@@ -1460,7 +1700,7 @@ Partial Class frmCandidateProfile
         Me.txtSYearUsed.Location = New System.Drawing.Point(524, 26)
         Me.txtSYearUsed.Name = "txtSYearUsed"
         Me.txtSYearUsed.Size = New System.Drawing.Size(59, 23)
-        Me.txtSYearUsed.TabIndex = 30
+        Me.txtSYearUsed.TabIndex = 57
         '
         'Label53
         '
@@ -1477,7 +1717,7 @@ Partial Class frmCandidateProfile
         Me.cboSkillLevel.Location = New System.Drawing.Point(524, 74)
         Me.cboSkillLevel.Name = "cboSkillLevel"
         Me.cboSkillLevel.Size = New System.Drawing.Size(234, 23)
-        Me.cboSkillLevel.TabIndex = 28
+        Me.cboSkillLevel.TabIndex = 59
         '
         'Label52
         '
@@ -1494,7 +1734,7 @@ Partial Class frmCandidateProfile
         Me.cboSkill.Location = New System.Drawing.Point(108, 74)
         Me.cboSkill.Name = "cboSkill"
         Me.cboSkill.Size = New System.Drawing.Size(284, 23)
-        Me.cboSkill.TabIndex = 26
+        Me.cboSkill.TabIndex = 56
         '
         'cboSkillGroup
         '
@@ -1502,7 +1742,7 @@ Partial Class frmCandidateProfile
         Me.cboSkillGroup.Location = New System.Drawing.Point(108, 50)
         Me.cboSkillGroup.Name = "cboSkillGroup"
         Me.cboSkillGroup.Size = New System.Drawing.Size(284, 23)
-        Me.cboSkillGroup.TabIndex = 25
+        Me.cboSkillGroup.TabIndex = 55
         '
         'cboSkillType
         '
@@ -1510,7 +1750,7 @@ Partial Class frmCandidateProfile
         Me.cboSkillType.Location = New System.Drawing.Point(108, 26)
         Me.cboSkillType.Name = "cboSkillType"
         Me.cboSkillType.Size = New System.Drawing.Size(284, 23)
-        Me.cboSkillType.TabIndex = 24
+        Me.cboSkillType.TabIndex = 54
         '
         'Label51
         '
@@ -1549,226 +1789,6 @@ Partial Class frmCandidateProfile
         Me.Label57.TabIndex = 20
         Me.Label57.Text = "Skill Information"
         '
-        'tpOthers
-        '
-        Me.tpOthers.AutoScroll = True
-        Me.tpOthers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpOthers.Controls.Add(Me.cboAvailInType)
-        Me.tpOthers.Controls.Add(Me.txtAppSrcRemarks)
-        Me.tpOthers.Controls.Add(Me.Label55)
-        Me.tpOthers.Controls.Add(Me.cboAppSource)
-        Me.tpOthers.Controls.Add(Me.chkIsNegotiable)
-        Me.tpOthers.Controls.Add(Me.txtCandidateRemarks)
-        Me.tpOthers.Controls.Add(Me.Label62)
-        Me.tpOthers.Controls.Add(Me.txtPrefWorkLocation)
-        Me.tpOthers.Controls.Add(Me.Label61)
-        Me.tpOthers.Controls.Add(Me.cboSalaryRate)
-        Me.tpOthers.Controls.Add(Me.txtSalary)
-        Me.tpOthers.Controls.Add(Me.txtApplyingFor)
-        Me.tpOthers.Controls.Add(Me.Label60)
-        Me.tpOthers.Controls.Add(Me.Label59)
-        Me.tpOthers.Controls.Add(Me.rdbAvail3)
-        Me.tpOthers.Controls.Add(Me.dtpAvailableOn)
-        Me.tpOthers.Controls.Add(Me.rdbAvail2)
-        Me.tpOthers.Controls.Add(Me.txtAvailInCount)
-        Me.tpOthers.Controls.Add(Me.rdbAvail1)
-        Me.tpOthers.Controls.Add(Me.rdbAvail0)
-        Me.tpOthers.Controls.Add(Me.Label56)
-        Me.tpOthers.Location = New System.Drawing.Point(4, 24)
-        Me.tpOthers.Name = "tpOthers"
-        Me.tpOthers.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpOthers.Size = New System.Drawing.Size(947, 385)
-        Me.tpOthers.TabIndex = 5
-        Me.tpOthers.Text = "Other Information"
-        Me.tpOthers.UseVisualStyleBackColor = True
-        '
-        'cboAvailInType
-        '
-        Me.cboAvailInType.FormattingEnabled = True
-        Me.cboAvailInType.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
-        Me.cboAvailInType.Location = New System.Drawing.Point(252, 159)
-        Me.cboAvailInType.Name = "cboAvailInType"
-        Me.cboAvailInType.Size = New System.Drawing.Size(121, 23)
-        Me.cboAvailInType.TabIndex = 48
-        '
-        'txtAppSrcRemarks
-        '
-        Me.txtAppSrcRemarks.Location = New System.Drawing.Point(457, 40)
-        Me.txtAppSrcRemarks.Name = "txtAppSrcRemarks"
-        Me.txtAppSrcRemarks.Size = New System.Drawing.Size(302, 23)
-        Me.txtAppSrcRemarks.TabIndex = 47
-        '
-        'Label55
-        '
-        Me.Label55.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label55.Location = New System.Drawing.Point(6, 43)
-        Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(127, 18)
-        Me.Label55.TabIndex = 46
-        Me.Label55.Text = "Applicant Source"
-        '
-        'cboAppSource
-        '
-        Me.cboAppSource.FormattingEnabled = True
-        Me.cboAppSource.Location = New System.Drawing.Point(176, 40)
-        Me.cboAppSource.Name = "cboAppSource"
-        Me.cboAppSource.Size = New System.Drawing.Size(280, 23)
-        Me.cboAppSource.TabIndex = 45
-        '
-        'chkIsNegotiable
-        '
-        Me.chkIsNegotiable.AutoSize = True
-        Me.chkIsNegotiable.Location = New System.Drawing.Point(462, 71)
-        Me.chkIsNegotiable.Name = "chkIsNegotiable"
-        Me.chkIsNegotiable.Size = New System.Drawing.Size(90, 19)
-        Me.chkIsNegotiable.TabIndex = 44
-        Me.chkIsNegotiable.Text = "Negotiable?"
-        Me.chkIsNegotiable.UseVisualStyleBackColor = True
-        '
-        'txtCandidateRemarks
-        '
-        Me.txtCandidateRemarks.Location = New System.Drawing.Point(176, 248)
-        Me.txtCandidateRemarks.Multiline = True
-        Me.txtCandidateRemarks.Name = "txtCandidateRemarks"
-        Me.txtCandidateRemarks.Size = New System.Drawing.Size(588, 129)
-        Me.txtCandidateRemarks.TabIndex = 43
-        '
-        'Label62
-        '
-        Me.Label62.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label62.Location = New System.Drawing.Point(6, 251)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(95, 15)
-        Me.Label62.TabIndex = 42
-        Me.Label62.Text = "Remarks"
-        '
-        'txtPrefWorkLocation
-        '
-        Me.txtPrefWorkLocation.Location = New System.Drawing.Point(176, 98)
-        Me.txtPrefWorkLocation.Name = "txtPrefWorkLocation"
-        Me.txtPrefWorkLocation.Size = New System.Drawing.Size(588, 23)
-        Me.txtPrefWorkLocation.TabIndex = 41
-        '
-        'Label61
-        '
-        Me.Label61.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(6, 101)
-        Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(157, 18)
-        Me.Label61.TabIndex = 40
-        Me.Label61.Text = "Preferred Work Location"
-        '
-        'cboSalaryRate
-        '
-        Me.cboSalaryRate.FormattingEnabled = True
-        Me.cboSalaryRate.Items.AddRange(New Object() {"per HOUR", "per DAY", "per MONTH", "per YEAR"})
-        Me.cboSalaryRate.Location = New System.Drawing.Point(309, 69)
-        Me.cboSalaryRate.Name = "cboSalaryRate"
-        Me.cboSalaryRate.Size = New System.Drawing.Size(147, 23)
-        Me.cboSalaryRate.TabIndex = 39
-        '
-        'txtSalary
-        '
-        Me.txtSalary.Location = New System.Drawing.Point(176, 69)
-        Me.txtSalary.Name = "txtSalary"
-        Me.txtSalary.Size = New System.Drawing.Size(132, 23)
-        Me.txtSalary.TabIndex = 38
-        '
-        'txtApplyingFor
-        '
-        Me.txtApplyingFor.Location = New System.Drawing.Point(176, 11)
-        Me.txtApplyingFor.Name = "txtApplyingFor"
-        Me.txtApplyingFor.Size = New System.Drawing.Size(583, 23)
-        Me.txtApplyingFor.TabIndex = 37
-        '
-        'Label60
-        '
-        Me.Label60.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label60.Location = New System.Drawing.Point(6, 72)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(127, 18)
-        Me.Label60.TabIndex = 36
-        Me.Label60.Text = "Preferred Salary Rate"
-        '
-        'Label59
-        '
-        Me.Label59.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label59.Location = New System.Drawing.Point(6, 14)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(127, 18)
-        Me.Label59.TabIndex = 35
-        Me.Label59.Text = "Position Applying For"
-        '
-        'rdbAvail3
-        '
-        Me.rdbAvail3.AutoSize = True
-        Me.rdbAvail3.Location = New System.Drawing.Point(176, 214)
-        Me.rdbAvail3.Name = "rdbAvail3"
-        Me.rdbAvail3.Size = New System.Drawing.Size(96, 19)
-        Me.rdbAvail3.TabIndex = 34
-        Me.rdbAvail3.TabStop = True
-        Me.rdbAvail3.Text = "Not Specified"
-        Me.rdbAvail3.UseVisualStyleBackColor = True
-        '
-        'dtpAvailableOn
-        '
-        Me.dtpAvailableOn.CustomFormat = "MMMM/dd/yyyy"
-        Me.dtpAvailableOn.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAvailableOn.Location = New System.Drawing.Point(216, 185)
-        Me.dtpAvailableOn.Name = "dtpAvailableOn"
-        Me.dtpAvailableOn.Size = New System.Drawing.Size(117, 23)
-        Me.dtpAvailableOn.TabIndex = 33
-        '
-        'rdbAvail2
-        '
-        Me.rdbAvail2.AutoSize = True
-        Me.rdbAvail2.Location = New System.Drawing.Point(176, 188)
-        Me.rdbAvail2.Name = "rdbAvail2"
-        Me.rdbAvail2.Size = New System.Drawing.Size(39, 19)
-        Me.rdbAvail2.TabIndex = 32
-        Me.rdbAvail2.TabStop = True
-        Me.rdbAvail2.Text = "on"
-        Me.rdbAvail2.UseVisualStyleBackColor = True
-        '
-        'txtAvailInCount
-        '
-        Me.txtAvailInCount.Location = New System.Drawing.Point(213, 159)
-        Me.txtAvailInCount.Name = "txtAvailInCount"
-        Me.txtAvailInCount.Size = New System.Drawing.Size(38, 23)
-        Me.txtAvailInCount.TabIndex = 31
-        '
-        'rdbAvail1
-        '
-        Me.rdbAvail1.AutoSize = True
-        Me.rdbAvail1.Location = New System.Drawing.Point(176, 160)
-        Me.rdbAvail1.Name = "rdbAvail1"
-        Me.rdbAvail1.Size = New System.Drawing.Size(246, 19)
-        Me.rdbAvail1.TabIndex = 30
-        Me.rdbAvail1.TabStop = True
-        Me.rdbAvail1.Text = "in                                                           notice"
-        Me.rdbAvail1.UseVisualStyleBackColor = True
-        '
-        'rdbAvail0
-        '
-        Me.rdbAvail0.AutoSize = True
-        Me.rdbAvail0.Checked = True
-        Me.rdbAvail0.Location = New System.Drawing.Point(176, 134)
-        Me.rdbAvail0.Name = "rdbAvail0"
-        Me.rdbAvail0.Size = New System.Drawing.Size(93, 19)
-        Me.rdbAvail0.TabIndex = 29
-        Me.rdbAvail0.TabStop = True
-        Me.rdbAvail0.Text = "Immediately"
-        Me.rdbAvail0.UseVisualStyleBackColor = True
-        '
-        'Label56
-        '
-        Me.Label56.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label56.Location = New System.Drawing.Point(6, 136)
-        Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(95, 15)
-        Me.Label56.TabIndex = 28
-        Me.Label56.Text = "Availability"
-        '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1784,15 +1804,15 @@ Partial Class frmCandidateProfile
         '
         Me.pnlCInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlCInfo.Controls.Add(Me.lblStatus)
-        Me.pnlCInfo.Controls.Add(Me.Label6)
+        Me.pnlCInfo.Controls.Add(Me.lblCStatus)
         Me.pnlCInfo.Controls.Add(Me.lblRefId)
         Me.pnlCInfo.Controls.Add(Me.txtMName)
         Me.pnlCInfo.Controls.Add(Me.txtFName)
         Me.pnlCInfo.Controls.Add(Me.txtLName)
-        Me.pnlCInfo.Controls.Add(Me.Label4)
-        Me.pnlCInfo.Controls.Add(Me.Label3)
-        Me.pnlCInfo.Controls.Add(Me.Label2)
-        Me.pnlCInfo.Controls.Add(Me.Label1)
+        Me.pnlCInfo.Controls.Add(Me.lblMName)
+        Me.pnlCInfo.Controls.Add(Me.lblFName)
+        Me.pnlCInfo.Controls.Add(Me.lblLName)
+        Me.pnlCInfo.Controls.Add(Me.lblCRefId)
         Me.pnlCInfo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlCInfo.Location = New System.Drawing.Point(200, 0)
         Me.pnlCInfo.Name = "pnlCInfo"
@@ -1809,14 +1829,14 @@ Partial Class frmCandidateProfile
         Me.lblStatus.TabIndex = 22
         Me.lblStatus.Text = "[]"
         '
-        'Label6
+        'lblCStatus
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 108)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(47, 15)
-        Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Status :"
+        Me.lblCStatus.AutoSize = True
+        Me.lblCStatus.Location = New System.Drawing.Point(7, 108)
+        Me.lblCStatus.Name = "lblCStatus"
+        Me.lblCStatus.Size = New System.Drawing.Size(47, 15)
+        Me.lblCStatus.TabIndex = 21
+        Me.lblCStatus.Text = "Status :"
         '
         'lblRefId
         '
@@ -1833,53 +1853,53 @@ Partial Class frmCandidateProfile
         Me.txtMName.Location = New System.Drawing.Point(112, 78)
         Me.txtMName.Name = "txtMName"
         Me.txtMName.Size = New System.Drawing.Size(275, 23)
-        Me.txtMName.TabIndex = 17
+        Me.txtMName.TabIndex = 2
         '
         'txtFName
         '
         Me.txtFName.Location = New System.Drawing.Point(112, 54)
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(275, 23)
-        Me.txtFName.TabIndex = 16
+        Me.txtFName.TabIndex = 1
         '
         'txtLName
         '
         Me.txtLName.Location = New System.Drawing.Point(112, 30)
         Me.txtLName.Name = "txtLName"
         Me.txtLName.Size = New System.Drawing.Size(275, 23)
-        Me.txtLName.TabIndex = 15
+        Me.txtLName.TabIndex = 0
         '
-        'Label4
+        'lblMName
         '
-        Me.Label4.Location = New System.Drawing.Point(7, 83)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 15)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Middle Name :"
+        Me.lblMName.Location = New System.Drawing.Point(7, 83)
+        Me.lblMName.Name = "lblMName"
+        Me.lblMName.Size = New System.Drawing.Size(95, 15)
+        Me.lblMName.TabIndex = 14
+        Me.lblMName.Text = "Middle Name :"
         '
-        'Label3
+        'lblFName
         '
-        Me.Label3.Location = New System.Drawing.Point(7, 58)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 20)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "First Name :"
+        Me.lblFName.Location = New System.Drawing.Point(7, 58)
+        Me.lblFName.Name = "lblFName"
+        Me.lblFName.Size = New System.Drawing.Size(95, 20)
+        Me.lblFName.TabIndex = 13
+        Me.lblFName.Text = "First Name :"
         '
-        'Label2
+        'lblLName
         '
-        Me.Label2.Location = New System.Drawing.Point(7, 33)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 20)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Last Name :"
+        Me.lblLName.Location = New System.Drawing.Point(7, 33)
+        Me.lblLName.Name = "lblLName"
+        Me.lblLName.Size = New System.Drawing.Size(95, 20)
+        Me.lblLName.TabIndex = 12
+        Me.lblLName.Text = "Last Name :"
         '
-        'Label1
+        'lblCRefId
         '
-        Me.Label1.Location = New System.Drawing.Point(7, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 15)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Candidate Ref# :"
+        Me.lblCRefId.Location = New System.Drawing.Point(7, 9)
+        Me.lblCRefId.Name = "lblCRefId"
+        Me.lblCRefId.Size = New System.Drawing.Size(95, 15)
+        Me.lblCRefId.TabIndex = 11
+        Me.lblCRefId.Text = "Candidate Ref# :"
         '
         'Panel5
         '
@@ -1895,7 +1915,7 @@ Partial Class frmCandidateProfile
         'btnUseImgFile
         '
         Me.btnUseImgFile.Image = CType(resources.GetObject("btnUseImgFile.Image"), System.Drawing.Image)
-        Me.btnUseImgFile.Location = New System.Drawing.Point(143, 52)
+        Me.btnUseImgFile.Location = New System.Drawing.Point(144, 6)
         Me.btnUseImgFile.Name = "btnUseImgFile"
         Me.btnUseImgFile.Size = New System.Drawing.Size(49, 44)
         Me.btnUseImgFile.TabIndex = 5
@@ -1915,11 +1935,12 @@ Partial Class frmCandidateProfile
         'picCandidate
         '
         Me.picCandidate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picCandidate.Image = CType(resources.GetObject("picCandidate.Image"), System.Drawing.Image)
+        Me.picCandidate.Image = Global.RecSys.My.Resources.Resources.profilephoto2
+        Me.picCandidate.InitialImage = Global.RecSys.My.Resources.Resources.profilephoto2
         Me.picCandidate.Location = New System.Drawing.Point(8, 5)
         Me.picCandidate.Name = "picCandidate"
         Me.picCandidate.Size = New System.Drawing.Size(129, 128)
-        Me.picCandidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picCandidate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picCandidate.TabIndex = 3
         Me.picCandidate.TabStop = False
         '
@@ -2034,23 +2055,9 @@ Partial Class frmCandidateProfile
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
-        'DataGridViewButtonColumn7
+        'ofdImage
         '
-        Me.DataGridViewButtonColumn7.Frozen = True
-        Me.DataGridViewButtonColumn7.HeaderText = ""
-        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
-        Me.DataGridViewButtonColumn7.ReadOnly = True
-        Me.DataGridViewButtonColumn7.Text = "Select"
-        Me.DataGridViewButtonColumn7.Width = 70
-        '
-        'DataGridViewButtonColumn8
-        '
-        Me.DataGridViewButtonColumn8.Frozen = True
-        Me.DataGridViewButtonColumn8.HeaderText = ""
-        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
-        Me.DataGridViewButtonColumn8.ReadOnly = True
-        Me.DataGridViewButtonColumn8.Text = "Remove"
-        Me.DataGridViewButtonColumn8.Width = 70
+        Me.ofdImage.FileName = "OpenFileDialog1"
         '
         'frmCandidateProfile
         '
@@ -2068,6 +2075,8 @@ Partial Class frmCandidateProfile
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.tabInfo.ResumeLayout(False)
+        Me.tpOthers.ResumeLayout(False)
+        Me.tpOthers.PerformLayout()
         Me.tpPersonal.ResumeLayout(False)
         Me.tpPersonal.PerformLayout()
         Me.tpFamily.ResumeLayout(False)
@@ -2098,8 +2107,6 @@ Partial Class frmCandidateProfile
         Me.Panel17.PerformLayout()
         Me.tsSkills.ResumeLayout(False)
         Me.tsSkills.PerformLayout()
-        Me.tpOthers.ResumeLayout(False)
-        Me.tpOthers.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.pnlCInfo.ResumeLayout(False)
         Me.pnlCInfo.PerformLayout()
@@ -2151,10 +2158,10 @@ Partial Class frmCandidateProfile
     Friend WithEvents txtMName As System.Windows.Forms.TextBox
     Friend WithEvents txtFName As System.Windows.Forms.TextBox
     Friend WithEvents txtLName As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblMName As System.Windows.Forms.Label
+    Friend WithEvents lblFName As System.Windows.Forms.Label
+    Friend WithEvents lblLName As System.Windows.Forms.Label
+    Friend WithEvents lblCRefId As System.Windows.Forms.Label
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents btnUseImgFile As System.Windows.Forms.Button
     Friend WithEvents btnUseCam As System.Windows.Forms.Button
@@ -2258,7 +2265,7 @@ Partial Class frmCandidateProfile
     Friend WithEvents Label37 As System.Windows.Forms.Label
     Friend WithEvents Label38 As System.Windows.Forms.Label
     Friend WithEvents lblStatus As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblCStatus As System.Windows.Forms.Label
     Friend WithEvents chkIsNegotiable As System.Windows.Forms.CheckBox
     Friend WithEvents txtAppSrcRemarks As System.Windows.Forms.TextBox
     Friend WithEvents Label55 As System.Windows.Forms.Label
@@ -2288,9 +2295,10 @@ Partial Class frmCandidateProfile
     Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn1 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn2 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn4 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn5 As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents ispresentemp As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewButtonColumn7 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn8 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn4 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents DataGridViewButtonColumn5 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents colchkbox As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents ofdImage As System.Windows.Forms.OpenFileDialog
 End Class

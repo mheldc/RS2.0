@@ -29,6 +29,7 @@ Partial Class frmSearch
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dgvSearchItems = New System.Windows.Forms.DataGridView()
+        Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.dgvSearchItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,12 +87,23 @@ Partial Class frmSearch
         Me.dgvSearchItems.AllowUserToAddRows = False
         Me.dgvSearchItems.AllowUserToDeleteRows = False
         Me.dgvSearchItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSearchItems.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSelect})
         Me.dgvSearchItems.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvSearchItems.Location = New System.Drawing.Point(0, 0)
         Me.dgvSearchItems.Name = "dgvSearchItems"
         Me.dgvSearchItems.ReadOnly = True
         Me.dgvSearchItems.Size = New System.Drawing.Size(820, 416)
         Me.dgvSearchItems.TabIndex = 0
+        '
+        'colSelect
+        '
+        Me.colSelect.Frozen = True
+        Me.colSelect.HeaderText = ""
+        Me.colSelect.Name = "colSelect"
+        Me.colSelect.ReadOnly = True
+        Me.colSelect.Text = "Select"
+        Me.colSelect.UseColumnTextForButtonValue = True
+        Me.colSelect.Width = 70
         '
         'frmSearch
         '
@@ -117,4 +129,5 @@ Partial Class frmSearch
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgvSearchItems As System.Windows.Forms.DataGridView
+    Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
 End Class

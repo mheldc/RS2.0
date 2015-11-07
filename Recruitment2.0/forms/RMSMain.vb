@@ -7,17 +7,17 @@ Imports MySql.Data.MySqlClient
 Public Class RMSMain
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim x As MySqlConnection = Open("localhost", "rms", "root", "")
-        'If x Is Nothing Then
-        '    MsgBox("Unable to connect to server")
-        'Else
-        '    MsgBox("Connected")
-        'End If
-        'With frmLogIn
-        '    .MdiParent = Me
-        '    .StartPosition = FormStartPosition.CenterParent
-        '    .Show()
-        'End With
+
+        ' For Testing purposes
+        DefHost = "localhost"
+        DefDb = "rmsv2"
+        DefUID = "root"
+        DefPWD = ""
+        DefPort = 3306
+
+        CurrentUID = 1
+        CurrentUName = "Admin"
+        CurrentUPosition = "Administrator"
 
     End Sub
     Function TestEncoding() As String
@@ -66,7 +66,7 @@ Public Class RMSMain
 
     End Sub
 
-    Private Sub NewFormsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewFormsToolStripMenuItem.Click
+    Private Sub NewFormsToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Dim x As New frmStageCandidate
         x.TopLevel = False
         x.MdiParent = Me
@@ -80,11 +80,63 @@ Public Class RMSMain
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
             Dim cProfile As New frmCandidateProfile
-            cProfile.TopLevel = False
-            cProfile.MdiParent = Me
-            cProfile.StartPosition = FormStartPosition.CenterParent
-            cProfile.WindowState = FormWindowState.Maximized
-            cProfile.Show()
+            With cProfile
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Maximized
+                .tsbAdd.PerformClick()
+                .Show()
+            End With
+
+        End If
+    End Sub
+
+    Private Sub CandidateProfileToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CandidateProfileToolStripMenuItem1.Click
+        If Application.OpenForms().OfType(Of frmCandidateProfile).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fCandidateProfile As New frmCandidateProfile
+            With fCandidateProfile
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Maximized
+                .Show()
+                .ClearNEnableFields(False)
+                .tsbSearch.PerformClick()
+            End With
+
+        End If
+    End Sub
+
+    Private Sub SkillTypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SkillTypeToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmSkillType).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fSkillType As New frmSkillType
+            With fSkillType
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub SourcesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SourcesToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmCandidateSource).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fCSource As New frmCandidateSource
+            With fCSource
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
         End If
     End Sub
 End Class

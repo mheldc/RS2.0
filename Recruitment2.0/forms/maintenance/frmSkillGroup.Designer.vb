@@ -23,13 +23,12 @@ Partial Class frmSkillGroup
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSkillGroup))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.pnlInfo = New System.Windows.Forms.Panel()
+        Me.cboSkillType = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtGroupCode = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtGroupDesc = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tsOps = New System.Windows.Forms.ToolStrip()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
@@ -41,33 +40,32 @@ Partial Class frmSkillGroup
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1.SuspendLayout()
+        Me.pnlInfo.SuspendLayout()
         Me.tsOps.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlInfo
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(460, 151)
-        Me.Panel1.TabIndex = 4
+        Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlInfo.Controls.Add(Me.cboSkillType)
+        Me.pnlInfo.Controls.Add(Me.Label5)
+        Me.pnlInfo.Controls.Add(Me.txtGroupCode)
+        Me.pnlInfo.Controls.Add(Me.Label4)
+        Me.pnlInfo.Controls.Add(Me.txtGroupDesc)
+        Me.pnlInfo.Controls.Add(Me.Label2)
+        Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
+        Me.pnlInfo.Name = "pnlInfo"
+        Me.pnlInfo.Size = New System.Drawing.Size(460, 151)
+        Me.pnlInfo.TabIndex = 4
         '
-        'ComboBox1
+        'cboSkillType
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(102, 15)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(329, 23)
-        Me.ComboBox1.TabIndex = 30
+        Me.cboSkillType.FormattingEnabled = True
+        Me.cboSkillType.Location = New System.Drawing.Point(102, 15)
+        Me.cboSkillType.Name = "cboSkillType"
+        Me.cboSkillType.Size = New System.Drawing.Size(329, 23)
+        Me.cboSkillType.TabIndex = 30
         '
         'Label5
         '
@@ -78,22 +76,13 @@ Partial Class frmSkillGroup
         Me.Label5.TabIndex = 29
         Me.Label5.Text = "Skill Type"
         '
-        'Label1
+        'txtGroupCode
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 105)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "[]"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(102, 39)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 27
+        Me.txtGroupCode.Location = New System.Drawing.Point(102, 39)
+        Me.txtGroupCode.Name = "txtGroupCode"
+        Me.txtGroupCode.ReadOnly = True
+        Me.txtGroupCode.Size = New System.Drawing.Size(160, 23)
+        Me.txtGroupCode.TabIndex = 27
         '
         'Label4
         '
@@ -104,13 +93,13 @@ Partial Class frmSkillGroup
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Group Code"
         '
-        'TextBox2
+        'txtGroupDesc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(102, 63)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 23
+        Me.txtGroupDesc.Location = New System.Drawing.Point(102, 63)
+        Me.txtGroupDesc.Multiline = True
+        Me.txtGroupDesc.Name = "txtGroupDesc"
+        Me.txtGroupDesc.Size = New System.Drawing.Size(329, 71)
+        Me.txtGroupDesc.TabIndex = 23
         '
         'Label2
         '
@@ -123,7 +112,7 @@ Partial Class frmSkillGroup
         '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(460, 39)
@@ -166,7 +155,6 @@ Partial Class frmSkillGroup
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -179,7 +167,6 @@ Partial Class frmSkillGroup
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
         '
         'tsbCancel
         '
@@ -239,7 +226,7 @@ Partial Class frmSkillGroup
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(460, 190)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -248,19 +235,18 @@ Partial Class frmSkillGroup
         Me.MinimizeBox = False
         Me.Name = "frmSkillGroup"
         Me.Text = "Skill Group"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlInfo.ResumeLayout(False)
+        Me.pnlInfo.PerformLayout()
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents pnlInfo As System.Windows.Forms.Panel
+    Friend WithEvents txtGroupCode As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtGroupDesc As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents tsOps As System.Windows.Forms.ToolStrip
     Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
@@ -272,6 +258,6 @@ Partial Class frmSkillGroup
     Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboSkillType As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

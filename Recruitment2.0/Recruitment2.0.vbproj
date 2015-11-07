@@ -361,6 +361,8 @@
     <Content Include="images\connect.png" />
     <Content Include="images\cross.png" />
     <Content Include="images\disk.png" />
+    <Content Include="Resources\profilephoto2.jpg" />
+    <None Include="Resources\profilephoto21.jpg" />
     <None Include="Resources\door.png" />
     <None Include="Resources\disk.png" />
     <None Include="Resources\disconnect.png" />

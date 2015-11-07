@@ -2,12 +2,12 @@
 Imports RecSys.RSv2.DataConnection
 Imports RecSys.RSv2.Mailer
 Imports RecSys.RSv2.AppForm
+Imports RecSys.RSv2.RegExUtilities
 Imports MySql.Data.MySqlClient
-
 
 Public Class frmCandidateProfile
     ' Candidate Information
-    Dim CandidateTranType As Integer = -1
+    Public CandidateTranType As Integer = -1
 
     ' Family Background
     Dim FMTranType As Integer = 0
@@ -21,25 +21,28 @@ Public Class frmCandidateProfile
     Dim EmpTranType As Integer = 0
     Dim selEmpId, selEmpCandidateId As Integer, selJobPost, selCompanyName As String
 
+    ' Others
+    Dim selImagePath As String
 
-    Public Shared SelCandidateId As Integer
-
-    Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ' For Testing purposes
-        DefHost = "localhost"
-        DefDb = "rmsv2"
-        DefUID = "root"
-        DefPWD = ""
-        DefPort = 3306
-
-        CurrentUID = 1
-        CurrentUName = "Admin"
-        CurrentUPosition = "Administrator"
-        ' 
-        Call ClearNEnableFields(False)
+    Private Sub frmCandidateProfile_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Not lblCRefId.Text.Length > 2 _
+            And MsgBox("Exit without saving entries?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
+            e.Cancel = False
+        Else
+            e.Cancel = True
+        End If
     End Sub
 
-    Private Sub ClearNEnableFields(Optional ByVal EnableControls As Boolean = True)
+    Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Call ClearNEnableFields(False)
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            Qry = "select `cs_id`,`description` from `rms_candidatesource` where `recstatus` = 1;"
+            Call FillComboBox(Qry, Cn, "description", "cs_id", cboAppSource, , CommandType.Text)
+        End Using
+
+    End Sub
+
+    Public Sub ClearNEnableFields(Optional ByVal EnableControls As Boolean = True)
 
         For Each tPages As TabPage In tabInfo.TabPages
             tPages.Enabled = EnableControls
@@ -47,7 +50,7 @@ Public Class frmCandidateProfile
                 For Each Ctrl As Control In pnlCInfo.Controls
                     If TypeOf Ctrl Is TextBox Then
                         With DirectCast(Ctrl, TextBox)
-                            .Clear()
+                            If Ctrl.Name = "txtAvailInCount" Then .Text = "0" Else .Clear()
                         End With
                     ElseIf TypeOf Ctrl Is Label Then
                         If DirectCast(Ctrl, Label).Name = "lblRefId" Or DirectCast(Ctrl, Label).Name = "lblStatus" Then
@@ -102,7 +105,7 @@ Public Class frmCandidateProfile
                                  Optional ByVal HDMFId As String = Nothing, Optional ByVal PHId As String = Nothing, Optional ByVal CandidateStatusId As Integer = Nothing, Optional ByVal AppliedPosition As String = Nothing, _
                                  Optional ByVal AppSourceId As Integer = Nothing, Optional ByVal AppSourceRemarks As String = Nothing, Optional ByVal PrefWorkLocation As String = Nothing, Optional ByVal PrefSalary As String = Nothing, _
                                  Optional ByVal PrefSalaryTypeId As Integer = Nothing, Optional ByVal IsSalaryNegotiable As Boolean = Nothing, Optional ByVal AvailabilityTypeId As Integer = Nothing, Optional ByVal AvailNoticeCount As Integer = Nothing, _
-                                 Optional ByVal AvailNoticeTypeId As Integer = Nothing, Optional ByVal AvailNoticeOnDate As Date = Nothing, Optional ByVal CandidateRemarks As Integer = Nothing, Optional ByVal CandidateImage As Byte = Nothing)
+                                 Optional ByVal AvailNoticeTypeId As Integer = Nothing, Optional ByVal AvailNoticeOnDate As Date = Nothing, Optional ByVal CandidateRemarks As String = Nothing, Optional ByVal CandidateImage As Byte = Nothing)
 
 
         Params = New ArrayList
@@ -142,69 +145,85 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cimage", CandidateImage))
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
 
+        Dim Legend As String = _
+            <Legend>
+               0 - Add
+               1 - Edit
+               2 - Delete
+               3 - Load Information
+               4 - Load List
+            </Legend>
+
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
-            If TranType = 3 Then
-                Dset = Query("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
-            Else
-                QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
-            End If
+            Select Case TranType
+                Case 0
+                    SelectedId = QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
+                Case 1, 2
+                    QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
+                Case 3
+                    Dset = New DataSet
+                    Dset = Query("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
 
+                    If Not IsNothing(Dset) Or Dset.Tables(0).Rows.Count > 0 Then
+                        For Each Drow As DataRow In Dset.Tables(0).Rows
+                            lblRefId.Text = Drow("referenceid")
+                            txtLName.Text = Drow("lastname")
+                            txtFName.Text = Drow("firstname")
+                            txtMName.Text = Drow("middlename")
+                            lblStatus.Text = Drow("statusdesc")
+                            cboGender.SelectedIndex = CInt(Drow("gender"))
+                            dtpBDate.Value = CDate(Drow("bdate"))
+                            txtBPlace.Text = Drow("bplace")
+                            txtAge.Text = Drow("age")
+                            txtAdd1.Text = Drow("address1")
+                            rdbAdd1.Checked = CBool(Drow("add1iscurrent"))
+                            txtAdd2.Text = Drow("address2")
+                            rdbAdd2.Checked = CBool(Drow("add2iscurrent"))
+                            txtPhoneNo.Text = Drow("phoneno")
+                            txtMobileNo.Text = Drow("mobileno")
+                            txtEmail.Text = Drow("email")
+                            mtbSSS.Text = Drow("sssid")
+                            mtbTIN.Text = Drow("tinid")
+                            mtbHDMF.Text = Drow("hdmfid")
+                            mtbPH.Text = Drow("phid")
+
+                            txtApplyingFor.Text = Drow("appliedposition")
+                            'cboAppSource.SelectedIndex = Drow("appsourceid")
+                            txtAppSrcRemarks.Text = Drow("appsourceremarks")
+                            txtPrefWorkLocation.Text = Drow("prefworklocation")
+                            txtSalary.Text = Format(Drow("prefsalary"), "###,###,##0.00")
+                            cboSalaryRate.SelectedIndex = Drow("prefsalarytype")
+                            chkIsNegotiable.Checked = CBool(Drow("issalarynegotiable"))
+
+                            Select Case Drow("availabilitytype")
+                                Case 0
+                                    rdbAvail0.Checked = True
+                                Case 1
+                                    rdbAvail1.Checked = True
+                                    txtAvailInCount.Text = Drow("availinnotice")
+                                    'cboAvailInType.SelectedIndex = Drow("availnoticetype")
+                                Case 2
+                                    rdbAvail2.Checked = True
+                                    dtpAvailableOn.Value = CDate(Drow("availondate"))
+                                Case 3
+                                    rdbAvail3.Checked = True
+                                Case Else
+
+                            End Select
+                            txtCandidateRemarks.Text = Drow("candidateremarks")
+                        Next
+                        Call Tran_FamilyBackground(4, 0, CandidateId, CurrentUserId)
+                        Call Tran_EducationalBackground(4, 0, CandidateId, CurrentUserId)
+                        Call Tran_EmploymentHistory(4, 0, CandidateId, CurrentUserId)
+                        Call Tran_CandidateSkills(4, 0, CandidateId, CurrentUserId)
+                    End If
+
+                Case 4
+
+                Case Else
+
+            End Select
         End Using
-        If TranType = 3 Then
-            If Dset.Tables.Count > 0 Or Not IsNothing(Dset) Then
-                For Each Drow As DataRow In Dset.Tables(0).Rows
-                    lblRefId.Text = Drow("referenceid")
-                    txtLName.Text = Drow("lastname")
-                    txtFName.Text = Drow("firstname")
-                    txtMName.Text = Drow("middlename")
-                    lblStatus.Text = Drow("statusdesc")
-                    cboGender.SelectedIndex = CInt(Drow("gender"))
-                    dtpBDate.Value = CDate(Drow("bdate"))
-                    txtBPlace.Text = Drow("bplace")
-                    txtAge.Text = Drow("age")
-                    txtAdd1.Text = Drow("address1")
-                    rdbAdd1.Checked = CBool(Drow("add1iscurrent"))
-                    txtAdd2.Text = Drow("address2")
-                    rdbAdd2.Checked = CBool(Drow("add2iscurrent"))
-                    txtPhoneNo.Text = Drow("phoneno")
-                    txtMobileNo.Text = Drow("mobileno")
-                    txtEmail.Text = Drow("email")
-                    mtbSSS.Text = Drow("sssid")
-                    mtbTIN.Text = Drow("tinid")
-                    mtbHDMF.Text = Drow("hdmfid")
-                    mtbPH.Text = Drow("phid")
-
-                    txtApplyingFor.Text = Drow("appliedposition")
-                    'cboAppSource.SelectedIndex = Drow("appsourceid")
-                    txtAppSrcRemarks.Text = Drow("appsourceremarks")
-                    txtPrefWorkLocation.Text = Drow("prefworklocation")
-                    txtSalary.Text = Format(Drow("prefsalary"), "###,###,##0.00")
-                    cboSalaryRate.SelectedIndex = Drow("prefsalarytype")
-                    chkIsNegotiable.Checked = CBool(Drow("issalarynegotiable"))
-
-                    Select Case Drow("availabilitytype")
-                        Case 0
-                            rdbAvail0.Checked = True
-                        Case 1
-                            rdbAvail1.Checked = True
-                            txtAvailInCount.Text = Drow("availinnotice")
-                            'cboAvailInType.SelectedIndex = Drow("availnoticetype")
-                        Case 2
-                            rdbAvail2.Checked = True
-                            dtpAvailableOn.Value = CDate(Drow("availondate"))
-                        Case 3
-                            rdbAvail3.Checked = True
-                        Case Else
-
-                    End Select
-                    txtCandidateRemarks.Text = Drow("candidateremarks")
-                Next
-                Call Tran_FamilyBackground(4, 0, CandidateId, CurrentUserId)
-                Call Tran_EducationalBackground(4, 0, CandidateId, CurrentUserId)
-                Call Tran_EmploymentHistory(4, 0, CandidateId, CurrentUserId)
-                Call Tran_CandidateSkills(4, 0, CandidateId, CurrentUserId)
-            End If
-        End If
 
     End Sub
 
@@ -225,37 +244,51 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cisdeceased", IsDeceased))
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
 
-        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
-            If TranType = 0 Or TranType = 1 Or TranType = 2 Then
-                QueryExec("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
-            ElseIf TranType = 3 Then
-                Dset = New DataSet
-                Dset = Query("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
-                For Each Drow As DataRow In Dset.Tables(0).Rows
-                    txtFMName.Text = Drow("familymembername")
-                    dtpFMBDate.Value = CDate(Drow("bdate"))
-                    txtFMAge.Text = Drow("age")
-                    cboFMCStatus.SelectedIndex = CInt(Drow("civilstatus"))
-                    txtFMRel.Text = Drow("relationship")
-                    txtFMOccupation.Text = Drow("occupation")
-                    chkFMIsDeceased.Checked = CBool(Drow("isdeceased"))
+        Dim Legend As String = _
+            <Legend>
+               0 - Add
+               1 - Edit
+               2 - Delete
+               3 - Load Information
+               4 - Load List
+            </Legend>
 
-                Next
-            ElseIf TranType = 4 Then
-                Dset = New DataSet
-                Dset = Query("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
-                dgvFM.DataSource = Dset.Tables(0)
-                FormatGridColumn(dgvFM, 2, "FMId", False, False, True, 50)
-                FormatGridColumn(dgvFM, 3, "CandidateId", False, False, True, 50)
-                FormatGridColumn(dgvFM, 4, "Name", True, True, True, 250)
-                FormatGridColumn(dgvFM, 5, "Birth Date", True, True, True, 150)
-                FormatGridColumn(dgvFM, 6, "Age", True, True, True, 70)
-                FormatGridColumn(dgvFM, 7, "Civil Status Id", False, False, True, 50)
-                FormatGridColumn(dgvFM, 8, "Civil Status", True, True, True, 150)
-                FormatGridColumn(dgvFM, 9, "Relationship", True, True, True, 250)
-                FormatGridColumn(dgvFM, 10, "Occupation", True, True, True, 250)
-                dgvFM.Refresh()
-            End If
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            Select Case TranType
+                Case 0, 1, 2
+                    QueryExec("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
+
+                Case 3
+                    Dset = New DataSet
+                    Dset = Query("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
+                    For Each Drow As DataRow In Dset.Tables(0).Rows
+                        txtFMName.Text = Drow("familymembername")
+                        dtpFMBDate.Value = CDate(Drow("bdate"))
+                        txtFMAge.Text = Drow("age")
+                        cboFMCStatus.SelectedIndex = CInt(Drow("civilstatus"))
+                        txtFMRel.Text = Drow("relationship")
+                        txtFMOccupation.Text = Drow("occupation")
+                        chkFMIsDeceased.Checked = CBool(Drow("isdeceased"))
+                    Next
+
+                Case 4
+                    Dset = New DataSet
+                    Dset = Query("tran_candidatefamilybackground", Cn, Params, CommandType.StoredProcedure)
+                    dgvFM.DataSource = Dset.Tables(0)
+                    FormatGridColumn(dgvFM, 2, "FMId", False, False, True, 50)
+                    FormatGridColumn(dgvFM, 3, "CandidateId", False, False, True, 50)
+                    FormatGridColumn(dgvFM, 4, "Name", True, True, True, 250)
+                    FormatGridColumn(dgvFM, 5, "Birth Date", True, True, True, 150)
+                    FormatGridColumn(dgvFM, 6, "Age", True, True, True, 70)
+                    FormatGridColumn(dgvFM, 7, "Civil Status Id", False, False, True, 50)
+                    FormatGridColumn(dgvFM, 8, "Civil Status", True, True, True, 150)
+                    FormatGridColumn(dgvFM, 9, "Relationship", True, True, True, 250)
+                    FormatGridColumn(dgvFM, 10, "Occupation", True, True, True, 250)
+                    dgvFM.Refresh()
+
+                Case Else
+
+            End Select
         End Using
     End Sub
 
@@ -277,41 +310,52 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@ce_honors", HonorsReceived))
         Params.Add(New MySqlParameter("@usedid", CurrentUID))
 
+        Dim Legend As String = _
+            <Legend>
+               0 - Add
+               1 - Edit
+               2 - Delete
+               3 - Load Information
+               4 - Load List
+            </Legend>
+
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
-            If TranType = 0 Or TranType = 1 Or TranType = 2 Then
-                QueryExec("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
-            ElseIf TranType = 3 Then
-                Dset = New DataSet
-                Dset = Query("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
+            Select Case TranType
+                Case 0, 1, 2
+                    QueryExec("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
 
-                For Each Drow As DataRow In Dset.Tables(0).Rows
-                    txtEduSchool.Text = Drow("institutionname")
-                    txtEduAdd.Text = Drow("institutionadd")
-                    txtEduCourse.Text = Drow("coursetaken")
-                    dtpEduStart.Value = CDate(Drow("startdate"))
-                    dtpEduEnd.Value = CDate(Drow("enddate"))
-                    dtpEduGrad.Value = CDate(Drow("graddate"))
-                    chkEduIsUG.Checked = CBool(Drow("isundergrad"))
-                    txtEduHonors.Text = Drow("honorsreceived")
-                Next
+                Case 3
+                    Dset = New DataSet
+                    Dset = Query("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
 
-            ElseIf TranType = 4 Then
-                Dset = New DataSet
-                Dset = Query("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
-                dgvEduHist.DataSource = Dset.Tables(0)
-                FormatGridColumn(dgvEduHist, 2, "EducId", False, False, True, 50)
-                FormatGridColumn(dgvEduHist, 3, "CandidateId", False, False, True, 50)
-                FormatGridColumn(dgvEduHist, 4, "School Name", False, True, True, 300)
-                FormatGridColumn(dgvEduHist, 5, "School Address", False, True, True, 300)
-                FormatGridColumn(dgvEduHist, 6, "Course Taken", False, True, True, 300)
-                FormatGridColumn(dgvEduHist, 7, "Inclusive Dates", False, True, True, 200)
-                FormatGridColumn(dgvEduHist, 8, "Date Graduated", False, True, True, 120)
-                FormatGridColumn(dgvEduHist, 9, "Honors Received", False, True, True, 200)
+                    For Each Drow As DataRow In Dset.Tables(0).Rows
+                        txtEduSchool.Text = Drow("institutionname")
+                        txtEduAdd.Text = Drow("institutionadd")
+                        txtEduCourse.Text = Drow("coursetaken")
+                        dtpEduStart.Value = CDate(Drow("startdate"))
+                        dtpEduEnd.Value = CDate(Drow("enddate"))
+                        dtpEduGrad.Value = CDate(Drow("graddate"))
+                        chkEduIsUG.Checked = CBool(Drow("isundergrad"))
+                        txtEduHonors.Text = Drow("honorsreceived")
+                    Next
 
-                dgvEduHist.Refresh()
-            Else
-                MsgBox("Unhandled condition", MsgBoxStyle.Exclamation, "OOOPS!")
-            End If
+                Case 4
+                    Dset = New DataSet
+                    Dset = Query("tran_candidateeduchist", Cn, Params, CommandType.StoredProcedure)
+                    dgvEduHist.DataSource = Dset.Tables(0)
+                    FormatGridColumn(dgvEduHist, 2, "EducId", False, False, True, 50)
+                    FormatGridColumn(dgvEduHist, 3, "CandidateId", False, False, True, 50)
+                    FormatGridColumn(dgvEduHist, 4, "School Name", False, True, True, 300)
+                    FormatGridColumn(dgvEduHist, 5, "School Address", False, True, True, 300)
+                    FormatGridColumn(dgvEduHist, 6, "Course Taken", False, True, True, 300)
+                    FormatGridColumn(dgvEduHist, 7, "Inclusive Dates", False, True, True, 200)
+                    FormatGridColumn(dgvEduHist, 8, "Date Graduated", False, True, True, 120)
+                    FormatGridColumn(dgvEduHist, 9, "Honors Received", False, True, True, 200)
+                    dgvEduHist.Refresh()
+
+                Case Else
+
+            End Select
         End Using
 
     End Sub
@@ -335,6 +379,15 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cimsuperior", ImmediateSuperior))
         Params.Add(New MySqlParameter("@creasonforleaving", ReasonForLeaving))
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
+
+        Dim Legend As String = _
+            <Legend>
+               0 - Add
+               1 - Edit
+               2 - Delete
+               3 - Load Information
+               4 - Load List
+            </Legend>
 
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
             Select Case TranType
@@ -362,13 +415,13 @@ Public Class frmCandidateProfile
 
                     With dgvEmp
                         .DataSource = Dset.Tables(0)
-                        FormatGridColumn(dgvEmp, 3, "EmpId", False, False, True, 50)
-                        FormatGridColumn(dgvEmp, 4, "CandidateId", False, False, True, 50)
-                        FormatGridColumn(dgvEmp, 5, "IsPresent", False, False, True, 50)
-                        FormatGridColumn(dgvEmp, 6, "Company Name", True, True, True, 300)
-                        FormatGridColumn(dgvEmp, 7, "Position Held", False, True, True, 250)
-                        FormatGridColumn(dgvEmp, 8, "Inclusive Dates", False, True, True, 200)
-                        FormatGridColumn(dgvEmp, 9, "Reason for Leaving", False, True, True, 350)
+                        FormatGridColumn(dgvEmp, 2, "EmpId", False, False, True, 50)
+                        FormatGridColumn(dgvEmp, 3, "CandidateId", False, False, True, 50)
+                        FormatGridColumn(dgvEmp, 4, "Present", False, True, True, 70, DataGridViewContentAlignment.MiddleCenter, DataGridViewContentAlignment.MiddleCenter)
+                        FormatGridColumn(dgvEmp, 5, "Company Name", True, True, True, 300)
+                        FormatGridColumn(dgvEmp, 6, "Position Held", False, True, True, 250)
+                        FormatGridColumn(dgvEmp, 7, "Inclusive Dates", False, True, True, 200)
+                        FormatGridColumn(dgvEmp, 8, "Reason for Leaving", False, True, True, 350)
                         .Refresh()
                     End With
                 Case Else
@@ -393,6 +446,15 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cttlyearsused", TotalYearsUsed))
         Params.Add(New MySqlParameter("@cyearlastused", LastYearUsed))
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
+
+        Dim Legend As String = _
+            <Legend>
+               0 - Add
+               1 - Edit
+               2 - Delete
+               3 - Load Information
+               4 - Load List
+            </Legend>
 
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
             Select Case TranType
@@ -432,20 +494,15 @@ Public Class frmCandidateProfile
 
             End Select
         End Using
-
-
     End Sub
 
     Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
-        CandidateTranType = 3
-        Dim ParamList As New ArrayList
-        ParamList.AddRange({4, "Mix", 5.1})
         With frmSearch
             .StartPosition = FormStartPosition.CenterScreen
             .WindowState = FormWindowState.Normal
-            .LoadSeachItems(Me.Name, ParamList)
+            .LoadSeachItems(Me)
             .ShowDialog()
-            Call TranCandidateInfo(CandidateTranType, SelCandidateId)
+            Call TranCandidateInfo(3, SelectedId)
         End With
     End Sub
 
@@ -468,10 +525,22 @@ Public Class frmCandidateProfile
 
     Private Sub tabInfo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tabInfo.SelectedIndexChanged
         With tabInfo
-            If .SelectedIndex = 0 Or .SelectedIndex = 5 Then
+            If .SelectedIndex = 0 Or .SelectedIndex = 1 Then
                 tsOps.Enabled = True
             Else
                 tsOps.Enabled = False
+                Select Case .SelectedIndex
+                    Case 2
+                        If SelectedId > 0 Then tsFM.Enabled = True Else tsFM.Enabled = False
+                    Case 3
+                        If SelectedId > 0 Then tsEduc.Enabled = True Else tsEduc.Enabled = False
+                    Case 4
+                        If SelectedId > 0 Then tsEmp.Enabled = True Else tsEmp.Enabled = False
+                    Case 5
+                        If SelectedId > 0 Then tsSkills.Enabled = True Else tsSkills.Enabled = False
+                    Case Else
+
+                End Select
             End If
         End With
     End Sub
@@ -498,6 +567,7 @@ Public Class frmCandidateProfile
         tsbPrint.Visible = True
         tsbSave.Visible = False
         tsbCancel.Visible = False
+        picCandidate.Image = RecSys.My.Resources.profilephoto2
 
         If CandidateTranType = 0 Then
             Call LogActivity(1, "User " + CurrentUName + " cancels profile creation.", CurrentUID)
@@ -509,11 +579,12 @@ Public Class frmCandidateProfile
 
         Call ClearNEnableFields(False)
         CandidateTranType = -1
-        SelCandidateId = 0
+        SelectedId = 0
+
     End Sub
 
     Private Sub tsbEdit_Click(sender As Object, e As EventArgs) Handles tsbEdit.Click
-        If SelCandidateId > 0 Then
+        If SelectedId > 0 Then
             CandidateTranType = 1
             tsbSave.Visible = True
             tsbCancel.Visible = True
@@ -534,13 +605,13 @@ Public Class frmCandidateProfile
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
-        If SelCandidateId > 0 Then
+        If SelectedId > 0 Then
             If MsgBox("Would you like to remove candidate profile of [" + lblRefId.Text + " " + txtFName.Text + " " + txtLName.Text + "] ?") = MsgBoxResult.Yes Then
-                Call TranCandidateInfo(2, SelCandidateId)
+                Call TranCandidateInfo(2, SelectedId)
                 Call LogActivity(1, "User " + CurrentUName + " successfully deleted the candidate profile of Mr./Ms. " + txtFName.Text + " " + txtLName.Text + ".", CurrentUID)
                 Call ClearNEnableFields(False)
                 CandidateTranType = -1
-                SelCandidateId = 0
+                SelectedId = 0
                 Call LogActivity(0, "System clears and disable fields. After deletion of candidate profile.", CurrentUID)
             End If
         Else
@@ -553,9 +624,98 @@ Public Class frmCandidateProfile
 
     Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
         If txtFName.Text.Trim.Length = 0 Then
+            MsgBox("Unable to save information. Please enter a valid value for [First Name] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply a value to [First Name] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtLName.Text.Trim.Length = 0 Then
+            MsgBox("Unable to save information. Please enter a valid value for [Last Name] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply a value to [Last Name] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtApplyingFor.Text.Length = 0 Then
+            MsgBox("Unable to save information. Please enter a valid value for [Position Applying for] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply a value to [Position Applying for] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If cboAppSource.SelectedIndex = -1 Then
+            MsgBox("Unable to save information. Please select a value for [Application Source] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to select a valid value from [Application Source] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtSalary.Text.Trim.Length = 0 Or IsNumeric(txtSalary.Text) = False Then
+            MsgBox("Unable to save information. Please enter a valid value for [Preferred Salary Rate] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply a value to [Preferred Salary Rate] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If cboGender.SelectedIndex = -1 Then
+            MsgBox("Unable to save information. Please select a valid value for [Gender] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply a value to [Gender] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If CInt(txtAge.Text) < 18 Then
+            If MsgBox("Under law, ages below 18 are NOT allowed to work without proper consent from a legal guardian. Proceed?", MsgBoxStyle.Question + vbYesNo, "Confirm") = MsgBoxResult.Yes Then
+                LogActivity(1, "Sytem validation : User verifies and confirms adding candidate under 18 of age.", CurrentUID)
+            Else
+                Exit Sub
+            End If
+        End If
+        If cboCStatus.SelectedIndex = -1 Then
+            MsgBox("Unable to save information. Please enter a valid value for [Civil Status] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to select a vald value from [Civil Status] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtAdd1.Text.Trim.Length = 0 And txtAdd2.Text.Trim.Length = 0 Then
+            MsgBox("Unable to save information. Please enter at least one(1) valid Address in [Address 1] or [Address 2] field.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply value to [Address 1] or [Address 2] field while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If (rdbAdd1.Checked = True And txtAdd1.Text.Trim.Length = 0) Or (rdbAdd2.Checked = True And txtAdd2.Text.Trim.Length = 0) Then
+            MsgBox("Unable to save information. Selected [Primary Address] cannot be empty.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply value to [Address 1] as [Primary Address] while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtPhoneNo.Text.Trim.Length = 0 And txtMobileNo.Text.Trim.Length = 0 Then
+            MsgBox("Unable to save information. Candidate should have at least one(1) valid contact number.", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply value to [Phone Number] or [Mobile Number] while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        End If
+        If txtEmail.Text.Trim.Length = 0 Then
+            MsgBox("Unable to save information. Candidate should have at least one(1) valid [Email Address].", MsgBoxStyle.Exclamation, "Saving Error")
+            LogActivity(1, "Sytem validation : User fails to supply value to [Email Address] while attempting to save Candidate Information", CurrentUID)
+            Exit Sub
+        Else
+            If IsValidEmail(txtEmail.Text) = False Then
+                MsgBox("Unable to save information. [Email Address] value is invalid.", MsgBoxStyle.Exclamation, "Saving Error")
+                LogActivity(1, "Sytem validation : User supplies and invalid [Email Address] while attempting to save Candidate Information", CurrentUID)
+                Exit Sub
+            End If
+        End If
 
-        ElseIf txtLName.Text.Trim.Length = 0 Then
+        If txtAvailInCount.Text = "" Then txtAvailInCount.Text = "0"
 
+        Dim AvailType As Integer = -1
+        If rdbAvail0.Checked = True Then
+            AvailType = 0
+        ElseIf rdbAvail1.Checked = True Then
+            AvailType = 1
+        ElseIf rdbAvail2.Checked = True Then
+            AvailType = 2
+        ElseIf rdbAvail3.Checked = True Then
+            AvailType = 3
+        Else
+            AvailType = 0
+        End If
+
+        If MsgBox("Save Candidate information?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+            Call TranCandidateInfo(CandidateTranType, 0, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
+                                   txtBPlace.Text, cboCStatus.SelectedIndex, txtAdd1.Text, rdbAdd1.Checked, txtAdd2.Text, rdbAdd2.Checked, _
+                                   txtPhoneNo.Text, txtMobileNo.Text, txtEmail.Text, mtbSSS.Text, mtbTIN.Text, mtbHDMF.Text, mtbPH.Text, _
+                                   1, txtApplyingFor.Text, cboAppSource.SelectedValue, txtAppSrcRemarks.Text, txtPrefWorkLocation.Text, txtSalary.Text, _
+                                   cboSalaryRate.SelectedIndex, chkIsNegotiable.Checked, AvailType, txtAvailInCount.Text, cboAvailInType.SelectedIndex, _
+                                   dtpAvailableOn.Value, txtCandidateRemarks.Text)
+
+            MsgBox("Candidate profile has been saved successfully", MsgBoxStyle.Information, "Saved")
         End If
     End Sub
 
@@ -564,25 +724,26 @@ Public Class frmCandidateProfile
         selFMCandidateId = dgvFM.Rows(e.RowIndex).Cells("ci_id").Value.ToString
         selFMName = dgvFM.Rows(e.RowIndex).Cells("familymembername").Value.ToString
 
-        If e.ColumnIndex = 0 Then
-            FMTranType = 1
-            Call Tran_FamilyBackground(3, selFMId, selFMCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
-            tsbFMSave.ToolTipText = "Update Information"
-        ElseIf e.ColumnIndex = 1 Then
-            If MsgBox("Proceed removing Family Member?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
-                Call Tran_FamilyBackground(2, selFMId, selFMCandidateId, CurrentUID)
-                Call Tran_FamilyBackground(4, 0, selFMCandidateId, CurrentUID)
-                MsgBox(selFMName + " has been removed from list.", MsgBoxStyle.Information, "Removed")
-            End If
-        Else
-            MsgBox("Unhandled condition", MsgBoxStyle.Information, "System Notification")
-        End If
+        Select Case e.ColumnIndex
+            Case 0
+                FMTranType = 1
+                Call Tran_FamilyBackground(3, selFMId, selFMCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
+                tsbFMSave.ToolTipText = "Update Information"
+            Case 1
+                If MsgBox("Proceed removing Family Member?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
+                    Call Tran_FamilyBackground(2, selFMId, selFMCandidateId, CurrentUID)
+                    Call Tran_FamilyBackground(4, 0, selFMCandidateId, CurrentUID)
+                    MsgBox(selFMName + " has been removed from list.", MsgBoxStyle.Information, "Removed")
+                End If
+            Case Else
+
+        End Select
 
     End Sub
 
     Private Sub tsbFMSave_Click(sender As Object, e As EventArgs) Handles tsbFMSave.Click
         If FMTranType = 0 Then
-            Call Tran_FamilyBackground(0, 0, SelCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
+            Call Tran_FamilyBackground(0, 0, SelectedId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
             MsgBox(txtFMName.Text + " has been added to family members list.", MsgBoxStyle.Information, "Family Member Added")
         Else
             Call Tran_FamilyBackground(1, selFMId, selFMCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
@@ -598,7 +759,8 @@ Public Class frmCandidateProfile
         txtFMOccupation.Clear()
         chkFMIsDeceased.CheckState = CheckState.Unchecked
 
-        Call Tran_FamilyBackground(4, selFMId, selFMCandidateId, CurrentUID, txtFMName.Text, dtpFMBDate.Value, cboFMCStatus.SelectedIndex, txtFMRel.Text, txtFMOccupation.Text, chkFMIsDeceased.Checked)
+        Call Tran_FamilyBackground(4, 0, SelectedId, CurrentUID)
+
     End Sub
 
     Private Sub tsbFMCancel_Click(sender As Object, e As EventArgs) Handles tsbFMCancel.Click
@@ -619,28 +781,30 @@ Public Class frmCandidateProfile
         selSchool = dgvEduHist.Rows(e.RowIndex).Cells("institutionname").Value.ToString
         selCourseTaken = dgvEduHist.Rows(e.RowIndex).Cells("coursetaken").Value.ToString
 
-        If e.ColumnIndex = 0 Then
-            EducTranType = 1
-            Call Tran_EducationalBackground(3, selEducId, selEducCandidateId, CurrentUID)
-            tsbEducSave.ToolTipText = "Update Information"
-        ElseIf e.ColumnIndex = 1 Then
-            If MsgBox("Proceed removing Education from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
-                Call Tran_EducationalBackground(2, selEducId, selEducCandidateId, CurrentUID)
-                Call Tran_EducationalBackground(4, 0, selEducCandidateId, CurrentUID)
-                MsgBox(selCourseTaken + " from " + selSchool + " has been removed from list.", MsgBoxStyle.Information, "Removed")
-            End If
+        Select Case e.ColumnIndex
+            Case 0
+                EducTranType = 1
+                Call Tran_EducationalBackground(3, selEducId, selEducCandidateId, CurrentUID)
+                tsbEducSave.ToolTipText = "Update Information"
 
-        Else
-            MsgBox("Unhandled condition", MsgBoxStyle.Information, "System Notification")
-        End If
+            Case 1
+                If MsgBox("Proceed removing Education from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
+                    Call Tran_EducationalBackground(2, selEducId, selEducCandidateId, CurrentUID)
+                    Call Tran_EducationalBackground(4, 0, selEducCandidateId, CurrentUID)
+                    MsgBox(selCourseTaken + " from " + selSchool + " has been removed from list.", MsgBoxStyle.Information, "Removed")
+                End If
+            Case Else
+
+        End Select
+
     End Sub
 
     Private Sub tsbEducSave_Click(sender As Object, e As EventArgs) Handles tsbEducSave.Click
         If EducTranType = 0 Then
-            Call Tran_EducationalBackground(0, 0, SelCandidateId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
+            Call Tran_EducationalBackground(0, 0, SelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
             MsgBox("Education has been added to list.", MsgBoxStyle.Information, "Education Added")
         Else
-            Call Tran_EducationalBackground(1, 0, SelCandidateId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
+            Call Tran_EducationalBackground(1, 0, SelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
             MsgBox("Education has been modified successfully.", MsgBoxStyle.Information, "Education Updated")
             EducTranType = 0
         End If
@@ -655,7 +819,7 @@ Public Class frmCandidateProfile
         txtEduHonors.Clear()
         tsbEducSave.ToolTipText = "Save Information"
 
-        Call Tran_EducationalBackground(4, 0, SelCandidateId, CurrentUID)
+        Call Tran_EducationalBackground(4, 0, SelectedId, CurrentUID)
 
     End Sub
 
@@ -670,6 +834,7 @@ Public Class frmCandidateProfile
         chkEduIsUG.CheckState = CheckState.Unchecked
         txtEduHonors.Clear()
         tsbEducSave.ToolTipText = "Save Information"
+        picCandidate.Image = picCandidate.InitialImage
     End Sub
 
     Private Sub dgvEmp_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmp.CellClick
@@ -678,23 +843,25 @@ Public Class frmCandidateProfile
         selCompanyName = dgvEmp.Rows(e.RowIndex).Cells("companyname").Value.ToString
         selJobPost = dgvEmp.Rows(e.RowIndex).Cells("posheld").Value.ToString
 
-        If e.ColumnIndex = 0 Then
-            EmpTranType = 1
-            Call Tran_EmploymentHistory(3, selEmpId, selEmpCandidateId, CurrentUID)
-        ElseIf e.ColumnIndex = 1 Then
-            If MsgBox("Proceed removing employment from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
+        Select Case e.ColumnIndex
+            Case 0
+                EmpTranType = 1
                 Call Tran_EmploymentHistory(3, selEmpId, selEmpCandidateId, CurrentUID)
-                Call Tran_EmploymentHistory(4, 0, selEmpCandidateId, CurrentUID)
-                MsgBox("Employment has been successfully removed from list.", MsgBoxStyle.Information, "Removed")
-            End If
-        Else
-            MsgBox("Unhandled condition")
-        End If
+            Case 1
+                If MsgBox("Proceed removing employment from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
+                    Call Tran_EmploymentHistory(2, selEmpId, selEmpCandidateId, CurrentUID)
+                    Call Tran_EmploymentHistory(4, 0, selEmpCandidateId, CurrentUID)
+                    MsgBox("Employment has been successfully removed from list.", MsgBoxStyle.Information, "Removed")
+                End If
+            Case Else
+
+        End Select
+
     End Sub
 
     Private Sub tsbEmpSave_Click(sender As Object, e As EventArgs) Handles tsbEmpSave.Click
         If EmpTranType = 0 Then
-            Call Tran_EmploymentHistory(0, 0, SelCandidateId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
+            Call Tran_EmploymentHistory(0, 0, SelectedId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
             MsgBox("Employment information has been added successfully.", MsgBoxStyle.Information, "Employment Added")
         Else
             Call Tran_EmploymentHistory(1, selEmpId, selEmpCandidateId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
@@ -711,7 +878,7 @@ Public Class frmCandidateProfile
         txtEmpPosHeld.Clear()
         txtEmpIS.Clear()
         txtEmpReason.Clear()
-        Call Tran_EmploymentHistory(4, 0, SelCandidateId, CurrentUID)
+        Call Tran_EmploymentHistory(4, 0, SelectedId, CurrentUID)
 
     End Sub
 
@@ -727,4 +894,14 @@ Public Class frmCandidateProfile
         txtEmpReason.Clear()
     End Sub
 
+    Private Sub btnUseImgFile_Click(sender As Object, e As EventArgs) Handles btnUseImgFile.Click
+        ofdImage.InitialDirectory = Application.StartupPath
+        ofdImage.Filter = "JPG/JPEG Images (*.jpg/*jpeg) | *.jpg; *.jpeg|Bitmap Images (*.bmp)| *.bmp"
+        ofdImage.FilterIndex = 0
+        If ofdImage.ShowDialog = Windows.Forms.DialogResult.OK Then
+            picCandidate.Image = Image.FromFile(ofdImage.FileName)
+            selImagePath = ofdImage.FileName
+            MsgBox(selImagePath)
+        End If
+    End Sub
 End Class
