@@ -80,6 +80,28 @@ Public Class frmSearch
                             FormatGridColumn(dgvSearchItems, 5, "Skill Type", True, True, True, 250)
                         End With
 
+                    Case "frmSkill"
+                        Qry = <Query>
+                                    select
+	                                    a.`sk_id`, c.`st_id`, b.`sg_id`,  a.`skillcode`, a.`description` as skill, b.`description` as skillgroup, c.`description` as skilltype
+                                    from 		   `rms_skills`      as a
+	                                    inner join `rms_skillgroups` as b on a.`sg_id` = b.`sg_id`
+	                                    inner join `rms_skilltypes`  as c on b.`st_id` = c.`st_id`
+                                    where a.`recstatus` = 1 limit 100; 
+                              </Query>.Value
+                        Dset = New DataSet
+                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        With dgvSearchItems
+                            .DataSource = Dset.Tables(0)
+                            FormatGridColumn(dgvSearchItems, 1, "Skill Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 2, "Skill Type Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 3, "Skill Group Id", False, False, False, 50)
+                            FormatGridColumn(dgvSearchItems, 4, "Code", True, True, True, 150)
+                            FormatGridColumn(dgvSearchItems, 5, "Description", True, True, True, 250)
+                            FormatGridColumn(dgvSearchItems, 6, "Skill Group", False, True, True, 250)
+                            FormatGridColumn(dgvSearchItems, 7, "Skill Type", False, True, True, 250)
+                        End With
+
                     Case "frmSkillLevel"
                         Qry = "select `sl_id`, `levelcode`, `description` from `rms_skilllevels` where `recstatus` = 1;"
                         Dset = New DataSet
@@ -101,8 +123,6 @@ Public Class frmSearch
         End Using
         Return 0
     End Function
-
-
 
     Private Sub dgvSearchItems_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSearchItems.CellClick
         If e.ColumnIndex = 0 Then

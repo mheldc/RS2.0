@@ -21,23 +21,41 @@ Public Class frmCandidateProfile
     Dim EmpTranType As Integer = 0
     Dim selEmpId, selEmpCandidateId As Integer, selJobPost, selCompanyName As String
 
+    ' Skills and Talents
+    Dim SkillTranType As Integer = 0
+    Dim selSkillType As Integer, selSkillGroup As Integer, selSkillId As Integer, selSkillRecId As Integer, selSkillName As String
+
     ' Others
     Dim selImagePath As String
-
-    Private Sub frmCandidateProfile_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If Not lblCRefId.Text.Length > 2 _
-            And MsgBox("Exit without saving entries?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm?") = MsgBoxResult.Yes Then
-            e.Cancel = False
-        Else
-            e.Cancel = True
-        End If
-    End Sub
 
     Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call ClearNEnableFields(False)
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
-            Qry = "select `cs_id`,`description` from `rms_candidatesource` where `recstatus` = 1;"
+            ' Applicant Source
+            Qry = <Query>
+                        select 0 as cs_id, '- Select an Applicant Source -' as description
+                        union all
+                        select `cs_id`,`description` from `rms_candidatesource` where `recstatus` = 1;
+
+                  </Query>.Value
             Call FillComboBox(Qry, Cn, "description", "cs_id", cboAppSource, , CommandType.Text)
+
+            'Skill Type
+            Qry = <Query>
+                        select 0 as st_id, '- Select a Skill Type -' as description
+                        union all
+                        select `st_id`, `description` from `rms_skilltypes` where `recstatus` = 1;
+                  </Query>.Value
+            Call FillComboBox(Qry, Cn, "description", "st_id", cboSkillType, , CommandType.Text)
+
+            ' Skill Level
+            Qry = <Query>
+                        select 0 as sl_id, '- Select a Skill Level -' as description
+                        union all
+                        select `sl_id`, `description` from `rms_skilllevels` where `recstatus` = 1;
+                  </Query>.Value
+            Call FillComboBox(Qry, Cn, "description", "sl_id", cboSkillLevel, , CommandType.Text)
+
         End Using
 
     End Sub
@@ -465,10 +483,10 @@ Public Class frmCandidateProfile
                     Dset = Query("tran_candidateskills", Cn, Params, CommandType.StoredProcedure)
 
                     For Each Drow As DataRow In Dset.Tables(0).Rows
-                        cboSkillType.SelectedIndex = CInt(Drow("skilltypeid"))
-                        cboSkillGroup.SelectedIndex = CInt(Drow("skillgroupid"))
-                        cboSkill.SelectedIndex = CInt(Drow("skillid"))
-                        cboSkillLevel.SelectedIndex = CInt(Drow("skilllevelid"))
+                        cboSkillType.SelectedValue = CInt(Drow("skilltypeid"))
+                        cboSkillGroup.SelectedValue = CInt(Drow("skillgroupid"))
+                        cboSkill.SelectedValue = CInt(Drow("skillid"))
+                        cboSkillLevel.SelectedValue = CInt(Drow("skilllevelid"))
                         txtSYearUsed.Text = Drow("totalyearsused")
                         txtSLastYearUsed.Text = Drow("yearlastused")
                     Next
@@ -904,4 +922,103 @@ Public Class frmCandidateProfile
             MsgBox(selImagePath)
         End If
     End Sub
+
+    Private Sub cboSkillType_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboSkillType.SelectedValueChanged
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            'Skill Group
+            Qry = <Query>
+                        select 0 as sg_id, '- Select a Skill Group -' as description
+                        union all
+                        select `sg_id`, `description` from `rms_skillgroups` where `st_id` = @skilltypeid and `recstatus` = 1;
+                  </Query>.Value
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@skilltypeid", cboSkillType.SelectedValue))
+            Call FillComboBox(Qry, Cn, "description", "sg_id", cboSkillGroup, Params, CommandType.Text)
+        End Using
+    End Sub
+
+    Private Sub cboSkillGroup_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboSkillGroup.SelectedValueChanged
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            'Skill Group
+            Qry = <Query>
+                        select 0 as sk_id, '- Select a Skill -' as description
+                        union all
+                        select `sk_id`, `description` from `rms_skills` where `sg_id` = @skillgroupid and `recstatus` = 1;
+                  </Query>
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@skillgroupid", cboSkillGroup.SelectedValue))
+            Call FillComboBox(Qry, Cn, "description", "sk_id", cboSkill, Params, CommandType.Text)
+        End Using
+    End Sub
+
+    Private Sub tsbSkillSave_Click(sender As Object, e As EventArgs) Handles tsbSkillSave.Click
+        If cboSkillType.SelectedValue = 0 Or cboSkillGroup.SelectedValue = 0 Or cboSkill.SelectedValue = 0 Or cboSkillLevel.SelectedValue = 0 Then
+            MsgBox("Incomplete/Invalid selection. Please try again.", MsgBoxStyle.Exclamation, "Saving Failed")
+            Exit Sub
+        End If
+        If txtSLastYearUsed.Text.Trim.Length < 4 Then
+            MsgBox("You have entered an invalid year. Try again.", MsgBoxStyle.Exclamation, "Saving Failed")
+            Exit Sub
+        End If
+        If txtSYearUsed.Text.Trim.Length = 0 Then
+            MsgBox("Invalid value supplied. Try again", MsgBoxStyle.Exclamation, "Saving Failed")
+            Exit Sub
+        End If
+
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            Dim SkillExists As Integer = 0
+            Qry = "select count(`cs_id`) as skillexists from `rms_candidateskills` where `ci_id` = @candidateid and `skillid` = @skillid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@candidateid", SelectedId))
+            Params.Add(New MySqlParameter("@skillid", cboSkill.SelectedValue))
+            SkillExists = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If SkillExists > 0 Then
+                MsgBox("Skill has already been added to list. Please select a different skill then try again.", MsgBoxStyle.Exclamation, "Saving Failed")
+                Exit Sub
+            End If
+        End Using
+
+        If MsgBox("Save this skill to list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+            Call Tran_CandidateSkills(SkillTranType, selSkillRecId, SelectedId, CurrentUID, cboSkillType.SelectedValue, _
+                                      cboSkillGroup.SelectedValue, cboSkill.SelectedValue, cboSkillLevel.SelectedValue, txtSYearUsed.Text, txtSLastYearUsed.Text)
+            MsgBox("Skill saved successfully.", MsgBoxStyle.Information, "Saved")
+            Tran_CandidateSkills(4, 0, SelectedId, CurrentUID)
+            tsbSkillCancel.PerformClick()
+        End If
+    End Sub
+
+    Private Sub tsbSkillCancel_Click(sender As Object, e As EventArgs) Handles tsbSkillCancel.Click
+        cboSkillType.SelectedValue = 0
+        cboSkillGroup.SelectedValue = 0
+        cboSkill.SelectedValue = 0
+        cboSkillLevel.SelectedValue = 0
+        txtSLastYearUsed.Text = Year(Now).ToString
+        txtSYearUsed.Text = "0"
+        SkillTranType = 0
+    End Sub
+
+    Private Sub dgvSkill_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSkill.CellClick
+        selSkillRecId = dgvSkill.Rows(e.RowIndex).Cells("cs_id").Value.ToString
+        selSkillType = dgvSkill.Rows(e.RowIndex).Cells("skilltypeid").Value.ToString
+        selSkillGroup = dgvSkill.Rows(e.RowIndex).Cells("skillgroupid").Value.ToString
+        selSkillId = dgvSkill.Rows(e.RowIndex).Cells("skillid").Value.ToString
+        selSkillName = dgvSkill.Rows(e.RowIndex).Cells("skillname").Value.ToString
+
+        Select Case e.ColumnIndex
+            Case 0
+                SkillTranType = 1
+                Call Tran_CandidateSkills(1, selSkillRecId, SelectedId, CurrentUID)
+            Case 1
+                If MsgBox("Remove skill from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+                    Call Tran_CandidateSkills(2, selSkillRecId, SelectedId, CurrentUID)
+                    MsgBox("Skill has been successfully removed from list.", MsgBoxStyle.Information, "Removed")
+                    Call Tran_CandidateSkills(4, selSkillRecId, SelectedId, CurrentUID)
+                    SkillTranType = 0
+                End If
+            Case Else
+
+        End Select
+    End Sub
+
+
 End Class
