@@ -26,7 +26,7 @@ Public Class frmCandidateProfile
     Dim selSkillType As Integer, selSkillGroup As Integer, selSkillId As Integer, selSkillRecId As Integer, selSkillName As String
 
     ' Others
-    Dim selImagePath As String
+    Dim selImagePath As String, imgData As IO.MemoryStream
 
     Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call ClearNEnableFields(False)
@@ -109,6 +109,14 @@ Public Class frmCandidateProfile
                         Console.WriteLine("the control is something else.")
                     End If
                 Next
+                dgvFM.DataSource = Nothing
+                dgvFM.Refresh()
+                dgvEduHist.DataSource = Nothing
+                dgvEduHist.Refresh()
+                dgvEmp.DataSource = Nothing
+                dgvEmp.Refresh()
+                dgvSkill.DataSource = Nothing
+                dgvSkill.Refresh()
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Error Occured")
             End Try
@@ -123,7 +131,7 @@ Public Class frmCandidateProfile
                                  Optional ByVal HDMFId As String = Nothing, Optional ByVal PHId As String = Nothing, Optional ByVal CandidateStatusId As Integer = Nothing, Optional ByVal AppliedPosition As String = Nothing, _
                                  Optional ByVal AppSourceId As Integer = Nothing, Optional ByVal AppSourceRemarks As String = Nothing, Optional ByVal PrefWorkLocation As String = Nothing, Optional ByVal PrefSalary As String = Nothing, _
                                  Optional ByVal PrefSalaryTypeId As Integer = Nothing, Optional ByVal IsSalaryNegotiable As Boolean = Nothing, Optional ByVal AvailabilityTypeId As Integer = Nothing, Optional ByVal AvailNoticeCount As Integer = Nothing, _
-                                 Optional ByVal AvailNoticeTypeId As Integer = Nothing, Optional ByVal AvailNoticeOnDate As Date = Nothing, Optional ByVal CandidateRemarks As String = Nothing, Optional ByVal CandidateImage As Byte = Nothing)
+                                 Optional ByVal AvailNoticeTypeId As Integer = Nothing, Optional ByVal AvailNoticeOnDate As Date = Nothing, Optional ByVal CandidateRemarks As String = Nothing, Optional ByVal CandidateImage() As Byte = Nothing)
 
 
         Params = New ArrayList
@@ -160,7 +168,9 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cavailnoticetype", AvailabilityTypeId))
         Params.Add(New MySqlParameter("@cavaildate", AvailNoticeOnDate))
         Params.Add(New MySqlParameter("@cremarks", CandidateRemarks))
-        Params.Add(New MySqlParameter("@cimage", CandidateImage))
+        Dim imgparam As New MySqlParameter("@cimage", MySqlDbType.VarBinary)
+        imgparam.Value = CandidateImage
+        Params.Add(imgparam)
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
 
         Dim Legend As String = _
@@ -228,6 +238,14 @@ Public Class frmCandidateProfile
                                 Case Else
 
                             End Select
+
+                            If Not IsNothing(Drow("candidateimg")) Then
+                                Dim imgArr() As Byte = Drow("candidateimg")
+                                Dim mstream As New System.IO.MemoryStream(imgArr)
+                                picCandidate.Image = Image.FromStream(mstream)
+                            End If
+
+
                             txtCandidateRemarks.Text = Drow("candidateremarks")
                         Next
                         Call Tran_FamilyBackground(4, 0, CandidateId, CurrentUserId)
@@ -596,6 +614,10 @@ Public Class frmCandidateProfile
         End If
 
         Call ClearNEnableFields(False)
+        dgvFM.Rows.Clear()
+        dgvEduHist.Rows.Clear()
+        dgvEmp.Rows.Clear()
+        dgvSkill.Rows.Clear()
         CandidateTranType = -1
         SelectedId = 0
 
@@ -725,13 +747,22 @@ Public Class frmCandidateProfile
             AvailType = 0
         End If
 
+        If selImagePath.Length > 0 Then
+            Using imgObj As Image = Image.FromFile(selImagePath)
+                Using imgStream As New IO.MemoryStream
+                    imgObj.Save(imgStream, Imaging.ImageFormat.Jpeg)
+                    imgData = imgStream
+                End Using
+            End Using
+        End If
+
         If MsgBox("Save Candidate information?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call TranCandidateInfo(CandidateTranType, 0, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
+            Call TranCandidateInfo(CandidateTranType, SelectedId, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
                                    txtBPlace.Text, cboCStatus.SelectedIndex, txtAdd1.Text, rdbAdd1.Checked, txtAdd2.Text, rdbAdd2.Checked, _
                                    txtPhoneNo.Text, txtMobileNo.Text, txtEmail.Text, mtbSSS.Text, mtbTIN.Text, mtbHDMF.Text, mtbPH.Text, _
                                    1, txtApplyingFor.Text, cboAppSource.SelectedValue, txtAppSrcRemarks.Text, txtPrefWorkLocation.Text, txtSalary.Text, _
                                    cboSalaryRate.SelectedIndex, chkIsNegotiable.Checked, AvailType, txtAvailInCount.Text, cboAvailInType.SelectedIndex, _
-                                   dtpAvailableOn.Value, txtCandidateRemarks.Text)
+                                   dtpAvailableOn.Value, txtCandidateRemarks.Text, imgData.GetBuffer())
 
             MsgBox("Candidate profile has been saved successfully", MsgBoxStyle.Information, "Saved")
         End If

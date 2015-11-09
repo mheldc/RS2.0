@@ -451,7 +451,7 @@ Partial Class frmMR
         Me.tpCandidate.Location = New System.Drawing.Point(4, 24)
         Me.tpCandidate.Name = "tpCandidate"
         Me.tpCandidate.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCandidate.Size = New System.Drawing.Size(841, 450)
+        Me.tpCandidate.Size = New System.Drawing.Size(841, 447)
         Me.tpCandidate.TabIndex = 0
         Me.tpCandidate.Text = "Candidate Preference"
         Me.tpCandidate.UseVisualStyleBackColor = True
@@ -593,7 +593,7 @@ Partial Class frmMR
         Me.tpEduc.Controls.Add(Me.Label19)
         Me.tpEduc.Location = New System.Drawing.Point(4, 24)
         Me.tpEduc.Name = "tpEduc"
-        Me.tpEduc.Size = New System.Drawing.Size(841, 450)
+        Me.tpEduc.Size = New System.Drawing.Size(841, 447)
         Me.tpEduc.TabIndex = 2
         Me.tpEduc.Text = "Education Preference"
         Me.tpEduc.UseVisualStyleBackColor = True
@@ -913,7 +913,7 @@ Partial Class frmMR
         Me.tpJDText.Controls.Add(Me.RichTextBox1)
         Me.tpJDText.Location = New System.Drawing.Point(4, 24)
         Me.tpJDText.Name = "tpJDText"
-        Me.tpJDText.Size = New System.Drawing.Size(841, 450)
+        Me.tpJDText.Size = New System.Drawing.Size(841, 447)
         Me.tpJDText.TabIndex = 3
         Me.tpJDText.Text = "Full Job Description (Text)"
         Me.tpJDText.UseVisualStyleBackColor = True
@@ -923,7 +923,7 @@ Partial Class frmMR
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(839, 448)
+        Me.RichTextBox1.Size = New System.Drawing.Size(839, 445)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = ""
         Me.RichTextBox1.WordWrap = False

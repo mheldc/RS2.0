@@ -249,4 +249,20 @@ Public Class RMSMain
             End With
         End If
     End Sub
+
+    Private Sub ManpowerRequestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManpowerRequestToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmMR).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim fMR As New frmMR
+            With fMR
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .tsbAdd.PerformClick()
+                .Show()
+            End With
+        End If
+    End Sub
 End Class
