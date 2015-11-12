@@ -103,8 +103,8 @@ Public Class RMSMain
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Maximized
                 .ClearNEnableFields(False)
-                .tsbSearch.PerformClick()
                 .Show()
+                .tsbSearch.PerformClick()
             End With
 
         End If
@@ -261,6 +261,21 @@ Public Class RMSMain
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Normal
                 .tsbAdd.PerformClick()
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub TypesToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles TypesToolStripMenuItem4.Click
+        If Application.OpenForms().OfType(Of frmAccountTypes).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim frmObj As New frmAccountTypes
+            With frmObj
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
                 .Show()
             End With
         End If

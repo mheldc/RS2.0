@@ -90,6 +90,12 @@
     <Compile Include="forms\frmSysDefaults.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\maintenance\frmAccountTypes.Designer.vb">
+      <DependentUpon>frmAccountTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\maintenance\frmAccountTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\maintenance\frmCandidateProfile.Designer.vb">
       <DependentUpon>frmCandidateProfile.vb</DependentUpon>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmSysDefaults.resx">
       <DependentUpon>frmSysDefaults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\maintenance\frmAccountTypes.resx">
+      <DependentUpon>frmAccountTypes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\maintenance\frmCandidateProfile.resx">
       <DependentUpon>frmCandidateProfile.vb</DependentUpon>

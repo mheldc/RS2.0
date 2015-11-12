@@ -81,6 +81,43 @@ Public Class frmSkillGroup
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
+        If SelectedId = 0 Then
+            MsgBox("You have not selected any item to delete. Select an item first then try again", MsgBoxStyle.Exclamation, "Delete Failed")
+            Exit Sub
+        End If
+
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            ' Skill Dependencies
+            Qry = "select count(`sk_id`) from `rms_skills` where `sg_id` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Skill group [" + txtGroupDesc.Text + "] cannot be deleted due to it's dependencies in Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+
+            ' Candidate Skills
+            Qry = "select count(`cs_id`) from `rms_candidateskills` where `skillgroupid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Skill group [" + txtGroupDesc.Text + "] cannot be deleted due to it's dependencies in Candidate Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+
+            ' Manpower Request Skills
+            Qry = "select count(`ms_id`) from `rms_mrskills` where `skillgroupid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Skill group [" + txtGroupDesc.Text + "] cannot be deleted due to it's dependencies in Manpower Request Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+        End Using
+
         If MsgBox("Remove selected skill group?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
             Call Tran_SkillGroup(2, SelectedId, CurrentUID)
             MsgBox("Skill group successfully removed.", MsgBoxStyle.Information, "Removed")

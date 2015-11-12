@@ -77,6 +77,23 @@ Public Class frmCandidateSource
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
+        If SelectedId = 0 Then
+            MsgBox("You have not selected any item to delete. Select an item first then try again", MsgBoxStyle.Exclamation, "Delete Failed")
+            Exit Sub
+        End If
+
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            ' Manpower Request Information
+            Qry = "select count(`ci_id`) from `rms_candidateinfo` where `appsourceid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Cannot remove applicant source [" + txtSourceDesc.Text + "] due to it's dependencies in Candidate Information", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+        End Using
+
         If MsgBox("Remove [" + txtSourceDesc.Text + "] as candidate source?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
             Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
                 Qry = "select count(`ci_id`) as datainuse from rms_candidateinfo where `appsourceid` = @sourceid;"

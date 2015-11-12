@@ -77,7 +77,51 @@ Public Class frmSkillType
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
+        If SelectedId = 0 Then
+            MsgBox("You have not selected any item to delete. Select an item first then try again", MsgBoxStyle.Exclamation, "Delete Failed")
+            Exit Sub
+        End If
+
         If MsgBox("Proceed in removing Skill Type [" + txtSTCode.Text + " : " + txtSTDesc.Text + "]?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+            Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+
+                ' Skill Group Dependencies
+                Qry = "select count(`st_id`) from `rms_skillgroups` where `st_id` = @selectedid;"
+                Params = New ArrayList
+                Params.Add(New MySqlParameter("@selectedid", SelectedId))
+                HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+                If HasDependencies > 0 Then
+                    MsgBox("Skill type [" + txtSTDesc.Text + "] cannot be deleted due to it's dependencies in Skill Group", MsgBoxStyle.Exclamation, "Delete Error")
+                    Exit Sub
+                End If
+
+                ' Skill Dependencies
+                Qry = <Query>
+                            select count(a.`sk_id`) 
+                            from 			`rms_skills` as a
+	                            inner join 	`rms_skillgroups` as b on a.`sg_id` = b.`sg_id`
+                            where b.`st_id` = @selectedid;
+                      </Query>.Value
+                Params = New ArrayList
+                Params.Add(New MySqlParameter("@selectedid", SelectedId))
+                HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+                If HasDependencies > 0 Then
+                    MsgBox("Skill type [" + txtSTDesc.Text + "] cannot be deleted due to it's dependencies in Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                    Exit Sub
+                End If
+
+                ' Candidate Skills
+                Qry = "select count(`cs_id`) from `rms_candidateskills` where `skilltypeid` = @selectedid;"
+                Params = New ArrayList
+                Params.Add(New MySqlParameter("@selectedid", SelectedId))
+                HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+                If HasDependencies > 0 Then
+                    MsgBox("Skill type [" + txtSTDesc.Text + "] cannot be deleted due to it's dependencies in Candidate Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                    Exit Sub
+                End If
+
+            End Using
+
             Call Tran_SkillTypes(2, SelectedId, CurrentUID)
             Call ClearNEnableFields()
             MsgBox("Skill type has been removed sucessfully", MsgBoxStyle.Information, "Removed")

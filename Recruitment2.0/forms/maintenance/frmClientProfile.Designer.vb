@@ -45,6 +45,12 @@ Partial Class frmClientProfile
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tpContactInfo = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.colId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAcctId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colContactName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colDesignation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -72,12 +78,6 @@ Partial Class frmClientProfile
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAcctId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colContactName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDesignation = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.tpAccountInfo.SuspendLayout()
@@ -307,6 +307,56 @@ Partial Class frmClientProfile
         Me.DataGridView1.Size = New System.Drawing.Size(587, 183)
         Me.DataGridView1.TabIndex = 1
         '
+        'colSelect
+        '
+        Me.colSelect.Frozen = True
+        Me.colSelect.HeaderText = ""
+        Me.colSelect.Name = "colSelect"
+        Me.colSelect.ReadOnly = True
+        Me.colSelect.Text = "Select"
+        Me.colSelect.UseColumnTextForButtonValue = True
+        Me.colSelect.Width = 70
+        '
+        'colRemove
+        '
+        Me.colRemove.Frozen = True
+        Me.colRemove.HeaderText = ""
+        Me.colRemove.Name = "colRemove"
+        Me.colRemove.ReadOnly = True
+        Me.colRemove.Text = "Remove"
+        Me.colRemove.UseColumnTextForButtonValue = True
+        Me.colRemove.Width = 70
+        '
+        'colId
+        '
+        Me.colId.HeaderText = "Id"
+        Me.colId.Name = "colId"
+        Me.colId.ReadOnly = True
+        Me.colId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.colId.Visible = False
+        '
+        'colAcctId
+        '
+        Me.colAcctId.HeaderText = "Account Id"
+        Me.colAcctId.Name = "colAcctId"
+        Me.colAcctId.ReadOnly = True
+        Me.colAcctId.Visible = False
+        '
+        'colContactName
+        '
+        Me.colContactName.HeaderText = "Contact Name"
+        Me.colContactName.Name = "colContactName"
+        Me.colContactName.ReadOnly = True
+        Me.colContactName.Width = 150
+        '
+        'colDesignation
+        '
+        Me.colDesignation.HeaderText = "Designation"
+        Me.colDesignation.Name = "colDesignation"
+        Me.colDesignation.ReadOnly = True
+        Me.colDesignation.Width = 200
+        '
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -472,7 +522,7 @@ Partial Class frmClientProfile
         '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
         Me.tsOps.Size = New System.Drawing.Size(605, 39)
@@ -515,7 +565,6 @@ Partial Class frmClientProfile
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -528,7 +577,6 @@ Partial Class frmClientProfile
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
         '
         'tsbCancel
         '
@@ -582,56 +630,6 @@ Partial Class frmClientProfile
         Me.tsbPrint.Size = New System.Drawing.Size(36, 36)
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
-        '
-        'colSelect
-        '
-        Me.colSelect.Frozen = True
-        Me.colSelect.HeaderText = ""
-        Me.colSelect.Name = "colSelect"
-        Me.colSelect.ReadOnly = True
-        Me.colSelect.Text = "Select"
-        Me.colSelect.UseColumnTextForButtonValue = True
-        Me.colSelect.Width = 70
-        '
-        'colRemove
-        '
-        Me.colRemove.Frozen = True
-        Me.colRemove.HeaderText = ""
-        Me.colRemove.Name = "colRemove"
-        Me.colRemove.ReadOnly = True
-        Me.colRemove.Text = "Remove"
-        Me.colRemove.UseColumnTextForButtonValue = True
-        Me.colRemove.Width = 70
-        '
-        'colId
-        '
-        Me.colId.HeaderText = "Id"
-        Me.colId.Name = "colId"
-        Me.colId.ReadOnly = True
-        Me.colId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.colId.Visible = False
-        '
-        'colAcctId
-        '
-        Me.colAcctId.HeaderText = "Account Id"
-        Me.colAcctId.Name = "colAcctId"
-        Me.colAcctId.ReadOnly = True
-        Me.colAcctId.Visible = False
-        '
-        'colContactName
-        '
-        Me.colContactName.HeaderText = "Contact Name"
-        Me.colContactName.Name = "colContactName"
-        Me.colContactName.ReadOnly = True
-        Me.colContactName.Width = 150
-        '
-        'colDesignation
-        '
-        Me.colDesignation.HeaderText = "Designation"
-        Me.colDesignation.Name = "colDesignation"
-        Me.colDesignation.ReadOnly = True
-        Me.colDesignation.Width = 200
         '
         'frmClientProfile
         '

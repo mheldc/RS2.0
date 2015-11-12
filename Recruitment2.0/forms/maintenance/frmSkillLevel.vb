@@ -75,11 +75,25 @@ Public Class frmSkillLevel
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
-        If SelectedId > 0 And _
-            MsgBox("Remove selected skill level?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+        If SelectedId = 0 Then
+            MsgBox("You have not selected any item to delete. Select an item first then try again", MsgBoxStyle.Exclamation, "Delete Failed")
+            Exit Sub
+        End If
+
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            ' Candidate Skills
+            Qry = "select count(`cs_id`) from `rms_candidateskills` where `skilllevelid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Skill level [" + txtLevelDesc.Text + "] cannot be deleted due to it's dependencies in Candidate Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+        End Using
+
+        If MsgBox("Remove selected skill level?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
             Call Tran_SkillLevel(2, SelectedId, CurrentUID)
-        Else
-            MsgBox("You have not selected any item tp delete. Try again.", MsgBoxStyle.Exclamation, "Remove Failed")
         End If
     End Sub
 

@@ -60,3 +60,4 @@ C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recru
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\bin\Debug\Recruitment2.0.pdb
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\bin\Debug\Recruitment2.0.xml
 C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\Recruitment2.0.xml
+C:\Users\MhelDC\Documents\Visual Studio 2013\Projects\Recruitment2.0\RS2.0\Recruitment2.0\obj\Debug\RecSys.frmAccountTypes.resources

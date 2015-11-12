@@ -160,6 +160,8 @@ Partial Class frmCandidateProfile
         Me.tpSkills = New System.Windows.Forms.TabPage()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.dgvSkill = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.tsSkills = New System.Windows.Forms.ToolStrip()
         Me.tsbSkillSave = New System.Windows.Forms.ToolStripButton()
@@ -177,8 +179,9 @@ Partial Class frmCandidateProfile
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnlCMain = New System.Windows.Forms.Panel()
         Me.pnlCInfo = New System.Windows.Forms.Panel()
+        Me.cboCandidateStatus = New System.Windows.Forms.ComboBox()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.lblCStatus = New System.Windows.Forms.Label()
         Me.lblRefId = New System.Windows.Forms.Label()
@@ -204,8 +207,6 @@ Partial Class frmCandidateProfile
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
         Me.ofdImage = New System.Windows.Forms.OpenFileDialog()
-        Me.DataGridViewButtonColumn7 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn8 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.tabInfo.SuspendLayout()
@@ -231,7 +232,7 @@ Partial Class frmCandidateProfile
         CType(Me.dgvSkill, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel17.SuspendLayout()
         Me.tsSkills.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.pnlCMain.SuspendLayout()
         Me.pnlCInfo.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.picCandidate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,7 +243,7 @@ Partial Class frmCandidateProfile
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.pnlCMain)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Name = "Panel1"
@@ -308,6 +309,7 @@ Partial Class frmCandidateProfile
         '
         'cboAvailInType
         '
+        Me.cboAvailInType.Enabled = False
         Me.cboAvailInType.FormattingEnabled = True
         Me.cboAvailInType.Items.AddRange(New Object() {"Day(s)", "Month(s)", "Year(s)"})
         Me.cboAvailInType.Location = New System.Drawing.Point(252, 159)
@@ -437,6 +439,7 @@ Partial Class frmCandidateProfile
         'dtpAvailableOn
         '
         Me.dtpAvailableOn.CustomFormat = "MMMM/dd/yyyy"
+        Me.dtpAvailableOn.Enabled = False
         Me.dtpAvailableOn.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpAvailableOn.Location = New System.Drawing.Point(216, 185)
         Me.dtpAvailableOn.Name = "dtpAvailableOn"
@@ -456,6 +459,7 @@ Partial Class frmCandidateProfile
         '
         'txtAvailInCount
         '
+        Me.txtAvailInCount.Enabled = False
         Me.txtAvailInCount.Location = New System.Drawing.Point(213, 159)
         Me.txtAvailInCount.Name = "txtAvailInCount"
         Me.txtAvailInCount.Size = New System.Drawing.Size(38, 23)
@@ -1608,6 +1612,26 @@ Partial Class frmCandidateProfile
         Me.dgvSkill.Size = New System.Drawing.Size(943, 227)
         Me.dgvSkill.TabIndex = 3
         '
+        'DataGridViewButtonColumn7
+        '
+        Me.DataGridViewButtonColumn7.Frozen = True
+        Me.DataGridViewButtonColumn7.HeaderText = ""
+        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
+        Me.DataGridViewButtonColumn7.ReadOnly = True
+        Me.DataGridViewButtonColumn7.Text = "Select"
+        Me.DataGridViewButtonColumn7.UseColumnTextForButtonValue = True
+        Me.DataGridViewButtonColumn7.Width = 70
+        '
+        'DataGridViewButtonColumn8
+        '
+        Me.DataGridViewButtonColumn8.Frozen = True
+        Me.DataGridViewButtonColumn8.HeaderText = ""
+        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
+        Me.DataGridViewButtonColumn8.ReadOnly = True
+        Me.DataGridViewButtonColumn8.Text = "Remove"
+        Me.DataGridViewButtonColumn8.UseColumnTextForButtonValue = True
+        Me.DataGridViewButtonColumn8.Width = 70
+        '
         'Panel17
         '
         Me.Panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1771,20 +1795,22 @@ Partial Class frmCandidateProfile
         Me.Label57.TabIndex = 20
         Me.Label57.Text = "Skill Information"
         '
-        'Panel2
+        'pnlCMain
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.pnlCInfo)
-        Me.Panel2.Controls.Add(Me.Panel5)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(955, 141)
-        Me.Panel2.TabIndex = 0
+        Me.pnlCMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlCMain.Controls.Add(Me.pnlCInfo)
+        Me.pnlCMain.Controls.Add(Me.Panel5)
+        Me.pnlCMain.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlCMain.Enabled = False
+        Me.pnlCMain.Location = New System.Drawing.Point(0, 0)
+        Me.pnlCMain.Name = "pnlCMain"
+        Me.pnlCMain.Size = New System.Drawing.Size(955, 141)
+        Me.pnlCMain.TabIndex = 0
         '
         'pnlCInfo
         '
         Me.pnlCInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlCInfo.Controls.Add(Me.cboCandidateStatus)
         Me.pnlCInfo.Controls.Add(Me.lblStatus)
         Me.pnlCInfo.Controls.Add(Me.lblCStatus)
         Me.pnlCInfo.Controls.Add(Me.lblRefId)
@@ -1801,6 +1827,15 @@ Partial Class frmCandidateProfile
         Me.pnlCInfo.Size = New System.Drawing.Size(753, 139)
         Me.pnlCInfo.TabIndex = 5
         '
+        'cboCandidateStatus
+        '
+        Me.cboCandidateStatus.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCandidateStatus.FormattingEnabled = True
+        Me.cboCandidateStatus.Location = New System.Drawing.Point(112, 102)
+        Me.cboCandidateStatus.Name = "cboCandidateStatus"
+        Me.cboCandidateStatus.Size = New System.Drawing.Size(275, 23)
+        Me.cboCandidateStatus.TabIndex = 23
+        '
         'lblStatus
         '
         Me.lblStatus.AutoSize = True
@@ -1814,7 +1849,7 @@ Partial Class frmCandidateProfile
         'lblCStatus
         '
         Me.lblCStatus.AutoSize = True
-        Me.lblCStatus.Location = New System.Drawing.Point(7, 108)
+        Me.lblCStatus.Location = New System.Drawing.Point(7, 105)
         Me.lblCStatus.Name = "lblCStatus"
         Me.lblCStatus.Size = New System.Drawing.Size(47, 15)
         Me.lblCStatus.TabIndex = 21
@@ -1832,6 +1867,7 @@ Partial Class frmCandidateProfile
         '
         'txtMName
         '
+        Me.txtMName.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMName.Location = New System.Drawing.Point(112, 78)
         Me.txtMName.Name = "txtMName"
         Me.txtMName.Size = New System.Drawing.Size(275, 23)
@@ -1839,6 +1875,7 @@ Partial Class frmCandidateProfile
         '
         'txtFName
         '
+        Me.txtFName.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFName.Location = New System.Drawing.Point(112, 54)
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(275, 23)
@@ -1846,6 +1883,7 @@ Partial Class frmCandidateProfile
         '
         'txtLName
         '
+        Me.txtLName.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLName.Location = New System.Drawing.Point(112, 30)
         Me.txtLName.Name = "txtLName"
         Me.txtLName.Size = New System.Drawing.Size(275, 23)
@@ -2041,26 +2079,6 @@ Partial Class frmCandidateProfile
         '
         Me.ofdImage.FileName = "OpenFileDialog1"
         '
-        'DataGridViewButtonColumn7
-        '
-        Me.DataGridViewButtonColumn7.Frozen = True
-        Me.DataGridViewButtonColumn7.HeaderText = ""
-        Me.DataGridViewButtonColumn7.Name = "DataGridViewButtonColumn7"
-        Me.DataGridViewButtonColumn7.ReadOnly = True
-        Me.DataGridViewButtonColumn7.Text = "Select"
-        Me.DataGridViewButtonColumn7.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn7.Width = 70
-        '
-        'DataGridViewButtonColumn8
-        '
-        Me.DataGridViewButtonColumn8.Frozen = True
-        Me.DataGridViewButtonColumn8.HeaderText = ""
-        Me.DataGridViewButtonColumn8.Name = "DataGridViewButtonColumn8"
-        Me.DataGridViewButtonColumn8.ReadOnly = True
-        Me.DataGridViewButtonColumn8.Text = "Remove"
-        Me.DataGridViewButtonColumn8.UseColumnTextForButtonValue = True
-        Me.DataGridViewButtonColumn8.Width = 70
-        '
         'frmCandidateProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -2109,7 +2127,7 @@ Partial Class frmCandidateProfile
         Me.Panel17.PerformLayout()
         Me.tsSkills.ResumeLayout(False)
         Me.tsSkills.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
+        Me.pnlCMain.ResumeLayout(False)
         Me.pnlCInfo.ResumeLayout(False)
         Me.pnlCInfo.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -2138,7 +2156,7 @@ Partial Class frmCandidateProfile
     Friend WithEvents tpEduc As System.Windows.Forms.TabPage
     Friend WithEvents tpEmpHist As System.Windows.Forms.TabPage
     Friend WithEvents tpSkills As System.Windows.Forms.TabPage
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents pnlCMain As System.Windows.Forms.Panel
     Friend WithEvents mtbTIN As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents mtbPH As System.Windows.Forms.MaskedTextBox
@@ -2303,4 +2321,5 @@ Partial Class frmCandidateProfile
     Friend WithEvents ofdImage As System.Windows.Forms.OpenFileDialog
     Friend WithEvents DataGridViewButtonColumn7 As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents DataGridViewButtonColumn8 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents cboCandidateStatus As System.Windows.Forms.ComboBox
 End Class

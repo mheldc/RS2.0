@@ -31,7 +31,7 @@ Namespace RSv2
         Public CurrentUID As Integer, CurrentUName As String, CurrentUPosition As String
 
         ' General Variables
-        Public SelectedId As Integer = 0
+        Public SelectedId As Integer = 0, RecordInUse As Integer = 0, HasDependencies As Integer = 0
 
         Public Enum DbTypes As Integer
             MySQL = 0

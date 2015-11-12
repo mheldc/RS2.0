@@ -31,12 +31,19 @@ Public Class frmCandidateProfile
     Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call ClearNEnableFields(False)
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            ' Candidate Status
+            Qry = <Query>
+                        select 0 as cs_id, '- Candidate Status -' as description
+                        union all
+                        select `cs_id`, `description` from `rms_candidatestatus` where `recstatus` = 1;
+                  </Query>.Value
+            Call FillComboBox(Qry, Cn, "description", "cs_id", cboCandidateStatus, , CommandType.Text)
+
             ' Applicant Source
             Qry = <Query>
                         select 0 as cs_id, '- Select an Applicant Source -' as description
                         union all
                         select `cs_id`,`description` from `rms_candidatesource` where `recstatus` = 1;
-
                   </Query>.Value
             Call FillComboBox(Qry, Cn, "description", "cs_id", cboAppSource, , CommandType.Text)
 
@@ -117,6 +124,7 @@ Public Class frmCandidateProfile
                 dgvEmp.Refresh()
                 dgvSkill.DataSource = Nothing
                 dgvSkill.Refresh()
+                pnlCMain.Enabled = EnableControls
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Error Occured")
             End Try
@@ -168,9 +176,13 @@ Public Class frmCandidateProfile
         Params.Add(New MySqlParameter("@cavailnoticetype", AvailabilityTypeId))
         Params.Add(New MySqlParameter("@cavaildate", AvailNoticeOnDate))
         Params.Add(New MySqlParameter("@cremarks", CandidateRemarks))
-        Dim imgparam As New MySqlParameter("@cimage", MySqlDbType.VarBinary)
-        imgparam.Value = CandidateImage
-        Params.Add(imgparam)
+        If IsNothing(CandidateImage) = False Then
+            Dim imgparam As New MySqlParameter("@cimage", MySqlDbType.VarBinary)
+            imgparam.Value = CandidateImage
+            Params.Add(imgparam)
+        Else
+            Params.Add(New MySqlParameter("@cimage", Nothing))
+        End If
         Params.Add(New MySqlParameter("@usedid", CurrentUserId))
 
         Dim Legend As String = _
@@ -199,6 +211,7 @@ Public Class frmCandidateProfile
                             txtFName.Text = Drow("firstname")
                             txtMName.Text = Drow("middlename")
                             lblStatus.Text = Drow("statusdesc")
+                            cboCandidateStatus.SelectedValue = CInt(Drow("candidatestatusid"))
                             cboGender.SelectedIndex = CInt(Drow("gender"))
                             dtpBDate.Value = CDate(Drow("bdate"))
                             txtBPlace.Text = Drow("bplace")
@@ -216,7 +229,7 @@ Public Class frmCandidateProfile
                             mtbPH.Text = Drow("phid")
 
                             txtApplyingFor.Text = Drow("appliedposition")
-                            'cboAppSource.SelectedIndex = Drow("appsourceid")
+                            cboAppSource.SelectedValue = Drow("appsourceid")
                             txtAppSrcRemarks.Text = Drow("appsourceremarks")
                             txtPrefWorkLocation.Text = Drow("prefworklocation")
                             txtSalary.Text = Format(Drow("prefsalary"), "###,###,##0.00")
@@ -229,7 +242,7 @@ Public Class frmCandidateProfile
                                 Case 1
                                     rdbAvail1.Checked = True
                                     txtAvailInCount.Text = Drow("availinnotice")
-                                    'cboAvailInType.SelectedIndex = Drow("availnoticetype")
+                                    cboAvailInType.SelectedIndex = Drow("availinnoticetype")
                                 Case 2
                                     rdbAvail2.Checked = True
                                     dtpAvailableOn.Value = CDate(Drow("availondate"))
@@ -239,12 +252,13 @@ Public Class frmCandidateProfile
 
                             End Select
 
-                            If Not IsNothing(Drow("candidateimg")) Then
+                            Try
                                 Dim imgArr() As Byte = Drow("candidateimg")
                                 Dim mstream As New System.IO.MemoryStream(imgArr)
                                 picCandidate.Image = Image.FromStream(mstream)
-                            End If
-
+                            Catch ex As Exception
+                                picCandidate.Image = RecSys.My.Resources.profilephoto2
+                            End Try
 
                             txtCandidateRemarks.Text = Drow("candidateremarks")
                         Next
@@ -604,6 +618,7 @@ Public Class frmCandidateProfile
         tsbSave.Visible = False
         tsbCancel.Visible = False
         picCandidate.Image = RecSys.My.Resources.profilephoto2
+        selImagePath = Nothing
 
         If CandidateTranType = 0 Then
             Call LogActivity(1, "User " + CurrentUName + " cancels profile creation.", CurrentUID)
@@ -634,6 +649,7 @@ Public Class frmCandidateProfile
             tsbSeparator.Visible = False
             tsbSearch.Visible = False
             tsbPrint.Visible = False
+            pnlCMain.Enabled = True
 
             For Each tPages In tabInfo.TabPages
                 tPages.enabled = True
@@ -747,20 +763,26 @@ Public Class frmCandidateProfile
             AvailType = 0
         End If
 
-        If selImagePath.Length > 0 Then
-            Using imgObj As Image = Image.FromFile(selImagePath)
-                Using imgStream As New IO.MemoryStream
-                    imgObj.Save(imgStream, Imaging.ImageFormat.Jpeg)
-                    imgData = imgStream
+        If IsNothing(selImagePath) = False Then
+            If IO.File.Exists(selImagePath) = True Then
+                Using imgObj As Image = Image.FromFile(selImagePath)
+                    Using imgStream As New IO.MemoryStream
+                        imgObj.Save(imgStream, Imaging.ImageFormat.Jpeg)
+                        imgData = imgStream
+                    End Using
                 End Using
-            End Using
+            Else
+                imgData = Nothing
+            End If
+        Else
+            imgData = Nothing
         End If
 
         If MsgBox("Save Candidate information?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
             Call TranCandidateInfo(CandidateTranType, SelectedId, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
                                    txtBPlace.Text, cboCStatus.SelectedIndex, txtAdd1.Text, rdbAdd1.Checked, txtAdd2.Text, rdbAdd2.Checked, _
                                    txtPhoneNo.Text, txtMobileNo.Text, txtEmail.Text, mtbSSS.Text, mtbTIN.Text, mtbHDMF.Text, mtbPH.Text, _
-                                   1, txtApplyingFor.Text, cboAppSource.SelectedValue, txtAppSrcRemarks.Text, txtPrefWorkLocation.Text, txtSalary.Text, _
+                                   cboCandidateStatus.SelectedValue, txtApplyingFor.Text, cboAppSource.SelectedValue, txtAppSrcRemarks.Text, txtPrefWorkLocation.Text, txtSalary.Text, _
                                    cboSalaryRate.SelectedIndex, chkIsNegotiable.Checked, AvailType, txtAvailInCount.Text, cboAvailInType.SelectedIndex, _
                                    dtpAvailableOn.Value, txtCandidateRemarks.Text, imgData.GetBuffer())
 

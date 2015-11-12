@@ -7,6 +7,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class frmSkill
     Dim SkillTranType As Integer = -1
+    Dim SkillId As Integer = 0
 
     Private Sub Tran_Skill(ByVal TranType As Integer, ByVal SkillId As Integer, ByVal CurrentUserId As Integer, _
                            Optional SkillGroupId As Integer = Nothing, Optional ByVal SkillDesc As String = Nothing)
@@ -46,6 +47,7 @@ Public Class frmSkill
         txtCode.Clear()
         txtDesc.Clear()
         pnlInfo.Enabled = IsEnabled
+        SkillId = 0
     End Sub
 
     Private Sub frmSkill_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -69,7 +71,7 @@ Public Class frmSkill
     End Sub
 
     Private Sub tsbEdit_Click(sender As Object, e As EventArgs) Handles tsbEdit.Click
-        If SelectedId = 0 Then
+        If SkillId = 0 Then
             MsgBox("You have not selected any item to update. Select an item then try again.", MsgBoxStyle.Exclamation, "Edit Failed")
             Exit Sub
         End If
@@ -90,8 +92,21 @@ Public Class frmSkill
             MsgBox("You have not selected any item to delete. Select an item first then try again", MsgBoxStyle.Exclamation, "Delete Failed")
             Exit Sub
         End If
+
+        ' Candidate Skills
+        Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
+            Qry = "select count(`cs_id`) from `rms_candidateskills` where `skillid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Skill [" + txtDesc.Text + "] cannot be deleted due to it's dependencies in Candidate Skills", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
+        End Using
+
         If MsgBox("Remove [" + txtDesc.Text + "] skill list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_Skill(2, SelectedId, CurrentUID, cboGroup.SelectedValue, txtDesc.Text)
+            Call Tran_Skill(2, SkillId, CurrentUID, cboGroup.SelectedValue, txtDesc.Text)
             MsgBox("Skill successfully deleted", MsgBoxStyle.Information, "Removed")
             tsbCancel.PerformClick()
         End If
@@ -103,7 +118,7 @@ Public Class frmSkill
             Exit Sub
         End If
         If MsgBox("Save skill information?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_Skill(SkillTranType, SelectedId, CurrentUID, cboGroup.SelectedValue, txtDesc.Text)
+            Call Tran_Skill(SkillTranType, SkillId, CurrentUID, cboGroup.SelectedValue, txtDesc.Text)
             MsgBox("Skill saved successfully.", MsgBoxStyle.Information, "Saved")
             tsbCancel.PerformClick()
         End If
@@ -120,7 +135,7 @@ Public Class frmSkill
         tsbSave.Visible = False
         ClearNEnableFields()
         SkillTranType = -1
-        SelectedId = 0
+        SkillId = 0
     End Sub
 
     Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
@@ -129,7 +144,8 @@ Public Class frmSkill
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me)
             .ShowDialog()
-            Call Tran_Skill(3, SelectedId, CurrentUID)
+            SkillId = SelectedId
+            Call Tran_Skill(3, SkillId, CurrentUID)
         End With
     End Sub
 
