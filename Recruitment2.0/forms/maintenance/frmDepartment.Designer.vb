@@ -23,122 +23,106 @@ Partial Class frmDepartment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmDepartment))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.pnlInfo = New System.Windows.Forms.Panel()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.cboHeadId = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtDesc = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.tsOps = New System.Windows.Forms.ToolStrip()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1.SuspendLayout()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.pnlInfo.SuspendLayout()
         Me.tsOps.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlInfo
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label15)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(461, 183)
-        Me.Panel1.TabIndex = 8
+        Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlInfo.Controls.Add(Me.Label1)
+        Me.pnlInfo.Controls.Add(Me.txtName)
+        Me.pnlInfo.Controls.Add(Me.lblCode)
+        Me.pnlInfo.Controls.Add(Me.cboHeadId)
+        Me.pnlInfo.Controls.Add(Me.Label5)
+        Me.pnlInfo.Controls.Add(Me.Label4)
+        Me.pnlInfo.Controls.Add(Me.txtDesc)
+        Me.pnlInfo.Controls.Add(Me.Label2)
+        Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Enabled = False
+        Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
+        Me.pnlInfo.Name = "pnlInfo"
+        Me.pnlInfo.Size = New System.Drawing.Size(450, 167)
+        Me.pnlInfo.TabIndex = 8
         '
-        'ComboBox1
+        'lblCode
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(106, 137)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(329, 23)
-        Me.ComboBox1.TabIndex = 30
+        Me.lblCode.AutoSize = True
+        Me.lblCode.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCode.Location = New System.Drawing.Point(100, 10)
+        Me.lblCode.Name = "lblCode"
+        Me.lblCode.Size = New System.Drawing.Size(18, 18)
+        Me.lblCode.TabIndex = 31
+        Me.lblCode.Text = "[]"
+        '
+        'cboHeadId
+        '
+        Me.cboHeadId.FormattingEnabled = True
+        Me.cboHeadId.Location = New System.Drawing.Point(103, 127)
+        Me.cboHeadId.Name = "cboHeadId"
+        Me.cboHeadId.Size = New System.Drawing.Size(329, 23)
+        Me.cboHeadId.TabIndex = 2
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(11, 140)
+        Me.Label5.Location = New System.Drawing.Point(8, 130)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 15)
         Me.Label5.TabIndex = 29
         Me.Label5.Text = "Dept. Head"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(160, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 28
-        Me.Label1.Text = "[]"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 41)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(160, 23)
-        Me.TextBox4.TabIndex = 27
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 44)
+        Me.Label4.Location = New System.Drawing.Point(11, 10)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 15)
+        Me.Label4.Size = New System.Drawing.Size(34, 15)
         Me.Label4.TabIndex = 26
-        Me.Label4.Text = "Dept. Code"
+        Me.Label4.Text = "Code"
         '
-        'TextBox2
+        'txtDesc
         '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 65)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(329, 71)
-        Me.TextBox2.TabIndex = 23
+        Me.txtDesc.Location = New System.Drawing.Point(103, 55)
+        Me.txtDesc.Multiline = True
+        Me.txtDesc.Name = "txtDesc"
+        Me.txtDesc.Size = New System.Drawing.Size(329, 71)
+        Me.txtDesc.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 68)
+        Me.Label2.Location = New System.Drawing.Point(11, 58)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 15)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Description"
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(11, 12)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(143, 15)
-        Me.Label15.TabIndex = 19
-        Me.Label15.Text = "Department Information"
-        '
         'tsOps
         '
-        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
+        Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(461, 39)
+        Me.tsOps.Size = New System.Drawing.Size(450, 39)
         Me.tsOps.TabIndex = 7
         '
         'tsbClose
@@ -178,7 +162,6 @@ Partial Class frmDepartment
         Me.tsbEdit.Text = "ToolStripButton4"
         Me.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbEdit.ToolTipText = "Edit"
-        Me.tsbEdit.Visible = False
         '
         'tsbDelete
         '
@@ -191,19 +174,6 @@ Partial Class frmDepartment
         Me.tsbDelete.Text = "ToolStripButton3"
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
-        Me.tsbDelete.Visible = False
-        '
-        'tsbCancel
-        '
-        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
-        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancel.Name = "tsbCancel"
-        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
-        Me.tsbCancel.Text = "ToolStripButton7"
-        Me.tsbCancel.ToolTipText = "Cancel"
-        Me.tsbCancel.Visible = False
         '
         'tsbSave
         '
@@ -217,6 +187,18 @@ Partial Class frmDepartment
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
+        '
+        'tsbCancel
+        '
+        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
+        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancel.Name = "tsbCancel"
+        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCancel.Text = "ToolStripButton7"
+        Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
         '
         'tsbSeparator
         '
@@ -246,12 +228,28 @@ Partial Class frmDepartment
         Me.tsbPrint.Text = "ToolStripButton8"
         Me.tsbPrint.ToolTipText = "Print"
         '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(103, 31)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(329, 23)
+        Me.txtName.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(38, 15)
+        Me.Label1.TabIndex = 33
+        Me.Label1.Text = "Name"
+        '
         'frmDepartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(461, 222)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(450, 206)
+        Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -260,23 +258,20 @@ Partial Class frmDepartment
         Me.MinimizeBox = False
         Me.Name = "frmDepartment"
         Me.Text = "Department"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.pnlInfo.ResumeLayout(False)
+        Me.pnlInfo.PerformLayout()
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents pnlInfo As System.Windows.Forms.Panel
+    Friend WithEvents cboHeadId As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtDesc As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents tsOps As System.Windows.Forms.ToolStrip
     Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbAdd As System.Windows.Forms.ToolStripButton
@@ -287,4 +282,7 @@ Partial Class frmDepartment
     Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
+    Friend WithEvents lblCode As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtName As System.Windows.Forms.TextBox
 End Class

@@ -37,11 +37,11 @@ Partial Class frmUserGroups
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.tsOps.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -51,7 +51,7 @@ Partial Class frmUserGroups
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbCancel, Me.tsbSave, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(485, 39)
+        Me.tsOps.Size = New System.Drawing.Size(479, 39)
         Me.tsOps.TabIndex = 1
         '
         'tsbClose
@@ -162,10 +162,10 @@ Partial Class frmUserGroups
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -174,7 +174,7 @@ Partial Class frmUserGroups
         Me.Panel1.Location = New System.Drawing.Point(0, 39)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(485, 172)
+        Me.Panel1.Size = New System.Drawing.Size(479, 170)
         Me.Panel1.TabIndex = 2
         '
         'Button1
@@ -202,13 +202,6 @@ Partial Class frmUserGroups
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(350, 23)
         Me.TextBox2.TabIndex = 24
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(172, 23)
-        Me.TextBox1.TabIndex = 23
         '
         'Label3
         '
@@ -251,11 +244,22 @@ Partial Class frmUserGroups
         Me.Label15.TabIndex = 19
         Me.Label15.Text = "Group Information"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(109, 33)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(18, 18)
+        Me.Label4.TabIndex = 27
+        Me.Label4.Text = "[]"
+        '
         'frmUserGroups
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(485, 211)
+        Me.ClientSize = New System.Drawing.Size(479, 209)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -288,10 +292,10 @@ Partial Class frmUserGroups
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

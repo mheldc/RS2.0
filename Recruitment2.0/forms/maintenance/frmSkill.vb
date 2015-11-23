@@ -146,6 +146,7 @@ Public Class frmSkill
             .ShowDialog()
             SkillId = SelectedId
             Call Tran_Skill(3, SkillId, CurrentUID)
+            SelectedId = 0
         End With
     End Sub
 

@@ -8,6 +8,7 @@ Imports MySql.Data.MySqlClient
 Public Class frmSkillLevel
 
     Dim SkillLevelTranType As Integer = -1
+    Dim SLSelectedId As Integer = 0
 
     Private Sub Tran_SkillLevel(ByVal TranType As Integer, ByVal SkillLevelId As Integer, ByVal CurrentUserId As Integer, _
                                 Optional ByVal LevelDescription As String = Nothing)
@@ -42,6 +43,8 @@ Public Class frmSkillLevel
         txtLevelCode.Clear()
         txtLevelDesc.Clear()
         pnlInfo.Enabled = IsEnabled
+        SkillLevelTranType = -1
+        SLSelectedId = 0
     End Sub
 
     Private Sub frmSkillLevel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -57,8 +60,8 @@ Public Class frmSkillLevel
         tsbSeparator.Visible = False
         tsbSearch.Visible = False
         tsbPrint.Visible = False
-        SkillLevelTranType = 0
         Call ClearNEnableFields(True)
+        SkillLevelTranType = 0
     End Sub
 
     Private Sub tsbEdit_Click(sender As Object, e As EventArgs) Handles tsbEdit.Click
@@ -70,8 +73,8 @@ Public Class frmSkillLevel
         tsbSeparator.Visible = False
         tsbSearch.Visible = False
         tsbPrint.Visible = False
-        SkillLevelTranType = 1
         pnlInfo.Enabled = True
+        SkillLevelTranType = 1
     End Sub
 
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
@@ -93,7 +96,7 @@ Public Class frmSkillLevel
         End Using
 
         If MsgBox("Remove selected skill level?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_SkillLevel(2, SelectedId, CurrentUID)
+            Call Tran_SkillLevel(2, SLSelectedId, CurrentUID)
         End If
     End Sub
 
@@ -102,7 +105,7 @@ Public Class frmSkillLevel
             MsgBox("Description field can't be empty. Key in a valid value.", MsgBoxStyle.Exclamation, "Save Failed")
             Exit Sub
         End If
-        Call Tran_SkillLevel(SkillLevelTranType, SelectedId, CurrentUID, txtLevelDesc.Text)
+        Call Tran_SkillLevel(SkillLevelTranType, SLSelectedId, CurrentUID, txtLevelDesc.Text)
         MsgBox("Skill level saved successfully.", MsgBoxStyle.Information, "Saved")
         tsbCancel.PerformClick()
     End Sub
@@ -116,8 +119,6 @@ Public Class frmSkillLevel
         tsbPrint.Visible = True
         tsbSave.Visible = False
         tsbCancel.Visible = False
-        SkillLevelTranType = -1
-        SelectedId = 0
         Call ClearNEnableFields()
     End Sub
 
@@ -127,7 +128,9 @@ Public Class frmSkillLevel
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me)
             .ShowDialog()
-            Call Tran_SkillLevel(3, SelectedId, CurrentUID)
+            SLSelectedId = SelectedId
+            Call Tran_SkillLevel(3, SLSelectedId, CurrentUID)
+            SelectedId = 0
         End With
     End Sub
 

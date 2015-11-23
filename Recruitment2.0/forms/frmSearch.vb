@@ -19,6 +19,29 @@ Public Class frmSearch
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
             Try
                 Select Case SourceObj.Name
+                    Case "frmDepartment"
+                        Qry = "select `dp_id`, `deptcode`, `deptname`, `description` from hrs_departments where `recstatus` = 1;"
+                        Dset = New DataSet
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
+                        With dgvSearchItems
+                            .DataSource = Dset.Tables(0)
+                            FormatGridColumn(dgvSearchItems, 1, "Department Id", False, False, True, 50, , DataGridViewContentAlignment.MiddleCenter)
+                            FormatGridColumn(dgvSearchItems, 2, "Department Code", False, True, True, 150, , DataGridViewContentAlignment.MiddleCenter)
+                            FormatGridColumn(dgvSearchItems, 3, "Department Name", False, True, True, 200, , DataGridViewContentAlignment.MiddleCenter)
+                            FormatGridColumn(dgvSearchItems, 4, "Description", False, True, True, 300, , DataGridViewContentAlignment.MiddleCenter)
+                        End With
+
+                    Case "frmClientProfile"
+                        Qry = "select `ca_id`, `accountcode`, `accountname` from `rms_clientaccounts` where `recstatus` = 1;"
+                        Dset = New DataSet
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
+                        With dgvSearchItems
+                            .DataSource = Dset.Tables(0)
+                            FormatGridColumn(dgvSearchItems, 1, "Account Id", False, False, True, 50, , DataGridViewContentAlignment.MiddleCenter)
+                            FormatGridColumn(dgvSearchItems, 2, "Account Code", False, True, True, 150, , DataGridViewContentAlignment.MiddleCenter)
+                            FormatGridColumn(dgvSearchItems, 3, "Account Name", False, True, True, 300, , DataGridViewContentAlignment.MiddleCenter)
+                        End With
+
                     Case "frmCandidateProfile"
                         Qry = <Command>
                                     select 
@@ -53,7 +76,7 @@ Public Class frmSearch
                     Case "frmSkillType"
                         Qry = "select `st_id`, `typecode`, `description` from `rms_skilltypes` where `recstatus` = 1;"
                         Dset = New DataSet
-                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
                         With dgvSearchItems
                             .DataSource = Dset.Tables(0)
                             FormatGridColumn(dgvSearchItems, 1, "Type Id", False, False, False, 50)
@@ -70,7 +93,7 @@ Public Class frmSearch
                                     order by a.`st_id` asc; 
                               </Query>.Value
                         Dset = New DataSet
-                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
                         With dgvSearchItems
                             .DataSource = Dset.Tables(0)
                             FormatGridColumn(dgvSearchItems, 1, "Group Id", False, False, False, 50)
@@ -90,7 +113,7 @@ Public Class frmSearch
                                     where a.`recstatus` = 1 limit 100; 
                               </Query>.Value
                         Dset = New DataSet
-                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
                         With dgvSearchItems
                             .DataSource = Dset.Tables(0)
                             FormatGridColumn(dgvSearchItems, 1, "Skill Id", False, False, False, 50)
@@ -105,7 +128,7 @@ Public Class frmSearch
                     Case "frmSkillLevel"
                         Qry = "select `sl_id`, `levelcode`, `description` from `rms_skilllevels` where `recstatus` = 1;"
                         Dset = New DataSet
-                        Dset = Query(Qry, Cn, , CommandType.Text)
+                        Dset = Query(Qry, Cn, Nothing, CommandType.Text)
                         With dgvSearchItems
                             .DataSource = Dset.Tables(0)
                             FormatGridColumn(dgvSearchItems, 1, "Level Id", False, False, False, 50)

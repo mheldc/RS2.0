@@ -7,6 +7,7 @@ Imports MySql.Data
 
 Public Class frmSkillGroup
     Dim SGTranType As Integer = -1
+    Dim SGSelectedId As Integer = 0
 
     Private Sub Tran_SkillGroup(ByVal TranType As Integer, ByVal SkillGroupId As Integer, CurrentUserId As Integer, _
                                 Optional ByVal SkillTypeId As Integer = Nothing, Optional ByVal GroupDescription As String = Nothing)
@@ -45,6 +46,8 @@ Public Class frmSkillGroup
         txtGroupCode.Clear()
         txtGroupDesc.Clear()
         pnlInfo.Enabled = IsEnabled
+        SGTranType = -1
+        SGSelectedId = 0
     End Sub
 
     Private Sub frmSkillGroup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -76,7 +79,7 @@ Public Class frmSkillGroup
         tsbAdd.Visible = False
         tsbEdit.Visible = False
         tsbDelete.Visible = False
-        Call ClearNEnableFields(True)
+        pnlInfo.Enabled = True
         SGTranType = 1
     End Sub
 
@@ -100,7 +103,7 @@ Public Class frmSkillGroup
             ' Candidate Skills
             Qry = "select count(`cs_id`) from `rms_candidateskills` where `skillgroupid` = @selectedid;"
             Params = New ArrayList
-            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            Params.Add(New MySqlParameter("@selectedid", SGSelectedId))
             HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
             If HasDependencies > 0 Then
                 MsgBox("Skill group [" + txtGroupDesc.Text + "] cannot be deleted due to it's dependencies in Candidate Skills", MsgBoxStyle.Exclamation, "Delete Error")
@@ -119,7 +122,7 @@ Public Class frmSkillGroup
         End Using
 
         If MsgBox("Remove selected skill group?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_SkillGroup(2, SelectedId, CurrentUID)
+            Call Tran_SkillGroup(2, SGSelectedId, CurrentUID)
             MsgBox("Skill group successfully removed.", MsgBoxStyle.Information, "Removed")
             Call ClearNEnableFields()
         End If
@@ -135,7 +138,7 @@ Public Class frmSkillGroup
             Exit Sub
         End If
 
-        Call Tran_SkillGroup(SGTranType, SelectedId, CurrentUID, cboSkillType.SelectedValue, txtGroupDesc.Text)
+        Call Tran_SkillGroup(SGTranType, SGSelectedId, CurrentUID, cboSkillType.SelectedValue, txtGroupDesc.Text)
         MsgBox("Skill group has been saved successfully", MsgBoxStyle.Information, "Saved")
 
         tsbCancel.PerformClick()
@@ -150,9 +153,7 @@ Public Class frmSkillGroup
         tsbPrint.Visible = True
         tsbSave.Visible = False
         tsbCancel.Visible = False
-        SGTranType = -1
         Call ClearNEnableFields()
-        SelectedId = 0
     End Sub
 
     Private Sub tsbSearch_Click(sender As Object, e As EventArgs) Handles tsbSearch.Click
@@ -161,7 +162,9 @@ Public Class frmSkillGroup
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me)
             .ShowDialog()
+            SGSelectedId = SelectedId
             Call Tran_SkillGroup(3, SelectedId, CurrentUID)
+            SelectedId = 0
         End With
     End Sub
 

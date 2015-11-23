@@ -356,10 +356,10 @@ Partial Class frmCR
         '
         Me.Panel5.Controls.Add(Me.ComboBox1)
         Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(698, 0)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel5.Location = New System.Drawing.Point(353, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(336, 43)
+        Me.Panel5.Size = New System.Drawing.Size(526, 43)
         Me.Panel5.TabIndex = 1
         '
         'ComboBox1
@@ -368,7 +368,7 @@ Partial Class frmCR
         Me.ComboBox1.Items.AddRange(New Object() {"New", "Extension", "Reload"})
         Me.ComboBox1.Location = New System.Drawing.Point(113, 12)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(212, 23)
+        Me.ComboBox1.Size = New System.Drawing.Size(408, 23)
         Me.ComboBox1.TabIndex = 5
         '
         'Label4

@@ -23,260 +23,246 @@ Partial Class frmClientProfile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientProfile))
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.pnlInfo = New System.Windows.Forms.Panel()
+        Me.tabInfo = New System.Windows.Forms.TabControl()
         Me.tpAccountInfo = New System.Windows.Forms.TabPage()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cboAcctType = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblRefNo = New System.Windows.Forms.Label()
+        Me.cboHandledBy = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtWebURL = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.txtFaxNo = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPhoneNo = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAddr = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtAcctName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tpContactInfo = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvContact = New System.Windows.Forms.DataGridView()
         Me.colSelect = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colRemove = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAcctId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colContactName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colDesignation = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.pnlCInfo = New System.Windows.Forms.Panel()
+        Me.tsContactOps = New System.Windows.Forms.ToolStrip()
+        Me.tsbCCancel = New System.Windows.Forms.ToolStripButton()
+        Me.txbCSave = New System.Windows.Forms.ToolStripButton()
+        Me.txtCOthers = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtCMobile = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.txtCPhone = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtCEmail = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtCDesignation = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtCName = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tsOps = New System.Windows.Forms.ToolStrip()
         Me.tsbClose = New System.Windows.Forms.ToolStripButton()
         Me.tsbAdd = New System.Windows.Forms.ToolStripButton()
         Me.tsbEdit = New System.Windows.Forms.ToolStripButton()
         Me.tsbDelete = New System.Windows.Forms.ToolStripButton()
-        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSave = New System.Windows.Forms.ToolStripButton()
+        Me.tsbCancel = New System.Windows.Forms.ToolStripButton()
         Me.tsbSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSearch = New System.Windows.Forms.ToolStripButton()
         Me.tsbPrint = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.pnlInfo.SuspendLayout()
+        Me.tabInfo.SuspendLayout()
         Me.tpAccountInfo.SuspendLayout()
         Me.tpContactInfo.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
+        CType(Me.dgvContact, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlCInfo.SuspendLayout()
+        Me.tsContactOps.SuspendLayout()
         Me.tsOps.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlInfo
         '
-        Me.Panel1.AutoScroll = True
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.TabControl1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(605, 497)
-        Me.Panel1.TabIndex = 10
+        Me.pnlInfo.AutoScroll = True
+        Me.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlInfo.Controls.Add(Me.tabInfo)
+        Me.pnlInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlInfo.Enabled = False
+        Me.pnlInfo.Location = New System.Drawing.Point(0, 39)
+        Me.pnlInfo.Name = "pnlInfo"
+        Me.pnlInfo.Size = New System.Drawing.Size(710, 497)
+        Me.pnlInfo.TabIndex = 10
         '
-        'TabControl1
+        'tabInfo
         '
-        Me.TabControl1.Controls.Add(Me.tpAccountInfo)
-        Me.TabControl1.Controls.Add(Me.tpContactInfo)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(603, 495)
-        Me.TabControl1.TabIndex = 2
+        Me.tabInfo.Controls.Add(Me.tpAccountInfo)
+        Me.tabInfo.Controls.Add(Me.tpContactInfo)
+        Me.tabInfo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabInfo.Location = New System.Drawing.Point(0, 0)
+        Me.tabInfo.Name = "tabInfo"
+        Me.tabInfo.SelectedIndex = 0
+        Me.tabInfo.Size = New System.Drawing.Size(708, 495)
+        Me.tabInfo.TabIndex = 2
         '
         'tpAccountInfo
         '
         Me.tpAccountInfo.AutoScroll = True
         Me.tpAccountInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpAccountInfo.Controls.Add(Me.ComboBox2)
+        Me.tpAccountInfo.Controls.Add(Me.cboAcctType)
         Me.tpAccountInfo.Controls.Add(Me.Label18)
-        Me.tpAccountInfo.Controls.Add(Me.Label15)
-        Me.tpAccountInfo.Controls.Add(Me.ComboBox1)
+        Me.tpAccountInfo.Controls.Add(Me.lblRefNo)
+        Me.tpAccountInfo.Controls.Add(Me.cboHandledBy)
         Me.tpAccountInfo.Controls.Add(Me.Label2)
-        Me.tpAccountInfo.Controls.Add(Me.TextBox7)
+        Me.tpAccountInfo.Controls.Add(Me.txtWebURL)
         Me.tpAccountInfo.Controls.Add(Me.Label9)
-        Me.tpAccountInfo.Controls.Add(Me.TextBox6)
+        Me.tpAccountInfo.Controls.Add(Me.txtFaxNo)
         Me.tpAccountInfo.Controls.Add(Me.Label8)
-        Me.tpAccountInfo.Controls.Add(Me.TextBox5)
+        Me.tpAccountInfo.Controls.Add(Me.txtPhoneNo)
         Me.tpAccountInfo.Controls.Add(Me.Label7)
-        Me.tpAccountInfo.Controls.Add(Me.TextBox1)
+        Me.tpAccountInfo.Controls.Add(Me.txtAddr)
         Me.tpAccountInfo.Controls.Add(Me.Label6)
-        Me.tpAccountInfo.Controls.Add(Me.Label1)
         Me.tpAccountInfo.Controls.Add(Me.Label4)
-        Me.tpAccountInfo.Controls.Add(Me.TextBox3)
+        Me.tpAccountInfo.Controls.Add(Me.txtAcctName)
         Me.tpAccountInfo.Controls.Add(Me.Label3)
         Me.tpAccountInfo.Location = New System.Drawing.Point(4, 24)
         Me.tpAccountInfo.Name = "tpAccountInfo"
         Me.tpAccountInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpAccountInfo.Size = New System.Drawing.Size(595, 467)
+        Me.tpAccountInfo.Size = New System.Drawing.Size(700, 467)
         Me.tpAccountInfo.TabIndex = 0
         Me.tpAccountInfo.Text = "Account Information"
         Me.tpAccountInfo.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'cboAcctType
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(140, 174)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(383, 23)
-        Me.ComboBox2.TabIndex = 92
+        Me.cboAcctType.FormattingEnabled = True
+        Me.cboAcctType.Location = New System.Drawing.Point(143, 34)
+        Me.cboAcctType.Name = "cboAcctType"
+        Me.cboAcctType.Size = New System.Drawing.Size(383, 23)
+        Me.cboAcctType.TabIndex = 6
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(9, 177)
+        Me.Label18.Location = New System.Drawing.Point(9, 37)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(78, 15)
         Me.Label18.TabIndex = 91
         Me.Label18.Text = "Account Type"
         '
-        'Label15
+        'lblRefNo
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(140, 9)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(127, 15)
-        Me.Label15.TabIndex = 73
-        Me.Label15.Text = "[Account Reference #]"
+        Me.lblRefNo.AutoSize = True
+        Me.lblRefNo.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRefNo.Location = New System.Drawing.Point(140, 14)
+        Me.lblRefNo.Name = "lblRefNo"
+        Me.lblRefNo.Size = New System.Drawing.Size(15, 15)
+        Me.lblRefNo.TabIndex = 73
+        Me.lblRefNo.Text = "[]"
         '
-        'ComboBox1
+        'cboHandledBy
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(140, 150)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(383, 23)
-        Me.ComboBox1.TabIndex = 72
+        Me.cboHandledBy.FormattingEnabled = True
+        Me.cboHandledBy.Location = New System.Drawing.Point(143, 178)
+        Me.cboHandledBy.Name = "cboHandledBy"
+        Me.cboHandledBy.Size = New System.Drawing.Size(383, 23)
+        Me.cboHandledBy.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 153)
+        Me.Label2.Location = New System.Drawing.Point(9, 181)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 15)
         Me.Label2.TabIndex = 71
         Me.Label2.Text = "Handled By"
         '
-        'TextBox7
+        'txtWebURL
         '
-        Me.TextBox7.Location = New System.Drawing.Point(140, 126)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox7.TabIndex = 70
+        Me.txtWebURL.Location = New System.Drawing.Point(143, 154)
+        Me.txtWebURL.Name = "txtWebURL"
+        Me.txtWebURL.Size = New System.Drawing.Size(383, 23)
+        Me.txtWebURL.TabIndex = 4
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(9, 128)
+        Me.Label9.Location = New System.Drawing.Point(9, 157)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(52, 15)
         Me.Label9.TabIndex = 69
         Me.Label9.Text = "Website"
         '
-        'TextBox6
+        'txtFaxNo
         '
-        Me.TextBox6.Location = New System.Drawing.Point(140, 102)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(186, 23)
-        Me.TextBox6.TabIndex = 68
+        Me.txtFaxNo.Location = New System.Drawing.Point(143, 130)
+        Me.txtFaxNo.Name = "txtFaxNo"
+        Me.txtFaxNo.Size = New System.Drawing.Size(186, 23)
+        Me.txtFaxNo.TabIndex = 3
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(9, 104)
+        Me.Label8.Location = New System.Drawing.Point(9, 133)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(47, 15)
         Me.Label8.TabIndex = 67
         Me.Label8.Text = "Fax No."
         '
-        'TextBox5
+        'txtPhoneNo
         '
-        Me.TextBox5.Location = New System.Drawing.Point(140, 78)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(186, 23)
-        Me.TextBox5.TabIndex = 66
+        Me.txtPhoneNo.Location = New System.Drawing.Point(143, 106)
+        Me.txtPhoneNo.Name = "txtPhoneNo"
+        Me.txtPhoneNo.Size = New System.Drawing.Size(186, 23)
+        Me.txtPhoneNo.TabIndex = 2
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 80)
+        Me.Label7.Location = New System.Drawing.Point(9, 109)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 15)
         Me.Label7.TabIndex = 65
         Me.Label7.Text = "Phone No."
         '
-        'TextBox1
+        'txtAddr
         '
-        Me.TextBox1.Location = New System.Drawing.Point(140, 54)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox1.TabIndex = 64
+        Me.txtAddr.Location = New System.Drawing.Point(143, 82)
+        Me.txtAddr.Name = "txtAddr"
+        Me.txtAddr.Size = New System.Drawing.Size(383, 23)
+        Me.txtAddr.TabIndex = 1
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 56)
+        Me.Label6.Location = New System.Drawing.Point(9, 85)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 15)
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "Address"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(330, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 15)
-        Me.Label1.TabIndex = 62
-        Me.Label1.Text = "[]"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 9)
+        Me.Label4.Location = New System.Drawing.Point(9, 14)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(116, 15)
         Me.Label4.TabIndex = 60
         Me.Label4.Text = "Account Reference #"
         '
-        'TextBox3
+        'txtAcctName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(140, 30)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox3.TabIndex = 59
+        Me.txtAcctName.Location = New System.Drawing.Point(143, 58)
+        Me.txtAcctName.Name = "txtAcctName"
+        Me.txtAcctName.Size = New System.Drawing.Size(383, 23)
+        Me.txtAcctName.TabIndex = 0
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 32)
+        Me.Label3.Location = New System.Drawing.Point(9, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 15)
         Me.Label3.TabIndex = 58
@@ -285,27 +271,28 @@ Partial Class frmClientProfile
         'tpContactInfo
         '
         Me.tpContactInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tpContactInfo.Controls.Add(Me.DataGridView1)
-        Me.tpContactInfo.Controls.Add(Me.Panel3)
+        Me.tpContactInfo.Controls.Add(Me.dgvContact)
+        Me.tpContactInfo.Controls.Add(Me.pnlCInfo)
         Me.tpContactInfo.Location = New System.Drawing.Point(4, 24)
         Me.tpContactInfo.Name = "tpContactInfo"
         Me.tpContactInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpContactInfo.Size = New System.Drawing.Size(595, 467)
+        Me.tpContactInfo.Size = New System.Drawing.Size(700, 467)
         Me.tpContactInfo.TabIndex = 1
         Me.tpContactInfo.Text = "Contact Information"
         Me.tpContactInfo.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvContact
         '
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSelect, Me.colRemove, Me.colId, Me.colAcctId, Me.colContactName, Me.colDesignation})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 279)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(587, 183)
-        Me.DataGridView1.TabIndex = 1
+        Me.dgvContact.AllowUserToAddRows = False
+        Me.dgvContact.AllowUserToDeleteRows = False
+        Me.dgvContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvContact.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSelect, Me.colRemove})
+        Me.dgvContact.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvContact.Location = New System.Drawing.Point(3, 279)
+        Me.dgvContact.Name = "dgvContact"
+        Me.dgvContact.ReadOnly = True
+        Me.dgvContact.Size = New System.Drawing.Size(692, 183)
+        Me.dgvContact.TabIndex = 1
         '
         'colSelect
         '
@@ -313,7 +300,7 @@ Partial Class frmClientProfile
         Me.colSelect.HeaderText = ""
         Me.colSelect.Name = "colSelect"
         Me.colSelect.ReadOnly = True
-        Me.colSelect.Text = "Select"
+        Me.colSelect.Text = "Edit"
         Me.colSelect.UseColumnTextForButtonValue = True
         Me.colSelect.Width = 70
         '
@@ -327,100 +314,71 @@ Partial Class frmClientProfile
         Me.colRemove.UseColumnTextForButtonValue = True
         Me.colRemove.Width = 70
         '
-        'colId
+        'pnlCInfo
         '
-        Me.colId.HeaderText = "Id"
-        Me.colId.Name = "colId"
-        Me.colId.ReadOnly = True
-        Me.colId.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.colId.Visible = False
+        Me.pnlCInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlCInfo.Controls.Add(Me.tsContactOps)
+        Me.pnlCInfo.Controls.Add(Me.txtCOthers)
+        Me.pnlCInfo.Controls.Add(Me.Label17)
+        Me.pnlCInfo.Controls.Add(Me.txtCMobile)
+        Me.pnlCInfo.Controls.Add(Me.Label16)
+        Me.pnlCInfo.Controls.Add(Me.txtCPhone)
+        Me.pnlCInfo.Controls.Add(Me.Label14)
+        Me.pnlCInfo.Controls.Add(Me.txtCEmail)
+        Me.pnlCInfo.Controls.Add(Me.Label13)
+        Me.pnlCInfo.Controls.Add(Me.txtCDesignation)
+        Me.pnlCInfo.Controls.Add(Me.Label12)
+        Me.pnlCInfo.Controls.Add(Me.Label11)
+        Me.pnlCInfo.Controls.Add(Me.txtCName)
+        Me.pnlCInfo.Controls.Add(Me.Label10)
+        Me.pnlCInfo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlCInfo.Location = New System.Drawing.Point(3, 3)
+        Me.pnlCInfo.Name = "pnlCInfo"
+        Me.pnlCInfo.Size = New System.Drawing.Size(692, 276)
+        Me.pnlCInfo.TabIndex = 0
         '
-        'colAcctId
+        'tsContactOps
         '
-        Me.colAcctId.HeaderText = "Account Id"
-        Me.colAcctId.Name = "colAcctId"
-        Me.colAcctId.ReadOnly = True
-        Me.colAcctId.Visible = False
+        Me.tsContactOps.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.tsContactOps.Enabled = False
+        Me.tsContactOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbCCancel, Me.txbCSave})
+        Me.tsContactOps.Location = New System.Drawing.Point(0, 235)
+        Me.tsContactOps.Name = "tsContactOps"
+        Me.tsContactOps.Size = New System.Drawing.Size(690, 39)
+        Me.tsContactOps.TabIndex = 114
+        Me.tsContactOps.Text = "ToolStrip1"
         '
-        'colContactName
+        'tsbCCancel
         '
-        Me.colContactName.HeaderText = "Contact Name"
-        Me.colContactName.Name = "colContactName"
-        Me.colContactName.ReadOnly = True
-        Me.colContactName.Width = 150
+        Me.tsbCCancel.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.tsbCCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCCancel.Image = CType(resources.GetObject("tsbCCancel.Image"), System.Drawing.Image)
+        Me.tsbCCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCCancel.Name = "tsbCCancel"
+        Me.tsbCCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCCancel.Text = "ToolStripButton1"
+        Me.tsbCCancel.ToolTipText = "Cancel"
         '
-        'colDesignation
+        'txbCSave
         '
-        Me.colDesignation.HeaderText = "Designation"
-        Me.colDesignation.Name = "colDesignation"
-        Me.colDesignation.ReadOnly = True
-        Me.colDesignation.Width = 200
+        Me.txbCSave.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.txbCSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.txbCSave.Image = CType(resources.GetObject("txbCSave.Image"), System.Drawing.Image)
+        Me.txbCSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.txbCSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.txbCSave.Name = "txbCSave"
+        Me.txbCSave.Size = New System.Drawing.Size(36, 36)
+        Me.txbCSave.Text = "ToolStripButton2"
+        Me.txbCSave.ToolTipText = "Save Contact"
         '
-        'Panel3
+        'txtCOthers
         '
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.ToolStrip1)
-        Me.Panel3.Controls.Add(Me.TextBox12)
-        Me.Panel3.Controls.Add(Me.Label17)
-        Me.Panel3.Controls.Add(Me.TextBox11)
-        Me.Panel3.Controls.Add(Me.Label16)
-        Me.Panel3.Controls.Add(Me.TextBox10)
-        Me.Panel3.Controls.Add(Me.Label14)
-        Me.Panel3.Controls.Add(Me.TextBox9)
-        Me.Panel3.Controls.Add(Me.Label13)
-        Me.Panel3.Controls.Add(Me.TextBox8)
-        Me.Panel3.Controls.Add(Me.Label12)
-        Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(3, 3)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(587, 276)
-        Me.Panel3.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 235)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(585, 39)
-        Me.ToolStrip1.TabIndex = 114
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Cancel"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        Me.ToolStripButton2.ToolTipText = "Save Contact"
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(115, 123)
-        Me.TextBox12.Multiline = True
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(383, 94)
-        Me.TextBox12.TabIndex = 113
+        Me.txtCOthers.Location = New System.Drawing.Point(115, 123)
+        Me.txtCOthers.Multiline = True
+        Me.txtCOthers.Name = "txtCOthers"
+        Me.txtCOthers.Size = New System.Drawing.Size(383, 94)
+        Me.txtCOthers.TabIndex = 113
         '
         'Label17
         '
@@ -431,12 +389,12 @@ Partial Class frmClientProfile
         Me.Label17.TabIndex = 112
         Me.Label17.Text = "Others"
         '
-        'TextBox11
+        'txtCMobile
         '
-        Me.TextBox11.Location = New System.Drawing.Point(115, 99)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox11.TabIndex = 111
+        Me.txtCMobile.Location = New System.Drawing.Point(115, 99)
+        Me.txtCMobile.Name = "txtCMobile"
+        Me.txtCMobile.Size = New System.Drawing.Size(383, 23)
+        Me.txtCMobile.TabIndex = 111
         '
         'Label16
         '
@@ -447,12 +405,12 @@ Partial Class frmClientProfile
         Me.Label16.TabIndex = 110
         Me.Label16.Text = "Mobile No."
         '
-        'TextBox10
+        'txtCPhone
         '
-        Me.TextBox10.Location = New System.Drawing.Point(115, 75)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox10.TabIndex = 109
+        Me.txtCPhone.Location = New System.Drawing.Point(115, 75)
+        Me.txtCPhone.Name = "txtCPhone"
+        Me.txtCPhone.Size = New System.Drawing.Size(383, 23)
+        Me.txtCPhone.TabIndex = 109
         '
         'Label14
         '
@@ -463,12 +421,12 @@ Partial Class frmClientProfile
         Me.Label14.TabIndex = 108
         Me.Label14.Text = "Phone No."
         '
-        'TextBox9
+        'txtCEmail
         '
-        Me.TextBox9.Location = New System.Drawing.Point(115, 51)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox9.TabIndex = 107
+        Me.txtCEmail.Location = New System.Drawing.Point(115, 51)
+        Me.txtCEmail.Name = "txtCEmail"
+        Me.txtCEmail.Size = New System.Drawing.Size(383, 23)
+        Me.txtCEmail.TabIndex = 107
         '
         'Label13
         '
@@ -479,12 +437,12 @@ Partial Class frmClientProfile
         Me.Label13.TabIndex = 106
         Me.Label13.Text = "E-mail Address"
         '
-        'TextBox8
+        'txtCDesignation
         '
-        Me.TextBox8.Location = New System.Drawing.Point(115, 27)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox8.TabIndex = 105
+        Me.txtCDesignation.Location = New System.Drawing.Point(115, 27)
+        Me.txtCDesignation.Name = "txtCDesignation"
+        Me.txtCDesignation.Size = New System.Drawing.Size(383, 23)
+        Me.txtCDesignation.TabIndex = 105
         '
         'Label12
         '
@@ -504,12 +462,12 @@ Partial Class frmClientProfile
         Me.Label11.TabIndex = 103
         Me.Label11.Text = "[]"
         '
-        'TextBox2
+        'txtCName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(115, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(383, 23)
-        Me.TextBox2.TabIndex = 102
+        Me.txtCName.Location = New System.Drawing.Point(115, 3)
+        Me.txtCName.Name = "txtCName"
+        Me.txtCName.Size = New System.Drawing.Size(383, 23)
+        Me.txtCName.TabIndex = 102
         '
         'Label10
         '
@@ -525,7 +483,7 @@ Partial Class frmClientProfile
         Me.tsOps.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbClose, Me.tsbAdd, Me.tsbEdit, Me.tsbDelete, Me.tsbSave, Me.tsbCancel, Me.tsbSeparator, Me.tsbSearch, Me.tsbPrint})
         Me.tsOps.Location = New System.Drawing.Point(0, 0)
         Me.tsOps.Name = "tsOps"
-        Me.tsOps.Size = New System.Drawing.Size(605, 39)
+        Me.tsOps.Size = New System.Drawing.Size(710, 39)
         Me.tsOps.TabIndex = 9
         '
         'tsbClose
@@ -578,18 +536,6 @@ Partial Class frmClientProfile
         Me.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbDelete.ToolTipText = "Delete"
         '
-        'tsbCancel
-        '
-        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
-        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbCancel.Name = "tsbCancel"
-        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
-        Me.tsbCancel.Text = "ToolStripButton7"
-        Me.tsbCancel.ToolTipText = "Cancel"
-        Me.tsbCancel.Visible = False
-        '
         'tsbSave
         '
         Me.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -602,6 +548,18 @@ Partial Class frmClientProfile
         Me.tsbSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.tsbSave.ToolTipText = "Save"
         Me.tsbSave.Visible = False
+        '
+        'tsbCancel
+        '
+        Me.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbCancel.Image = CType(resources.GetObject("tsbCancel.Image"), System.Drawing.Image)
+        Me.tsbCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbCancel.Name = "tsbCancel"
+        Me.tsbCancel.Size = New System.Drawing.Size(36, 36)
+        Me.tsbCancel.Text = "ToolStripButton7"
+        Me.tsbCancel.ToolTipText = "Cancel"
+        Me.tsbCancel.Visible = False
         '
         'tsbSeparator
         '
@@ -635,8 +593,8 @@ Partial Class frmClientProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(605, 536)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(710, 536)
+        Me.Controls.Add(Me.pnlInfo)
         Me.Controls.Add(Me.tsOps)
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -645,23 +603,23 @@ Partial Class frmClientProfile
         Me.MinimizeBox = False
         Me.Name = "frmClientProfile"
         Me.Text = "Client Accounts"
-        Me.Panel1.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
+        Me.pnlInfo.ResumeLayout(False)
+        Me.tabInfo.ResumeLayout(False)
         Me.tpAccountInfo.ResumeLayout(False)
         Me.tpAccountInfo.PerformLayout()
         Me.tpContactInfo.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        CType(Me.dgvContact, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlCInfo.ResumeLayout(False)
+        Me.pnlCInfo.PerformLayout()
+        Me.tsContactOps.ResumeLayout(False)
+        Me.tsContactOps.PerformLayout()
         Me.tsOps.ResumeLayout(False)
         Me.tsOps.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents pnlInfo As System.Windows.Forms.Panel
     Friend WithEvents tsOps As System.Windows.Forms.ToolStrip
     Friend WithEvents tsbClose As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbAdd As System.Windows.Forms.ToolStripButton
@@ -672,48 +630,43 @@ Partial Class frmClientProfile
     Friend WithEvents tsbSeparator As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents tsbSearch As System.Windows.Forms.ToolStripButton
     Friend WithEvents tsbPrint As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents tabInfo As System.Windows.Forms.TabControl
     Friend WithEvents tpAccountInfo As System.Windows.Forms.TabPage
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents lblRefNo As System.Windows.Forms.Label
+    Friend WithEvents cboHandledBy As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents txtWebURL As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents txtFaxNo As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents txtPhoneNo As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAddr As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtAcctName As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents tpContactInfo As System.Windows.Forms.TabPage
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents dgvContact As System.Windows.Forms.DataGridView
+    Friend WithEvents pnlCInfo As System.Windows.Forms.Panel
+    Friend WithEvents tsContactOps As System.Windows.Forms.ToolStrip
+    Friend WithEvents tsbCCancel As System.Windows.Forms.ToolStripButton
+    Friend WithEvents txbCSave As System.Windows.Forms.ToolStripButton
+    Friend WithEvents txtCOthers As System.Windows.Forms.TextBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCMobile As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCPhone As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCEmail As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCDesignation As System.Windows.Forms.TextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCName As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cboAcctType As System.Windows.Forms.ComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents colSelect As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents colRemove As System.Windows.Forms.DataGridViewButtonColumn
-    Friend WithEvents colId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colAcctId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colContactName As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents colDesignation As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

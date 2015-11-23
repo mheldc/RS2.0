@@ -79,8 +79,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmCandidateProfile).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim cProfile As New frmCandidateProfile
-            With cProfile
+            Dim frmObj As New frmCandidateProfile
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -96,8 +96,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmCandidateProfile).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fCandidateProfile As New frmCandidateProfile
-            With fCandidateProfile
+            Dim frmObj As New frmCandidateProfile
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -114,8 +114,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillType).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillType As New frmSkillType
-            With fSkillType
+            Dim frmObj As New frmSkillType
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -130,8 +130,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmCandidateSource).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fCSource As New frmCandidateSource
-            With fCSource
+            Dim frmObj As New frmCandidateSource
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -146,8 +146,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillGroup).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillGroup As New frmSkillGroup
-            With fSkillGroup
+            Dim frmObj As New frmSkillGroup
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -162,8 +162,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillType).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillType As New frmSkillType
-            With fSkillType
+            Dim frmObj As New frmSkillType
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -177,8 +177,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillGroup).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillGroup As New frmSkillGroup
-            With fSkillGroup
+            Dim frmObj As New frmSkillGroup
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -192,8 +192,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillLevel).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillLevel As New frmSkillLevel
-            With fSkillLevel
+            Dim frmObj As New frmSkillLevel
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -207,8 +207,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkill).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkill As New frmSkill
-            With fSkill
+            Dim frmObj As New frmSkill
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -222,8 +222,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkillLevel).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkillLevel As New frmSkillLevel
-            With fSkillLevel
+            Dim frmObj As New frmSkillLevel
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -238,8 +238,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmSkill).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fSkill As New frmSkill
-            With fSkill
+            Dim frmObj As New frmSkill
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -254,8 +254,8 @@ Public Class RMSMain
         If Application.OpenForms().OfType(Of frmMR).Any Then
             MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
         Else
-            Dim fMR As New frmMR
-            With fMR
+            Dim frmObj As New frmMR
+            With frmObj
                 .TopLevel = False
                 .MdiParent = Me
                 .StartPosition = FormStartPosition.CenterParent
@@ -277,6 +277,68 @@ Public Class RMSMain
                 .StartPosition = FormStartPosition.CenterParent
                 .WindowState = FormWindowState.Normal
                 .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub ClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmClientProfile).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim frmObj As New frmClientProfile
+            With frmObj
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub DepartmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartmentToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmDepartment).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim frmObj As New frmDepartment
+            With frmObj
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+            End With
+        End If
+    End Sub
+
+    Private Sub DepartmentToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DepartmentToolStripMenuItem1.Click
+        If Application.OpenForms().OfType(Of frmDepartment).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim frmObj As New frmDepartment
+            With frmObj
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Normal
+                .Show()
+                .tsbAdd.PerformClick()
+            End With
+        End If
+    End Sub
+
+    Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccountsToolStripMenuItem.Click
+        If Application.OpenForms().OfType(Of frmUserProfile).Any Then
+            MsgBox("Cannot create another instance of this form." + vbCrLf + "Form already loaded.", MsgBoxStyle.Exclamation, "OOOPS!")
+        Else
+            Dim frmObj As New frmUserProfile
+            With frmObj
+                .TopLevel = False
+                .MdiParent = Me
+                .StartPosition = FormStartPosition.CenterParent
+                .WindowState = FormWindowState.Maximized
+                .Show()
+                .tsbAdd.PerformClick()
             End With
         End If
     End Sub

@@ -39,17 +39,21 @@ Namespace RSv2
             ORACLE = 2 ' To support soon
         End Enum
 
-        Public Enum RecModules As Integer
-            Candidate = 0
-            ManpowerRequest = 1
-            LineUpRequest = 2
-            ContractRequest = 3
-            MRStatus = 4
-            MRTypes = 5
-            LRStatus = 6
-            CRStatus = 7
-            ClientAccounts = 8
-            UserProfile = 9
+        Public Enum SysModules As Integer
+            System = 100
+            DbConnection = 101
+            MailerSetup = 102
+            UserLogin = 103
+            UserChangePwd = 104
+
+            Accounts = 200
+            CompanyProfile = 201
+            Department = 202
+
+            User = 300
+
+
+            Recruitment = 300
         End Enum
 
     End Module

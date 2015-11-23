@@ -83,7 +83,14 @@ Public Class frmAccountTypes
         End If
 
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
-
+            Qry = "select count(`ca_id`) from `rms_clientaccounts` where `accounttypeid` = @selectedid;"
+            Params = New ArrayList
+            Params.Add(New MySqlParameter("@selectedid", AcctTypeSelectedId))
+            HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
+            If HasDependencies > 0 Then
+                MsgBox("Account Type [" + txtDesc.Text + "] cannot be deleted due to it's dependencies in Manpower Request(MR) Info", MsgBoxStyle.Exclamation, "Delete Error")
+                Exit Sub
+            End If
         End Using
 
         If MsgBox("Delete account type [" + txtDesc.Text + "]?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
@@ -128,6 +135,7 @@ Public Class frmAccountTypes
             .ShowDialog()
             AcctTypeSelectedId = SelectedId
             Call Tran_AccountTypes(3, AcctTypeSelectedId, CurrentUID)
+            SelectedId = 0
         End With
     End Sub
 

@@ -8,6 +8,7 @@ Imports MySql.Data.MySqlClient
 Public Class frmCandidateSource
 
     Dim CSourceTranType As Integer = -1
+    Dim CSourceSelectedId As Integer = 0
 
     Private Sub Tran_CandidateSource(ByVal TranType As Integer, ByVal SourceId As Integer, ByVal CurrentUserId As Integer, _
                                      Optional ByVal SourceDesc As String = Nothing)
@@ -44,6 +45,8 @@ Public Class frmCandidateSource
         txtSource.Clear()
         txtSourceDesc.Clear()
         pnlInfo.Enabled = IsEnabled
+        CSourceSelectedId = 0
+        CSourceTranType = -1
     End Sub
 
     Private Sub frmCandidateSource_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -86,7 +89,7 @@ Public Class frmCandidateSource
             ' Manpower Request Information
             Qry = "select count(`ci_id`) from `rms_candidateinfo` where `appsourceid` = @selectedid;"
             Params = New ArrayList
-            Params.Add(New MySqlParameter("@selectedid", SelectedId))
+            Params.Add(New MySqlParameter("@selectedid", CSourceSelectedId))
             HasDependencies = QueryExec(Qry, Cn, Params, CommandType.Text)
             If HasDependencies > 0 Then
                 MsgBox("Cannot remove applicant source [" + txtSourceDesc.Text + "] due to it's dependencies in Candidate Information", MsgBoxStyle.Exclamation, "Delete Error")
@@ -98,13 +101,13 @@ Public Class frmCandidateSource
             Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
                 Qry = "select count(`ci_id`) as datainuse from rms_candidateinfo where `appsourceid` = @sourceid;"
                 Params = New ArrayList
-                Params.Add(New MySqlParameter("@sourceid", SelectedId))
+                Params.Add(New MySqlParameter("@sourceid", CSourceSelectedId))
                 Dim DataInUse As Integer = QueryExec(Qry, Cn, Params, CommandType.Text)
                 If DataInUse > 0 Then
                     MsgBox("Unable to remove selected source, it's currently being used." + vbCrLf + _
                            "Select another one and try again.", MsgBoxStyle.Exclamation, "Remove Failed")
                 Else
-                    Call Tran_CandidateSource(2, SelectedId, CurrentUID)
+                    Call Tran_CandidateSource(2, CSourceSelectedId, CurrentUID)
                     MsgBox("Candidate source has been removed successfully", MsgBoxStyle.Information, "Removed")
                     Call ClearNEnableFields()
                 End If
@@ -115,7 +118,7 @@ Public Class frmCandidateSource
 
     Private Sub tsbSave_Click(sender As Object, e As EventArgs) Handles tsbSave.Click
         If MsgBox("Save candidate source?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_CandidateSource(CSourceTranType, SelectedId, CurrentUID, txtSourceDesc.Text)
+            Call Tran_CandidateSource(CSourceTranType, CSourceSelectedId, CurrentUID, txtSourceDesc.Text)
             MsgBox("Candidate source has been saved successfully", MsgBoxStyle.Information, "Saved")
             ClearNEnableFields()
             tsbAdd.Visible = True
@@ -148,7 +151,9 @@ Public Class frmCandidateSource
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me)
             .ShowDialog()
-            Call Tran_CandidateSource(3, SelectedId, CurrentUID)
+            CSourceSelectedId = SelectedId
+            Call Tran_CandidateSource(3, CSourceSelectedId, CurrentUID)
+            SelectedId = 0
         End With
     End Sub
 

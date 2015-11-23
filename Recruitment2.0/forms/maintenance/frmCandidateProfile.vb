@@ -7,7 +7,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class frmCandidateProfile
     ' Candidate Information
-    Public CandidateTranType As Integer = -1
+    Dim CandidateTranType As Integer = -1
+    Dim CandidateSelectedId As Integer = 0
 
     ' Family Background
     Dim FMTranType As Integer = 0
@@ -26,7 +27,7 @@ Public Class frmCandidateProfile
     Dim selSkillType As Integer, selSkillGroup As Integer, selSkillId As Integer, selSkillRecId As Integer, selSkillName As String
 
     ' Others
-    Dim selImagePath As String, imgData As IO.MemoryStream
+    Dim selImagePath As String, imgData() As Byte
 
     Private Sub frmCandidateProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call ClearNEnableFields(False)
@@ -125,6 +126,9 @@ Public Class frmCandidateProfile
                 dgvSkill.DataSource = Nothing
                 dgvSkill.Refresh()
                 pnlCMain.Enabled = EnableControls
+                CandidateSelectedId = 0
+                CandidateTranType = -1
+                imgData = Nothing
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "Error Occured")
             End Try
@@ -197,7 +201,7 @@ Public Class frmCandidateProfile
         Using Cn As MySqlConnection = Open(DefHost, DefDb, DefUID, DefPWD, DefPort)
             Select Case TranType
                 Case 0
-                    SelectedId = QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
+                    CandidateSelectedId = QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
                 Case 1, 2
                     QueryExec("tran_candidateinfo", Cn, Params, CommandType.StoredProcedure)
                 Case 3
@@ -552,7 +556,9 @@ Public Class frmCandidateProfile
             .WindowState = FormWindowState.Normal
             .LoadSeachItems(Me)
             .ShowDialog()
-            Call TranCandidateInfo(3, SelectedId)
+            CandidateSelectedId = SelectedId
+            Call TranCandidateInfo(3, CandidateSelectedId)
+            SelectedId = 0
         End With
     End Sub
 
@@ -581,13 +587,13 @@ Public Class frmCandidateProfile
                 tsOps.Enabled = False
                 Select Case .SelectedIndex
                     Case 2
-                        If SelectedId > 0 Then tsFM.Enabled = True Else tsFM.Enabled = False
+                        If CandidateSelectedId > 0 Then tsFM.Enabled = True Else tsFM.Enabled = False
                     Case 3
-                        If SelectedId > 0 Then tsEduc.Enabled = True Else tsEduc.Enabled = False
+                        If CandidateSelectedId > 0 Then tsEduc.Enabled = True Else tsEduc.Enabled = False
                     Case 4
-                        If SelectedId > 0 Then tsEmp.Enabled = True Else tsEmp.Enabled = False
+                        If CandidateSelectedId > 0 Then tsEmp.Enabled = True Else tsEmp.Enabled = False
                     Case 5
-                        If SelectedId > 0 Then tsSkills.Enabled = True Else tsSkills.Enabled = False
+                        If CandidateSelectedId > 0 Then tsSkills.Enabled = True Else tsSkills.Enabled = False
                     Case Else
 
                 End Select
@@ -596,7 +602,6 @@ Public Class frmCandidateProfile
     End Sub
 
     Private Sub tsbAdd_Click(sender As Object, e As EventArgs) Handles tsbAdd.Click
-        CandidateTranType = 0
         tsbSave.Visible = True
         tsbCancel.Visible = True
         tsbAdd.Visible = False
@@ -606,6 +611,7 @@ Public Class frmCandidateProfile
         tsbSearch.Visible = False
         tsbPrint.Visible = False
         Call ClearNEnableFields(True)
+        CandidateTranType = 0
     End Sub
 
     Private Sub tsbCancel_Click(sender As Object, e As EventArgs) Handles tsbCancel.Click
@@ -629,12 +635,10 @@ Public Class frmCandidateProfile
         End If
 
         Call ClearNEnableFields(False)
-        dgvFM.Rows.Clear()
-        dgvEduHist.Rows.Clear()
-        dgvEmp.Rows.Clear()
-        dgvSkill.Rows.Clear()
-        CandidateTranType = -1
-        SelectedId = 0
+        'dgvFM.Rows.Clear()
+        'dgvEduHist.Rows.Clear()
+        'dgvEmp.Rows.Clear()
+        'dgvSkill.Rows.Clear()
 
     End Sub
 
@@ -663,11 +667,9 @@ Public Class frmCandidateProfile
     Private Sub tsbDelete_Click(sender As Object, e As EventArgs) Handles tsbDelete.Click
         If SelectedId > 0 Then
             If MsgBox("Would you like to remove candidate profile of [" + lblRefId.Text + " " + txtFName.Text + " " + txtLName.Text + "] ?") = MsgBoxResult.Yes Then
-                Call TranCandidateInfo(2, SelectedId)
+                Call TranCandidateInfo(2, CandidateSelectedId)
                 Call LogActivity(1, "User " + CurrentUName + " successfully deleted the candidate profile of Mr./Ms. " + txtFName.Text + " " + txtLName.Text + ".", CurrentUID)
                 Call ClearNEnableFields(False)
-                CandidateTranType = -1
-                SelectedId = 0
                 Call LogActivity(0, "System clears and disable fields. After deletion of candidate profile.", CurrentUID)
             End If
         Else
@@ -763,12 +765,13 @@ Public Class frmCandidateProfile
             AvailType = 0
         End If
 
+
         If IsNothing(selImagePath) = False Then
             If IO.File.Exists(selImagePath) = True Then
                 Using imgObj As Image = Image.FromFile(selImagePath)
                     Using imgStream As New IO.MemoryStream
                         imgObj.Save(imgStream, Imaging.ImageFormat.Jpeg)
-                        imgData = imgStream
+                        imgData = imgStream.GetBuffer()
                     End Using
                 End Using
             Else
@@ -779,12 +782,12 @@ Public Class frmCandidateProfile
         End If
 
         If MsgBox("Save Candidate information?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call TranCandidateInfo(CandidateTranType, SelectedId, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
+            Call TranCandidateInfo(CandidateTranType, CandidateSelectedId, CurrentUID, txtLName.Text, txtFName.Text, txtMName.Text, cboGender.SelectedIndex, dtpBDate.Value, _
                                    txtBPlace.Text, cboCStatus.SelectedIndex, txtAdd1.Text, rdbAdd1.Checked, txtAdd2.Text, rdbAdd2.Checked, _
                                    txtPhoneNo.Text, txtMobileNo.Text, txtEmail.Text, mtbSSS.Text, mtbTIN.Text, mtbHDMF.Text, mtbPH.Text, _
                                    cboCandidateStatus.SelectedValue, txtApplyingFor.Text, cboAppSource.SelectedValue, txtAppSrcRemarks.Text, txtPrefWorkLocation.Text, txtSalary.Text, _
                                    cboSalaryRate.SelectedIndex, chkIsNegotiable.Checked, AvailType, txtAvailInCount.Text, cboAvailInType.SelectedIndex, _
-                                   dtpAvailableOn.Value, txtCandidateRemarks.Text, imgData.GetBuffer())
+                                   dtpAvailableOn.Value, txtCandidateRemarks.Text, imgData)
 
             MsgBox("Candidate profile has been saved successfully", MsgBoxStyle.Information, "Saved")
         End If
@@ -872,10 +875,10 @@ Public Class frmCandidateProfile
 
     Private Sub tsbEducSave_Click(sender As Object, e As EventArgs) Handles tsbEducSave.Click
         If EducTranType = 0 Then
-            Call Tran_EducationalBackground(0, 0, SelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
+            Call Tran_EducationalBackground(0, 0, CandidateSelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
             MsgBox("Education has been added to list.", MsgBoxStyle.Information, "Education Added")
         Else
-            Call Tran_EducationalBackground(1, 0, SelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
+            Call Tran_EducationalBackground(1, 0, CandidateSelectedId, CurrentUID, txtEduSchool.Text, txtEduAdd.Text, txtEduCourse.Text, dtpEduStart.Value, dtpEduEnd.Value, dtpEduGrad.Value, chkEduIsUG.Checked, txtEduHonors.Text)
             MsgBox("Education has been modified successfully.", MsgBoxStyle.Information, "Education Updated")
             EducTranType = 0
         End If
@@ -890,7 +893,7 @@ Public Class frmCandidateProfile
         txtEduHonors.Clear()
         tsbEducSave.ToolTipText = "Save Information"
 
-        Call Tran_EducationalBackground(4, 0, SelectedId, CurrentUID)
+        Call Tran_EducationalBackground(4, 0, CandidateSelectedId, CurrentUID)
 
     End Sub
 
@@ -932,7 +935,7 @@ Public Class frmCandidateProfile
 
     Private Sub tsbEmpSave_Click(sender As Object, e As EventArgs) Handles tsbEmpSave.Click
         If EmpTranType = 0 Then
-            Call Tran_EmploymentHistory(0, 0, SelectedId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
+            Call Tran_EmploymentHistory(0, 0, CandidateSelectedId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
             MsgBox("Employment information has been added successfully.", MsgBoxStyle.Information, "Employment Added")
         Else
             Call Tran_EmploymentHistory(1, selEmpId, selEmpCandidateId, CurrentUID, txtEmpCName.Text, txtEmpCAdd.Text, txtEmpCContact.Text, dtpEmpStart.Value, dtpEmpEnd.Value, chkEmpPresent.Checked, txtEmpPosHeld.Text, txtEmpIS.Text, txtEmpReason.Text)
@@ -1032,7 +1035,7 @@ Public Class frmCandidateProfile
         End Using
 
         If MsgBox("Save this skill to list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-            Call Tran_CandidateSkills(SkillTranType, selSkillRecId, SelectedId, CurrentUID, cboSkillType.SelectedValue, _
+            Call Tran_CandidateSkills(SkillTranType, selSkillRecId, CandidateSelectedId, CurrentUID, cboSkillType.SelectedValue, _
                                       cboSkillGroup.SelectedValue, cboSkill.SelectedValue, cboSkillLevel.SelectedValue, txtSYearUsed.Text, txtSLastYearUsed.Text)
             MsgBox("Skill saved successfully.", MsgBoxStyle.Information, "Saved")
             Tran_CandidateSkills(4, 0, SelectedId, CurrentUID)
@@ -1060,12 +1063,12 @@ Public Class frmCandidateProfile
         Select Case e.ColumnIndex
             Case 0
                 SkillTranType = 1
-                Call Tran_CandidateSkills(1, selSkillRecId, SelectedId, CurrentUID)
+                Call Tran_CandidateSkills(1, selSkillRecId, CandidateSelectedId, CurrentUID)
             Case 1
                 If MsgBox("Remove skill from list?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
-                    Call Tran_CandidateSkills(2, selSkillRecId, SelectedId, CurrentUID)
+                    Call Tran_CandidateSkills(2, selSkillRecId, CandidateSelectedId, CurrentUID)
                     MsgBox("Skill has been successfully removed from list.", MsgBoxStyle.Information, "Removed")
-                    Call Tran_CandidateSkills(4, selSkillRecId, SelectedId, CurrentUID)
+                    Call Tran_CandidateSkills(4, selSkillRecId, CandidateSelectedId, CurrentUID)
                     SkillTranType = 0
                 End If
             Case Else
